@@ -23,24 +23,28 @@
 <details>
    <summary>WordPress Site</summary>
 
-  > * 
-  >
-  > **ToDo:**
-  >
-  > * CMS Backend
+  <ul>
+    <li> * </li>
+  </ul>
 
+  <ul> **ToDo:**
+    </li> * CMS Backend</li>
+  </ul>
 </details>
 
 <details>
    <summary>Tech Stack</summary>
-
-  > **Frontend:**
-  > * WordPress
-  > * Theme: Avas
-
-  > **Backend:**
-  >
-  > * Database: MySQL
+<ul>
+  <li> **Frontend:**</li>
+    <ul>
+      <li> * WordPress</li>
+      <li> * Theme: Avas</li>
+    </ul>
+  <li> **Backend:**</li>
+    <ul>
+      <li> * Database: MySQL</li>
+    </ul>
+</ul>
 
 </details>
 
@@ -58,6 +62,6 @@
 <pre>
 Developer:   Victor Wright
 Client:      {{ siteId }}
-Date:        Mar 2024
+Date:        Sep 2005
 GH Page:     <a href="https://vrw-gh.github.io/{{ siteId }}/">vrw-gh.github.io/{{ siteId }}</a>
 </pre>
