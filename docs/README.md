@@ -8,7 +8,7 @@
 
 [<img src="https://raw.githubusercontent.com/vrw-GH/assets/main/repo-media/{{ siteId }}/Screenshot.png" alt="screenshot of {{ siteId }} app" width="98%">](https://{{ siteId }}.{{ siteDev }} "click to visit beta site")
 
-*`(Click ►items to expand)`*
+*`(Click on` ► `items to expand)`*
 
 <details open><summary>
 
@@ -21,7 +21,6 @@
 * New categories added
 * Products and details updated
 * Added Downloads area
-
 </details>
 
 ---
@@ -54,7 +53,7 @@
 </details>
 
 <details>
-<summary>
+<summary open>
 
 #### Tech Stack
 
@@ -70,10 +69,9 @@
 ** PHP Mailer
 
 </details>
-
 ---
 
-## VERSIONS
+## Versions
 
 * Beta Ver: <a href="https://{{ siteId }}.{{ siteDev }}">{{ siteId }}.{{ siteDev }}</a>
 * Dev Build:    <a href="https://wrightsdesk.com/{{ siteId }}">wrightsdesk.com/{{ siteId }}</a>
