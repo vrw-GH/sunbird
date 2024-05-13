@@ -8,7 +8,7 @@
 
 [<img src="https://raw.githubusercontent.com/vrw-GH/assets/main/repo-media/{{ siteId }}/Screenshot.png" alt="screenshot of {{ siteId }} app" width="98%">](https://{{ siteId }}.{{ siteDev }} "click to visit beta site")
 
-*`(Click on` ► `items to expand)`*
+*(Click on ` ► ` items to expand)*
 
 <details open><summary>
 
@@ -21,10 +21,10 @@
 * New categories added
 * Products and details updated
 * Added Downloads area
-</details>
+
+</details><br/>
 
 ---
-
 
 ## Features
 
@@ -69,6 +69,7 @@
 ** PHP Mailer
 
 </details>
+
 ---
 
 ## Versions
