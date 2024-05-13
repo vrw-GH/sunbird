@@ -12,59 +12,46 @@
 
 <details open><summary><b>Project Summary</b></summary>
    <ul>
-      <li>Original site built in cooperation with A ZONE (*Amila Thushara*)</li>
       <li><mark>New Updates: 2022</mark></li>
       <li>New categories added</li>
       <li>Products and details updated</li>
       <li>Added Downloads area</li>
+      <li>Original site built in cooperation with A ZONE (<i>Amila Thushara</i>)</li>
    </ul>
 </details>
 
----
-
 ## Features
 
-<details><summary>
-
-#### Site
-
-</summary>
-
-* Home (to Main Landing Page)
-* Products, Gallery and Info, presented per Sub-divisions
-* Email contact with sub-areas and branches
-* Locations with info
-
+<details><summary><b>Site:</b></summary>
+   <ul>
+      <li>Home (to Main Landing Page)</li>
+      <li>Products, Gallery and Info, presented per Sub-divisions</li>
+      <li>Email contact with sub-areas and branches</li>
+      <li>Locations with info</li>
+   </ul>
 </details>
 
-<details>
-<summary>
-
-#### To-Dos
-
-</summary>
-
-* CMS Backend
-
+<details><summary><b>To-Dos</b></summary>
+   <ul>
+      <li>CMS Backend</li>
+   </ul>
 </details>
 
-<details>
-<summary open>
-
-#### Tech Stack
-
-</summary>
-
-* Built with WordPress
-* Original Theme:
-* Main Plugins:
-** Woocommerce
-** ContactForm7
-** Elementor
-** W3-Total-Cache
-** PHP Mailer
-
+<details><summary open><b>Tech Stack</b></summary>
+   <ul>
+      <li>Built with WordPress</li>
+      <li>Original Theme: Avas</li>
+      <li>Main Plugins:</li>
+         <ul>
+            <li>Elementor</li>
+            <li>ContactForm7</li>
+            <li>Woocommerce</li>
+            <li>W3-Total-Cache</li>
+            <li>PHP Mailer</li>
+         </ul>
+   </ul>
 </details>
+
 
 ---
 
