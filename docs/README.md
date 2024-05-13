@@ -9,11 +9,12 @@
 [<img src="https://raw.githubusercontent.com/vrw-GH/assets/main/repo-media/{{ siteId }}/Screenshot.png" alt="screenshot of {{ siteId }} app" width="98%">](https://{{ siteId }}.{{ siteDev }} "click to visit beta site")
 
 <details>
-   <summary>Click to read the <b>Project Summary</b></summary>
+   <summary><b>Project Summary</b> <small><i>(Click to read)</small></i></summary>
    <ul>
-     <li>Existing Project updated 2020</li>
-     <li>Added new categories</li>
-     <li>Added new products</li>
+     <li>Original site built in coorperation with A ZONE (Amila Thushara)</li>
+     <li><mark>New Updates: 2022</mark></li>
+     <li>New categories added</li>
+     <li>Products and details updated</li>
      <li>Added Downloads area</li>
    </ul>
 </details>
@@ -23,10 +24,13 @@
 ## Features
 
 <details>
-   <summary>WordPress Site</summary>
+   <summary>Site</summary>
    <ul>
-     <li>Home (to Main Landing Page)</li>
-     <li>Products, Gallery and Info, presented per Sub-divisions</li>
+      <li>Built with WordPress</li>
+      <li>Home (to Main Landing Page)</li>
+      <li>Products, Gallery and Info, presented per Sub-divisions</li>
+      <li>Email contact with sub-areas and branches</li>
+      <li>Locations with info</li>
    </ul>
 </details>
 
@@ -40,14 +44,15 @@
 <details>
    <summary>Tech Stack</summary>
    <ul>
-      <li>**Frontend:**</li>
-         <ul>
-            <li>WordPress</li>
-            <li>Theme: Avas</li>
+      <li>WordPress</li>
+      <li>Theme: Avas</li>
+      <li>Plugins: </li>
          </ul>
-      <li>**Database:**</li>
-         <ul>
-            <li>Database: MySQL</li>
+            <li>Woocommerce</li>
+            <li>ContactForm</li>
+            <li>Elementor</li>
+            <li>Total-Cache</li>
+            <li>PHP Mailer</li>
          </ul>
    </ul>
 
@@ -66,6 +71,6 @@
 <pre>
 Developer:   Victor Wright
 Client:      {{ siteId }}
-Date:        Sep 2005
+Date:        Sep 2022
 GH Page:     <a href="https://vrw-gh.github.io/{{ siteId }}/">vrw-gh.github.io/{{ siteId }}</a>
 </pre>
