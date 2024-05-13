@@ -9,7 +9,9 @@
 [<img src="https://raw.githubusercontent.com/vrw-GH/assets/main/repo-media/{{ siteId }}/Screenshot.png" alt="screenshot of {{ siteId }} app" width="98%">](https://{{ siteId }}.{{ siteDev }} "click to visit beta site")
 
 <details>
-   <summary><b>Project Summary</b> <small><i>(Click to read)</small></i></summary>
+   <summary>
+      <b>Project Summary</b> <small><i>(Click to read)</i></small>
+   </summary>
    <ul>
      <li>Original site built in coorperation with A ZONE (Amila Thushara)</li>
      <li><mark>New Updates: 2022</mark></li>
@@ -26,7 +28,6 @@
 <details>
    <summary>Site</summary>
    <ul>
-      <li>Built with WordPress</li>
       <li>Home (to Main Landing Page)</li>
       <li>Products, Gallery and Info, presented per Sub-divisions</li>
       <li>Email contact with sub-areas and branches</li>
@@ -44,14 +45,14 @@
 <details>
    <summary>Tech Stack</summary>
    <ul>
-      <li>WordPress</li>
-      <li>Theme: Avas</li>
-      <li>Plugins: </li>
+      <li>Built with WordPress</li>
+      <li>Original Theme: Avas</li>
+      <li>Main Plugins: </li>
          </ul>
             <li>Woocommerce</li>
-            <li>ContactForm</li>
+            <li>ContactForm7</li>
             <li>Elementor</li>
-            <li>Total-Cache</li>
+            <li>W3-Total-Cache</li>
             <li>PHP Mailer</li>
          </ul>
    </ul>
