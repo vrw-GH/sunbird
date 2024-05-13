@@ -8,17 +8,17 @@
 
 [<img src="https://raw.githubusercontent.com/vrw-GH/assets/main/repo-media/{{ siteId }}/Screenshot.png" alt="screenshot of {{ siteId }} app" width="98%">](https://{{ siteId }}.{{ siteDev }} "click to visit beta site")
 
-<details>
-   <summary>
-      <b>Project Summary</b> <small><i>(Click to read)</i></small>
-   </summary>
-   <ul>
-     <li>Original site built in coorperation with A ZONE (Amila Thushara)</li>
-     <li><mark>New Updates: 2022</mark></li>
-     <li>New categories added</li>
-     <li>Products and details updated</li>
-     <li>Added Downloads area</li>
-   </ul>
+<details open>
+<summary>
+
+#### Project *Summary* `(Click to read)`
+</summary>
+
+* Original site built in coorperation with A ZONE (Amila Thushara)
+* <mark>New Updates: 2022</mark>
+* New categories added
+* Products and details updated
+* Added Downloads area
 </details>
 
 ---
@@ -26,36 +26,45 @@
 ## Features
 
 <details>
-   <summary>Site</summary>
-   <ul>
-      <li>Home (to Main Landing Page)</li>
-      <li>Products, Gallery and Info, presented per Sub-divisions</li>
-      <li>Email contact with sub-areas and branches</li>
-      <li>Locations with info</li>
-   </ul>
+<summary>
+
+#### Site
+
+</summary>
+
+* Home (to Main Landing Page)
+* Products, Gallery and Info, presented per Sub-divisions
+* Email contact with sub-areas and branches
+* Locations with info
+
 </details>
 
 <details>
-   <summary>To-Dos</summary>
-   <ul>
-      <li>CMS Backend</li>
-   </ul>
+<summary>
+
+#### To-Dos
+
+</summary>
+
+* CMS Backend
+
 </details>
 
 <details>
-   <summary>Tech Stack</summary>
-   <ul>
-      <li>Built with WordPress</li>
-      <li>Original Theme: Avas</li>
-      <li>Main Plugins: </li>
-         </ul>
-            <li>Woocommerce</li>
-            <li>ContactForm7</li>
-            <li>Elementor</li>
-            <li>W3-Total-Cache</li>
-            <li>PHP Mailer</li>
-         </ul>
-   </ul>
+<summary>
+
+#### Tech Stack
+
+</summary>
+
+* Built with WordPress
+* Original Theme:
+* Main Plugins:
+** Woocommerce
+** ContactForm7
+** Elementor
+** W3-Total-Cache
+** PHP Mailer
 
 </details>
 
