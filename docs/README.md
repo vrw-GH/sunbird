@@ -9,9 +9,10 @@
 [<img src="https://raw.githubusercontent.com/vrw-GH/assets/main/repo-media/{{ siteId }}/Screenshot.png" alt="screenshot of {{ siteId }} app" width="98%">](https://{{ siteId }}.{{ siteDev }} "click to visit beta site")
 
 <details open>
-<summary>
+<summary>⎆ &#x2198;
 
-#### Project *Summary* `(Click to read)`
+#### Project *Summary*
+
 </summary>
 
 * Original site built in coorperation with A ZONE (Amila Thushara)
@@ -19,11 +20,13 @@
 * New categories added
 * Products and details updated
 * Added Downloads area
+
 </details>
 
 ---
 
-## Features
+
+## Features `(Click to read)`
 
 <details>
 <summary>
