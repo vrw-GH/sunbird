@@ -8,14 +8,15 @@
 
 [<img src="https://raw.githubusercontent.com/vrw-GH/assets/main/repo-media/{{ siteId }}/Screenshot.png" alt="screenshot of {{ siteId }} app" width="98%">](https://{{ siteId }}.{{ siteDev }} "click to visit beta site")
 
-<details open>
-<summary>⎆ &#x2198;
+*`(Click ►items to expand)`*
 
-#### Project *Summary*
+<details open><summary>
+
+#### Project Summary
 
 </summary>
 
-* Original site built in coorperation with A ZONE (Amila Thushara)
+* Original site built in coorperation with A ZONE (*Amila Thushara*)
 * <mark>New Updates: 2022</mark>
 * New categories added
 * Products and details updated
@@ -26,10 +27,9 @@
 ---
 
 
-## Features `(Click to read)`
+## Features
 
-<details>
-<summary>
+<details><summary>
 
 #### Site
 
