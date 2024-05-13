@@ -4,9 +4,11 @@
 
 # Project: {{ projectName }}
 
-## {{ projectName }}® website  (updates) - <i>(WordPress site)</i>
+## {{ projectName }}® WP website (updates)
 
 [<img src="https://raw.githubusercontent.com/vrw-GH/assets/main/repo-media/{{ siteId }}/Screenshot.png" alt="screenshot of {{ siteId }} app" width="98%">](https://{{ siteId }}.{{ siteDev }} "click to visit beta site")
+
+---
 
 *(Click on* ► *items to expand)*
 
