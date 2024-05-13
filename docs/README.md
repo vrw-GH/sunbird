@@ -4,7 +4,7 @@
 
 # Project: {{ projectName }}
 
-## {{ projectName }}® WP website (updates)
+## {{ projectName }}® website (updates)
 
 [<img src="https://raw.githubusercontent.com/vrw-GH/assets/main/repo-media/{{ siteId }}/Screenshot.png" alt="screenshot of {{ siteId }} app" width="98%">](https://{{ siteId }}.{{ siteDev }} "click to visit beta site")
 
@@ -12,7 +12,7 @@
 
 *(Click on* ► *items to expand)*
 
-<details open><summary><b>Project Summary</b></summary>
+<details open><summary><b>Project Summary</b><br></summary>
    <ul>
       <li><mark>New Updates: 2022</mark></li>
       <li>New categories added</li>
@@ -33,13 +33,13 @@
    </ul>
 </details>
 
-<details><summary><b>To-Dos</b></summary>
+<details><summary><b>To-Dos:</b></summary>
    <ul>
       <li>CMS Backend</li>
    </ul>
 </details>
 
-<details><summary open><b>Tech Stack</b></summary>
+<details><summary open><b>Tech Stack:</b></summary>
    <ul>
       <li>Built with WordPress</li>
       <li>Original Theme: Avas</li>
@@ -53,7 +53,6 @@
          </ul>
    </ul>
 </details>
-
 
 ---
 
