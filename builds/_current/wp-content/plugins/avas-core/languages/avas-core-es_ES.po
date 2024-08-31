@@ -1,0 +1,4831 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Project-Id-Version: Avas Core\n"
+"POT-Creation-Date: 2019-12-30 14:45+0600\n"
+"PO-Revision-Date: 2021-07-04 08:12+0000\n"
+"Last-Translator: \n"
+"Language-Team: Spanish (Spain)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: avas-core.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"Report-Msgid-Bugs-To: \n"
+"Language: es_ES\n"
+"X-Loco-Version: 2.5.3; wp-5.7.2"
+
+#: inc/cpt.php:33 inc/cpt.php:34 inc/cpt.php:123 inc/cpt.php:124
+msgid "Add New "
+msgstr ""
+
+#: inc/cpt.php:35 inc/cpt.php:125 inc/cpt.php:211
+msgid "New "
+msgstr ""
+
+#: inc/cpt.php:36 inc/cpt.php:126 inc/cpt.php:212
+msgid "Edit "
+msgstr ""
+
+#: inc/cpt.php:37 inc/cpt.php:127 inc/cpt.php:213
+msgid "View "
+msgstr ""
+
+#: inc/cpt.php:38 inc/cpt.php:128
+msgid "All "
+msgstr ""
+
+#: inc/cpt.php:39 inc/cpt.php:129 inc/cpt.php:215
+msgid "Search "
+msgstr ""
+
+#: inc/cpt.php:40 inc/cpt.php:130 inc/cpt.php:216
+msgid "Parent "
+msgstr ""
+
+#: inc/cpt.php:41 inc/cpt.php:42 inc/cpt.php:131 inc/cpt.php:132
+#: inc/cpt.php:217 inc/cpt.php:218
+msgid "No "
+msgstr ""
+
+#: inc/cpt.php:87 inc/cpt.php:175 inc/cpt.php:263
+msgid " Catagory"
+msgstr ""
+
+#: inc/cpt.php:209 inc/cpt.php:210 inc/meta/portfolio.php:81
+#: inc/meta/team.php:97
+msgid "Add New"
+msgstr ""
+
+#: inc/cpt.php:214
+msgid "View All"
+msgstr ""
+
+#: inc/gallery.php:33
+msgid "Add image"
+msgstr ""
+
+#: inc/gallery.php:39
+msgid "Change"
+msgstr ""
+
+#: inc/gallery.php:40 inc/meta/portfolio.php:67 inc/meta/portfolio.php:73
+#: inc/meta/portfolio.php:79 inc/meta/team.php:83 inc/meta/team.php:89
+#: inc/meta/team.php:95
+msgid "Remove"
+msgstr ""
+
+#: inc/handler.php:74
+msgid "Avas Widgets"
+msgstr ""
+
+#: inc/helper.php:267
+msgid "Select a Contact Form"
+msgstr ""
+
+#: inc/helper.php:273
+msgid "Create a Form First"
+msgstr ""
+
+#: inc/meta/author-bio.php:22
+msgid "Address"
+msgstr ""
+
+#: inc/meta/author-bio.php:25
+msgid "Please enter your address"
+msgstr ""
+
+#: inc/meta/author-bio.php:30
+#: modules/profile-carousel/widgets/profile-carousel.php:114
+#: modules/profile/widgets/profile.php:114
+#: modules/team-carousel/widgets/team-carousel.php:162
+msgid "Social Profile"
+msgstr ""
+
+#: inc/meta/author-bio.php:32 inc/meta/team.php:102
+#: modules/profile-carousel/widgets/profile-carousel.php:125
+#: modules/profile/widgets/profile.php:125
+msgid "Facebook"
+msgstr ""
+
+#: inc/meta/author-bio.php:35
+msgid "Please enter your Facebook url"
+msgstr ""
+
+#: inc/meta/author-bio.php:39 inc/meta/team.php:106
+#: modules/profile-carousel/widgets/profile-carousel.php:130
+#: modules/profile/widgets/profile.php:130
+msgid "Twitter"
+msgstr ""
+
+#: inc/meta/author-bio.php:42
+msgid "Please enter your Twitter url"
+msgstr ""
+
+#: inc/meta/author-bio.php:46 inc/meta/team.php:114
+#: modules/profile-carousel/widgets/profile-carousel.php:135
+#: modules/profile/widgets/profile.php:135
+msgid "LinkedIn"
+msgstr ""
+
+#: inc/meta/author-bio.php:49
+msgid "Please enter your LinkedIn url."
+msgstr ""
+
+#: inc/meta/author-bio.php:53 inc/meta/team.php:118
+#: modules/profile-carousel/widgets/profile-carousel.php:140
+#: modules/profile/widgets/profile.php:140
+msgid "Instagram"
+msgstr ""
+
+#: inc/meta/author-bio.php:56
+msgid "Please enter your Instagram url"
+msgstr ""
+
+#: inc/meta/portfolio.php:18
+msgid "Project Details"
+msgstr ""
+
+#: inc/meta/portfolio.php:53
+msgid "Project Title"
+msgstr ""
+
+#: inc/meta/portfolio.php:58 inc/meta/team.php:74
+#: modules/profile-carousel/widgets/profile-carousel.php:77
+#: modules/profile/widgets/profile.php:77
+#: modules/testimonial/widgets/testimonial.php:70
+msgid "Name"
+msgstr ""
+
+#: inc/meta/portfolio.php:59 modules/price-table/widgets/price-table.php:158
+#: modules/profile-carousel/widgets/profile-carousel.php:108
+#: modules/profile/widgets/profile.php:108
+msgid "Details"
+msgstr ""
+
+#: inc/meta/portfolio.php:87
+msgid "Project Completion Title"
+msgstr ""
+
+#: inc/meta/portfolio.php:88
+msgid "Ex: Completion"
+msgstr ""
+
+#: inc/meta/portfolio.php:89
+msgid "Project Completion Percentage"
+msgstr ""
+
+#: inc/meta/portfolio.php:90
+msgid "Ex: 75, do not enter %"
+msgstr ""
+
+#: inc/meta/portfolio.php:97
+msgid "Website URL"
+msgstr ""
+
+#: inc/meta/portfolio.php:98
+msgid "Example: https://google.com"
+msgstr ""
+
+#: inc/meta/portfolio.php:159
+msgid "Created Date"
+msgstr ""
+
+#: inc/meta/portfolio.php:165
+msgid "Created By"
+msgstr ""
+
+#: inc/meta/portfolio.php:173
+msgid "Website"
+msgstr ""
+
+#: inc/meta/portfolio.php:174
+msgid "Click to visit"
+msgstr ""
+
+#: inc/meta/portfolio.php:197 inc/meta/service.php:160
+msgid "Portfolio Settings"
+msgstr ""
+
+#: inc/meta/portfolio.php:225
+#: modules/call-to-action/widgets/call-to-action.php:49
+#: modules/icon-box/widgets/icon-box.php:96
+#: modules/post-list/widgets/post-list.php:76
+#: modules/post-tiled/widgets/post-tiled.php:46
+msgid "Layout"
+msgstr ""
+
+#: inc/meta/portfolio.php:227
+msgid "Boxed"
+msgstr ""
+
+#: inc/meta/portfolio.php:228
+msgid "Full Width"
+msgstr ""
+
+#: inc/meta/portfolio.php:232
+msgid "Filter"
+msgstr ""
+
+#: inc/meta/portfolio.php:234 modules/flipster/widgets/flipster.php:130
+#: modules/flipster/widgets/flipster.php:149
+msgid "Enable"
+msgstr ""
+
+#: inc/meta/portfolio.php:235 modules/flipster/widgets/flipster.php:134
+#: modules/flipster/widgets/flipster.php:153
+msgid "Disable"
+msgstr ""
+
+#: inc/meta/portfolio.php:239 modules/portfolio/widgets/portfolio.php:105
+#: modules/profile/widgets/profile.php:222
+msgid "Columns"
+msgstr ""
+
+#: inc/meta/portfolio.php:241
+msgid "Three"
+msgstr ""
+
+#: inc/meta/portfolio.php:242
+msgid "Four"
+msgstr ""
+
+#: inc/meta/portfolio.php:243
+msgid "Six"
+msgstr ""
+
+#: inc/meta/portfolio.php:244
+msgid "Two"
+msgstr ""
+
+#: inc/meta/portfolio.php:248 inc/meta/service.php:184
+msgid "Display Type"
+msgstr ""
+
+#: inc/meta/portfolio.php:250 modules/portfolio/widgets/portfolio.php:95
+msgid "Masonry"
+msgstr ""
+
+#: inc/meta/portfolio.php:251 modules/portfolio/widgets/portfolio.php:96
+msgid "Grid Horizontal"
+msgstr ""
+
+#: inc/meta/portfolio.php:252 modules/portfolio/widgets/portfolio.php:97
+msgid "Grid Vertical"
+msgstr ""
+
+#: inc/meta/portfolio.php:256
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:159
+#: modules/portfolio/widgets/portfolio.php:243
+#: modules/post-carousel/widgets/post-carousel.php:148
+#: modules/post-grid/widgets/post-grid.php:253
+#: modules/post-list/widgets/post-list.php:187
+#: modules/post-tiled/widgets/post-tiled.php:162
+#: modules/services-carousel/widgets/services-carousel.php:165
+#: modules/services/widgets/services.php:184
+#: modules/team-carousel/widgets/team-carousel.php:126
+#: modules/team/widgets/team.php:220
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:102
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:102
+msgid "Category"
+msgstr ""
+
+#: inc/meta/portfolio.php:258 inc/meta/portfolio.php:265
+#: inc/meta/portfolio.php:272 inc/meta/portfolio.php:279
+#: inc/meta/portfolio.php:286 inc/meta/service.php:193 inc/meta/service.php:200
+#: inc/meta/service.php:207 inc/meta/service.php:214
+#: modules/countdown/widgets/countdown.php:99
+#: modules/countdown/widgets/countdown.php:119
+#: modules/countdown/widgets/countdown.php:150
+#: modules/countdown/widgets/countdown.php:181
+#: modules/countdown/widgets/countdown.php:212
+#: modules/testimonial/widgets/testimonial.php:193
+#: modules/timeline/widgets/timeline.php:109
+#: modules/timeline/widgets/timeline.php:396
+#: modules/timeline/widgets/timeline.php:418
+#: modules/timeline/widgets/timeline.php:436
+#: modules/timeline/widgets/timeline.php:454
+msgid "Show"
+msgstr ""
+
+#: inc/meta/portfolio.php:259 inc/meta/portfolio.php:266
+#: inc/meta/portfolio.php:273 inc/meta/portfolio.php:280
+#: inc/meta/portfolio.php:287 inc/meta/service.php:194 inc/meta/service.php:201
+#: inc/meta/service.php:208 inc/meta/service.php:215
+#: modules/countdown/widgets/countdown.php:103
+#: modules/countdown/widgets/countdown.php:123
+#: modules/countdown/widgets/countdown.php:154
+#: modules/countdown/widgets/countdown.php:185
+#: modules/countdown/widgets/countdown.php:216
+#: modules/testimonial/widgets/testimonial.php:197
+#: modules/timeline/widgets/timeline.php:113
+#: modules/timeline/widgets/timeline.php:400
+#: modules/timeline/widgets/timeline.php:422
+#: modules/timeline/widgets/timeline.php:440
+#: modules/timeline/widgets/timeline.php:458
+msgid "Hide"
+msgstr ""
+
+#: inc/meta/portfolio.php:263 inc/meta/service.php:198 inc/meta/team.php:69
+#: inc/widgets/posts-carousel-widget.php:217
+#: modules/call-to-action/widgets/call-to-action.php:125
+#: modules/courses-carousel/widgets/courses-carousel.php:85
+#: modules/courses/widgets/courses.php:103
+#: modules/features/widgets/features.php:139
+#: modules/features/widgets/features.php:189
+#: modules/icon-box/widgets/icon-box.php:211
+#: modules/image-box/widgets/image-box.php:96
+#: modules/image-hover/widgets/image-hover.php:105
+#: modules/news-ticker/widgets/news-ticker.php:128
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:88
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:138
+#: modules/portfolio/widgets/portfolio.php:163
+#: modules/portfolio/widgets/portfolio.php:207
+#: modules/post-carousel/widgets/post-carousel.php:116
+#: modules/post-carousel/widgets/post-carousel.php:166
+#: modules/post-grid/widgets/post-grid.php:132
+#: modules/post-grid/widgets/post-grid.php:223
+#: modules/post-list/widgets/post-list.php:121
+#: modules/post-list/widgets/post-list.php:156
+#: modules/post-tiled/widgets/post-tiled.php:136
+#: modules/post-tiled/widgets/post-tiled.php:181
+#: modules/price-menu/widgets/price-menu.php:67
+#: modules/price-menu/widgets/price-menu.php:73
+#: modules/price-menu/widgets/price-menu.php:74
+#: modules/price-menu/widgets/price-menu.php:341
+#: modules/services-carousel/widgets/services-carousel.php:88
+#: modules/services-carousel/widgets/services-carousel.php:146
+#: modules/services/widgets/services.php:125
+#: modules/services/widgets/services.php:148 modules/table/widgets/table.php:64
+#: modules/team-carousel/widgets/team-carousel.php:87
+#: modules/team-carousel/widgets/team-carousel.php:107
+#: modules/team/widgets/team.php:158 modules/team/widgets/team.php:184
+#: modules/timeline/widgets/timeline.php:134
+#: modules/timeline/widgets/timeline.php:289
+#: modules/timeline/widgets/timeline.php:414
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:101
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:101
+msgid "Title"
+msgstr ""
+
+#: inc/meta/portfolio.php:270 inc/meta/service.php:205
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:180
+#: modules/post-carousel/widgets/post-carousel.php:197
+#: modules/post-grid/widgets/post-grid.php:307
+#: modules/services-carousel/widgets/services-carousel.php:183
+#: modules/timeline/widgets/timeline.php:432
+msgid "Excerpt"
+msgstr ""
+
+#: inc/meta/portfolio.php:277
+msgid "Enlarge"
+msgstr ""
+
+#: inc/meta/portfolio.php:284 modules/heading/widgets/heading.php:131
+#: modules/price-menu/widgets/price-menu.php:139
+msgid "Link"
+msgstr ""
+
+#: inc/meta/portfolio.php:291
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:222
+#: modules/portfolio/widgets/portfolio.php:281
+msgid "Popup"
+msgstr ""
+
+#: inc/meta/portfolio.php:293
+msgid "Without Content"
+msgstr ""
+
+#: inc/meta/portfolio.php:294
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:227
+#: modules/portfolio/widgets/portfolio.php:286
+msgid "With Content"
+msgstr ""
+
+#: inc/meta/portfolio.php:298
+#: modules/courses-carousel/widgets/courses-carousel.php:143
+#: modules/instagram-carousel/widgets/instagram-carousel.php:172
+#: modules/news-ticker/widgets/news-ticker.php:184
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:300
+#: modules/post-carousel/widgets/post-carousel.php:343
+#: modules/profile-carousel/widgets/profile-carousel.php:289
+#: modules/services-carousel/widgets/services-carousel.php:286
+#: modules/team-carousel/widgets/team-carousel.php:222
+#: modules/testimonial/widgets/testimonial.php:249
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:243
+msgid "Gutter"
+msgstr ""
+
+#: inc/meta/portfolio.php:299
+msgid "Number only, Example: 20"
+msgstr ""
+
+#: inc/meta/portfolio.php:303 inc/meta/service.php:219
+msgid "Item per page"
+msgstr ""
+
+#: inc/meta/portfolio.php:304
+msgid "Default 12. Enter -1 to show all"
+msgstr ""
+
+#: inc/meta/post.php:21
+msgid "Video Option"
+msgstr ""
+
+#: inc/meta/post.php:46
+msgid ""
+"Please enter Youtube video URL. You need to choose post format as Video."
+msgstr ""
+
+#: inc/meta/service.php:18
+msgid "Brochure Details"
+msgstr ""
+
+#: inc/meta/service.php:40
+msgid "Brochure Title"
+msgstr ""
+
+#: inc/meta/service.php:41
+msgid "Please enter title here ex: Our Brochure etc"
+msgstr ""
+
+#: inc/meta/service.php:50
+msgid "Brochure Description"
+msgstr ""
+
+#: inc/meta/service.php:51
+msgid "Please enter description here"
+msgstr ""
+
+#: inc/meta/service.php:67
+msgid "Please click Upload Image button to upload Brochure image."
+msgstr ""
+
+#: inc/meta/service.php:68
+msgid "Upload Image"
+msgstr ""
+
+#: inc/meta/service.php:70
+msgid "Remove Image"
+msgstr ""
+
+#: inc/meta/service.php:82
+msgid "Please click Upload File button to upload Brochure file"
+msgstr ""
+
+#: inc/meta/service.php:83
+msgid "Upload File"
+msgstr ""
+
+#: inc/meta/service.php:85
+msgid "Remove File"
+msgstr ""
+
+#: inc/meta/service.php:92
+msgid "Form Shortcode"
+msgstr ""
+
+#: inc/meta/service.php:93
+msgid "Please enter shortcode here ex: Contact Form 7 shortcode etc"
+msgstr ""
+
+#: inc/meta/service.php:186
+#: modules/services-carousel/widgets/services-carousel.php:119
+#: modules/services/widgets/services.php:82
+msgid "Grid"
+msgstr ""
+
+#: inc/meta/service.php:187
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:119
+#: modules/services-carousel/widgets/services-carousel.php:120
+#: modules/services/widgets/services.php:83
+msgid "Overlay"
+msgstr ""
+
+#: inc/meta/service.php:191
+msgid "Category(For Grid only)"
+msgstr ""
+
+#: inc/meta/service.php:212
+msgid "Link(For Overlay only)"
+msgstr ""
+
+#: inc/meta/service.php:220
+msgid "Default 9. Enter -1 to show all"
+msgstr ""
+
+#: inc/meta/team.php:14
+msgid "Team Profile"
+msgstr ""
+
+#: inc/meta/team.php:75
+msgid "Value"
+msgstr ""
+
+#: inc/meta/team.php:110
+#: modules/profile-carousel/widgets/profile-carousel.php:160
+#: modules/profile/widgets/profile.php:160
+msgid "Youtube"
+msgstr ""
+
+#: inc/meta/team.php:122
+#: modules/animated-heading/widgets/animated-heading.php:223
+#: modules/button/widgets/button.php:93 modules/heading/widgets/heading.php:138
+#: modules/profile-carousel/widgets/profile-carousel.php:84
+#: modules/profile/widgets/profile.php:84
+msgid "Link URL"
+msgstr ""
+
+#: inc/meta/team.php:126
+msgid "Link Text"
+msgstr ""
+
+#: inc/social-media.php:134 inc/social-media.php:174
+msgid "Share on"
+msgstr "Compartir en"
+
+#: inc/widgets/category-widget.php:18
+msgid "- Avas | Categories"
+msgstr ""
+
+#: inc/widgets/category-widget.php:20
+msgid "A list or dropdown of categories."
+msgstr ""
+
+#: inc/widgets/category-widget.php:70
+msgid "Select Category"
+msgstr ""
+
+#: inc/widgets/category-widget.php:127 inc/widgets/posts-gallery-widget.php:90
+#: inc/widgets/recent-post-widget.php:203 inc/widgets/tag-widget.php:117
+msgid "Title:"
+msgstr ""
+
+#: inc/widgets/category-widget.php:130 inc/widgets/posts-gallery-widget.php:97
+#: inc/widgets/recent-post-widget.php:217
+#: modules/features/widgets/features.php:60
+msgid "Post Type"
+msgstr ""
+
+#: inc/widgets/category-widget.php:156
+msgid "Number of category to show:"
+msgstr ""
+
+#: inc/widgets/category-widget.php:161
+msgid "Show post counts"
+msgstr ""
+
+#: inc/widgets/posts-carousel-widget.php:17
+msgid "- Avas | Posts Carousel"
+msgstr ""
+
+#: inc/widgets/posts-carousel-widget.php:19
+msgid "Posts Carousel."
+msgstr ""
+
+#: inc/widgets/posts-carousel-widget.php:197
+msgid "Posts Carousel"
+msgstr ""
+
+#: inc/widgets/posts-carousel-widget.php:222
+#: inc/widgets/recent-post-widget.php:208
+msgid "Number of posts to show:"
+msgstr ""
+
+#: inc/widgets/posts-carousel-widget.php:226
+msgid "Title Length"
+msgstr ""
+
+#: inc/widgets/posts-carousel-widget.php:230
+#: modules/table/widgets/table.php:170
+msgid "Column"
+msgstr ""
+
+#: inc/widgets/posts-carousel-widget.php:234
+#: inc/widgets/posts-gallery-widget.php:124
+#: modules/courses-carousel/widgets/courses-carousel.php:79
+#: modules/courses/widgets/courses.php:97
+#: modules/features/widgets/features.php:133
+#: modules/news-ticker/widgets/news-ticker.php:122
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:82
+#: modules/portfolio/widgets/portfolio.php:157
+#: modules/post-carousel/widgets/post-carousel.php:110
+#: modules/post-grid/widgets/post-grid.php:126
+#: modules/post-list/widgets/post-list.php:115
+#: modules/post-tiled/widgets/post-tiled.php:130
+#: modules/services-carousel/widgets/services-carousel.php:82
+#: modules/services/widgets/services.php:119
+#: modules/team-carousel/widgets/team-carousel.php:81
+#: modules/team/widgets/team.php:152 modules/timeline/widgets/timeline.php:283
+msgid "Order By"
+msgstr ""
+
+#: inc/widgets/posts-carousel-widget.php:259
+#: inc/widgets/recent-post-widget.php:276
+msgid "Filter by Categories"
+msgstr ""
+
+#: inc/widgets/posts-carousel-widget.php:269
+msgid "Category color"
+msgstr ""
+
+#: inc/widgets/posts-carousel-widget.php:273
+#: inc/widgets/recent-post-widget.php:295
+msgid "Title color"
+msgstr ""
+
+#: inc/widgets/posts-carousel-widget.php:277
+#: inc/widgets/recent-post-widget.php:299
+msgid "Title hover color"
+msgstr ""
+
+#: inc/widgets/posts-carousel-widget.php:281
+msgid "Post Meta Color"
+msgstr ""
+
+#: inc/widgets/posts-carousel-widget.php:286
+#: inc/widgets/recent-post-widget.php:288
+msgid "Display post date"
+msgstr ""
+
+#: inc/widgets/posts-carousel-widget.php:290
+msgid "Display post views"
+msgstr ""
+
+#: inc/widgets/posts-gallery-widget.php:16
+msgid "- Avas | Posts Gallery"
+msgstr ""
+
+#: inc/widgets/posts-gallery-widget.php:18
+msgid "Display posts thumbnail gallery."
+msgstr ""
+
+#: inc/widgets/posts-gallery-widget.php:78
+msgid "Posts Gallery"
+msgstr ""
+
+#: inc/widgets/posts-gallery-widget.php:93
+msgid "Number of project to show:"
+msgstr ""
+
+#: inc/widgets/recent-post-widget.php:18
+msgid "- Avas | Recent Posts"
+msgstr ""
+
+#: inc/widgets/recent-post-widget.php:20
+msgid "Display recent/popular posts with thumbnail."
+msgstr ""
+
+#: inc/widgets/recent-post-widget.php:181
+msgid "Recent posts"
+msgstr ""
+
+#: inc/widgets/recent-post-widget.php:212
+msgid "Title Length:"
+msgstr ""
+
+#: inc/widgets/recent-post-widget.php:244
+msgid "Order By (Popular Posts will not work for custom post type)"
+msgstr ""
+
+#: inc/widgets/recent-post-widget.php:278
+msgid "All categories"
+msgstr ""
+
+#: inc/widgets/recent-post-widget.php:292
+msgid "Display post views (Will not work for custom post type)"
+msgstr ""
+
+#: inc/widgets/recent-post-widget.php:303
+msgid "Meta color"
+msgstr ""
+
+#: inc/widgets/tag-widget.php:18
+msgid "- Avas | Tags"
+msgstr ""
+
+#: inc/widgets/tag-widget.php:20
+msgid "A cloud of your most used tags."
+msgstr ""
+
+#: inc/widgets/tag-widget.php:131
+msgid "Show tag counts"
+msgstr ""
+
+#: inc/widgets/tag-widget.php:138
+msgid ""
+"The tag cloud will not be displayed since there are no taxonomies that "
+"support the tag cloud widget."
+msgstr ""
+
+#: inc/widgets/tag-widget.php:156
+msgid "Taxonomy:"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:22
+msgid "Avas Animated Heading"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:44
+#: modules/flipster/widgets/flipster.php:44
+#: modules/image-box/widgets/image-box.php:90
+#: modules/image-box/widgets/image-box.php:391
+#: modules/popup/widgets/popup.php:57
+#: modules/price-menu/widgets/price-menu.php:42
+#: modules/price-menu/widgets/price-menu.php:313
+#: modules/profile-carousel/widgets/profile-carousel.php:42
+#: modules/profile/widgets/profile.php:42 modules/table/widgets/table.php:200
+#: modules/timeline/widgets/timeline.php:141
+msgid "Content"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:50
+#: modules/button/widgets/button.php:47 modules/button/widgets/button.php:176
+#: modules/circle-progress-bar/widgets/circle-progress-bar.php:116
+#: modules/flip-box/widgets/flip-box.php:291
+#: modules/icon-box/widgets/icon-box.php:361
+#: modules/image-hover/widgets/image-hover.php:146
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:107
+#: modules/portfolio/widgets/portfolio.php:91
+#: modules/price-menu/widgets/price-menu.php:865
+#: modules/services-carousel/widgets/services-carousel.php:115
+#: modules/services/widgets/services.php:78
+msgid "Style"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:53
+msgid "Typed"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:54
+msgid "Animated"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:62
+msgid "Type Speed"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:73
+msgid "Start Delay"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:86
+msgid "Back Speed"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:98
+msgid "Back Delay"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:110
+msgid "Animation"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:113
+#: modules/price-menu/widgets/price-menu.php:406
+msgid "None"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:114
+msgid "Fade In"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:115
+msgid "Fade In Up"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:116
+msgid "Fade In Down"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:117
+msgid "Fade In Left"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:118
+msgid "Fade In Right"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:119
+#: modules/flip-box/widgets/flip-box.php:51
+msgid "Zoom In"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:120
+msgid "Zoom In Up"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:121
+msgid "Zoom In Down"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:122
+msgid "Zoom In Left"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:123
+msgid "Zoom In Right"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:124
+msgid "Bounce In"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:125
+msgid "Bounce In Up"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:126
+msgid "Bounce In Down"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:127
+msgid "Bounce In Left"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:128
+msgid "Bounce In Right"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:129
+msgid "Slide In"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:130
+msgid "Slide In Up"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:131
+msgid "Slide In Down"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:132
+msgid "Slide In Left"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:133
+msgid "Slide In Right"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:134
+msgid "Rotate In"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:135
+msgid "Rotate In Up Left"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:136
+msgid "Rotate In Up Right"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:137
+msgid "Rotate In Down Left"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:138
+msgid "Rotate In Down Right"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:139
+msgid "Bounce"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:140
+msgid "Flash"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:141
+msgid "Pulse"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:142
+msgid "Rubber Band"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:143
+msgid "Shake"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:144
+msgid "Head Shake"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:145
+msgid "Swing"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:146
+msgid "Tada"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:147
+msgid "Wobble"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:148
+msgid "Jello"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:149
+msgid "Light Speed In"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:150
+msgid "Roll In"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:161
+#: modules/circle-progress-bar/widgets/circle-progress-bar.php:72
+msgid "Delay"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:173
+#: modules/animated-heading/widgets/animated-heading.php:342
+#: modules/circle-progress-bar/widgets/circle-progress-bar.php:80
+msgid "Before Text"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:176
+msgid "This is"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:184
+#: modules/animated-heading/widgets/animated-heading.php:414
+msgid "Animated Text"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:187
+msgid "Animated, Typing, Dynamic"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:193
+#: modules/animated-heading/widgets/animated-heading.php:486
+#: modules/circle-progress-bar/widgets/circle-progress-bar.php:94
+msgid "After Text"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:196
+#: modules/heading/widgets/heading.php:79
+#: modules/price-table/widgets/price-table.php:111
+msgid "Heading"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:202
+#: modules/heading/widgets/heading.php:112
+#: modules/icon-box/widgets/icon-box.php:223
+#: modules/image-box/widgets/image-box.php:106
+msgid "HTML Tag"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:232
+#: modules/button/widgets/button.php:137
+#: modules/flip-box/widgets/flip-box.php:262
+#: modules/flipster/widgets/flipster.php:196
+#: modules/heading/widgets/heading.php:151
+#: modules/image-box/widgets/image-box.php:154
+#: modules/price-menu/widgets/price-menu.php:170
+#: modules/profile-carousel/widgets/profile-carousel.php:222
+#: modules/profile/widgets/profile.php:238 modules/table/widgets/table.php:250
+msgid "Alignment"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:236
+#: modules/button/widgets/button.php:141
+#: modules/call-to-action/widgets/call-to-action.php:79
+#: modules/flip-box/widgets/flip-box.php:47
+#: modules/flip-box/widgets/flip-box.php:267
+#: modules/flipster/widgets/flipster.php:201
+#: modules/heading/widgets/heading.php:156
+#: modules/icon-box/widgets/icon-box.php:114
+#: modules/image-box/widgets/image-box.php:158
+#: modules/popup/widgets/popup.php:168
+#: modules/portfolio/widgets/portfolio.php:369
+#: modules/price-menu/widgets/price-menu.php:174
+#: modules/profile-carousel/widgets/profile-carousel.php:226
+#: modules/profile/widgets/profile.php:242 modules/table/widgets/table.php:256
+#: modules/table/widgets/table.php:409 modules/table/widgets/table.php:585
+msgid "Left"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:240
+#: modules/button/widgets/button.php:145
+#: modules/call-to-action/widgets/call-to-action.php:80
+#: modules/flip-box/widgets/flip-box.php:271
+#: modules/flipster/widgets/flipster.php:205
+#: modules/heading/widgets/heading.php:160
+#: modules/icon-box/widgets/icon-box.php:118
+#: modules/image-box/widgets/image-box.php:162
+#: modules/popup/widgets/popup.php:172
+#: modules/portfolio/widgets/portfolio.php:373
+#: modules/price-menu/widgets/price-menu.php:178
+#: modules/price-menu/widgets/price-menu.php:839
+#: modules/profile-carousel/widgets/profile-carousel.php:230
+#: modules/profile/widgets/profile.php:246 modules/table/widgets/table.php:260
+#: modules/table/widgets/table.php:413 modules/table/widgets/table.php:589
+msgid "Center"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:244
+#: modules/button/widgets/button.php:149
+#: modules/call-to-action/widgets/call-to-action.php:81
+#: modules/flip-box/widgets/flip-box.php:48
+#: modules/flip-box/widgets/flip-box.php:275
+#: modules/flipster/widgets/flipster.php:209
+#: modules/heading/widgets/heading.php:164
+#: modules/icon-box/widgets/icon-box.php:122
+#: modules/image-box/widgets/image-box.php:166
+#: modules/popup/widgets/popup.php:176
+#: modules/portfolio/widgets/portfolio.php:377
+#: modules/price-menu/widgets/price-menu.php:182
+#: modules/profile-carousel/widgets/profile-carousel.php:234
+#: modules/profile/widgets/profile.php:250 modules/table/widgets/table.php:264
+#: modules/table/widgets/table.php:417 modules/table/widgets/table.php:593
+msgid "Right"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:260
+msgid "Default Styles"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:267
+#: modules/call-to-action/widgets/call-to-action.php:423
+#: modules/call-to-action/widgets/call-to-action.php:476
+#: modules/contact-form-seven/widgets/contact-form-seven.php:280
+#: modules/contact-form-seven/widgets/contact-form-seven.php:367
+#: modules/popup/widgets/popup.php:254
+#: modules/price-menu/widgets/price-menu.php:531
+msgid "Text Color"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:277
+#: modules/popup/widgets/popup.php:288
+msgid "Text Hover Color"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:287
+msgid "Text Background Color"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:318
+#: modules/animated-heading/widgets/animated-heading.php:390
+#: modules/animated-heading/widgets/animated-heading.php:462
+#: modules/animated-heading/widgets/animated-heading.php:534
+#: modules/button/widgets/button.php:245
+#: modules/call-to-action/widgets/call-to-action.php:229
+#: modules/call-to-action/widgets/call-to-action.php:388
+#: modules/contact-form-seven/widgets/contact-form-seven.php:204
+#: modules/contact-form-seven/widgets/contact-form-seven.php:335
+#: modules/countdown/widgets/countdown.php:275
+#: modules/flip-box/widgets/flip-box.php:366
+#: modules/icon-box/widgets/icon-box.php:428
+#: modules/icon-box/widgets/icon-box.php:538
+#: modules/news-ticker/widgets/news-ticker.php:329
+#: modules/post-carousel/widgets/post-carousel.php:508
+#: modules/post-grid/widgets/post-grid.php:377
+#: modules/post-grid/widgets/post-grid.php:465
+#: modules/post-tiled/widgets/post-tiled.php:270
+#: modules/price-menu/widgets/price-menu.php:267
+#: modules/price-menu/widgets/price-menu.php:324
+#: modules/price-menu/widgets/price-menu.php:750
+#: modules/price-table/widgets/price-table.php:257
+#: modules/profile-carousel/widgets/profile-carousel.php:480
+#: modules/profile/widgets/profile.php:319 modules/table/widgets/table.php:309
+#: modules/table/widgets/table.php:503
+#: modules/testimonial/widgets/testimonial.php:437
+msgid "Padding"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:329
+#: modules/animated-heading/widgets/animated-heading.php:401
+#: modules/animated-heading/widgets/animated-heading.php:473
+#: modules/animated-heading/widgets/animated-heading.php:545
+#: modules/call-to-action/widgets/call-to-action.php:241
+#: modules/call-to-action/widgets/call-to-action.php:400
+#: modules/news-ticker/widgets/news-ticker.php:340
+#: modules/post-carousel/widgets/post-carousel.php:519
+#: modules/price-menu/widgets/price-menu.php:738
+#: modules/profile-carousel/widgets/profile-carousel.php:491
+#: modules/profile/widgets/profile.php:330
+#: modules/testimonial/widgets/testimonial.php:448
+msgid "Margin"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:349
+#: modules/circle-progress-bar/widgets/circle-progress-bar.php:145
+msgid "Before Text Color"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:359
+msgid "Before Text Background Color"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:421
+msgid "Animated Text Color"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:431
+msgid "Animated Text Background Color"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:493
+#: modules/circle-progress-bar/widgets/circle-progress-bar.php:225
+msgid "After Text Color"
+msgstr ""
+
+#: modules/animated-heading/widgets/animated-heading.php:503
+msgid "After Text Background Color"
+msgstr ""
+
+#: modules/button/widgets/button.php:22
+msgid "Avas Button"
+msgstr ""
+
+#: modules/button/widgets/button.php:41
+#: modules/call-to-action/widgets/call-to-action.php:42
+#: modules/circle-progress-bar/widgets/circle-progress-bar.php:47
+#: modules/contact-form-seven/widgets/contact-form-seven.php:60
+#: modules/countdown/widgets/countdown.php:49
+#: modules/courses-carousel/widgets/courses-carousel.php:41
+#: modules/courses/widgets/courses.php:43
+#: modules/features/widgets/features.php:40
+#: modules/flip-box/widgets/flip-box.php:36
+#: modules/flipster/widgets/flipster.php:88
+#: modules/heading/widgets/heading.php:41
+#: modules/icon-box/widgets/icon-box.php:44
+#: modules/image-hover/widgets/image-hover.php:47
+#: modules/news-ticker/widgets/news-ticker.php:42
+#: modules/popup/widgets/popup.php:47
+#: modules/portfolio/widgets/portfolio.php:42
+#: modules/post-grid/widgets/post-grid.php:40
+#: modules/post-list/widgets/post-list.php:40
+#: modules/post-tiled/widgets/post-tiled.php:40
+#: modules/price-table/widgets/price-table.php:41
+#: modules/profile-carousel/widgets/profile-carousel.php:251
+#: modules/services/widgets/services.php:41 modules/team/widgets/team.php:41
+#: modules/timeline/widgets/timeline.php:43
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:42
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:42
+msgid "Settings"
+msgstr ""
+
+#: modules/button/widgets/button.php:50
+#: modules/icon-box/widgets/icon-box.php:99
+#: modules/post-list/widgets/post-list.php:79
+#: modules/price-menu/widgets/price-menu.php:158
+msgid "Style 1"
+msgstr ""
+
+#: modules/button/widgets/button.php:51
+#: modules/icon-box/widgets/icon-box.php:100
+#: modules/post-list/widgets/post-list.php:80
+#: modules/price-menu/widgets/price-menu.php:159
+msgid "Style 2"
+msgstr ""
+
+#: modules/button/widgets/button.php:52
+#: modules/icon-box/widgets/icon-box.php:101
+#: modules/post-list/widgets/post-list.php:81
+#: modules/price-menu/widgets/price-menu.php:160
+msgid "Style 3"
+msgstr ""
+
+#: modules/button/widgets/button.php:53
+#: modules/post-list/widgets/post-list.php:82
+#: modules/price-menu/widgets/price-menu.php:161
+msgid "Style 4"
+msgstr ""
+
+#: modules/button/widgets/button.php:54
+#: modules/price-menu/widgets/price-menu.php:162
+msgid "Style 5"
+msgstr ""
+
+#: modules/button/widgets/button.php:70
+#: modules/call-to-action/widgets/call-to-action.php:145
+#: modules/icon-box/widgets/icon-box.php:282
+#: modules/image-box/widgets/image-box.php:208
+#: modules/popup/widgets/popup.php:103
+#: modules/price-table/widgets/price-table.php:195
+#: modules/timeline/widgets/timeline.php:204
+msgid "Button Text"
+msgstr ""
+
+#: modules/button/widgets/button.php:72
+msgid "HOVER ME"
+msgstr ""
+
+#: modules/button/widgets/button.php:78
+msgid "Hover Text"
+msgstr ""
+
+#: modules/button/widgets/button.php:80
+msgid "CLICK ME"
+msgstr ""
+
+#: modules/button/widgets/button.php:105
+#: modules/price-menu/widgets/price-menu.php:714
+#: modules/table/widgets/table.php:224
+msgid "Width"
+msgstr ""
+
+#: modules/button/widgets/button.php:185
+#: modules/call-to-action/widgets/call-to-action.php:418
+#: modules/contact-form-seven/widgets/contact-form-seven.php:273
+#: modules/icon-box/widgets/icon-box.php:370
+#: modules/image-box/widgets/image-box.php:497
+#: modules/popup/widgets/popup.php:241
+#: modules/price-table/widgets/price-table.php:537
+#: modules/table/widgets/table.php:321 modules/table/widgets/table.php:443
+msgid "Normal"
+msgstr ""
+
+#: modules/button/widgets/button.php:191 modules/button/widgets/button.php:265
+#: modules/call-to-action/widgets/call-to-action.php:315
+#: modules/call-to-action/widgets/call-to-action.php:343
+#: modules/call-to-action/widgets/call-to-action.php:559
+#: modules/circle-progress-bar/widgets/circle-progress-bar.php:124
+#: modules/flipster/widgets/flipster.php:178
+#: modules/price-menu/widgets/price-menu.php:349
+#: modules/price-menu/widgets/price-menu.php:561
+#: modules/price-menu/widgets/price-menu.php:640
+#: modules/price-menu/widgets/price-menu.php:887
+#: modules/table/widgets/table.php:326 modules/table/widgets/table.php:361
+msgid "Color"
+msgstr ""
+
+#: modules/button/widgets/button.php:201 modules/button/widgets/button.php:275
+#: modules/call-to-action/widgets/call-to-action.php:97
+#: modules/call-to-action/widgets/call-to-action.php:217
+#: modules/call-to-action/widgets/call-to-action.php:435
+#: modules/call-to-action/widgets/call-to-action.php:488
+#: modules/circle-progress-bar/widgets/circle-progress-bar.php:134
+#: modules/contact-form-seven/widgets/contact-form-seven.php:162
+#: modules/contact-form-seven/widgets/contact-form-seven.php:292
+#: modules/contact-form-seven/widgets/contact-form-seven.php:378
+#: modules/countdown/widgets/countdown.php:248
+#: modules/popup/widgets/popup.php:264
+#: modules/price-menu/widgets/price-menu.php:236
+#: modules/price-menu/widgets/price-menu.php:546
+#: modules/price-menu/widgets/price-menu.php:702
+#: modules/table/widgets/table.php:337 modules/table/widgets/table.php:372
+#: modules/team/widgets/team.php:291
+msgid "Background Color"
+msgstr ""
+
+#: modules/button/widgets/button.php:225
+#: modules/call-to-action/widgets/call-to-action.php:262
+#: modules/call-to-action/widgets/call-to-action.php:456
+#: modules/contact-form-seven/widgets/contact-form-seven.php:246
+#: modules/contact-form-seven/widgets/contact-form-seven.php:315
+#: modules/countdown/widgets/countdown.php:294
+#: modules/flip-box/widgets/flip-box.php:344
+#: modules/image-box/widgets/image-box.php:302
+#: modules/image-hover/widgets/image-hover.php:168
+#: modules/price-menu/widgets/price-menu.php:290
+#: modules/price-menu/widgets/price-menu.php:773
+#: modules/price-table/widgets/price-table.php:239
+#: modules/profile-carousel/widgets/profile-carousel.php:455
+#: modules/profile/widgets/profile.php:294
+#: modules/profile/widgets/profile.php:482
+#: modules/testimonial/widgets/testimonial.php:412
+msgid "Border Radius"
+msgstr ""
+
+#: modules/button/widgets/button.php:259
+#: modules/call-to-action/widgets/call-to-action.php:471
+#: modules/contact-form-seven/widgets/contact-form-seven.php:360
+#: modules/icon-box/widgets/icon-box.php:658
+#: modules/image-box/widgets/image-box.php:578
+#: modules/popup/widgets/popup.php:282
+#: modules/price-table/widgets/price-table.php:613
+#: modules/table/widgets/table.php:356 modules/table/widgets/table.php:515
+msgid "Hover"
+msgstr ""
+
+#: modules/call-to-action/widgets/call-to-action.php:26
+msgid "Avas Call To Action"
+msgstr ""
+
+#: modules/call-to-action/widgets/call-to-action.php:54
+msgid "Basic"
+msgstr ""
+
+#: modules/call-to-action/widgets/call-to-action.php:55
+msgid "Flex Grid"
+msgstr ""
+
+#: modules/call-to-action/widgets/call-to-action.php:56
+msgid "Flex Grid with Icon"
+msgstr ""
+
+#: modules/call-to-action/widgets/call-to-action.php:63
+#: modules/flip-box/widgets/flip-box.php:77
+#: modules/flip-box/widgets/flip-box.php:91
+#: modules/heading/widgets/heading.php:47
+#: modules/heading/widgets/heading.php:452
+#: modules/icon-box/widgets/icon-box.php:54
+#: modules/icon-box/widgets/icon-box.php:68
+#: modules/price-table/widgets/price-table.php:77
+#: modules/price-table/widgets/price-table.php:164
+#: modules/table/widgets/table.php:89 modules/table/widgets/table.php:104
+#: modules/timeline/widgets/timeline.php:162
+#: modules/timeline/widgets/timeline.php:337
+#: modules/timeline/widgets/timeline.php:376
+msgid "Icon"
+msgstr ""
+
+#: modules/call-to-action/widgets/call-to-action.php:74
+#: modules/circle-progress-bar/widgets/circle-progress-bar.php:163
+#: modules/circle-progress-bar/widgets/circle-progress-bar.php:203
+#: modules/circle-progress-bar/widgets/circle-progress-bar.php:243
+#: modules/icon-box/widgets/icon-box.php:109
+#: modules/profile-carousel/widgets/profile-carousel.php:93
+#: modules/profile/widgets/profile.php:93
+msgid "Position"
+msgstr ""
+
+#: modules/call-to-action/widgets/call-to-action.php:92
+msgid "Background Style"
+msgstr ""
+
+#: modules/call-to-action/widgets/call-to-action.php:98
+#: modules/call-to-action/widgets/call-to-action.php:108
+msgid "Background Image"
+msgstr ""
+
+#: modules/call-to-action/widgets/call-to-action.php:99
+msgid "Background Fixed Image"
+msgstr ""
+
+#: modules/call-to-action/widgets/call-to-action.php:128
+msgid "CALL TO ACTION"
+msgstr ""
+
+#: modules/call-to-action/widgets/call-to-action.php:134
+#: modules/heading/widgets/heading.php:103
+#: modules/icon-box/widgets/icon-box.php:263
+#: modules/image-box/widgets/image-box.php:144
+#: modules/image-hover/widgets/image-hover.php:134
+#: modules/portfolio/widgets/portfolio.php:225
+#: modules/price-menu/widgets/price-menu.php:78
+#: modules/price-menu/widgets/price-menu.php:84
+#: modules/price-menu/widgets/price-menu.php:85
+#: modules/price-menu/widgets/price-menu.php:632
+#: modules/services/widgets/services.php:166 modules/team/widgets/team.php:202
+msgid "Description"
+msgstr ""
+
+#: modules/call-to-action/widgets/call-to-action.php:137
+msgid ""
+"Suspendisse potenti Phasellus euismod libero in neque molestie et mentum "
+"libero maximus."
+msgstr ""
+
+#: modules/call-to-action/widgets/call-to-action.php:148
+#: modules/image-box/widgets/image-box.php:62
+msgid "View More"
+msgstr ""
+
+#: modules/call-to-action/widgets/call-to-action.php:155
+#: modules/icon-box/widgets/icon-box.php:296
+#: modules/price-table/widgets/price-table.php:204
+#: modules/timeline/widgets/timeline.php:211
+msgid "Button Link"
+msgstr ""
+
+#: modules/call-to-action/widgets/call-to-action.php:168
+msgid "Call to Action Style"
+msgstr ""
+
+#: modules/call-to-action/widgets/call-to-action.php:176
+msgid "Set max width for the container?"
+msgstr ""
+
+#: modules/call-to-action/widgets/call-to-action.php:178
+#: modules/table/widgets/table.php:78
+msgid "yes"
+msgstr ""
+
+#: modules/call-to-action/widgets/call-to-action.php:179
+#: modules/table/widgets/table.php:79
+msgid "no"
+msgstr ""
+
+#: modules/call-to-action/widgets/call-to-action.php:187
+#, php-format
+msgid "Container Max Width (% or px)"
+msgstr ""
+
+#: modules/call-to-action/widgets/call-to-action.php:254
+#: modules/call-to-action/widgets/call-to-action.php:448
+#: modules/contact-form-seven/widgets/contact-form-seven.php:236
+#: modules/contact-form-seven/widgets/contact-form-seven.php:304
+#: modules/countdown/widgets/countdown.php:287
+#: modules/flip-box/widgets/flip-box.php:335
+#: modules/post-carousel/widgets/post-carousel.php:501
+#: modules/price-menu/widgets/price-menu.php:280
+#: modules/price-menu/widgets/price-menu.php:763
+#: modules/profile-carousel/widgets/profile-carousel.php:448
+#: modules/profile/widgets/profile.php:287
+#: modules/profile/widgets/profile.php:475 modules/table/widgets/table.php:349
+#: modules/table/widgets/table.php:384 modules/table/widgets/table.php:494
+#: modules/testimonial/widgets/testimonial.php:405
+msgid "Border"
+msgstr ""
+
+#: modules/call-to-action/widgets/call-to-action.php:285
+#: modules/image-box/widgets/image-box.php:398
+#: modules/profile-carousel/widgets/profile-carousel.php:521
+#: modules/profile/widgets/profile.php:360
+#: modules/timeline/widgets/timeline.php:488
+msgid "Content Padding"
+msgstr ""
+
+#: modules/call-to-action/widgets/call-to-action.php:299
+msgid "Color &amp; Typography "
+msgstr ""
+
+#: modules/call-to-action/widgets/call-to-action.php:307
+msgid "Title Style"
+msgstr ""
+
+#: modules/call-to-action/widgets/call-to-action.php:334
+msgid "Content Style"
+msgstr ""
+
+#: modules/call-to-action/widgets/call-to-action.php:365
+msgid "Button Style"
+msgstr ""
+
+#: modules/call-to-action/widgets/call-to-action.php:373
+msgid "Effect"
+msgstr ""
+
+#: modules/call-to-action/widgets/call-to-action.php:378
+msgid "Default"
+msgstr ""
+
+#: modules/call-to-action/widgets/call-to-action.php:379
+msgid "Top to Bottom"
+msgstr ""
+
+#: modules/call-to-action/widgets/call-to-action.php:380
+msgid "Left to Right"
+msgstr ""
+
+#: modules/call-to-action/widgets/call-to-action.php:501
+#: modules/contact-form-seven/widgets/contact-form-seven.php:389
+#: modules/countdown/widgets/countdown.php:379
+#: modules/countdown/widgets/countdown.php:420
+#: modules/price-menu/widgets/price-menu.php:475
+msgid "Border Color"
+msgstr ""
+
+#: modules/call-to-action/widgets/call-to-action.php:529
+msgid "Icon Style"
+msgstr ""
+
+#: modules/call-to-action/widgets/call-to-action.php:540
+msgid "Font Size"
+msgstr ""
+
+#: modules/circle-progress-bar/widgets/circle-progress-bar.php:25
+msgid "Avas Circle Progress Bar"
+msgstr ""
+
+#: modules/circle-progress-bar/widgets/circle-progress-bar.php:53
+msgid "Percentage"
+msgstr ""
+
+#: modules/circle-progress-bar/widgets/circle-progress-bar.php:64
+msgid "Bar Size"
+msgstr ""
+
+#: modules/circle-progress-bar/widgets/circle-progress-bar.php:87
+msgid "Percentage Text"
+msgstr ""
+
+#: modules/circle-progress-bar/widgets/circle-progress-bar.php:101
+msgid "Line Cap"
+msgstr ""
+
+#: modules/circle-progress-bar/widgets/circle-progress-bar.php:105
+msgid "Rounded"
+msgstr ""
+
+#: modules/circle-progress-bar/widgets/circle-progress-bar.php:106
+msgid "Square"
+msgstr ""
+
+#: modules/circle-progress-bar/widgets/circle-progress-bar.php:107
+msgid "Butt"
+msgstr ""
+
+#: modules/circle-progress-bar/widgets/circle-progress-bar.php:185
+msgid "Percentage Text Color"
+msgstr ""
+
+#: modules/contact-form-seven/widgets/contact-form-seven.php:26
+msgid "Avas Contact Form 7"
+msgstr ""
+
+#: modules/contact-form-seven/widgets/contact-form-seven.php:43
+msgid "Notice"
+msgstr ""
+
+#: modules/contact-form-seven/widgets/contact-form-seven.php:51
+msgid "Please install / activate <strong>Contact Form 7</strong> plugin."
+msgstr ""
+
+#: modules/contact-form-seven/widgets/contact-form-seven.php:66
+msgid "Select Form"
+msgstr ""
+
+#: modules/contact-form-seven/widgets/contact-form-seven.php:78
+#: modules/countdown/widgets/countdown.php:64
+#: modules/countdown/widgets/countdown.php:135
+#: modules/countdown/widgets/countdown.php:166
+#: modules/countdown/widgets/countdown.php:197
+#: modules/countdown/widgets/countdown.php:228
+#: modules/news-ticker/widgets/news-ticker.php:48
+msgid "Label"
+msgstr ""
+
+#: modules/contact-form-seven/widgets/contact-form-seven.php:86
+#: modules/countdown/widgets/countdown.php:322
+#: modules/news-ticker/widgets/news-ticker.php:299
+msgid "Label Color"
+msgstr ""
+
+#: modules/contact-form-seven/widgets/contact-form-seven.php:98
+#: modules/contact-form-seven/widgets/contact-form-seven.php:349
+#: modules/price-menu/widgets/price-menu.php:362
+#: modules/price-menu/widgets/price-menu.php:577
+#: modules/price-menu/widgets/price-menu.php:653
+msgid "Typography"
+msgstr ""
+
+#: modules/contact-form-seven/widgets/contact-form-seven.php:108
+msgid "Input"
+msgstr ""
+
+#: modules/contact-form-seven/widgets/contact-form-seven.php:116
+msgid "Placeholder Color"
+msgstr ""
+
+#: modules/contact-form-seven/widgets/contact-form-seven.php:128
+msgid "Placeholder Typography"
+msgstr ""
+
+#: modules/contact-form-seven/widgets/contact-form-seven.php:135
+msgid "Input Text Color"
+msgstr ""
+
+#: modules/contact-form-seven/widgets/contact-form-seven.php:149
+msgid "Others Text Color"
+msgstr ""
+
+#: modules/contact-form-seven/widgets/contact-form-seven.php:175
+msgid "Input Typography"
+msgstr ""
+
+#: modules/contact-form-seven/widgets/contact-form-seven.php:182
+msgid "Textarea Height"
+msgstr ""
+
+#: modules/contact-form-seven/widgets/contact-form-seven.php:216
+msgid "Element Space"
+msgstr ""
+
+#: modules/contact-form-seven/widgets/contact-form-seven.php:263
+msgid "Submit Button"
+msgstr ""
+
+#: modules/contact-form-seven/widgets/contact-form-seven.php:425
+msgid "Please install / activate Contact Form 7 plugin."
+msgstr ""
+
+#: modules/countdown/widgets/countdown.php:25
+msgid "Avas Countdown"
+msgstr ""
+
+#: modules/countdown/widgets/countdown.php:56
+msgid "Set Date and Time"
+msgstr ""
+
+#: modules/countdown/widgets/countdown.php:68
+msgid "Block"
+msgstr ""
+
+#: modules/countdown/widgets/countdown.php:69
+msgid "Inline"
+msgstr ""
+
+#: modules/countdown/widgets/countdown.php:76
+msgid "Label Spacing"
+msgstr ""
+
+#: modules/countdown/widgets/countdown.php:95
+msgid "Separator"
+msgstr ""
+
+#: modules/countdown/widgets/countdown.php:115
+#: modules/countdown/widgets/countdown.php:137
+msgid "Days"
+msgstr ""
+
+#: modules/countdown/widgets/countdown.php:146
+#: modules/countdown/widgets/countdown.php:168
+msgid "Hours"
+msgstr ""
+
+#: modules/countdown/widgets/countdown.php:177
+#: modules/countdown/widgets/countdown.php:199
+msgid "Minutes"
+msgstr ""
+
+#: modules/countdown/widgets/countdown.php:208
+#: modules/countdown/widgets/countdown.php:230
+msgid "Seconds"
+msgstr ""
+
+#: modules/countdown/widgets/countdown.php:241
+#: modules/courses-carousel/widgets/courses-carousel.php:282
+#: modules/courses/widgets/courses.php:139
+#: modules/features/widgets/features.php:239
+#: modules/flipster/widgets/flipster.php:171
+#: modules/instagram-carousel/widgets/instagram-carousel.php:306
+#: modules/news-ticker/widgets/news-ticker.php:292
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:438
+#: modules/portfolio/widgets/portfolio.php:320
+#: modules/post-carousel/widgets/post-carousel.php:483
+#: modules/post-grid/widgets/post-grid.php:359
+#: modules/post-list/widgets/post-list.php:282
+#: modules/post-tiled/widgets/post-tiled.php:254
+#: modules/price-table/widgets/price-table.php:218
+#: modules/profile-carousel/widgets/profile-carousel.php:430
+#: modules/profile/widgets/profile.php:269
+#: modules/services-carousel/widgets/services-carousel.php:424
+#: modules/services/widgets/services.php:279
+#: modules/team-carousel/widgets/team-carousel.php:362
+#: modules/team/widgets/team.php:284
+#: modules/testimonial/widgets/testimonial.php:387
+#: modules/timeline/widgets/timeline.php:472
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:382
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:229
+msgid "Styles"
+msgstr ""
+
+#: modules/countdown/widgets/countdown.php:258
+msgid "Spacing"
+msgstr ""
+
+#: modules/countdown/widgets/countdown.php:304
+msgid "Digits Color"
+msgstr ""
+
+#: modules/countdown/widgets/countdown.php:342
+msgid "Block Styles"
+msgstr ""
+
+#: modules/countdown/widgets/countdown.php:349
+msgid "Days Background Color"
+msgstr ""
+
+#: modules/countdown/widgets/countdown.php:359
+msgid "Days Digit Color"
+msgstr ""
+
+#: modules/countdown/widgets/countdown.php:369
+msgid "Days Label Color"
+msgstr ""
+
+#: modules/countdown/widgets/countdown.php:389
+msgid "Hours Background Color"
+msgstr ""
+
+#: modules/countdown/widgets/countdown.php:400
+msgid "Hours Digit Color"
+msgstr ""
+
+#: modules/countdown/widgets/countdown.php:410
+msgid "Hours Label Color"
+msgstr ""
+
+#: modules/countdown/widgets/countdown.php:430
+msgid "Minutes Background Color"
+msgstr ""
+
+#: modules/countdown/widgets/countdown.php:441
+msgid "Minutes Digit Color"
+msgstr ""
+
+#: modules/countdown/widgets/countdown.php:451
+msgid "Minutes Label Color"
+msgstr ""
+
+#: modules/countdown/widgets/countdown.php:461
+msgid "Minutes Border Color"
+msgstr ""
+
+#: modules/countdown/widgets/countdown.php:471
+msgid "Seconds Background Color"
+msgstr ""
+
+#: modules/countdown/widgets/countdown.php:482
+msgid "Seconds Digit Color"
+msgstr ""
+
+#: modules/countdown/widgets/countdown.php:492
+msgid "Seconds Label Color"
+msgstr ""
+
+#: modules/countdown/widgets/countdown.php:502
+msgid "Seconds Border Color"
+msgstr ""
+
+#: modules/countdown/widgets/countdown.php:530
+#: modules/countdown/widgets/countdown.php:540
+#: modules/countdown/widgets/countdown.php:550
+#: modules/countdown/widgets/countdown.php:560
+msgid "00"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:26
+msgid "Avas Courses Carousel"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:48
+#: modules/courses/widgets/courses.php:50
+#: modules/features/widgets/features.php:84
+#: modules/news-ticker/widgets/news-ticker.php:56
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:49
+#: modules/portfolio/widgets/portfolio.php:78
+#: modules/post-carousel/widgets/post-carousel.php:49
+#: modules/post-grid/widgets/post-grid.php:65
+#: modules/post-list/widgets/post-list.php:65
+#: modules/post-tiled/widgets/post-tiled.php:87
+#: modules/services-carousel/widgets/services-carousel.php:49
+#: modules/services/widgets/services.php:67
+#: modules/team-carousel/widgets/team-carousel.php:48
+#: modules/team/widgets/team.php:66 modules/timeline/widgets/timeline.php:253
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:53
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:62
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:53
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:61
+msgid "Categories"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:59
+#: modules/courses/widgets/courses.php:77
+msgid "Number of Courses"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:67
+#: modules/courses/widgets/courses.php:85
+#: modules/features/widgets/features.php:118
+#: modules/news-ticker/widgets/news-ticker.php:97
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:70
+#: modules/portfolio/widgets/portfolio.php:132
+#: modules/post-carousel/widgets/post-carousel.php:98
+#: modules/post-grid/widgets/post-grid.php:101
+#: modules/post-list/widgets/post-list.php:90
+#: modules/post-tiled/widgets/post-tiled.php:105
+#: modules/services-carousel/widgets/services-carousel.php:70
+#: modules/services/widgets/services.php:107
+#: modules/team-carousel/widgets/team-carousel.php:69
+#: modules/team/widgets/team.php:127 modules/timeline/widgets/timeline.php:268
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:84
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:112
+msgid "Order"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:70
+#: modules/courses/widgets/courses.php:88
+#: modules/features/widgets/features.php:121
+#: modules/news-ticker/widgets/news-ticker.php:100
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:73
+#: modules/portfolio/widgets/portfolio.php:135
+#: modules/post-carousel/widgets/post-carousel.php:101
+#: modules/post-grid/widgets/post-grid.php:104
+#: modules/post-list/widgets/post-list.php:93
+#: modules/post-tiled/widgets/post-tiled.php:108
+#: modules/services-carousel/widgets/services-carousel.php:73
+#: modules/services/widgets/services.php:110
+#: modules/team-carousel/widgets/team-carousel.php:72
+#: modules/team/widgets/team.php:130 modules/timeline/widgets/timeline.php:271
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:87
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:115
+msgid "Ascending"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:71
+#: modules/courses/widgets/courses.php:89
+#: modules/features/widgets/features.php:122
+#: modules/news-ticker/widgets/news-ticker.php:101
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:74
+#: modules/portfolio/widgets/portfolio.php:136
+#: modules/post-carousel/widgets/post-carousel.php:102
+#: modules/post-grid/widgets/post-grid.php:105
+#: modules/post-list/widgets/post-list.php:94
+#: modules/post-tiled/widgets/post-tiled.php:109
+#: modules/services-carousel/widgets/services-carousel.php:74
+#: modules/services/widgets/services.php:111
+#: modules/team-carousel/widgets/team-carousel.php:73
+#: modules/team/widgets/team.php:131 modules/timeline/widgets/timeline.php:272
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:88
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:116
+msgid "Descending"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:82
+#: modules/courses/widgets/courses.php:100
+#: modules/features/widgets/features.php:136
+#: modules/news-ticker/widgets/news-ticker.php:125
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:85
+#: modules/portfolio/widgets/portfolio.php:160
+#: modules/post-carousel/widgets/post-carousel.php:113
+#: modules/post-grid/widgets/post-grid.php:129
+#: modules/post-list/widgets/post-list.php:118
+#: modules/post-tiled/widgets/post-tiled.php:133
+#: modules/services-carousel/widgets/services-carousel.php:85
+#: modules/services/widgets/services.php:122
+#: modules/team-carousel/widgets/team-carousel.php:84
+#: modules/team/widgets/team.php:155 modules/timeline/widgets/timeline.php:286
+msgid "No order"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:83
+#: modules/courses/widgets/courses.php:101
+#: modules/features/widgets/features.php:137
+#: modules/news-ticker/widgets/news-ticker.php:126
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:86
+#: modules/portfolio/widgets/portfolio.php:161
+#: modules/post-carousel/widgets/post-carousel.php:114
+#: modules/post-grid/widgets/post-grid.php:130
+#: modules/post-list/widgets/post-list.php:119
+#: modules/post-tiled/widgets/post-tiled.php:134
+#: modules/services-carousel/widgets/services-carousel.php:86
+#: modules/services/widgets/services.php:123
+#: modules/team-carousel/widgets/team-carousel.php:85
+#: modules/team/widgets/team.php:156 modules/timeline/widgets/timeline.php:287
+msgid "Post ID"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:84
+#: modules/courses/widgets/courses.php:102
+#: modules/features/widgets/features.php:138
+#: modules/news-ticker/widgets/news-ticker.php:127
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:87
+#: modules/portfolio/widgets/portfolio.php:162
+#: modules/post-carousel/widgets/post-carousel.php:115
+#: modules/post-carousel/widgets/post-carousel.php:245
+#: modules/post-grid/widgets/post-grid.php:131
+#: modules/post-list/widgets/post-list.php:120
+#: modules/post-list/widgets/post-list.php:223
+#: modules/post-tiled/widgets/post-tiled.php:135
+#: modules/post-tiled/widgets/post-tiled.php:212
+#: modules/services-carousel/widgets/services-carousel.php:87
+#: modules/services/widgets/services.php:124
+#: modules/team-carousel/widgets/team-carousel.php:86
+#: modules/team/widgets/team.php:157 modules/timeline/widgets/timeline.php:288
+msgid "Author"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:86
+#: modules/courses/widgets/courses.php:104
+#: modules/features/widgets/features.php:140
+#: modules/news-ticker/widgets/news-ticker.php:129
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:89
+#: modules/portfolio/widgets/portfolio.php:164
+#: modules/post-carousel/widgets/post-carousel.php:117
+#: modules/post-grid/widgets/post-grid.php:133
+#: modules/post-list/widgets/post-list.php:122
+#: modules/post-tiled/widgets/post-tiled.php:137
+#: modules/services-carousel/widgets/services-carousel.php:89
+#: modules/services/widgets/services.php:126
+#: modules/team-carousel/widgets/team-carousel.php:88
+#: modules/team/widgets/team.php:159 modules/timeline/widgets/timeline.php:290
+msgid "Published date"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:87
+#: modules/courses/widgets/courses.php:107
+#: modules/features/widgets/features.php:143
+#: modules/news-ticker/widgets/news-ticker.php:131
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:90
+#: modules/portfolio/widgets/portfolio.php:167
+#: modules/post-carousel/widgets/post-carousel.php:119
+#: modules/post-grid/widgets/post-grid.php:136
+#: modules/post-list/widgets/post-list.php:125
+#: modules/post-tiled/widgets/post-tiled.php:140
+#: modules/services-carousel/widgets/services-carousel.php:90
+#: modules/services/widgets/services.php:129
+#: modules/team-carousel/widgets/team-carousel.php:89
+#: modules/team/widgets/team.php:162 modules/timeline/widgets/timeline.php:293
+msgid "Random order"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:88
+#: modules/courses/widgets/courses.php:108
+#: modules/features/widgets/features.php:145
+#: modules/news-ticker/widgets/news-ticker.php:132
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:91
+#: modules/portfolio/widgets/portfolio.php:169
+#: modules/post-carousel/widgets/post-carousel.php:120
+#: modules/post-grid/widgets/post-grid.php:138
+#: modules/post-list/widgets/post-list.php:127
+#: modules/post-tiled/widgets/post-tiled.php:142
+#: modules/services-carousel/widgets/services-carousel.php:91
+#: modules/services/widgets/services.php:131
+#: modules/team-carousel/widgets/team-carousel.php:90
+#: modules/team/widgets/team.php:164 modules/timeline/widgets/timeline.php:295
+msgid "Menu order"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:96
+#: modules/features/widgets/features.php:108
+#: modules/news-ticker/widgets/news-ticker.php:89
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:99
+#: modules/post-carousel/widgets/post-carousel.php:82
+#: modules/post-grid/widgets/post-grid.php:158
+#: modules/post-list/widgets/post-list.php:147
+#: modules/post-tiled/widgets/post-tiled.php:154
+#: modules/services-carousel/widgets/services-carousel.php:99
+#: modules/team-carousel/widgets/team-carousel.php:98
+#: modules/timeline/widgets/timeline.php:318
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:110
+msgid "Offset"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:105
+#: modules/instagram-carousel/widgets/instagram-carousel.php:134
+#: modules/news-ticker/widgets/news-ticker.php:146
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:262
+#: modules/post-carousel/widgets/post-carousel.php:305
+#: modules/services-carousel/widgets/services-carousel.php:248
+#: modules/team-carousel/widgets/team-carousel.php:184
+#: modules/testimonial/widgets/testimonial.php:211
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:205
+msgid "Carousel Settings"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:111
+#: modules/instagram-carousel/widgets/instagram-carousel.php:140
+#: modules/news-ticker/widgets/news-ticker.php:152
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:268
+#: modules/post-carousel/widgets/post-carousel.php:311
+#: modules/services-carousel/widgets/services-carousel.php:254
+#: modules/team-carousel/widgets/team-carousel.php:190
+#: modules/testimonial/widgets/testimonial.php:217
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:211
+msgid "Posts Per Row on Mobile"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:119
+#: modules/instagram-carousel/widgets/instagram-carousel.php:148
+#: modules/news-ticker/widgets/news-ticker.php:160
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:276
+#: modules/post-carousel/widgets/post-carousel.php:319
+#: modules/services-carousel/widgets/services-carousel.php:262
+#: modules/team-carousel/widgets/team-carousel.php:198
+#: modules/testimonial/widgets/testimonial.php:225
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:219
+msgid "Posts Per Row on Tablet"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:127
+#: modules/instagram-carousel/widgets/instagram-carousel.php:156
+#: modules/news-ticker/widgets/news-ticker.php:168
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:284
+#: modules/post-carousel/widgets/post-carousel.php:327
+#: modules/services-carousel/widgets/services-carousel.php:270
+#: modules/team-carousel/widgets/team-carousel.php:206
+#: modules/testimonial/widgets/testimonial.php:233
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:227
+msgid "Posts Per Row on Laptop"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:135
+#: modules/instagram-carousel/widgets/instagram-carousel.php:164
+#: modules/news-ticker/widgets/news-ticker.php:176
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:292
+#: modules/post-carousel/widgets/post-carousel.php:335
+#: modules/services-carousel/widgets/services-carousel.php:278
+#: modules/team-carousel/widgets/team-carousel.php:214
+#: modules/testimonial/widgets/testimonial.php:241
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:235
+msgid "Posts Per Row on Desktop"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:152
+#: modules/instagram-carousel/widgets/instagram-carousel.php:181
+#: modules/news-ticker/widgets/news-ticker.php:193
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:309
+#: modules/post-carousel/widgets/post-carousel.php:352
+#: modules/profile-carousel/widgets/profile-carousel.php:298
+#: modules/services-carousel/widgets/services-carousel.php:295
+#: modules/team-carousel/widgets/team-carousel.php:231
+#: modules/testimonial/widgets/testimonial.php:258
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:252
+msgid "Autoplay"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:156
+#: modules/courses-carousel/widgets/courses-carousel.php:198
+#: modules/courses-carousel/widgets/courses-carousel.php:220
+#: modules/courses-carousel/widgets/courses-carousel.php:239
+#: modules/courses-carousel/widgets/courses-carousel.php:259
+#: modules/courses/widgets/courses.php:120
+#: modules/features/widgets/features.php:250
+#: modules/flip-box/widgets/flip-box.php:203
+#: modules/image-box/widgets/image-box.php:193
+#: modules/instagram-carousel/widgets/instagram-carousel.php:76
+#: modules/instagram-carousel/widgets/instagram-carousel.php:96
+#: modules/instagram-carousel/widgets/instagram-carousel.php:115
+#: modules/instagram-carousel/widgets/instagram-carousel.php:185
+#: modules/instagram-carousel/widgets/instagram-carousel.php:223
+#: modules/instagram-carousel/widgets/instagram-carousel.php:245
+#: modules/instagram-carousel/widgets/instagram-carousel.php:264
+#: modules/instagram-carousel/widgets/instagram-carousel.php:284
+#: modules/news-ticker/widgets/news-ticker.php:197
+#: modules/news-ticker/widgets/news-ticker.php:235
+#: modules/news-ticker/widgets/news-ticker.php:254
+#: modules/news-ticker/widgets/news-ticker.php:273
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:123
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:142
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:163
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:184
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:205
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:243
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:313
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:355
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:377
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:396
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:416
+#: modules/portfolio/widgets/portfolio.php:62
+#: modules/portfolio/widgets/portfolio.php:193
+#: modules/portfolio/widgets/portfolio.php:211
+#: modules/portfolio/widgets/portfolio.php:229
+#: modules/portfolio/widgets/portfolio.php:247
+#: modules/portfolio/widgets/portfolio.php:266
+#: modules/portfolio/widgets/portfolio.php:301
+#: modules/post-carousel/widgets/post-carousel.php:133
+#: modules/post-carousel/widgets/post-carousel.php:152
+#: modules/post-carousel/widgets/post-carousel.php:170
+#: modules/post-carousel/widgets/post-carousel.php:201
+#: modules/post-carousel/widgets/post-carousel.php:231
+#: modules/post-carousel/widgets/post-carousel.php:249
+#: modules/post-carousel/widgets/post-carousel.php:267
+#: modules/post-carousel/widgets/post-carousel.php:285
+#: modules/post-carousel/widgets/post-carousel.php:356
+#: modules/post-carousel/widgets/post-carousel.php:400
+#: modules/post-carousel/widgets/post-carousel.php:422
+#: modules/post-carousel/widgets/post-carousel.php:441
+#: modules/post-carousel/widgets/post-carousel.php:461
+#: modules/post-grid/widgets/post-grid.php:191
+#: modules/post-grid/widgets/post-grid.php:209
+#: modules/post-grid/widgets/post-grid.php:227
+#: modules/post-grid/widgets/post-grid.php:257
+#: modules/post-grid/widgets/post-grid.php:275
+#: modules/post-grid/widgets/post-grid.php:293
+#: modules/post-grid/widgets/post-grid.php:311
+#: modules/post-grid/widgets/post-grid.php:340
+#: modules/post-list/widgets/post-list.php:160
+#: modules/post-list/widgets/post-list.php:191
+#: modules/post-list/widgets/post-list.php:209
+#: modules/post-list/widgets/post-list.php:227
+#: modules/post-list/widgets/post-list.php:245
+#: modules/post-list/widgets/post-list.php:263
+#: modules/post-tiled/widgets/post-tiled.php:166
+#: modules/post-tiled/widgets/post-tiled.php:185
+#: modules/post-tiled/widgets/post-tiled.php:216
+#: modules/post-tiled/widgets/post-tiled.php:235
+#: modules/price-menu/widgets/price-menu.php:202
+#: modules/price-menu/widgets/price-menu.php:217
+#: modules/price-table/widgets/price-table.php:51
+#: modules/price-table/widgets/price-table.php:81
+#: modules/price-table/widgets/price-table.php:175
+#: modules/profile-carousel/widgets/profile-carousel.php:302
+#: modules/profile-carousel/widgets/profile-carousel.php:346
+#: modules/profile-carousel/widgets/profile-carousel.php:368
+#: modules/profile-carousel/widgets/profile-carousel.php:388
+#: modules/profile-carousel/widgets/profile-carousel.php:408
+#: modules/services-carousel/widgets/services-carousel.php:131
+#: modules/services-carousel/widgets/services-carousel.php:150
+#: modules/services-carousel/widgets/services-carousel.php:169
+#: modules/services-carousel/widgets/services-carousel.php:187
+#: modules/services-carousel/widgets/services-carousel.php:205
+#: modules/services-carousel/widgets/services-carousel.php:229
+#: modules/services-carousel/widgets/services-carousel.php:299
+#: modules/services-carousel/widgets/services-carousel.php:341
+#: modules/services-carousel/widgets/services-carousel.php:363
+#: modules/services-carousel/widgets/services-carousel.php:382
+#: modules/services-carousel/widgets/services-carousel.php:402
+#: modules/services/widgets/services.php:152
+#: modules/services/widgets/services.php:170
+#: modules/services/widgets/services.php:188
+#: modules/services/widgets/services.php:207
+#: modules/services/widgets/services.php:231
+#: modules/services/widgets/services.php:252
+#: modules/team-carousel/widgets/team-carousel.php:111
+#: modules/team-carousel/widgets/team-carousel.php:130
+#: modules/team-carousel/widgets/team-carousel.php:148
+#: modules/team-carousel/widgets/team-carousel.php:166
+#: modules/team-carousel/widgets/team-carousel.php:235
+#: modules/team-carousel/widgets/team-carousel.php:279
+#: modules/team-carousel/widgets/team-carousel.php:301
+#: modules/team-carousel/widgets/team-carousel.php:320
+#: modules/team-carousel/widgets/team-carousel.php:340
+#: modules/team/widgets/team.php:188 modules/team/widgets/team.php:206
+#: modules/team/widgets/team.php:224 modules/team/widgets/team.php:245
+#: modules/team/widgets/team.php:264
+#: modules/testimonial/widgets/testimonial.php:102
+#: modules/testimonial/widgets/testimonial.php:262
+#: modules/testimonial/widgets/testimonial.php:306
+#: modules/testimonial/widgets/testimonial.php:325
+#: modules/testimonial/widgets/testimonial.php:345
+#: modules/testimonial/widgets/testimonial.php:365
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:123
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:142
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:161
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:256
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:298
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:320
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:339
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:359
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:128
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:173
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:192
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:211
+msgid "Yes"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:160
+#: modules/courses-carousel/widgets/courses-carousel.php:202
+#: modules/courses-carousel/widgets/courses-carousel.php:224
+#: modules/courses-carousel/widgets/courses-carousel.php:243
+#: modules/courses-carousel/widgets/courses-carousel.php:263
+#: modules/courses/widgets/courses.php:124
+#: modules/features/widgets/features.php:254
+#: modules/flip-box/widgets/flip-box.php:207
+#: modules/image-box/widgets/image-box.php:197
+#: modules/instagram-carousel/widgets/instagram-carousel.php:80
+#: modules/instagram-carousel/widgets/instagram-carousel.php:100
+#: modules/instagram-carousel/widgets/instagram-carousel.php:119
+#: modules/instagram-carousel/widgets/instagram-carousel.php:189
+#: modules/instagram-carousel/widgets/instagram-carousel.php:227
+#: modules/instagram-carousel/widgets/instagram-carousel.php:249
+#: modules/instagram-carousel/widgets/instagram-carousel.php:268
+#: modules/instagram-carousel/widgets/instagram-carousel.php:288
+#: modules/news-ticker/widgets/news-ticker.php:201
+#: modules/news-ticker/widgets/news-ticker.php:239
+#: modules/news-ticker/widgets/news-ticker.php:258
+#: modules/news-ticker/widgets/news-ticker.php:277
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:127
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:146
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:167
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:188
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:209
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:247
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:317
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:359
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:381
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:400
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:420
+#: modules/portfolio/widgets/portfolio.php:66
+#: modules/portfolio/widgets/portfolio.php:197
+#: modules/portfolio/widgets/portfolio.php:215
+#: modules/portfolio/widgets/portfolio.php:233
+#: modules/portfolio/widgets/portfolio.php:251
+#: modules/portfolio/widgets/portfolio.php:270
+#: modules/portfolio/widgets/portfolio.php:305
+#: modules/post-carousel/widgets/post-carousel.php:137
+#: modules/post-carousel/widgets/post-carousel.php:156
+#: modules/post-carousel/widgets/post-carousel.php:174
+#: modules/post-carousel/widgets/post-carousel.php:205
+#: modules/post-carousel/widgets/post-carousel.php:235
+#: modules/post-carousel/widgets/post-carousel.php:253
+#: modules/post-carousel/widgets/post-carousel.php:271
+#: modules/post-carousel/widgets/post-carousel.php:289
+#: modules/post-carousel/widgets/post-carousel.php:360
+#: modules/post-carousel/widgets/post-carousel.php:404
+#: modules/post-carousel/widgets/post-carousel.php:426
+#: modules/post-carousel/widgets/post-carousel.php:445
+#: modules/post-carousel/widgets/post-carousel.php:465
+#: modules/post-grid/widgets/post-grid.php:195
+#: modules/post-grid/widgets/post-grid.php:213
+#: modules/post-grid/widgets/post-grid.php:231
+#: modules/post-grid/widgets/post-grid.php:261
+#: modules/post-grid/widgets/post-grid.php:279
+#: modules/post-grid/widgets/post-grid.php:297
+#: modules/post-grid/widgets/post-grid.php:315
+#: modules/post-grid/widgets/post-grid.php:344
+#: modules/post-list/widgets/post-list.php:164
+#: modules/post-list/widgets/post-list.php:195
+#: modules/post-list/widgets/post-list.php:213
+#: modules/post-list/widgets/post-list.php:231
+#: modules/post-list/widgets/post-list.php:249
+#: modules/post-list/widgets/post-list.php:267
+#: modules/post-tiled/widgets/post-tiled.php:170
+#: modules/post-tiled/widgets/post-tiled.php:189
+#: modules/post-tiled/widgets/post-tiled.php:220
+#: modules/post-tiled/widgets/post-tiled.php:239
+#: modules/price-menu/widgets/price-menu.php:203
+#: modules/price-menu/widgets/price-menu.php:218
+#: modules/price-table/widgets/price-table.php:55
+#: modules/price-table/widgets/price-table.php:85
+#: modules/price-table/widgets/price-table.php:179
+#: modules/profile-carousel/widgets/profile-carousel.php:306
+#: modules/profile-carousel/widgets/profile-carousel.php:350
+#: modules/profile-carousel/widgets/profile-carousel.php:372
+#: modules/profile-carousel/widgets/profile-carousel.php:392
+#: modules/profile-carousel/widgets/profile-carousel.php:412
+#: modules/services-carousel/widgets/services-carousel.php:135
+#: modules/services-carousel/widgets/services-carousel.php:154
+#: modules/services-carousel/widgets/services-carousel.php:173
+#: modules/services-carousel/widgets/services-carousel.php:191
+#: modules/services-carousel/widgets/services-carousel.php:209
+#: modules/services-carousel/widgets/services-carousel.php:233
+#: modules/services-carousel/widgets/services-carousel.php:303
+#: modules/services-carousel/widgets/services-carousel.php:345
+#: modules/services-carousel/widgets/services-carousel.php:367
+#: modules/services-carousel/widgets/services-carousel.php:386
+#: modules/services-carousel/widgets/services-carousel.php:406
+#: modules/services/widgets/services.php:156
+#: modules/services/widgets/services.php:174
+#: modules/services/widgets/services.php:192
+#: modules/services/widgets/services.php:211
+#: modules/services/widgets/services.php:235
+#: modules/services/widgets/services.php:256
+#: modules/team-carousel/widgets/team-carousel.php:115
+#: modules/team-carousel/widgets/team-carousel.php:134
+#: modules/team-carousel/widgets/team-carousel.php:152
+#: modules/team-carousel/widgets/team-carousel.php:170
+#: modules/team-carousel/widgets/team-carousel.php:239
+#: modules/team-carousel/widgets/team-carousel.php:283
+#: modules/team-carousel/widgets/team-carousel.php:305
+#: modules/team-carousel/widgets/team-carousel.php:324
+#: modules/team-carousel/widgets/team-carousel.php:344
+#: modules/team/widgets/team.php:192 modules/team/widgets/team.php:210
+#: modules/team/widgets/team.php:228 modules/team/widgets/team.php:249
+#: modules/team/widgets/team.php:268
+#: modules/testimonial/widgets/testimonial.php:106
+#: modules/testimonial/widgets/testimonial.php:266
+#: modules/testimonial/widgets/testimonial.php:310
+#: modules/testimonial/widgets/testimonial.php:329
+#: modules/testimonial/widgets/testimonial.php:349
+#: modules/testimonial/widgets/testimonial.php:369
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:127
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:146
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:165
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:260
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:302
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:324
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:343
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:363
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:132
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:177
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:196
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:215
+msgid "No"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:172
+#: modules/instagram-carousel/widgets/instagram-carousel.php:201
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:329
+#: modules/post-carousel/widgets/post-carousel.php:372
+#: modules/services-carousel/widgets/services-carousel.php:315
+#: modules/team-carousel/widgets/team-carousel.php:251
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:272
+msgid "Slide Change Speed"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:183
+#: modules/instagram-carousel/widgets/instagram-carousel.php:210
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:340
+#: modules/post-carousel/widgets/post-carousel.php:384
+#: modules/services-carousel/widgets/services-carousel.php:326
+#: modules/team-carousel/widgets/team-carousel.php:263
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:283
+msgid "Slide Change Delay"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:194
+#: modules/instagram-carousel/widgets/instagram-carousel.php:219
+#: modules/news-ticker/widgets/news-ticker.php:231
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:351
+#: modules/post-carousel/widgets/post-carousel.php:396
+#: modules/profile-carousel/widgets/profile-carousel.php:342
+#: modules/services-carousel/widgets/services-carousel.php:337
+#: modules/team-carousel/widgets/team-carousel.php:275
+#: modules/testimonial/widgets/testimonial.php:302
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:294
+msgid "Autoplay pause on hover"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:216
+#: modules/flipster/widgets/flipster.php:126
+#: modules/instagram-carousel/widgets/instagram-carousel.php:241
+#: modules/news-ticker/widgets/news-ticker.php:250
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:373
+#: modules/post-carousel/widgets/post-carousel.php:418
+#: modules/profile-carousel/widgets/profile-carousel.php:364
+#: modules/services-carousel/widgets/services-carousel.php:359
+#: modules/team-carousel/widgets/team-carousel.php:297
+#: modules/testimonial/widgets/testimonial.php:321
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:316
+msgid "Loop"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:235
+#: modules/flipster/widgets/flipster.php:145
+#: modules/instagram-carousel/widgets/instagram-carousel.php:260
+#: modules/news-ticker/widgets/news-ticker.php:269
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:392
+#: modules/post-carousel/widgets/post-carousel.php:437
+#: modules/profile-carousel/widgets/profile-carousel.php:384
+#: modules/services-carousel/widgets/services-carousel.php:378
+#: modules/team-carousel/widgets/team-carousel.php:316
+#: modules/testimonial/widgets/testimonial.php:341
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:335
+msgid "Navigation"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:255
+#: modules/instagram-carousel/widgets/instagram-carousel.php:280
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:412
+#: modules/post-carousel/widgets/post-carousel.php:457
+#: modules/profile-carousel/widgets/profile-carousel.php:404
+#: modules/services-carousel/widgets/services-carousel.php:398
+#: modules/team-carousel/widgets/team-carousel.php:336
+#: modules/testimonial/widgets/testimonial.php:361
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:355
+msgid "Dots"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:289
+#: modules/courses/widgets/courses.php:146
+#: modules/features/widgets/features.php:284
+#: modules/icon-box/widgets/icon-box.php:549
+#: modules/image-box/widgets/image-box.php:434
+#: modules/image-hover/widgets/image-hover.php:188
+#: modules/news-ticker/widgets/news-ticker.php:351
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:465
+#: modules/portfolio/widgets/portfolio.php:415
+#: modules/post-carousel/widgets/post-carousel.php:616
+#: modules/post-grid/widgets/post-grid.php:428
+#: modules/post-tiled/widgets/post-tiled.php:338
+#: modules/services-carousel/widgets/services-carousel.php:451
+#: modules/services/widgets/services.php:297
+#: modules/services/widgets/services.php:337
+#: modules/team-carousel/widgets/team-carousel.php:379
+#: modules/team/widgets/team.php:302 modules/timeline/widgets/timeline.php:588
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:389
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:237
+msgid "Title Color"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:300
+#: modules/courses/widgets/courses.php:157
+#: modules/features/widgets/features.php:295
+#: modules/icon-box/widgets/icon-box.php:753
+#: modules/image-box/widgets/image-box.php:445
+#: modules/image-hover/widgets/image-hover.php:199
+#: modules/news-ticker/widgets/news-ticker.php:362
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:479
+#: modules/portfolio/widgets/portfolio.php:429
+#: modules/post-carousel/widgets/post-carousel.php:630
+#: modules/post-grid/widgets/post-grid.php:442
+#: modules/post-tiled/widgets/post-tiled.php:353
+#: modules/services-carousel/widgets/services-carousel.php:465
+#: modules/services/widgets/services.php:312
+#: modules/services/widgets/services.php:352
+#: modules/team-carousel/widgets/team-carousel.php:393
+#: modules/team/widgets/team.php:318
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:400
+msgid "Title Hover Color"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:317
+#: modules/courses/widgets/courses.php:174
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:520
+#: modules/portfolio/widgets/portfolio.php:477
+#: modules/post-carousel/widgets/post-carousel.php:574
+#: modules/post-list/widgets/post-list.php:298
+#: modules/services-carousel/widgets/services-carousel.php:521
+#: modules/services/widgets/services.php:443
+#: modules/team-carousel/widgets/team-carousel.php:434
+#: modules/team/widgets/team.php:371
+msgid "Category Color"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:329
+#: modules/courses/widgets/courses.php:186
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:532
+#: modules/portfolio/widgets/portfolio.php:491
+#: modules/services-carousel/widgets/services-carousel.php:533
+#: modules/services/widgets/services.php:458
+#: modules/team-carousel/widgets/team-carousel.php:446
+#: modules/team/widgets/team.php:385
+msgid "Category Hover Color"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:348
+#: modules/courses/widgets/courses.php:205
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:429
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:274
+msgid "Sale Price Color"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:361
+#: modules/courses/widgets/courses.php:217
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:417
+msgid "Regular Price Color"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:373
+#: modules/courses/widgets/courses.php:229
+#: modules/price-table/widgets/price-table.php:443
+msgid "Price Background Color"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:394
+#: modules/instagram-carousel/widgets/instagram-carousel.php:357
+#: modules/news-ticker/widgets/news-ticker.php:381
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:588
+#: modules/post-carousel/widgets/post-carousel.php:701
+#: modules/profile-carousel/widgets/profile-carousel.php:659
+#: modules/services-carousel/widgets/services-carousel.php:551
+#: modules/team-carousel/widgets/team-carousel.php:488
+#: modules/testimonial/widgets/testimonial.php:551
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:457
+msgid "Navigation Color"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:408
+#: modules/instagram-carousel/widgets/instagram-carousel.php:371
+#: modules/news-ticker/widgets/news-ticker.php:395
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:602
+#: modules/post-carousel/widgets/post-carousel.php:715
+#: modules/profile-carousel/widgets/profile-carousel.php:673
+#: modules/services-carousel/widgets/services-carousel.php:565
+#: modules/team-carousel/widgets/team-carousel.php:502
+#: modules/testimonial/widgets/testimonial.php:565
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:471
+msgid "Navigation Hover Color"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:422
+#: modules/instagram-carousel/widgets/instagram-carousel.php:385
+#: modules/news-ticker/widgets/news-ticker.php:409
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:616
+#: modules/post-carousel/widgets/post-carousel.php:729
+#: modules/profile-carousel/widgets/profile-carousel.php:687
+#: modules/services-carousel/widgets/services-carousel.php:579
+#: modules/team-carousel/widgets/team-carousel.php:516
+#: modules/testimonial/widgets/testimonial.php:579
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:485
+msgid "Navigation Background Color"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:435
+#: modules/instagram-carousel/widgets/instagram-carousel.php:398
+#: modules/news-ticker/widgets/news-ticker.php:422
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:629
+#: modules/post-carousel/widgets/post-carousel.php:742
+#: modules/profile-carousel/widgets/profile-carousel.php:700
+#: modules/services-carousel/widgets/services-carousel.php:592
+#: modules/team-carousel/widgets/team-carousel.php:529
+#: modules/testimonial/widgets/testimonial.php:592
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:498
+msgid "Navigation Background Hover Color"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:449
+#: modules/instagram-carousel/widgets/instagram-carousel.php:412
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:643
+#: modules/post-carousel/widgets/post-carousel.php:756
+#: modules/profile-carousel/widgets/profile-carousel.php:714
+#: modules/services-carousel/widgets/services-carousel.php:606
+#: modules/team-carousel/widgets/team-carousel.php:543
+#: modules/testimonial/widgets/testimonial.php:606
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:512
+msgid "Dots Color"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:463
+#: modules/instagram-carousel/widgets/instagram-carousel.php:426
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:657
+#: modules/post-carousel/widgets/post-carousel.php:770
+#: modules/profile-carousel/widgets/profile-carousel.php:728
+#: modules/services-carousel/widgets/services-carousel.php:620
+#: modules/team-carousel/widgets/team-carousel.php:557
+#: modules/testimonial/widgets/testimonial.php:620
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:526
+msgid "Dots Active Color"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:476
+#: modules/instagram-carousel/widgets/instagram-carousel.php:439
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:670
+#: modules/post-carousel/widgets/post-carousel.php:783
+#: modules/profile-carousel/widgets/profile-carousel.php:741
+#: modules/services-carousel/widgets/services-carousel.php:633
+#: modules/team-carousel/widgets/team-carousel.php:570
+#: modules/testimonial/widgets/testimonial.php:633
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:539
+msgid "Dots Size"
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:596
+#: modules/courses/widgets/courses.php:403
+msgid "No course found."
+msgstr ""
+
+#: modules/courses-carousel/widgets/courses-carousel.php:604
+#: modules/courses/widgets/courses.php:418
+msgid "Please install and activate LearnPress plugin"
+msgstr ""
+
+#: modules/courses/widgets/courses.php:28
+msgid "Avas Courses Grid"
+msgstr ""
+
+#: modules/courses/widgets/courses.php:61
+#: modules/post-grid/widgets/post-grid.php:77
+#: modules/services/widgets/services.php:91 modules/team/widgets/team.php:85
+msgid "Number of Columns"
+msgstr ""
+
+#: modules/courses/widgets/courses.php:65
+#: modules/portfolio/widgets/portfolio.php:109
+#: modules/post-grid/widgets/post-grid.php:81
+#: modules/profile/widgets/profile.php:226
+#: modules/services/widgets/services.php:95 modules/team/widgets/team.php:89
+msgid "One Column"
+msgstr ""
+
+#: modules/courses/widgets/courses.php:66
+#: modules/portfolio/widgets/portfolio.php:110
+#: modules/post-grid/widgets/post-grid.php:82
+#: modules/profile/widgets/profile.php:227
+#: modules/services/widgets/services.php:96 modules/team/widgets/team.php:90
+msgid "Two Columns"
+msgstr ""
+
+#: modules/courses/widgets/courses.php:67
+#: modules/portfolio/widgets/portfolio.php:111
+#: modules/post-grid/widgets/post-grid.php:83
+#: modules/profile/widgets/profile.php:228
+#: modules/services/widgets/services.php:97 modules/team/widgets/team.php:91
+msgid "Three Columns"
+msgstr ""
+
+#: modules/courses/widgets/courses.php:68
+#: modules/portfolio/widgets/portfolio.php:112
+#: modules/post-grid/widgets/post-grid.php:84
+#: modules/profile/widgets/profile.php:229
+#: modules/services/widgets/services.php:98 modules/team/widgets/team.php:92
+msgid "Four Columns"
+msgstr ""
+
+#: modules/courses/widgets/courses.php:69
+#: modules/portfolio/widgets/portfolio.php:113
+#: modules/post-grid/widgets/post-grid.php:85
+#: modules/profile/widgets/profile.php:230
+#: modules/services/widgets/services.php:99 modules/team/widgets/team.php:93
+msgid "Six Columns"
+msgstr ""
+
+#: modules/courses/widgets/courses.php:105
+#: modules/features/widgets/features.php:141
+#: modules/portfolio/widgets/portfolio.php:165
+#: modules/post-grid/widgets/post-grid.php:134
+#: modules/post-list/widgets/post-list.php:123
+#: modules/post-tiled/widgets/post-tiled.php:138
+#: modules/services/widgets/services.php:127 modules/team/widgets/team.php:160
+#: modules/timeline/widgets/timeline.php:291
+msgid "Modified date"
+msgstr ""
+
+#: modules/courses/widgets/courses.php:106
+#: modules/features/widgets/features.php:142
+#: modules/news-ticker/widgets/news-ticker.php:130
+#: modules/portfolio/widgets/portfolio.php:166
+#: modules/post-carousel/widgets/post-carousel.php:118
+#: modules/post-grid/widgets/post-grid.php:135
+#: modules/post-list/widgets/post-list.php:124
+#: modules/post-tiled/widgets/post-tiled.php:139
+#: modules/services/widgets/services.php:128 modules/team/widgets/team.php:161
+#: modules/timeline/widgets/timeline.php:292
+msgid "By parent"
+msgstr ""
+
+#: modules/courses/widgets/courses.php:116
+#: modules/portfolio/widgets/portfolio.php:189
+#: modules/post-grid/widgets/post-grid.php:336
+#: modules/post-list/widgets/post-list.php:259
+#: modules/services/widgets/services.php:248 modules/team/widgets/team.php:260
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:207
+msgid "Pagination"
+msgstr ""
+
+#: modules/courses/widgets/courses.php:250
+#: modules/portfolio/widgets/portfolio.php:542
+#: modules/post-grid/widgets/post-grid.php:541
+#: modules/post-list/widgets/post-list.php:448
+#: modules/services/widgets/services.php:512 modules/team/widgets/team.php:442
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:440
+msgid "Pagination Color"
+msgstr ""
+
+#: modules/courses/widgets/courses.php:264
+#: modules/portfolio/widgets/portfolio.php:556
+#: modules/post-grid/widgets/post-grid.php:555
+#: modules/post-list/widgets/post-list.php:462
+#: modules/services/widgets/services.php:526 modules/team/widgets/team.php:456
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:454
+msgid "Pagination Border Color"
+msgstr ""
+
+#: modules/courses/widgets/courses.php:277
+#: modules/portfolio/widgets/portfolio.php:569
+#: modules/post-grid/widgets/post-grid.php:568
+#: modules/post-list/widgets/post-list.php:475
+#: modules/services/widgets/services.php:539 modules/team/widgets/team.php:469
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:467
+msgid "Pagination Hover Color"
+msgstr ""
+
+#: modules/courses/widgets/courses.php:290
+#: modules/portfolio/widgets/portfolio.php:582
+#: modules/post-grid/widgets/post-grid.php:581
+#: modules/post-list/widgets/post-list.php:488
+#: modules/services/widgets/services.php:552 modules/team/widgets/team.php:482
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:480
+msgid "Pagination Hover Border Color"
+msgstr ""
+
+#: modules/courses/widgets/courses.php:303
+#: modules/portfolio/widgets/portfolio.php:595
+#: modules/post-grid/widgets/post-grid.php:594
+#: modules/post-list/widgets/post-list.php:501
+#: modules/services/widgets/services.php:565 modules/team/widgets/team.php:495
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:493
+msgid "Pagination Hover Background Color"
+msgstr ""
+
+#: modules/features/widgets/features.php:26
+msgid "Avas Features"
+msgstr ""
+
+#: modules/features/widgets/features.php:47
+msgid "Source"
+msgstr ""
+
+#: modules/features/widgets/features.php:52
+#: modules/timeline/widgets/timeline.php:54
+msgid "Custom"
+msgstr ""
+
+#: modules/features/widgets/features.php:53
+#: modules/timeline/widgets/timeline.php:55
+msgid "Dynamic"
+msgstr ""
+
+#: modules/features/widgets/features.php:97
+#: modules/instagram-carousel/widgets/instagram-carousel.php:64
+#: modules/news-ticker/widgets/news-ticker.php:81
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:61
+#: modules/portfolio/widgets/portfolio.php:180
+#: modules/post-carousel/widgets/post-carousel.php:74
+#: modules/post-grid/widgets/post-grid.php:150
+#: modules/post-list/widgets/post-list.php:139
+#: modules/services-carousel/widgets/services-carousel.php:61
+#: modules/services/widgets/services.php:140
+#: modules/team-carousel/widgets/team-carousel.php:60
+#: modules/timeline/widgets/timeline.php:307
+msgid "Number of Posts"
+msgstr ""
+
+#: modules/features/widgets/features.php:144
+#: modules/portfolio/widgets/portfolio.php:168
+#: modules/post-grid/widgets/post-grid.php:137
+#: modules/post-list/widgets/post-list.php:126
+#: modules/post-tiled/widgets/post-tiled.php:141
+#: modules/services/widgets/services.php:130 modules/team/widgets/team.php:163
+#: modules/timeline/widgets/timeline.php:294
+msgid "Comment count"
+msgstr ""
+
+#: modules/features/widgets/features.php:146
+#: modules/post-grid/widgets/post-grid.php:139
+#: modules/post-list/widgets/post-list.php:128
+#: modules/post-tiled/widgets/post-tiled.php:143
+#: modules/services/widgets/services.php:132 modules/team/widgets/team.php:165
+#: modules/timeline/widgets/timeline.php:296
+msgid "By include order"
+msgstr ""
+
+#: modules/features/widgets/features.php:192
+msgid "Tristique sapien accum"
+msgstr ""
+
+#: modules/features/widgets/features.php:196
+#: modules/icon-box/widgets/icon-box.php:250
+#: modules/image-box/widgets/image-box.php:132
+#: modules/image-hover/widgets/image-hover.php:122
+msgid "Title Link URL"
+msgstr ""
+
+#: modules/features/widgets/features.php:204
+msgid "Subtitle"
+msgstr ""
+
+#: modules/features/widgets/features.php:207
+msgid "Ligula ultrices"
+msgstr ""
+
+#: modules/features/widgets/features.php:213
+msgid "Image."
+msgstr ""
+
+#: modules/features/widgets/features.php:224
+msgid "Text"
+msgstr ""
+
+#: modules/features/widgets/features.php:225
+msgid ""
+"Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor "
+"incididunt ut labore et dolore magna aliquat enim ad minim veniam quis."
+msgstr ""
+
+#: modules/features/widgets/features.php:246
+msgid "Tiled"
+msgstr ""
+
+#: modules/features/widgets/features.php:264
+msgid "Space"
+msgstr ""
+
+#: modules/features/widgets/features.php:313
+msgid "Sub Title"
+msgstr ""
+
+#: modules/features/widgets/features.php:337
+#: modules/post-grid/widgets/post-grid.php:388
+#: modules/timeline/widgets/timeline.php:637
+msgid "Date Color"
+msgstr ""
+
+#: modules/features/widgets/features.php:361
+#: modules/icon-box/widgets/icon-box.php:567
+#: modules/image-box/widgets/image-box.php:464
+#: modules/image-hover/widgets/image-hover.php:227
+#: modules/portfolio/widgets/portfolio.php:452
+#: modules/post-carousel/widgets/post-carousel.php:653
+#: modules/post-grid/widgets/post-grid.php:476
+#: modules/post-list/widgets/post-list.php:368
+#: modules/services/widgets/services.php:391
+#: modules/services/widgets/services.php:417 modules/team/widgets/team.php:345
+msgid "Description Color"
+msgstr ""
+
+#: modules/flip-box/widgets/flip-box.php:21
+msgid "Avas Flip Box"
+msgstr ""
+
+#: modules/flip-box/widgets/flip-box.php:42
+msgid "Flip Style"
+msgstr ""
+
+#: modules/flip-box/widgets/flip-box.php:49
+msgid "Up"
+msgstr ""
+
+#: modules/flip-box/widgets/flip-box.php:50
+msgid "Down"
+msgstr ""
+
+#: modules/flip-box/widgets/flip-box.php:52
+msgid "Zoom Out"
+msgstr ""
+
+#: modules/flip-box/widgets/flip-box.php:60
+msgid "Animatin Speed(ms)"
+msgstr ""
+
+#: modules/flip-box/widgets/flip-box.php:73
+#: modules/icon-box/widgets/icon-box.php:50
+msgid "Select Icon or Image"
+msgstr ""
+
+#: modules/flip-box/widgets/flip-box.php:81
+#: modules/flip-box/widgets/flip-box.php:124
+#: modules/icon-box/widgets/icon-box.php:58
+#: modules/icon-box/widgets/icon-box.php:83
+#: modules/image-box/widgets/image-box.php:44
+#: modules/image-box/widgets/image-box.php:278
+#: modules/image-hover/widgets/image-hover.php:53
+#: modules/popup/widgets/popup.php:56
+#: modules/price-menu/widgets/price-menu.php:128
+#: modules/price-menu/widgets/price-menu.php:685
+#: modules/profile-carousel/widgets/profile-carousel.php:98
+#: modules/profile/widgets/profile.php:98
+#: modules/services-carousel/widgets/services-carousel.php:127
+#: modules/table/widgets/table.php:93 modules/table/widgets/table.php:114
+#: modules/testimonial/widgets/testimonial.php:81
+#: modules/timeline/widgets/timeline.php:105
+#: modules/timeline/widgets/timeline.php:122
+#: modules/timeline/widgets/timeline.php:158
+#: modules/timeline/widgets/timeline.php:333
+#: modules/timeline/widgets/timeline.php:351
+#: modules/timeline/widgets/timeline.php:392
+msgid "Image"
+msgstr ""
+
+#: modules/flip-box/widgets/flip-box.php:106
+#: modules/flip-box/widgets/flip-box.php:378
+#: modules/heading/widgets/heading.php:469
+#: modules/icon-box/widgets/icon-box.php:460
+#: modules/price-table/widgets/price-table.php:322
+msgid "Icon Size"
+msgstr ""
+
+#: modules/flip-box/widgets/flip-box.php:137
+#: modules/image-hover/widgets/image-hover.php:63
+#: modules/price-menu/widgets/price-menu.php:694
+#: modules/profile-carousel/widgets/profile-carousel.php:171
+#: modules/profile/widgets/profile.php:171 modules/table/widgets/table.php:125
+#: modules/testimonial/widgets/testimonial.php:138
+#: modules/timeline/widgets/timeline.php:364
+msgid "Image Size"
+msgstr ""
+
+#: modules/flip-box/widgets/flip-box.php:155
+msgid "Front / Back"
+msgstr ""
+
+#: modules/flip-box/widgets/flip-box.php:160
+msgid "Front Content"
+msgstr ""
+
+#: modules/flip-box/widgets/flip-box.php:164
+msgid "Back Content"
+msgstr ""
+
+#: modules/flip-box/widgets/flip-box.php:175
+msgid "Front Title"
+msgstr ""
+
+#: modules/flip-box/widgets/flip-box.php:178
+msgid "Ut enim ad minim veniam quis"
+msgstr ""
+
+#: modules/flip-box/widgets/flip-box.php:187
+msgid "Front Description"
+msgstr ""
+
+#: modules/flip-box/widgets/flip-box.php:190 modules/popup/widgets/popup.php:81
+#: modules/testimonial/widgets/testimonial.php:53
+#: modules/testimonial/widgets/testimonial.php:93
+#: modules/timeline/widgets/timeline.php:144
+msgid ""
+"Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor "
+"incididunt ut labore et dolore magna aliqua."
+msgstr ""
+
+#: modules/flip-box/widgets/flip-box.php:199
+msgid "Display Icon"
+msgstr ""
+
+#: modules/flip-box/widgets/flip-box.php:222
+msgid "Back Title"
+msgstr ""
+
+#: modules/flip-box/widgets/flip-box.php:225
+msgid "Exercitation ullamco laboris"
+msgstr ""
+
+#: modules/flip-box/widgets/flip-box.php:235
+#: modules/icon-box/widgets/icon-box.php:242
+#: modules/image-box/widgets/image-box.php:125
+#: modules/image-hover/widgets/image-hover.php:115
+msgid "Title Link"
+msgstr ""
+
+#: modules/flip-box/widgets/flip-box.php:250
+msgid "Back Description"
+msgstr ""
+
+#: modules/flip-box/widgets/flip-box.php:253
+msgid ""
+"Suspendisse potenti Phasellus euismod libero in neque molestie et elementum "
+"libero maximus. Etiam in enim vestibulum suscipit sem quis molestie nibh. "
+"Donec ac lacus nec diam gravida pellentesque."
+msgstr ""
+
+#: modules/flip-box/widgets/flip-box.php:298
+msgid "Box Height"
+msgstr ""
+
+#: modules/flip-box/widgets/flip-box.php:313
+msgid "Front Background Color"
+msgstr ""
+
+#: modules/flip-box/widgets/flip-box.php:324
+msgid "Back Background Color"
+msgstr ""
+
+#: modules/flip-box/widgets/flip-box.php:400
+#: modules/heading/widgets/heading.php:459
+#: modules/icon-box/widgets/icon-box.php:439
+#: modules/price-table/widgets/price-table.php:299
+msgid "Icon Color"
+msgstr ""
+
+#: modules/flip-box/widgets/flip-box.php:411
+#: modules/icon-box/widgets/icon-box.php:450
+#: modules/price-table/widgets/price-table.php:311
+msgid "Icon Background Color"
+msgstr ""
+
+#: modules/flip-box/widgets/flip-box.php:428
+#: modules/icon-box/widgets/icon-box.php:508
+#: modules/price-table/widgets/price-table.php:353
+msgid "Icon Border Radius"
+msgstr ""
+
+#: modules/flip-box/widgets/flip-box.php:448
+#: modules/heading/widgets/heading.php:489
+#: modules/price-table/widgets/price-table.php:365
+msgid "Icon Padding"
+msgstr ""
+
+#: modules/flip-box/widgets/flip-box.php:459
+#: modules/heading/widgets/heading.php:500
+#: modules/price-table/widgets/price-table.php:377
+#: modules/price-table/widgets/price-table.php:391
+msgid "Icon Margin"
+msgstr ""
+
+#: modules/flip-box/widgets/flip-box.php:470
+msgid "Front Title Color"
+msgstr ""
+
+#: modules/flip-box/widgets/flip-box.php:488
+msgid "Back Title Color"
+msgstr ""
+
+#: modules/flip-box/widgets/flip-box.php:499
+msgid "Back Title Hover Color"
+msgstr ""
+
+#: modules/flip-box/widgets/flip-box.php:517
+msgid "Front Description Color"
+msgstr ""
+
+#: modules/flip-box/widgets/flip-box.php:535
+msgid "Back Description Color"
+msgstr ""
+
+#: modules/flipster/widgets/flipster.php:26
+msgid "Avas Flipster"
+msgstr ""
+
+#: modules/flipster/widgets/flipster.php:66
+msgid "Slide"
+msgstr ""
+
+#: modules/flipster/widgets/flipster.php:74
+msgid "Caption"
+msgstr ""
+
+#: modules/flipster/widgets/flipster.php:94
+msgid "Carousel Type"
+msgstr ""
+
+#: modules/flipster/widgets/flipster.php:99
+msgid "Cover-Flow"
+msgstr ""
+
+#: modules/flipster/widgets/flipster.php:100
+msgid "Carousel"
+msgstr ""
+
+#: modules/flipster/widgets/flipster.php:101
+msgid "Flat"
+msgstr ""
+
+#: modules/flipster/widgets/flipster.php:102
+msgid "Wheel"
+msgstr ""
+
+#: modules/flipster/widgets/flipster.php:109
+msgid "Item Spacing"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:26
+msgid "Avas Heading"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:55
+#: modules/image-box/widgets/image-box.php:241
+#: modules/popup/widgets/popup.php:119
+msgid "Icon Position"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:59
+#: modules/price-menu/widgets/price-menu.php:790
+#: modules/price-menu/widgets/price-menu.php:835
+msgid "Top"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:60
+#: modules/price-menu/widgets/price-menu.php:798
+#: modules/price-menu/widgets/price-menu.php:843
+msgid "Bottom"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:67
+#: modules/heading/widgets/heading.php:70
+#: modules/heading/widgets/heading.php:513
+#: modules/price-table/widgets/price-table.php:118
+#: modules/price-table/widgets/price-table.php:120
+msgid "Sub Heading"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:76
+msgid "Main Heading (First Part)"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:85
+msgid "Main Heading (Last Part)"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:88
+msgid "Example"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:94
+msgid "Watermark Heading"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:97
+#: modules/heading/widgets/heading.php:609
+msgid "Watermark"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:106
+msgid ""
+"Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor "
+"incididunt ut labore."
+msgstr ""
+
+#: modules/heading/widgets/heading.php:178
+#: modules/price-table/widgets/price-table.php:109
+msgid "Main Heading"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:192
+msgid "Main Heading Arrow"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:199
+msgid "Arrow Vertical Position"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:219
+msgid "Arrow Horizontal Position"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:239
+msgid "Arrow Color"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:253
+msgid "Main Heading Padding"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:264
+msgid "Main Heading Margin"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:275
+msgid "Main Heading First Part Background Color"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:286
+msgid "Main Heading First Part Background Hover Color"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:296
+msgid "Main Heading First Part Color"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:306
+msgid "Main Heading First Part Hover Color"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:316
+msgid "Main Heading First Part Border Hover Color"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:340
+msgid "Main Heading First Part Padding"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:351
+msgid "Main Heading First Part Margin"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:363
+msgid "Main Heading Last Part Background Color"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:374
+msgid "Main Heading Last Part Background Hover Color"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:384
+msgid "Main Heading Last Part Color"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:394
+msgid "Main Heading Last Part Hover Color"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:404
+msgid "Main Heading Last Part Border Hover Color"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:428
+msgid "Main Heading Last Part Padding"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:439
+msgid "Main Heading Last Part Margin"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:520
+msgid "Sub Header Color"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:537
+msgid "Sub Header Padding"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:548
+msgid "Sub Header Margin"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:561
+msgid "Heading Description"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:568
+msgid "Heading Description Color"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:585
+msgid "Heading Description Padding"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:596
+msgid "Heading Description Margin"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:616
+msgid "Heading Watermark Color"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:640
+msgid "Heading Watermark Padding"
+msgstr ""
+
+#: modules/heading/widgets/heading.php:651
+msgid "Heading Watermark Margin"
+msgstr ""
+
+#: modules/icon-box/widgets/icon-box.php:25
+msgid "Avas Icon Box"
+msgstr ""
+
+#: modules/icon-box/widgets/icon-box.php:132
+#: modules/icon-box/widgets/icon-box.php:170
+msgid "Icon Spacing Vertical"
+msgstr ""
+
+#: modules/icon-box/widgets/icon-box.php:151
+#: modules/icon-box/widgets/icon-box.php:189
+msgid "Icon Spacing Horizontal"
+msgstr ""
+
+#: modules/icon-box/widgets/icon-box.php:216
+#: modules/image-box/widgets/image-box.php:99
+#: modules/image-hover/widgets/image-hover.php:108
+msgid "This is the title"
+msgstr ""
+
+#: modules/icon-box/widgets/icon-box.php:268
+msgid ""
+"Suspendisse potenti Phasellus euismod libero in neque molestie et mentum "
+"libero maximus. Etiam in enim vestibulum suscipit sem quis molestie nibh."
+msgstr ""
+
+#: modules/icon-box/widgets/icon-box.php:269
+#: modules/image-hover/widgets/image-hover.php:138
+msgid "Enter your description"
+msgstr ""
+
+#: modules/icon-box/widgets/icon-box.php:275
+#: modules/image-box/widgets/image-box.php:183
+#: modules/image-box/widgets/image-box.php:484
+#: modules/popup/widgets/popup.php:232
+#: modules/price-table/widgets/price-table.php:529
+msgid "Button"
+msgstr ""
+
+#: modules/icon-box/widgets/icon-box.php:284
+#: modules/timeline/widgets/timeline.php:207
+msgid "Read More"
+msgstr ""
+
+#: modules/icon-box/widgets/icon-box.php:285
+msgid "Enter Text"
+msgstr ""
+
+#: modules/icon-box/widgets/icon-box.php:301
+#: modules/timeline/widgets/timeline.php:216
+msgid "https://your-link.com"
+msgstr ""
+
+#: modules/icon-box/widgets/icon-box.php:313
+#: modules/image-box/widgets/image-box.php:231
+#: modules/popup/widgets/popup.php:112
+msgid "Button Icon"
+msgstr ""
+
+#: modules/icon-box/widgets/icon-box.php:325
+msgid "Button Icon Position"
+msgstr ""
+
+#: modules/icon-box/widgets/icon-box.php:329
+#: modules/image-box/widgets/image-box.php:245
+#: modules/popup/widgets/popup.php:123
+msgid "Before"
+msgstr ""
+
+#: modules/icon-box/widgets/icon-box.php:330
+#: modules/image-box/widgets/image-box.php:246
+#: modules/popup/widgets/popup.php:124
+msgid "After"
+msgstr ""
+
+#: modules/icon-box/widgets/icon-box.php:341
+#: modules/image-box/widgets/image-box.php:257
+#: modules/popup/widgets/popup.php:131
+msgid "Icon Spacing"
+msgstr ""
+
+#: modules/icon-box/widgets/icon-box.php:390
+msgid "Background Border Radius"
+msgstr ""
+
+#: modules/icon-box/widgets/icon-box.php:408
+msgid "Rotate"
+msgstr ""
+
+#: modules/icon-box/widgets/icon-box.php:480
+msgid "Icon Rotate"
+msgstr ""
+
+#: modules/icon-box/widgets/icon-box.php:519
+msgid "Icon Margin Bottom"
+msgstr ""
+
+#: modules/icon-box/widgets/icon-box.php:584
+#: modules/image-box/widgets/image-box.php:504
+#: modules/price-table/widgets/price-table.php:543
+#: modules/timeline/widgets/timeline.php:661
+msgid "Button Color"
+msgstr ""
+
+#: modules/icon-box/widgets/icon-box.php:595
+#: modules/image-box/widgets/image-box.php:514
+#: modules/price-table/widgets/price-table.php:554
+#: modules/timeline/widgets/timeline.php:684
+msgid "Button Background Color"
+msgstr ""
+
+#: modules/icon-box/widgets/icon-box.php:621
+#: modules/image-box/widgets/image-box.php:538
+#: modules/popup/widgets/popup.php:148
+#: modules/price-table/widgets/price-table.php:578
+msgid "Button Border Radius"
+msgstr ""
+
+#: modules/icon-box/widgets/icon-box.php:632
+#: modules/image-box/widgets/image-box.php:554
+#: modules/popup/widgets/popup.php:189
+#: modules/price-table/widgets/price-table.php:589
+#: modules/timeline/widgets/timeline.php:711
+msgid "Button Padding"
+msgstr ""
+
+#: modules/icon-box/widgets/icon-box.php:643
+msgid "Button Space"
+msgstr ""
+
+#: modules/icon-box/widgets/icon-box.php:685
+msgid "Hover Rotate"
+msgstr ""
+
+#: modules/icon-box/widgets/icon-box.php:705
+msgid "Icon Hover Color"
+msgstr ""
+
+#: modules/icon-box/widgets/icon-box.php:716
+msgid "Icon Background Hover Color"
+msgstr ""
+
+#: modules/icon-box/widgets/icon-box.php:733
+msgid "Icon Rotate Hover"
+msgstr ""
+
+#: modules/icon-box/widgets/icon-box.php:764
+#: modules/image-box/widgets/image-box.php:585
+#: modules/price-table/widgets/price-table.php:619
+#: modules/timeline/widgets/timeline.php:673
+msgid "Button Hover Color"
+msgstr ""
+
+#: modules/icon-box/widgets/icon-box.php:775
+#: modules/image-box/widgets/image-box.php:595
+#: modules/price-table/widgets/price-table.php:629
+#: modules/timeline/widgets/timeline.php:694
+msgid "Button Background Hover Color"
+msgstr ""
+
+#: modules/image-box/widgets/image-box.php:25
+msgid "Avas Image Box"
+msgstr ""
+
+#: modules/image-box/widgets/image-box.php:59
+msgid "Overlay Text"
+msgstr ""
+
+#: modules/image-box/widgets/image-box.php:69
+msgid "Overlay Text Link"
+msgstr ""
+
+#: modules/image-box/widgets/image-box.php:76
+msgid "Overlay Text Link URL"
+msgstr ""
+
+#: modules/image-box/widgets/image-box.php:147
+#: modules/image-hover/widgets/image-hover.php:137
+msgid ""
+"Suspendisse potenti Phasellus euismod libero in neque molestie et mentum "
+"libero maximus. Etiam in enim vestibulum suscipit sem quis."
+msgstr ""
+
+#: modules/image-box/widgets/image-box.php:189
+msgid "Button Display"
+msgstr ""
+
+#: modules/image-box/widgets/image-box.php:210
+msgid "View Details"
+msgstr ""
+
+#: modules/image-box/widgets/image-box.php:219
+msgid "Button Link URL"
+msgstr ""
+
+#: modules/image-box/widgets/image-box.php:285
+msgid "Image Overlay Color"
+msgstr ""
+
+#: modules/image-box/widgets/image-box.php:323
+msgid "Overlay Text Color"
+msgstr ""
+
+#: modules/image-box/widgets/image-box.php:334
+msgid "Overlay Text Hover Color"
+msgstr ""
+
+#: modules/image-box/widgets/image-box.php:358
+msgid "Overlay Text Border Radius"
+msgstr ""
+
+#: modules/image-box/widgets/image-box.php:378
+msgid "Overlay Text Padding"
+msgstr ""
+
+#: modules/image-box/widgets/image-box.php:424
+#: modules/post-carousel/widgets/post-carousel.php:490
+#: modules/post-grid/widgets/post-grid.php:366
+#: modules/profile-carousel/widgets/profile-carousel.php:509
+#: modules/profile/widgets/profile.php:348
+msgid "Content Background Color"
+msgstr ""
+
+#: modules/image-box/widgets/image-box.php:565
+#: modules/price-table/widgets/price-table.php:600
+msgid "Button Margin"
+msgstr ""
+
+#: modules/image-hover/widgets/image-hover.php:26
+msgid "Avas Image Hover"
+msgstr ""
+
+#: modules/image-hover/widgets/image-hover.php:83
+msgid "Effects"
+msgstr ""
+
+#: modules/image-hover/widgets/image-hover.php:86
+msgid "Effect 1"
+msgstr ""
+
+#: modules/image-hover/widgets/image-hover.php:88
+msgid "Effect 2"
+msgstr ""
+
+#: modules/image-hover/widgets/image-hover.php:89
+msgid "Effect 3"
+msgstr ""
+
+#: modules/image-hover/widgets/image-hover.php:90
+msgid "Effect 4"
+msgstr ""
+
+#: modules/image-hover/widgets/image-hover.php:95
+msgid "Effect 5"
+msgstr ""
+
+#: modules/image-hover/widgets/image-hover.php:154
+#: modules/profile-carousel/widgets/profile-carousel.php:438
+#: modules/profile/widgets/profile.php:277
+#: modules/testimonial/widgets/testimonial.php:395
+msgid "Background"
+msgstr ""
+
+#: modules/image-hover/widgets/image-hover.php:216
+msgid "Title Padding"
+msgstr ""
+
+#: modules/image-hover/widgets/image-hover.php:245
+msgid "Description Padding"
+msgstr ""
+
+#: modules/instagram-carousel/widgets/instagram-carousel.php:26
+msgid "Avas Instagram Carousel"
+msgstr ""
+
+#: modules/instagram-carousel/widgets/instagram-carousel.php:45
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:42
+#: modules/post-carousel/widgets/post-carousel.php:42
+#: modules/services-carousel/widgets/services-carousel.php:42
+#: modules/team-carousel/widgets/team-carousel.php:41
+#: modules/testimonial/widgets/testimonial.php:40
+msgid "Content Settings"
+msgstr ""
+
+#: modules/instagram-carousel/widgets/instagram-carousel.php:51
+msgid "Image Resolution"
+msgstr ""
+
+#: modules/instagram-carousel/widgets/instagram-carousel.php:54
+msgid "Small (150x150)"
+msgstr ""
+
+#: modules/instagram-carousel/widgets/instagram-carousel.php:55
+msgid "Medium (320x320)"
+msgstr ""
+
+#: modules/instagram-carousel/widgets/instagram-carousel.php:56
+msgid "Large (640x640)"
+msgstr ""
+
+#: modules/instagram-carousel/widgets/instagram-carousel.php:72
+msgid "Like"
+msgstr ""
+
+#: modules/instagram-carousel/widgets/instagram-carousel.php:92
+#: modules/post-grid/widgets/post-grid.php:271
+msgid "Comments"
+msgstr ""
+
+#: modules/instagram-carousel/widgets/instagram-carousel.php:111
+msgid "Clickable"
+msgstr ""
+
+#: modules/instagram-carousel/widgets/instagram-carousel.php:313
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:445
+#: modules/portfolio/widgets/portfolio.php:392
+#: modules/services-carousel/widgets/services-carousel.php:431
+#: modules/team-carousel/widgets/team-carousel.php:369
+msgid "Overlay Background Color"
+msgstr ""
+
+#: modules/instagram-carousel/widgets/instagram-carousel.php:323
+msgid "Like Color"
+msgstr ""
+
+#: modules/instagram-carousel/widgets/instagram-carousel.php:337
+msgid "Comments Color"
+msgstr ""
+
+#: modules/instagram-carousel/widgets/instagram-carousel.php:540
+msgid ""
+"Please Enter Instagram Access Token Via WordPress Dashboard > Theme Options >"
+" API > Instagram Access Token."
+msgstr ""
+
+#: modules/news-ticker/widgets/news-ticker.php:26
+msgid "Avas News Ticker"
+msgstr ""
+
+#: modules/news-ticker/widgets/news-ticker.php:50
+msgid "TRENDING"
+msgstr ""
+
+#: modules/news-ticker/widgets/news-ticker.php:67
+#: modules/post-carousel/widgets/post-carousel.php:60
+msgid "Post Format"
+msgstr ""
+
+#: modules/news-ticker/widgets/news-ticker.php:70
+#: modules/post-carousel/widgets/post-carousel.php:63
+msgid "Gallery"
+msgstr ""
+
+#: modules/news-ticker/widgets/news-ticker.php:71
+#: modules/post-carousel/widgets/post-carousel.php:64
+#: modules/post-grid/widgets/post-grid.php:187
+msgid "Video"
+msgstr ""
+
+#: modules/news-ticker/widgets/news-ticker.php:109
+#: modules/portfolio/widgets/portfolio.php:144
+#: modules/post-grid/widgets/post-grid.php:113
+#: modules/post-list/widgets/post-list.php:102
+#: modules/post-tiled/widgets/post-tiled.php:117
+#: modules/team/widgets/team.php:139
+msgid "Post sort by"
+msgstr ""
+
+#: modules/news-ticker/widgets/news-ticker.php:113
+#: modules/portfolio/widgets/portfolio.php:148
+#: modules/post-grid/widgets/post-grid.php:117
+#: modules/post-list/widgets/post-list.php:106
+#: modules/post-tiled/widgets/post-tiled.php:121
+#: modules/team/widgets/team.php:143
+msgid "Latest posts"
+msgstr ""
+
+#: modules/news-ticker/widgets/news-ticker.php:114
+#: modules/portfolio/widgets/portfolio.php:149
+#: modules/post-grid/widgets/post-grid.php:118
+#: modules/post-list/widgets/post-list.php:107
+#: modules/post-tiled/widgets/post-tiled.php:122
+#: modules/team/widgets/team.php:144
+msgid "Popular posts"
+msgstr ""
+
+#: modules/news-ticker/widgets/news-ticker.php:115
+#: modules/portfolio/widgets/portfolio.php:150
+#: modules/post-grid/widgets/post-grid.php:119
+#: modules/post-list/widgets/post-list.php:108
+#: modules/post-tiled/widgets/post-tiled.php:123
+#: modules/team/widgets/team.php:145
+msgid "Most discussed"
+msgstr ""
+
+#: modules/news-ticker/widgets/news-ticker.php:213
+msgid "Slide Change Speed(ms)"
+msgstr ""
+
+#: modules/news-ticker/widgets/news-ticker.php:222
+msgid "Slide Change Delay(ms)"
+msgstr ""
+
+#: modules/news-ticker/widgets/news-ticker.php:310
+msgid "Label Background Color"
+msgstr ""
+
+#: modules/popup/widgets/popup.php:26
+msgid "Avas Popup"
+msgstr ""
+
+#: modules/popup/widgets/popup.php:53
+msgid "Popup Type"
+msgstr ""
+
+#: modules/popup/widgets/popup.php:58
+msgid "External URL"
+msgstr ""
+
+#: modules/popup/widgets/popup.php:66
+msgid "Choose Image"
+msgstr ""
+
+#: modules/popup/widgets/popup.php:79
+msgid "Add Content"
+msgstr ""
+
+#: modules/popup/widgets/popup.php:90
+msgid "Add website, video, map etc url"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+#: modules/popup/widgets/popup.php:94
+msgid "https://x-theme.com/avas"
+msgstr ""
+
+#: modules/popup/widgets/popup.php:105
+msgid "CLICK TO OPEN"
+msgstr ""
+
+#: modules/popup/widgets/popup.php:164
+msgid "Button Alignment"
+msgstr ""
+
+#: modules/popup/widgets/popup.php:298
+msgid "Background Hover Color"
+msgstr ""
+
+#: modules/popup/widgets/popup.php:308
+msgid "Border Hover Color"
+msgstr ""
+
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:26
+msgid "Avas Portfolio Carousel"
+msgstr ""
+
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:111
+msgid "Vertical"
+msgstr ""
+
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:112
+msgid "Horizontal"
+msgstr ""
+
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:201
+#: modules/portfolio/widgets/portfolio.php:262
+msgid "Popup Icon"
+msgstr ""
+
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:226
+#: modules/portfolio/widgets/portfolio.php:285
+msgid "Image Only"
+msgstr ""
+
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:239
+#: modules/portfolio/widgets/portfolio.php:297
+msgid "Link Icon"
+msgstr ""
+
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:455
+#: modules/portfolio/widgets/portfolio.php:404
+msgid "Overlay Border Color"
+msgstr ""
+
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:502
+#: modules/services-carousel/widgets/services-carousel.php:503
+#: modules/timeline/widgets/timeline.php:612
+msgid "Excerpt Color"
+msgstr ""
+
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:550
+msgid "Popup & Link Icons Color"
+msgstr ""
+
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:561
+msgid "Popup & Link Icons Hover Color"
+msgstr ""
+
+#: modules/portfolio-carousel/widgets/portfolio-carousel.php:571
+msgid "Popup & Link Icons Background Color"
+msgstr ""
+
+#: modules/portfolio/widgets/portfolio.php:27
+msgid "Avas Portfolio"
+msgstr ""
+
+#: modules/portfolio/widgets/portfolio.php:48
+#: modules/post-grid/widgets/post-grid.php:46
+#: modules/post-list/widgets/post-list.php:46
+#: modules/post-tiled/widgets/post-tiled.php:69
+#: modules/services/widgets/services.php:47 modules/team/widgets/team.php:47
+#: modules/timeline/widgets/timeline.php:228
+msgid "Post Types"
+msgstr ""
+
+#: modules/portfolio/widgets/portfolio.php:50
+msgid ""
+"If you could not see any Portfolio item then please add Portfolio via "
+"WordPress Dashboard > Portfolio > Add New Portfolio"
+msgstr ""
+
+#: modules/portfolio/widgets/portfolio.php:58
+msgid "Category Filter"
+msgstr ""
+
+#: modules/portfolio/widgets/portfolio.php:121
+msgid "Gap"
+msgstr ""
+
+#: modules/portfolio/widgets/portfolio.php:327
+msgid "Category Filter Color"
+msgstr ""
+
+#: modules/portfolio/widgets/portfolio.php:341
+msgid "Category Filter Hover Color"
+msgstr ""
+
+#: modules/portfolio/widgets/portfolio.php:365
+msgid "Cat Filter Alignment"
+msgstr ""
+
+#: modules/portfolio/widgets/portfolio.php:514
+msgid "Popup Icon Color"
+msgstr ""
+
+#: modules/portfolio/widgets/portfolio.php:528
+msgid "Link Icon Color"
+msgstr ""
+
+#: modules/portfolio/widgets/portfolio.php:664
+msgid "All"
+msgstr ""
+
+#: modules/post-carousel/widgets/post-carousel.php:26
+msgid "Avas Post Carousel"
+msgstr ""
+
+#: modules/post-carousel/widgets/post-carousel.php:129
+msgid "Video Icon"
+msgstr ""
+
+#: modules/post-carousel/widgets/post-carousel.php:185
+#: modules/post-grid/widgets/post-grid.php:241
+#: modules/post-list/widgets/post-list.php:174
+#: modules/post-tiled/widgets/post-tiled.php:200
+msgid "Title Lenth"
+msgstr ""
+
+#: modules/post-carousel/widgets/post-carousel.php:216
+#: modules/post-grid/widgets/post-grid.php:325
+msgid "Excerpt Words"
+msgstr ""
+
+#: modules/post-carousel/widgets/post-carousel.php:227
+#: modules/post-grid/widgets/post-grid.php:205
+#: modules/post-list/widgets/post-list.php:205
+#: modules/post-tiled/widgets/post-tiled.php:231
+#: modules/timeline/widgets/timeline.php:450
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:100
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:100
+msgid "Date"
+msgstr ""
+
+#: modules/post-carousel/widgets/post-carousel.php:263
+#: modules/post-grid/widgets/post-grid.php:289
+#: modules/post-list/widgets/post-list.php:241
+msgid "Views"
+msgstr ""
+
+#: modules/post-carousel/widgets/post-carousel.php:281
+msgid "Separator Line"
+msgstr ""
+
+#: modules/post-carousel/widgets/post-carousel.php:537
+msgid "Video Icon Color"
+msgstr ""
+
+#: modules/post-carousel/widgets/post-carousel.php:551
+msgid "Video Icon Hover Color"
+msgstr ""
+
+#: modules/post-carousel/widgets/post-carousel.php:588
+#: modules/post-list/widgets/post-list.php:309
+#: modules/post-tiled/widgets/post-tiled.php:281
+msgid "Category Background Color"
+msgstr ""
+
+#: modules/post-carousel/widgets/post-carousel.php:602
+#: modules/post-list/widgets/post-list.php:320
+msgid "Category Background Hover Color"
+msgstr ""
+
+#: modules/post-carousel/widgets/post-carousel.php:677
+#: modules/post-grid/widgets/post-grid.php:500
+#: modules/post-list/widgets/post-list.php:425
+#: modules/post-tiled/widgets/post-tiled.php:377
+msgid "Meta Color"
+msgstr ""
+
+#: modules/post-carousel/widgets/post-carousel.php:689
+#: modules/post-grid/widgets/post-grid.php:512
+#: modules/post-list/widgets/post-list.php:437
+msgid "Meta Icons Color"
+msgstr ""
+
+#: modules/post-grid/widgets/post-grid.php:26
+msgid "Avas Post Grid"
+msgstr ""
+
+#: modules/post-grid/widgets/post-grid.php:57
+#: modules/post-list/widgets/post-list.php:57
+#: modules/post-tiled/widgets/post-tiled.php:79
+#: modules/services/widgets/services.php:59 modules/team/widgets/team.php:58
+#: modules/timeline/widgets/timeline.php:242
+msgid "Taxonomy"
+msgstr ""
+
+#: modules/post-grid/widgets/post-grid.php:166
+msgid "Min Height"
+msgstr ""
+
+#: modules/post-grid/widgets/post-grid.php:402
+msgid "Date Background Color"
+msgstr ""
+
+#: modules/post-grid/widgets/post-grid.php:415
+msgid "Date Background Hover Color"
+msgstr ""
+
+#: modules/post-grid/widgets/post-grid.php:530
+msgid "Hover Bottom Border Color"
+msgstr ""
+
+#: modules/post-list/widgets/post-list.php:26
+msgid "Avas Post List"
+msgstr ""
+
+#: modules/post-list/widgets/post-list.php:177
+msgid "This will not work for the first post of Style 1, Style 2 and Style 4."
+msgstr ""
+
+#: modules/post-list/widgets/post-list.php:290
+#: modules/post-tiled/widgets/post-tiled.php:262
+#: modules/timeline/widgets/timeline.php:480
+msgid "Content Background"
+msgstr ""
+
+#: modules/post-list/widgets/post-list.php:331
+msgid "Title Color First Post"
+msgstr ""
+
+#: modules/post-list/widgets/post-list.php:345
+msgid "Title First Post Hover Color"
+msgstr ""
+
+#: modules/post-list/widgets/post-list.php:386
+msgid "Title Color Rest Posts"
+msgstr ""
+
+#: modules/post-list/widgets/post-list.php:400
+msgid "Title Rest Posts Hover Color"
+msgstr ""
+
+#: modules/post-tiled/widgets/post-tiled.php:26
+msgid "Avas Post Tiled"
+msgstr ""
+
+#: modules/post-tiled/widgets/post-tiled.php:49
+msgid "Layout 1"
+msgstr ""
+
+#: modules/post-tiled/widgets/post-tiled.php:50
+msgid "Layout 2"
+msgstr ""
+
+#: modules/post-tiled/widgets/post-tiled.php:51
+msgid "Layout 3"
+msgstr ""
+
+#: modules/post-tiled/widgets/post-tiled.php:52
+msgid "Layout 4"
+msgstr ""
+
+#: modules/post-tiled/widgets/post-tiled.php:53
+msgid "Layout 5"
+msgstr ""
+
+#: modules/post-tiled/widgets/post-tiled.php:54
+msgid "Layout 6"
+msgstr ""
+
+#: modules/post-tiled/widgets/post-tiled.php:55
+msgid "Layout 7"
+msgstr ""
+
+#: modules/post-tiled/widgets/post-tiled.php:56
+msgid "Layout 8"
+msgstr ""
+
+#: modules/post-tiled/widgets/post-tiled.php:57
+msgid "Layout 9"
+msgstr ""
+
+#: modules/post-tiled/widgets/post-tiled.php:58
+msgid "Layout 10"
+msgstr ""
+
+#: modules/post-tiled/widgets/post-tiled.php:59
+msgid "Layout 11"
+msgstr ""
+
+#: modules/post-tiled/widgets/post-tiled.php:60
+msgid "Layout 12"
+msgstr ""
+
+#: modules/post-tiled/widgets/post-tiled.php:61
+msgid "Layout 13"
+msgstr ""
+
+#: modules/post-tiled/widgets/post-tiled.php:296
+msgid "Category BG Hover Color"
+msgstr ""
+
+#: modules/post-tiled/widgets/post-tiled.php:310
+msgid "Category Font Color"
+msgstr ""
+
+#: modules/post-tiled/widgets/post-tiled.php:324
+msgid "Category Font Hover Color"
+msgstr ""
+
+#: modules/price-menu/widgets/price-menu.php:23
+msgid "Avas Price Menu"
+msgstr ""
+
+#: modules/price-menu/widgets/price-menu.php:52
+msgid "Menu Item #1"
+msgstr ""
+
+#: modules/price-menu/widgets/price-menu.php:56
+msgid "Menu Item #2"
+msgstr ""
+
+#: modules/price-menu/widgets/price-menu.php:60
+msgid "Menu Item #3"
+msgstr ""
+
+#: modules/price-menu/widgets/price-menu.php:89
+#: modules/price-menu/widgets/price-menu.php:511
+#: modules/price-table/widgets/price-table.php:126
+msgid "Price"
+msgstr ""
+
+#: modules/price-menu/widgets/price-menu.php:98
+msgid "Discount"
+msgstr ""
+
+#: modules/price-menu/widgets/price-menu.php:101
+#: modules/price-menu/widgets/price-menu.php:122
+#: modules/price-menu/widgets/price-menu.php:597
+msgid "On"
+msgstr ""
+
+#: modules/price-menu/widgets/price-menu.php:102
+#: modules/price-menu/widgets/price-menu.php:123
+#: modules/price-menu/widgets/price-menu.php:598
+msgid "Off"
+msgstr ""
+
+#: modules/price-menu/widgets/price-menu.php:107
+#: modules/price-menu/widgets/price-menu.php:585
+msgid "Original Price"
+msgstr ""
+
+#: modules/price-menu/widgets/price-menu.php:119
+msgid "Show Image"
+msgstr ""
+
+#: modules/price-menu/widgets/price-menu.php:154
+msgid "Menu Style"
+msgstr ""
+
+#: modules/price-menu/widgets/price-menu.php:199
+#: modules/price-menu/widgets/price-menu.php:818
+msgid "Title-Price Connector"
+msgstr ""
+
+#: modules/price-menu/widgets/price-menu.php:214
+#: modules/price-menu/widgets/price-menu.php:391
+msgid "Title Separator"
+msgstr ""
+
+#: modules/price-menu/widgets/price-menu.php:228
+msgid "Menu Items"
+msgstr ""
+
+#: modules/price-menu/widgets/price-menu.php:248
+msgid "Items Spacing"
+msgstr ""
+
+#: modules/price-menu/widgets/price-menu.php:370
+#: modules/price-menu/widgets/price-menu.php:490
+#: modules/price-menu/widgets/price-menu.php:661
+msgid "Margin Bottom"
+msgstr ""
+
+#: modules/price-menu/widgets/price-menu.php:402
+msgid "Border Type"
+msgstr ""
+
+#: modules/price-menu/widgets/price-menu.php:407
+#: modules/price-menu/widgets/price-menu.php:869
+msgid "Solid"
+msgstr ""
+
+#: modules/price-menu/widgets/price-menu.php:408
+#: modules/price-menu/widgets/price-menu.php:872
+msgid "Double"
+msgstr ""
+
+#: modules/price-menu/widgets/price-menu.php:409
+#: modules/price-menu/widgets/price-menu.php:871
+msgid "Dotted"
+msgstr ""
+
+#: modules/price-menu/widgets/price-menu.php:410
+#: modules/price-menu/widgets/price-menu.php:870
+msgid "Dashed"
+msgstr ""
+
+#: modules/price-menu/widgets/price-menu.php:424
+msgid "Border Height"
+msgstr ""
+
+#: modules/price-menu/widgets/price-menu.php:449
+msgid "Border Width"
+msgstr ""
+
+#: modules/price-menu/widgets/price-menu.php:519
+msgid "Price Badge"
+msgstr ""
+
+#: modules/price-menu/widgets/price-menu.php:594
+msgid "Strikethrough"
+msgstr ""
+
+#: modules/price-menu/widgets/price-menu.php:609
+msgid "Original Price Color"
+msgstr ""
+
+#: modules/price-menu/widgets/price-menu.php:622
+msgid "Original Price Typography"
+msgstr ""
+
+#: modules/price-menu/widgets/price-menu.php:785
+msgid "Vertical Position"
+msgstr ""
+
+#: modules/price-menu/widgets/price-menu.php:794
+msgid "Middle"
+msgstr ""
+
+#: modules/price-menu/widgets/price-menu.php:830
+msgid "Vertical Alignment"
+msgstr ""
+
+#: modules/price-menu/widgets/price-menu.php:903
+msgid "Divider Weight"
+msgstr ""
+
+#: modules/price-table/widgets/price-table.php:26
+msgid "Avas Price Table"
+msgstr ""
+
+#: modules/price-table/widgets/price-table.php:47
+msgid "Ribbon"
+msgstr ""
+
+#: modules/price-table/widgets/price-table.php:66
+msgid "Ribbon Text"
+msgstr ""
+
+#: modules/price-table/widgets/price-table.php:68
+msgid "POPULAR"
+msgstr ""
+
+#: modules/price-table/widgets/price-table.php:128
+msgid "24.99"
+msgstr ""
+
+#: modules/price-table/widgets/price-table.php:135
+msgid "Period"
+msgstr ""
+
+#: modules/price-table/widgets/price-table.php:137
+msgid "Per month"
+msgstr ""
+
+#: modules/price-table/widgets/price-table.php:171
+msgid "Active"
+msgstr ""
+
+#: modules/price-table/widgets/price-table.php:197
+msgid "ORDER NOW"
+msgstr ""
+
+#: modules/price-table/widgets/price-table.php:268
+msgid "Ribbon Color"
+msgstr ""
+
+#: modules/price-table/widgets/price-table.php:280
+msgid "Ribbon Background Color"
+msgstr ""
+
+#: modules/price-table/widgets/price-table.php:398
+msgid "Heading Color"
+msgstr ""
+
+#: modules/price-table/widgets/price-table.php:415
+msgid "Heading Padding"
+msgstr ""
+
+#: modules/price-table/widgets/price-table.php:426
+msgid "Sub Heading Color"
+msgstr ""
+
+#: modules/price-table/widgets/price-table.php:454
+msgid "Price Padding"
+msgstr ""
+
+#: modules/price-table/widgets/price-table.php:465
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:256
+msgid "Price Color"
+msgstr ""
+
+#: modules/price-table/widgets/price-table.php:482
+msgid "Period Color"
+msgstr ""
+
+#: modules/price-table/widgets/price-table.php:499
+msgid "Features Item Color"
+msgstr ""
+
+#: modules/price-table/widgets/price-table.php:510
+msgid "Features Item Border Color"
+msgstr ""
+
+#: modules/profile-carousel/widgets/profile-carousel.php:26
+msgid "Avas Profile Carousel"
+msgstr ""
+
+#: modules/profile-carousel/widgets/profile-carousel.php:53
+#: modules/profile/widgets/profile.php:53
+#: modules/testimonial/widgets/testimonial.php:51
+msgid "John Doe"
+msgstr ""
+
+#: modules/profile-carousel/widgets/profile-carousel.php:54
+#: modules/profile/widgets/profile.php:54
+msgid "Web Developer"
+msgstr ""
+
+#: modules/profile-carousel/widgets/profile-carousel.php:55
+#: modules/profile-carousel/widgets/profile-carousel.php:110
+#: modules/profile/widgets/profile.php:55
+#: modules/profile/widgets/profile.php:110
+msgid ""
+"Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor "
+"incididunt."
+msgstr ""
+
+#: modules/profile-carousel/widgets/profile-carousel.php:58
+#: modules/profile/widgets/profile.php:58
+#: modules/testimonial/widgets/testimonial.php:56
+msgid "Sharon Brinson"
+msgstr ""
+
+#: modules/profile-carousel/widgets/profile-carousel.php:59
+#: modules/profile/widgets/profile.php:59
+msgid "Graphics Designer"
+msgstr ""
+
+#: modules/profile-carousel/widgets/profile-carousel.php:60
+#: modules/profile/widgets/profile.php:60
+msgid ""
+"Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut "
+"aliquip."
+msgstr ""
+
+#: modules/profile-carousel/widgets/profile-carousel.php:63
+#: modules/profile/widgets/profile.php:63
+#: modules/testimonial/widgets/testimonial.php:61
+msgid "Felix Mercer"
+msgstr ""
+
+#: modules/profile-carousel/widgets/profile-carousel.php:64
+#: modules/profile/widgets/profile.php:64
+msgid "Marketing Expert"
+msgstr ""
+
+#: modules/profile-carousel/widgets/profile-carousel.php:65
+#: modules/profile/widgets/profile.php:65
+msgid ""
+"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore."
+msgstr ""
+
+#: modules/profile-carousel/widgets/profile-carousel.php:68
+#: modules/profile/widgets/profile.php:68
+msgid "Carla Houston"
+msgstr ""
+
+#: modules/profile-carousel/widgets/profile-carousel.php:69
+#: modules/profile/widgets/profile.php:69
+msgid "Finance Manager"
+msgstr ""
+
+#: modules/profile-carousel/widgets/profile-carousel.php:70
+#: modules/profile/widgets/profile.php:70
+msgid ""
+"Cras hendrerit suscipit ligula id ultrices. Maecenas dolor libero fringilla."
+msgstr ""
+
+#: modules/profile-carousel/widgets/profile-carousel.php:120
+#: modules/profile/widgets/profile.php:120
+msgid "Email"
+msgstr ""
+
+#: modules/profile-carousel/widgets/profile-carousel.php:145
+#: modules/profile/widgets/profile.php:145
+msgid "Behance"
+msgstr ""
+
+#: modules/profile-carousel/widgets/profile-carousel.php:150
+#: modules/profile/widgets/profile.php:150
+msgid "Dribbble"
+msgstr ""
+
+#: modules/profile-carousel/widgets/profile-carousel.php:155
+#: modules/profile/widgets/profile.php:155
+msgid "Pinterest"
+msgstr ""
+
+#: modules/profile-carousel/widgets/profile-carousel.php:197
+#: modules/profile/widgets/profile.php:197
+#: modules/testimonial/widgets/testimonial.php:164
+msgid "Image Border Radius"
+msgstr ""
+
+#: modules/profile-carousel/widgets/profile-carousel.php:257
+msgid "Profile Per Row on Mobile"
+msgstr ""
+
+#: modules/profile-carousel/widgets/profile-carousel.php:265
+msgid "Profile Per Row on Tablet"
+msgstr ""
+
+#: modules/profile-carousel/widgets/profile-carousel.php:273
+msgid "Profile Per Row on Laptop"
+msgstr ""
+
+#: modules/profile-carousel/widgets/profile-carousel.php:281
+msgid "Profile Per Row on Desktop"
+msgstr ""
+
+#: modules/profile-carousel/widgets/profile-carousel.php:318
+#: modules/testimonial/widgets/testimonial.php:278
+msgid "Slide Speed"
+msgstr ""
+
+#: modules/profile-carousel/widgets/profile-carousel.php:330
+#: modules/testimonial/widgets/testimonial.php:290
+msgid "Slide Delay"
+msgstr ""
+
+#: modules/profile-carousel/widgets/profile-carousel.php:533
+#: modules/timeline/widgets/timeline.php:500
+msgid "Content Border"
+msgstr ""
+
+#: modules/profile-carousel/widgets/profile-carousel.php:547
+#: modules/profile/widgets/profile.php:372
+#: modules/testimonial/widgets/testimonial.php:510
+msgid "Name Color"
+msgstr ""
+
+#: modules/profile-carousel/widgets/profile-carousel.php:559
+#: modules/profile/widgets/profile.php:384
+msgid "Name Hover Color"
+msgstr ""
+
+#: modules/profile-carousel/widgets/profile-carousel.php:578
+#: modules/profile/widgets/profile.php:403
+msgid "Position Color"
+msgstr ""
+
+#: modules/profile-carousel/widgets/profile-carousel.php:598
+#: modules/profile/widgets/profile.php:423
+msgid "Profile Details Color"
+msgstr ""
+
+#: modules/profile-carousel/widgets/profile-carousel.php:618
+#: modules/profile/widgets/profile.php:443
+msgid "Social Profile Color"
+msgstr ""
+
+#: modules/profile-carousel/widgets/profile-carousel.php:630
+#: modules/profile/widgets/profile.php:455
+msgid "Social Profile Hover Color"
+msgstr ""
+
+#: modules/profile-carousel/widgets/profile-carousel.php:648
+#: modules/profile/widgets/profile.php:507
+msgid "Social Profile Icon Padding"
+msgstr ""
+
+#: modules/profile/widgets/profile.php:26
+msgid "Avas Profile"
+msgstr ""
+
+#: modules/profile/widgets/profile.php:518
+msgid "Social Profile Icon Margin"
+msgstr ""
+
+#: modules/services-carousel/widgets/services-carousel.php:26
+msgid "Avas Services Carousel"
+msgstr ""
+
+#: modules/services-carousel/widgets/services-carousel.php:201
+#: modules/services/widgets/services.php:203
+msgid "Overlay Icon"
+msgstr ""
+
+#: modules/services-carousel/widgets/services-carousel.php:225
+msgid "Overlay Arrow"
+msgstr ""
+
+#: modules/services-carousel/widgets/services-carousel.php:441
+msgid "Overlay Icon Color"
+msgstr ""
+
+#: modules/services-carousel/widgets/services-carousel.php:479
+#: modules/services/widgets/services.php:366
+msgid "Title Background Color"
+msgstr ""
+
+#: modules/services/widgets/services.php:26
+msgid "Avas Services"
+msgstr ""
+
+#: modules/services/widgets/services.php:49
+msgid ""
+"If you can not see any Services item then please add Services via WordPress "
+"Dashboard > Services > Add New Services"
+msgstr ""
+
+#: modules/services/widgets/services.php:227
+msgid "Link Arrow"
+msgstr ""
+
+#: modules/services/widgets/services.php:286
+msgid "Image Background Hover Color"
+msgstr ""
+
+#: modules/services/widgets/services.php:483
+msgid "Link Arrow Color"
+msgstr ""
+
+#: modules/services/widgets/services.php:498
+msgid "Link Arrow Hover Color"
+msgstr ""
+
+#: modules/table/widgets/table.php:26
+msgid "Avas Table"
+msgstr ""
+
+#: modules/table/widgets/table.php:45
+msgid "Header"
+msgstr ""
+
+#: modules/table/widgets/table.php:70
+msgid "Span"
+msgstr ""
+
+#: modules/table/widgets/table.php:76
+msgid "Header Icon"
+msgstr ""
+
+#: modules/table/widgets/table.php:85
+msgid "Icon Type"
+msgstr ""
+
+#: modules/table/widgets/table.php:146
+msgid "Body"
+msgstr ""
+
+#: modules/table/widgets/table.php:165
+msgid "Type"
+msgstr ""
+
+#: modules/table/widgets/table.php:169
+msgid "Row"
+msgstr ""
+
+#: modules/table/widgets/table.php:175
+msgid "Col Span"
+msgstr ""
+
+#: modules/table/widgets/table.php:186
+msgid "Row Span"
+msgstr ""
+
+#: modules/table/widgets/table.php:216
+msgid "General"
+msgstr ""
+
+#: modules/table/widgets/table.php:283
+msgid "Header Style"
+msgstr ""
+
+#: modules/table/widgets/table.php:292
+msgid "Header Border Radius"
+msgstr ""
+
+#: modules/table/widgets/table.php:404
+msgid "Title Alignment"
+msgstr ""
+
+#: modules/table/widgets/table.php:436
+msgid "Body Style"
+msgstr ""
+
+#: modules/table/widgets/table.php:448 modules/table/widgets/table.php:520
+msgid "Odd Row Color"
+msgstr ""
+
+#: modules/table/widgets/table.php:459 modules/table/widgets/table.php:531
+msgid "Odd Row Background Color"
+msgstr ""
+
+#: modules/table/widgets/table.php:470 modules/table/widgets/table.php:542
+msgid "Even Row Color"
+msgstr ""
+
+#: modules/table/widgets/table.php:482 modules/table/widgets/table.php:554
+msgid "Even Row Background Color"
+msgstr ""
+
+#: modules/table/widgets/table.php:580
+msgid "Content Alignment"
+msgstr ""
+
+#: modules/team-carousel/widgets/team-carousel.php:26
+msgid "Avas Team Carousel"
+msgstr ""
+
+#: modules/team-carousel/widgets/team-carousel.php:144
+msgid "Bio"
+msgstr ""
+
+#: modules/team-carousel/widgets/team-carousel.php:416
+msgid "Bio Color"
+msgstr ""
+
+#: modules/team-carousel/widgets/team-carousel.php:464
+msgid "Social Icon Color"
+msgstr ""
+
+#: modules/team-carousel/widgets/team-carousel.php:476
+msgid "Social Icon Hover Color"
+msgstr ""
+
+#: modules/team/widgets/team.php:26
+msgid "Avas Team"
+msgstr ""
+
+#: modules/team/widgets/team.php:49
+msgid ""
+"If you can not see any Team item then please add Team via WordPress "
+"Dashboard > Team > Add New"
+msgstr ""
+
+#: modules/team/widgets/team.php:101
+msgid "Column Bottom Gap"
+msgstr ""
+
+#: modules/team/widgets/team.php:176
+msgid "Number of Teams"
+msgstr ""
+
+#: modules/team/widgets/team.php:241
+msgid "Social Media"
+msgstr ""
+
+#: modules/team/widgets/team.php:408
+msgid "Social Media Color"
+msgstr ""
+
+#: modules/team/widgets/team.php:425
+msgid "Social Media Hover Color"
+msgstr ""
+
+#: modules/testimonial/widgets/testimonial.php:25
+msgid "Avas Testimonial"
+msgstr ""
+
+#: modules/testimonial/widgets/testimonial.php:52
+msgid "Theme X"
+msgstr ""
+
+#: modules/testimonial/widgets/testimonial.php:57
+msgid "Envato"
+msgstr ""
+
+#: modules/testimonial/widgets/testimonial.php:58
+msgid ""
+"Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut "
+"aliquip exea commodo consequat."
+msgstr ""
+
+#: modules/testimonial/widgets/testimonial.php:62
+msgid "Themeforest"
+msgstr ""
+
+#: modules/testimonial/widgets/testimonial.php:63
+msgid ""
+"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore "
+"eu fugiat nulla pariatur."
+msgstr ""
+
+#: modules/testimonial/widgets/testimonial.php:76
+msgid "Company Name"
+msgstr ""
+
+#: modules/testimonial/widgets/testimonial.php:91
+msgid "Testimonials"
+msgstr ""
+
+#: modules/testimonial/widgets/testimonial.php:98
+msgid "Rating"
+msgstr ""
+
+#: modules/testimonial/widgets/testimonial.php:116
+msgid "Stars"
+msgstr ""
+
+#: modules/testimonial/widgets/testimonial.php:120
+msgid "1 Star"
+msgstr ""
+
+#: modules/testimonial/widgets/testimonial.php:121
+msgid "2 Stars"
+msgstr ""
+
+#: modules/testimonial/widgets/testimonial.php:122
+msgid "3 Stars"
+msgstr ""
+
+#: modules/testimonial/widgets/testimonial.php:123
+msgid "4 Stars"
+msgstr ""
+
+#: modules/testimonial/widgets/testimonial.php:124
+msgid "5 Stars"
+msgstr ""
+
+#: modules/testimonial/widgets/testimonial.php:189
+msgid "Quote"
+msgstr ""
+
+#: modules/testimonial/widgets/testimonial.php:466
+msgid "Quote Color"
+msgstr ""
+
+#: modules/testimonial/widgets/testimonial.php:490
+msgid "Testimonials Details Color"
+msgstr ""
+
+#: modules/testimonial/widgets/testimonial.php:530
+msgid "Company Name Color"
+msgstr ""
+
+#: modules/timeline/widgets/timeline.php:26
+msgid "Avas Timeline"
+msgstr ""
+
+#: modules/timeline/widgets/timeline.php:49
+msgid "Content Source"
+msgstr ""
+
+#: modules/timeline/widgets/timeline.php:69
+#: modules/timeline/widgets/timeline.php:77
+#: modules/timeline/widgets/timeline.php:85
+#: modules/timeline/widgets/timeline.php:93
+msgid "Lorem ipsum dolor sit amet"
+msgstr ""
+
+#: modules/timeline/widgets/timeline.php:70
+#: modules/timeline/widgets/timeline.php:78
+#: modules/timeline/widgets/timeline.php:86
+#: modules/timeline/widgets/timeline.php:94
+msgid ""
+"Consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et "
+"dolore magna aliqua."
+msgstr ""
+
+#: modules/timeline/widgets/timeline.php:137
+msgid "Your title goes here"
+msgstr ""
+
+#: modules/timeline/widgets/timeline.php:148
+msgid "Post Date"
+msgstr ""
+
+#: modules/timeline/widgets/timeline.php:150
+msgid "January 01, 2019"
+msgstr ""
+
+#: modules/timeline/widgets/timeline.php:154
+#: modules/timeline/widgets/timeline.php:329
+msgid "Circle Image / Icon"
+msgstr ""
+
+#: modules/timeline/widgets/timeline.php:171
+msgid "Circle Image"
+msgstr ""
+
+#: modules/timeline/widgets/timeline.php:182
+msgid "Icon Image Size"
+msgstr ""
+
+#: modules/timeline/widgets/timeline.php:191
+msgid "Circle Icon"
+msgstr ""
+
+#: modules/timeline/widgets/timeline.php:508
+msgid "Content Border Radius"
+msgstr ""
+
+#: modules/timeline/widgets/timeline.php:530
+msgid "Content Arrow Color"
+msgstr ""
+
+#: modules/timeline/widgets/timeline.php:543
+msgid "Line Color"
+msgstr ""
+
+#: modules/timeline/widgets/timeline.php:555
+msgid "Over Line Color"
+msgstr ""
+
+#: modules/timeline/widgets/timeline.php:566
+msgid "Line Icon Color"
+msgstr ""
+
+#: modules/timeline/widgets/timeline.php:577
+msgid "Line Icon Background Color"
+msgstr ""
+
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:26
+msgid "Avas Woocommerce Carousel"
+msgstr ""
+
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:49
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:49
+msgid "Product Type"
+msgstr ""
+
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:52
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:697
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:52
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:600
+msgid "Featured"
+msgstr ""
+
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:76
+msgid "Number of Products"
+msgstr ""
+
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:96
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:96
+msgid "Order by"
+msgstr ""
+
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:103
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:103
+msgid "Random"
+msgstr ""
+
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:119
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:169
+msgid "Sale Badge"
+msgstr ""
+
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:138
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:188
+msgid "Featured Badge"
+msgstr ""
+
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:157
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:124
+msgid "New Badge"
+msgstr ""
+
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:177
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:143
+msgid "New badge display for days"
+msgstr ""
+
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:688
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:591
+msgid "New"
+msgstr ""
+
+#: modules/woocommerce-carousel/widgets/woocommerce-carousel.php:734
+msgid "Please install and activate WooCommerce plugin"
+msgstr ""
+
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:26
+msgid "Avas WooCommerce Grid"
+msgstr ""
+
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:76
+msgid "Product Per Page"
+msgstr ""
+
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:84
+msgid "Columns per row"
+msgstr ""
+
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:85
+msgid ""
+"You need to change the value too in WordPress Dashboard > Theme Options > "
+"WooCommerce > Product per row"
+msgstr ""
+
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:291
+msgid "Sale Badge Color"
+msgstr ""
+
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:305
+msgid "Sale Badge Background Color"
+msgstr ""
+
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:328
+msgid "New Badge Color"
+msgstr ""
+
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:342
+msgid "New Badge Background Color"
+msgstr ""
+
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:365
+msgid "Featured Badge Color"
+msgstr ""
+
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:379
+msgid "Featured Badge Background Color"
+msgstr ""
+
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:402
+msgid "Add to Cart Color"
+msgstr ""
+
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:413
+msgid "Add to Cart Hover Color"
+msgstr ""
+
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:423
+msgid "Add to Cart Background Color"
+msgstr ""
+
+#: modules/woocommerce-grid/widgets/woocommerce-grid.php:640
+msgid "Please install and activate WooCoommerce plugin"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Avas Core"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"This plugin for Avas WordPress theme only. To use Avas theme properly you "
+"must activate this plugin."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "theme-x"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://x-theme.com/"
+msgstr ""

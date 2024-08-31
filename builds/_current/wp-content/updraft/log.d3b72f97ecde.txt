@@ -1,0 +1,341 @@
+0000.009 (0) Opened log file at time: Thu, 29 Aug 2024 16:12:17 +0000 on http://www.sunbird.lk
+0000.012 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.22.24 WP: 6.6.1 PHP: 8.1.28 (cgi-fcgi, Linux tev-cl09.omnis.com 3.10.0-1160.114.2.el7.x86_64 #1 SMP Wed Mar 20 15:54:52 UTC 2024 x86_64) MySQL: 10.4.22-MariaDB-1:10.4.22+maria~buster (max packet size=16777216) WPLANG: en_US Server: Apache/2.4.41 (CentOS) OpenSSL/1.0.2k-fips mod_vhost_ldap/2.4.0 safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 83.3M | 85M) multisite: N openssl: OpenSSL 1.0.2k  26 Jan 2017 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.014 (0) Free space on disk containing Updraft's temporary directory: Unknown
+0000.100 (0) Tasks: Backup files: 1 (schedule: daily) Backup DB: 0 (schedule: daily)
+0000.105 (0) Semaphore (f, wp_options) being initialised
+0000.111 (0) Requesting semaphore lock (f) (apparently not via scheduler)
+0000.116 (0) Set semaphore last lock (f) time to 2024-08-29 16:12:17
+0000.118 (0) Semaphore lock (f) complete
+0000.124 (0) Backup run: resumption=0, nonce=d3b72f97ecde, file_nonce=d3b72f97ecde begun at=1724947937 (0s ago), job type=backup
+0000.127 (0) Scheduling a resumption (1) after 300 seconds (1724948237) in case this run gets aborted
+0000.148 (0) Checking if we have a zip executable available
+0000.177 (0) Testing: /usr/bin/zip
+0000.198 (0) Output: zip warning: binziptest/test.zip not found or empty
+0000.203 (0) Output: adding: binziptest/subdir1/	(in=0) (out=0) (stored 0%)
+0000.204 (0) Output: adding: binziptest/subdir1/subdir2/	(in=0) (out=0) (stored 0%)
+0000.206 (0) Output: adding: binziptest/subdir1/subdir2/test.html	(in=131) (out=107) (deflated 18%)
+0000.208 (0) Output: total bytes=131, compressed=107 -> 18% savings
+0000.225 (0) Output: adding: binziptest/subdir1/subdir2/test2.html	(in=138) (out=113) (deflated 18%)
+0000.227 (0) Output: total bytes=269, compressed=220 -> 18% savings
+0000.248 (0) Working binary zip found: /usr/bin/zip
+0000.252 (0) Zip engine: found/will use a binary zip: /usr/bin/zip
+0000.254 (0) Creation of backups of directories: beginning
+0000.287 (0) Beginning creation of dump of plugins (split every: 400 MB)
+0013.596 (0) Total entities for the zip file: 2797 directories, 11298 files (0 skipped as non-modified), 135.8 MB
+0013.603 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 2.0 seconds have passed since the last write (0 MB, 1 (1) files added so far); re-opening (prior size: 0 KB)
+0013.988 (0) backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: size is now: 0.70 MB
+0014.167 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 100 files added (on-disk size: 683.7 KB)
+0014.306 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 200 files added (on-disk size: 683.7 KB)
+0014.487 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 300 files added (on-disk size: 683.7 KB)
+0014.636 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 400 files added (on-disk size: 683.7 KB)
+0014.775 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 500 files added (on-disk size: 683.7 KB)
+0014.906 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 600 files added (on-disk size: 683.7 KB)
+0015.068 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 700 files added (on-disk size: 683.7 KB)
+0015.208 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 800 files added (on-disk size: 683.7 KB)
+0015.348 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 900 files added (on-disk size: 683.7 KB)
+0015.489 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 1000 files added (on-disk size: 683.7 KB)
+0015.495 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 1000 files added on this batch (4.7 MB, 11298 files batched, 1001 (1002) added so far); re-opening (prior size: 683.7 KB)
+0017.890 (0) backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: size is now: 1.80 MB
+0018.023 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 1100 files added (on-disk size: 1887.1 KB)
+0018.186 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 1200 files added (on-disk size: 1887.1 KB)
+0018.312 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 1300 files added (on-disk size: 1887.1 KB)
+0018.450 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 1400 files added (on-disk size: 1887.1 KB)
+0018.601 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 1500 files added (on-disk size: 1887.1 KB)
+0018.757 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 1600 files added (on-disk size: 1887.1 KB)
+0018.887 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 1700 files added (on-disk size: 1887.1 KB)
+0019.018 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 1800 files added (on-disk size: 1887.1 KB)
+0019.145 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 1900 files added (on-disk size: 1887.1 KB)
+0019.269 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 2000 files added (on-disk size: 1887.1 KB)
+0019.274 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 1000 files added on this batch (10.8 MB, 11298 files batched, 1001 (2003) added so far); re-opening (prior size: 1887.1 KB)
+0022.083 (0) backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: size is now: 6.20 MB
+0022.184 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 2100 files added (on-disk size: 6302.8 KB)
+0022.280 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 2200 files added (on-disk size: 6302.8 KB)
+0022.396 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 2300 files added (on-disk size: 6302.8 KB)
+0022.591 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 2400 files added (on-disk size: 6302.8 KB)
+0022.775 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 2500 files added (on-disk size: 6302.8 KB)
+0022.953 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 2600 files added (on-disk size: 6302.8 KB)
+0023.083 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 2700 files added (on-disk size: 6302.8 KB)
+0023.209 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 2800 files added (on-disk size: 6302.8 KB)
+0023.826 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 2900 files added (on-disk size: 6302.8 KB)
+0023.972 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 3000 files added (on-disk size: 6302.8 KB)
+0023.980 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 1000 files added on this batch (7.1 MB, 11298 files batched, 1001 (3004) added so far); re-opening (prior size: 6302.8 KB)
+0026.420 (0) backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: size is now: 8.10 MB
+0026.603 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 3100 files added (on-disk size: 8311 KB)
+0026.785 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 3200 files added (on-disk size: 8311 KB)
+0026.912 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 3300 files added (on-disk size: 8311 KB)
+0027.016 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 3400 files added (on-disk size: 8311 KB)
+0027.146 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 3500 files added (on-disk size: 8311 KB)
+0027.315 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 3600 files added (on-disk size: 8311 KB)
+0027.473 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 3700 files added (on-disk size: 8311 KB)
+0027.633 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 3800 files added (on-disk size: 8311 KB)
+0027.780 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 3900 files added (on-disk size: 8311 KB)
+0027.938 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 4000 files added (on-disk size: 8311 KB)
+0027.950 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 1000 files added on this batch (22.9 MB, 11298 files batched, 1001 (4005) added so far); re-opening (prior size: 8311 KB)
+0031.813 (0) backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: size is now: 14.70 MB
+0031.922 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 4100 files added (on-disk size: 15089.1 KB)
+0032.032 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 4200 files added (on-disk size: 15089.1 KB)
+0032.167 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 4300 files added (on-disk size: 15089.1 KB)
+0032.288 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 4400 files added (on-disk size: 15089.1 KB)
+0032.479 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 4500 files added (on-disk size: 15089.1 KB)
+0032.607 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 4600 files added (on-disk size: 15089.1 KB)
+0032.761 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 4700 files added (on-disk size: 15089.1 KB)
+0032.902 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 4800 files added (on-disk size: 15089.1 KB)
+0033.101 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 4900 files added (on-disk size: 15089.1 KB)
+0033.243 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 5000 files added (on-disk size: 15089.1 KB)
+0033.256 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 1000 files added on this batch (14.1 MB, 11298 files batched, 1001 (5006) added so far); re-opening (prior size: 15089.1 KB)
+0036.258 (0) backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: size is now: 21.80 MB
+0036.359 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 5100 files added (on-disk size: 22300.5 KB)
+0036.506 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 5200 files added (on-disk size: 22300.5 KB)
+0036.689 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 5300 files added (on-disk size: 22300.5 KB)
+0036.841 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 5400 files added (on-disk size: 22300.5 KB)
+0036.986 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 5500 files added (on-disk size: 22300.5 KB)
+0037.146 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 5600 files added (on-disk size: 22300.5 KB)
+0037.285 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 5700 files added (on-disk size: 22300.5 KB)
+0037.407 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 5800 files added (on-disk size: 22300.5 KB)
+0037.578 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 5900 files added (on-disk size: 22300.5 KB)
+0037.798 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 6000 files added (on-disk size: 22300.5 KB)
+0037.820 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 1000 files added on this batch (11 MB, 11298 files batched, 1001 (6007) added so far); re-opening (prior size: 22300.5 KB)
+0041.983 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 6100 files added (on-disk size: 25233.3 KB)
+0042.242 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 6200 files added (on-disk size: 25233.3 KB)
+0042.447 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 6300 files added (on-disk size: 25233.3 KB)
+0042.641 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 6400 files added (on-disk size: 25233.3 KB)
+0042.837 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 6500 files added (on-disk size: 25233.3 KB)
+0043.031 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 6600 files added (on-disk size: 25233.3 KB)
+0043.210 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 6700 files added (on-disk size: 25233.3 KB)
+0043.417 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 6800 files added (on-disk size: 25233.3 KB)
+0043.622 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 6900 files added (on-disk size: 25233.3 KB)
+0043.816 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 7000 files added (on-disk size: 25233.3 KB)
+0043.838 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 1000 files added on this batch (1.8 MB, 11298 files batched, 1001 (7008) added so far); re-opening (prior size: 25233.3 KB)
+0047.572 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 7100 files added (on-disk size: 26325.7 KB)
+0047.788 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 7200 files added (on-disk size: 26325.7 KB)
+0047.973 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 7300 files added (on-disk size: 26325.7 KB)
+0048.127 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 7400 files added (on-disk size: 26325.7 KB)
+0048.273 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 7500 files added (on-disk size: 26325.7 KB)
+0048.384 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 7600 files added (on-disk size: 26325.7 KB)
+0048.510 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 7700 files added (on-disk size: 26325.7 KB)
+0048.648 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 7800 files added (on-disk size: 26325.7 KB)
+0048.807 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 7900 files added (on-disk size: 26325.7 KB)
+0048.956 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 8000 files added (on-disk size: 26325.7 KB)
+0048.972 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 1000 files added on this batch (7.8 MB, 11298 files batched, 1001 (8009) added so far); re-opening (prior size: 26325.7 KB)
+0051.821 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 8100 files added (on-disk size: 29002.7 KB)
+0051.920 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 8200 files added (on-disk size: 29002.7 KB)
+0052.024 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 8300 files added (on-disk size: 29002.7 KB)
+0052.150 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 8400 files added (on-disk size: 29002.7 KB)
+0052.270 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 8500 files added (on-disk size: 29002.7 KB)
+0052.388 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 8600 files added (on-disk size: 29002.7 KB)
+0052.495 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 8700 files added (on-disk size: 29002.7 KB)
+0052.626 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 8800 files added (on-disk size: 29002.7 KB)
+0052.757 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 8900 files added (on-disk size: 29002.7 KB)
+0052.857 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 9000 files added (on-disk size: 29002.7 KB)
+0052.869 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 1000 files added on this batch (10.8 MB, 11298 files batched, 1001 (9010) added so far); re-opening (prior size: 29002.7 KB)
+0057.011 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 9100 files added (on-disk size: 33740.9 KB)
+0057.170 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 9200 files added (on-disk size: 33740.9 KB)
+0057.595 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 9300 files added (on-disk size: 33740.9 KB)
+0057.722 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 9400 files added (on-disk size: 33740.9 KB)
+0058.357 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 9500 files added (on-disk size: 33740.9 KB)
+0058.497 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 9600 files added (on-disk size: 33740.9 KB)
+0058.844 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 9700 files added (on-disk size: 33740.9 KB)
+0058.996 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 9800 files added (on-disk size: 33740.9 KB)
+0059.112 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 9900 files added (on-disk size: 33740.9 KB)
+0059.292 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 10000 files added (on-disk size: 33740.9 KB)
+0059.309 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 1000 files added on this batch (21.9 MB, 11298 files batched, 1001 (10011) added so far); re-opening (prior size: 33740.9 KB)
+0063.858 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 10100 files added (on-disk size: 40269.5 KB)
+0063.991 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 10200 files added (on-disk size: 40269.5 KB)
+0064.127 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 10300 files added (on-disk size: 40269.5 KB)
+0064.291 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 10400 files added (on-disk size: 40269.5 KB)
+0064.439 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 10500 files added (on-disk size: 40269.5 KB)
+0064.556 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 10600 files added (on-disk size: 40269.5 KB)
+0064.694 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 10700 files added (on-disk size: 40269.5 KB)
+0064.823 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 10800 files added (on-disk size: 40269.5 KB)
+0064.970 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 10900 files added (on-disk size: 40269.5 KB)
+0065.138 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 11000 files added (on-disk size: 40269.5 KB)
+0065.157 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 1000 files added on this batch (21.4 MB, 11298 files batched, 1001 (11012) added so far); re-opening (prior size: 40269.5 KB)
+0069.373 (0) backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: size is now: 47.90 MB
+0069.483 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 11100 files added (on-disk size: 49027.6 KB)
+0069.615 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.tmp: 11200 files added (on-disk size: 49027.6 KB)
+0071.782 (0) Creating zip file manifest (backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.list-temp.tmp)
+0071.824 (0) Successfully created zip file manifest (size: 1019807)
+0072.755 (0) Created plugins zip (0) - 49521.9 KB in 72.2 s (685.5 KB/s) (sha1: f9fa5d6b2e78f73acb7816faf7d3a8b568d9fd3d, sha256: 8beac79dc4cb3bef62b31aa0a4a5261cd64f92b3ee298f1f598dfa619506d368)
+0072.835 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0072.838 (0) No remote despatch: user chose no remote backup service
+0072.840 (0) Recording as successfully uploaded: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip
+0072.844 (0) Deleting zip manifest (backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip.list.tmp)
+0072.850 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=1, retain_db=1
+0072.853 (0) Number of backup sets in history: 2; groups (db): 1
+0072.855 (0) Examining (for databases) backup set with group_id=0, nonce=3b4e0abe5c15, datestamp=1724947907 (Aug 29 2024 16:11:47)
+0072.857 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0072.858 (0) Examining (for databases) backup set with group_id=0, nonce=13f04e0f5b3e, datestamp=1724939683 (Aug 29 2024 13:54:43)
+0072.859 (0) Number of backup sets in history: 2; groups (files): 1
+0072.860 (0) Examining (for files) backup set with nonce=3b4e0abe5c15, datestamp=1724947907 (Aug 29 2024 16:11:47)
+0072.860 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0072.862 (0) Examining (for files) backup set with nonce=13f04e0f5b3e, datestamp=1724939683 (Aug 29 2024 13:54:43)
+0072.862 (0) This backup set remains non-empty (f=1/d=0); will retain in history
+0072.864 (0) Retain: saving new backup history (sets now: 2) and finishing retain operation
+0072.912 (0) Beginning creation of dump of themes (split every: 400 MB)
+0073.611 (0) Total entities for the zip file: 86 directories, 535 files (0 skipped as non-modified), 42.5 MB
+0073.690 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-themes.zip.tmp: 100 files added (on-disk size: 0 KB)
+0073.759 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-themes.zip.tmp: 200 files added (on-disk size: 0 KB)
+0073.779 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 25 MB added on this batch (26.1 MB, 535 files batched, 222 (222) added so far); re-opening (prior size: 0 KB)
+0075.251 (0) backup_2024-08-29-2042_Sunbird_d3b72f97ecde-themes.zip.tmp: size is now: 5.30 MB
+0075.257 (0) A useful amount of data was added after this amount of zip processing: 2.9 s (normalised: 2.8 s, rate: 9246 KB/s)
+0075.261 (0) Performance is good - will increase the amount of data we attempt to batch (time=2.8954350948334, normalised_time=2.7687615904495, max_time=75.249639034271, data points known=1, old_max_bytes=26214400, new_max_bytes=209715200)
+0075.340 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-themes.zip.tmp: 300 files added (on-disk size: 5455.2 KB)
+0075.461 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-themes.zip.tmp: 400 files added (on-disk size: 5455.2 KB)
+0075.564 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-themes.zip.tmp: 500 files added (on-disk size: 5455.2 KB)
+0076.890 (0) backup_2024-08-29-2042_Sunbird_d3b72f97ecde-themes.zip.tmp: size is now: 11.30 MB
+0076.912 (0) Creating zip file manifest (backup_2024-08-29-2042_Sunbird_d3b72f97ecde-themes.zip.list-temp.tmp)
+0076.919 (0) Successfully created zip file manifest (size: 33052)
+0077.161 (0) Created themes zip (0) - 11618.7 KB in 4 s (2937 KB/s) (sha1: 2b87031750e9a890b8b6c985a9f88d48410158c5, sha256: 935ecbc9f3e25868751511e8200ba27169058e09da205293b2c7e16452f91020)
+0077.211 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0077.215 (0) No remote despatch: user chose no remote backup service
+0077.217 (0) Recording as successfully uploaded: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-themes.zip
+0077.220 (0) Deleting zip manifest (backup_2024-08-29-2042_Sunbird_d3b72f97ecde-themes.zip.list.tmp)
+0077.223 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=1, retain_db=1
+0077.225 (0) Number of backup sets in history: 2; groups (db): 1
+0077.228 (0) Examining (for databases) backup set with group_id=0, nonce=3b4e0abe5c15, datestamp=1724947907 (Aug 29 2024 16:11:47)
+0077.229 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0077.230 (0) Examining (for databases) backup set with group_id=0, nonce=13f04e0f5b3e, datestamp=1724939683 (Aug 29 2024 13:54:43)
+0077.230 (0) Number of backup sets in history: 2; groups (files): 1
+0077.231 (0) Examining (for files) backup set with nonce=3b4e0abe5c15, datestamp=1724947907 (Aug 29 2024 16:11:47)
+0077.231 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0077.232 (0) Examining (for files) backup set with nonce=13f04e0f5b3e, datestamp=1724939683 (Aug 29 2024 13:54:43)
+0077.232 (0) This backup set remains non-empty (f=1/d=0); will retain in history
+0077.233 (0) Retain: saving new backup history (sets now: 2) and finishing retain operation
+0077.275 (0) No backup of uploads: excluded by user's options
+0077.280 (0) Beginning backup of other directories found in the content directory (index: 0)
+0077.282 (0) Exclusion option setting (others): upgrade,cache,updraft,backup*,*backups,mysql.sql,debug.log
+0077.283 (0) Looking for candidates to backup in: /webroot/g/r/gripf001/jfalanka.sunbird/www/wp-content
+0077.285 (0) finding files: themes: skipping: this is the themes directory
+0077.287 (0) finding files: index.php: adding to list (1)
+0077.288 (0) finding files: plugins: skipping: this is the plugins directory
+0077.289 (0) finding files: languages: adding to list (2)
+0077.291 (0) finding files: uploads: adding to list (3)
+0077.292 (0) finding files: mu-plugins: adding to list (4)
+0077.294 (0) finding files: upgrade: skipping: excluded by options
+0077.295 (0) finding files: updraft: skipping: this is the updraft directory
+0077.296 (0) finding files: blogs.dir: adding to list (5)
+0077.298 (0) finding files: cache: skipping: excluded by options
+0077.299 (0) finding files: db.php.x: adding to list (6)
+0077.300 (0) finding files: w3tc-config: adding to list (7)
+0077.301 (0) finding files: smush-webp: adding to list (8)
+0082.242 (0) Total entities for the zip file: 87 directories, 6859 files (0 skipped as non-modified), 249.8 MB
+0082.249 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 2.0 seconds have passed since the last write (0 MB, 1 (1) files added so far); re-opening (prior size: 0 KB)
+0082.293 (0) backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: size is now: 0.00 MB
+0082.464 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 100 files added (on-disk size: 13.9 KB)
+0082.631 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 200 files added (on-disk size: 13.9 KB)
+0082.758 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 300 files added (on-disk size: 13.9 KB)
+0082.876 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 400 files added (on-disk size: 13.9 KB)
+0083.004 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 500 files added (on-disk size: 13.9 KB)
+0083.156 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 600 files added (on-disk size: 13.9 KB)
+0083.309 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 700 files added (on-disk size: 13.9 KB)
+0083.448 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 800 files added (on-disk size: 13.9 KB)
+0083.605 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 900 files added (on-disk size: 13.9 KB)
+0083.736 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 1000 files added (on-disk size: 13.9 KB)
+0083.741 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 1000 files added on this batch (34.5 MB, 6859 files batched, 1001 (1002) added so far); re-opening (prior size: 13.9 KB)
+0087.458 (0) backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: size is now: 34.70 MB
+0088.130 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 1100 files added (on-disk size: 35507.6 KB)
+0088.274 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 1200 files added (on-disk size: 35507.6 KB)
+0088.426 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 1300 files added (on-disk size: 35507.6 KB)
+0088.552 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 1400 files added (on-disk size: 35507.6 KB)
+0088.690 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 1500 files added (on-disk size: 35507.6 KB)
+0088.848 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 1600 files added (on-disk size: 35507.6 KB)
+0088.990 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 1700 files added (on-disk size: 35507.6 KB)
+0089.130 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 1800 files added (on-disk size: 35507.6 KB)
+0089.256 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 1900 files added (on-disk size: 35507.6 KB)
+0089.391 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 2000 files added (on-disk size: 35507.6 KB)
+0089.397 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 1000 files added on this batch (25.6 MB, 6859 files batched, 1001 (2003) added so far); re-opening (prior size: 35507.6 KB)
+0093.519 (0) backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: size is now: 60.40 MB
+0093.653 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 2100 files added (on-disk size: 61865.2 KB)
+0093.787 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 2200 files added (on-disk size: 61865.2 KB)
+0093.937 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 2300 files added (on-disk size: 61865.2 KB)
+0094.100 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 2400 files added (on-disk size: 61865.2 KB)
+0094.237 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 2500 files added (on-disk size: 61865.2 KB)
+0094.538 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 2600 files added (on-disk size: 61865.2 KB)
+0094.726 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 2700 files added (on-disk size: 61865.2 KB)
+0094.898 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 2800 files added (on-disk size: 61865.2 KB)
+0095.030 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 2900 files added (on-disk size: 61865.2 KB)
+0095.175 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 3000 files added (on-disk size: 61865.2 KB)
+0095.184 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 1000 files added on this batch (47.2 MB, 6859 files batched, 1001 (3004) added so far); re-opening (prior size: 61865.2 KB)
+0101.306 (0) backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: size is now: 107.80 MB
+0101.472 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 3100 files added (on-disk size: 110395.3 KB)
+0101.617 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 3200 files added (on-disk size: 110395.3 KB)
+0101.788 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 3300 files added (on-disk size: 110395.3 KB)
+0101.947 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 3400 files added (on-disk size: 110395.3 KB)
+0102.136 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 3500 files added (on-disk size: 110395.3 KB)
+0102.288 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 3600 files added (on-disk size: 110395.3 KB)
+0102.474 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 3700 files added (on-disk size: 110395.3 KB)
+0102.614 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 3800 files added (on-disk size: 110395.3 KB)
+0102.816 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 3900 files added (on-disk size: 110395.3 KB)
+0102.959 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 4000 files added (on-disk size: 110395.3 KB)
+0102.968 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 1000 files added on this batch (33.8 MB, 6859 files batched, 1001 (4005) added so far); re-opening (prior size: 110395.3 KB)
+0109.250 (0) backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: size is now: 141.80 MB
+0109.503 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 4100 files added (on-disk size: 145188.3 KB)
+0109.700 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 4200 files added (on-disk size: 145188.3 KB)
+0109.845 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 4300 files added (on-disk size: 145188.3 KB)
+0110.024 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 4400 files added (on-disk size: 145188.3 KB)
+0110.191 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 4500 files added (on-disk size: 145188.3 KB)
+0110.360 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 4600 files added (on-disk size: 145188.3 KB)
+0110.519 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 4700 files added (on-disk size: 145188.3 KB)
+0110.699 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 4800 files added (on-disk size: 145188.3 KB)
+0110.835 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 4900 files added (on-disk size: 145188.3 KB)
+0111.281 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 5000 files added (on-disk size: 145188.3 KB)
+0111.291 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 1000 files added on this batch (19.8 MB, 6859 files batched, 1001 (5006) added so far); re-opening (prior size: 145188.3 KB)
+0117.835 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 5100 files added (on-disk size: 165337.3 KB)
+0118.794 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 5200 files added (on-disk size: 165337.3 KB)
+0118.973 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 5300 files added (on-disk size: 165337.3 KB)
+0119.126 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 5400 files added (on-disk size: 165337.3 KB)
+0119.268 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 5500 files added (on-disk size: 165337.3 KB)
+0119.397 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 5600 files added (on-disk size: 165337.3 KB)
+0119.539 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 5700 files added (on-disk size: 165337.3 KB)
+0119.675 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 5800 files added (on-disk size: 165337.3 KB)
+0119.834 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 5900 files added (on-disk size: 165337.3 KB)
+0119.999 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 6000 files added (on-disk size: 165337.3 KB)
+0120.021 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 1000 files added on this batch (29.7 MB, 6859 files batched, 1001 (6007) added so far); re-opening (prior size: 165337.3 KB)
+0128.860 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 6100 files added (on-disk size: 195910.1 KB)
+0129.056 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 6200 files added (on-disk size: 195910.1 KB)
+0129.206 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 6300 files added (on-disk size: 195910.1 KB)
+0129.345 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 6400 files added (on-disk size: 195910.1 KB)
+0129.484 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 6500 files added (on-disk size: 195910.1 KB)
+0129.637 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 6600 files added (on-disk size: 195910.1 KB)
+0129.800 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 6700 files added (on-disk size: 195910.1 KB)
+0129.975 (0) Zip: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: 6800 files added (on-disk size: 195910.1 KB)
+0139.847 (0) backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.tmp: size is now: 250.10 MB
+0139.953 (0) Creating zip file manifest (backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.list-temp.tmp)
+0139.979 (0) Successfully created zip file manifest (size: 352970)
+0144.559 (0) Created others zip (0) - 256102.3 KB in 67.1 s (3817.5 KB/s) (sha1: e9b695bf93db4f7a1e14276a07c3ed1fa4148354, sha256: b713f93ddd9df4cd9256fed7446ceaf8fea3af6edcbd9ef90c4a18417c8c9de0)
+0144.805 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0144.807 (0) No remote despatch: user chose no remote backup service
+0144.810 (0) Recording as successfully uploaded: backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip
+0144.813 (0) Deleting zip manifest (backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip.list.tmp)
+0144.823 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=1, retain_db=1
+0144.832 (0) Number of backup sets in history: 2; groups (db): 1
+0144.841 (0) Examining (for databases) backup set with group_id=0, nonce=3b4e0abe5c15, datestamp=1724947907 (Aug 29 2024 16:11:47)
+0144.842 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0144.843 (0) Examining (for databases) backup set with group_id=0, nonce=13f04e0f5b3e, datestamp=1724939683 (Aug 29 2024 13:54:43)
+0144.843 (0) Number of backup sets in history: 2; groups (files): 1
+0144.844 (0) Examining (for files) backup set with nonce=3b4e0abe5c15, datestamp=1724947907 (Aug 29 2024 16:11:47)
+0144.845 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0144.846 (0) Examining (for files) backup set with nonce=13f04e0f5b3e, datestamp=1724939683 (Aug 29 2024 13:54:43)
+0144.846 (0) This backup set remains non-empty (f=1/d=0); will retain in history
+0144.847 (0) Retain: saving new backup history (sets now: 2) and finishing retain operation
+0144.907 (0) Saving backup status to database (elements: 6)
+0144.914 (0) No database backup (wp) - not part of this run
+0144.928 (0) backup_2024-08-29-2042_Sunbird_d3b72f97ecde-plugins.zip: plugins: This file has already been successfully uploaded
+0144.931 (0) backup_2024-08-29-2042_Sunbird_d3b72f97ecde-themes.zip: themes: This file has already been successfully uploaded
+0144.940 (0) backup_2024-08-29-2042_Sunbird_d3b72f97ecde-others.zip: others: This file has already been successfully uploaded
+0144.942 (0) Saving backup history. Total backup size: 309.8 MB
+0144.948 (0) Resume backup (d3b72f97ecde, 0): finish run
+0144.952 (0) There were no more files that needed uploading
+0144.956 (0) Decremented the semaphore (f) by 1
+0144.959 (0) Semaphore (f) unlocked
+0144.960 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0144.970 (0) No email will be sent - this backup set was empty.
+0144.973 (0) The backup apparently succeeded and is now complete
+0000.000 (1) Opened log file at time: Thu, 29 Aug 2024 16:35:30 +0000 on http://www.sunbird.lk
+0000.003 (1) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.22.24 WP: 6.6.1 PHP: 8.1.28 (cgi-fcgi, Linux tev-cl03.omnis.com 3.10.0-1160.114.2.el7.x86_64 #1 SMP Wed Mar 20 15:54:52 UTC 2024 x86_64) MySQL: 10.4.22-MariaDB-1:10.4.22+maria~buster (max packet size=16777216) WPLANG: en_US Server: Apache/2.4.41 (CentOS) OpenSSL/1.0.2k-fips mod_vhost_ldap/2.4.0 safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 69.3M | 71M) multisite: N openssl: OpenSSL 1.0.2k  26 Jan 2017 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.005 (1) PHP event: code E_WARNING: disk_free_space(): Permission denied (line 1029, wp-content/plugins/updraftplus/class-updraftplus.php)
+0000.007 (1) Free space on disk containing Updraft's temporary directory: Unknown
+0000.011 (1) Requesting backup semaphore lock (d3b72f97ecde)
+0000.014 (1) [Debug] Lock option (updraft_lock_d3b72f97ecde, wp_options) was created in the database
+0000.015 (1) [Info] Lock (updraft_lock_d3b72f97ecde, wp_options) acquired after initialising the database
+0000.016 (1) This backup task (d3b72f97ecde) is either complete or began over 2 days ago: ending (1724949330.8665, ) (existing jobdata keys: )
