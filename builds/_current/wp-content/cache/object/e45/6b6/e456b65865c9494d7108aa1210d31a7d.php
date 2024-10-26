@@ -1,1 +1,0 @@
-àl–f<?php exit; ?>a:1:{s:7:"content";O:8:"stdClass":9:{s:7:"term_id";s:2:"56";s:4:"name";s:36:"Premium SENSE PV Solar Energy System";s:4:"slug";s:7:"premium";s:10:"term_group";s:1:"0";s:16:"term_taxonomy_id";s:2:"56";s:8:"taxonomy";s:16:"service-category";s:11:"description";s:0:"";s:6:"parent";s:2:"49";s:5:"count";s:1:"9";}}
