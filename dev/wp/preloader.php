@@ -23,6 +23,6 @@ echo '<p
 <script language="javascript">
    window.onload = (event) => {
       document.getElementById("loader").remove();
-      // console.log("page is fully loaded");
+      console.log("page is fully loaded");
    };
 </script>
