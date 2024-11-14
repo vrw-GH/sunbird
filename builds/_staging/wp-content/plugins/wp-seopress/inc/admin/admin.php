@@ -180,7 +180,7 @@ class seopress_options
             return;
         }
 
-        //IndewNow======================================================================================
+        //IndewNow=================================================================================
         $seopress_instant_indexing_option_name = get_option('seopress_instant_indexing_option_name');
 
         //Init if option doesn't exist
