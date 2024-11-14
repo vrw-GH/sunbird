@@ -12,7 +12,38 @@
 
 *(Click on* ► *items to expand)*
 
-<details open><summary><b>Project Summary</b><br></summary>
+## Features
+
+<details><summary><b>SITE Structure:</b></summary>
+   <ul>
+      <li>Home Page</li>
+      <li>Products - Sub categorized (HW/PV)</li>
+      <li>Products - Details and Quote Request</li>
+      <li>Gallery and Testimonials</li>
+      <li>HW/PV - FAQ/Info/Awards/Certifications etc</li>
+      <li>Branches</li>
+      <li>Facilities</li>
+      <li>About-us and Staff</li>
+      <li>Carreers, Policies</li>
+   </ul>
+</details>
+
+<details><summary><b>To-Dos:</b></summary>
+   <ul>
+      <li>Product: Fact sheets</li>
+   </ul>
+</details>
+
+<details open><summary><b>Version History</b><br></summary>
+   <ul>
+      <li><mark>New Updates: 2024</mark></li>
+      <li>Complete Re-structured</li>
+      <li>Media Cleaned/updated - removed date-based folders</li>
+      <li>Made Dev(Local)/Prod(Live) "$HOST" independent</li>
+      <li>DB 70% cleaned, size redued to 2MB!</li>
+      <li>New Plugins: Popup, Defender, SEO, Cache, Contact, Statistics</li>
+   </ul>
+
    <ul>
       <li><mark>New Updates: 2022</mark></li>
       <li>New categories added</li>
@@ -22,35 +53,24 @@
    </ul>
 </details>
 
-## Features
-
-<details><summary><b>Site:</b></summary>
-   <ul>
-      <li>Home (to Main Landing Page)</li>
-      <li>Products, Gallery and Info, presented per Sub-divisions</li>
-      <li>Email contact with sub-areas and branches</li>
-      <li>Locations with info</li>
-   </ul>
-</details>
-
-<details><summary><b>To-Dos:</b></summary>
-   <ul>
-      <li>CMS Backend</li>
-   </ul>
-</details>
-
 <details><summary open><b>Tech Stack:</b></summary>
    <ul>
-      <li>Built with WordPress</li>
-      <li>Original Theme: Avas</li>
+      <li>WordPress 6.7</li>
+      <li>Theme: Twenty-twentyfour, <s>Avas</s></li>
       <li>Main Plugins:</li>
          <ul>
-            <li>Elementor</li>
-            <li>ContactForm7</li>
-            <li>Woocommerce</li>
-            <li>W3-Total-Cache</li>
-            <li>PHP Mailer</li>
+            <li>Classic, <s>Elementor</s></li>
+            <li>JetFormBuilder/Contact-form-by-SupSystic, <s>ContactForm7</s></li>
+            <li>WP Fastest-Cache, <s>W3-Total-Cache</s></li>
+            <li>WP-mail, <s>PHP Mailer</s></li>
+            <li>Auto Translation (Gtranslate)</li>
+            <li>Popup Box</li>
+            <li>Strong Testimonials</li>
+            <li>Burst Statistics</li>
+            <li>Scrollup button</li>
+            <li>SEOpress</li>
          </ul>
+      <li>"Loading" preloader.php - called via index.php</li>
    </ul>
 </details>
 
