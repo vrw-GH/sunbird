@@ -1,6 +1,6 @@
 <?php
-ob_start();
-include_once __DIR__ . '/preloader.php';
+#ob_start();
+#include_once __DIR__ . '/preloader.php';
 
 /**
  * Front to the WordPress application. This file doesn't do anything, but loads
@@ -19,4 +19,4 @@ define( 'WP_USE_THEMES', true );
 /** Loads the WordPress Environment and Template */
 require __DIR__ . '/wp-blog-header.php';
 
-ob_end_flush(); 
+#ob_end_flush(); 
