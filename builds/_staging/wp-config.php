@@ -1,9 +1,9 @@
 <?php
 include_once
-   'X:/Apache-root/htdocs/includes/get_dotenvs/get-dotenvs.php'; 
-   #$_SERVER['DOCUMENT_ROOT'].'/includes/get_dotenvs/get-dotenvs.php'; 
+   'X:/Apache-root/htdocs/common/includes/get_dotenvs/get-dotenvs.php'; 
+   #$_SERVER['DOCUMENT_ROOT'].'/common/includes/get_dotenvs/get-dotenvs.php'; 
    #---------------------------------  vw- added local .env variables //see httpd.conf 
-   #$_SERVER['MY_BASEDIR'].'/includes/get_dotenvs/get-dotenvs.php'; 
+   #$_SERVER['MY_BASEDIR'].'/common/includes/get_dotenvs/get-dotenvs.php'; 
 #
 ### DEV_MODEs: 0-Prod, 1-Alert/NoCache, 2-&Debug, 3-&Die
 define('DEV_MODE',(int)getenv('ENV_DEV_MODE'));
