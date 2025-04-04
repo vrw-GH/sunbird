@@ -1,13 +1,32 @@
 <?php
-include_once
-   'X:/Apache-root/htdocs/common/includes/get_dotenvs/get-dotenvs.php'; 
-   #$_SERVER['DOCUMENT_ROOT'].'/common/includes/get_dotenvs/get-dotenvs.php'; 
-   #---------------------------------  vw- added local .env variables //see httpd.conf 
-   #$_SERVER['MY_BASEDIR'].'/common/includes/get_dotenvs/get-dotenvs.php'; 
+try {
+   echo "<html><head></head><body>Site loading...</body></html>";
+   (@include_once 'get-dotenvs.php') //# symlink /.common/includes/get_dotenvs/? -> always in base
+   || (@include_once '/get-dotenvs.php')
+   || (@include_once '../get-dotenvs.php') 
+   || (include_once __DIR__.'/get-dotenvs.php')
+   ;
+   echo "<script>console.info('✅ENV load success.')</script>";
+} catch (\Throwable $e1) {
+   echo "<script>alert('".$e1->getMessage()."')</script>";   
+}
 #
 ### DEV_MODEs: 0-Prod, 1-Alert/NoCache, 2-&Debug, 3-&Die
-define('DEV_MODE',(int)getenv('ENV_DEV_MODE'));
-echo (DEV_MODE<>0) ? "DevMode:".DEV_MODE : "";
+define('DEV_MODE', (int)getenv('ENV_DEV_MODE'));
+
+echo (DEV_MODE <> 0)
+   ? '<script>alert("'
+   . '👉👉 CLEAR WP CACHE!! 👈👈'
+   . '\nDevMode: '   . DEV_MODE . ' (ℹ️ in Console)'
+   . '\nServer: '   . $_SERVER['SERVER_NAME']
+   . '\nProtocol: ' . $_SERVER['SERVER_PROTOCOL']
+   . '\nHost: '   . $_SERVER['HTTP_HOST']
+   . '\nPort: '   . $_SERVER['SERVER_PORT']
+   . '\nDocRoot: '   . $_SERVER['DOCUMENT_ROOT']
+   . '\nCWD: '   . getcwd()      // Current Working Directory
+   . '")</script>'
+   : '';
+
 #--------------------------------- 
 
 /** Enable W3 Total Cache */
