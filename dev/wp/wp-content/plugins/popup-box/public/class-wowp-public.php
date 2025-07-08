@@ -143,8 +143,10 @@ class WOWP_Public {
 	}
 
 	private function create_popup( $id, $param ) {
+		$data  = DBManager::get_data_by_id( $id );
+		$title = ! empty( $data->title ) ? $data->title : 'Popup Box';
 		add_filter( 'safe_style_css', [ $this, 'allowed_properties' ], 10, 1 );
-		echo '<div class="ds-popup" id="ds-popup-' . absint( $id ) . '">';
+		echo '<div class="ds-popup" id="ds-popup-' . absint( $id ) . '" role="dialog" aria-label="' . esc_attr( $title ) . '">';
 		echo '<div class="ds-popup-wrapper"><div class="ds-popup-content">';
 		echo do_shortcode( wp_kses_post( $param['content'] ) );
 		echo '</div></div></div>';

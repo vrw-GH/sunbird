@@ -16,26 +16,63 @@ function seopress_admin_bar_links() {
 
     global $wp_admin_bar;
 
-    $title = '<div id="seopress-ab-icon" class="ab-item svg seopress-logo" style="background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIGlkPSJ1dWlkLTRmNmE4YTQxLTE4ZTMtNGY3Ny1iNWE5LTRiMWIzOGFhMmRjOSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgODk5LjY1NSA0OTQuMzA5NCI+PHBhdGggaWQ9InV1aWQtYTE1NWMxY2EtZDg2OC00NjUzLTg0NzctOGRkODcyNDBhNzY1IiBkPSJNMzI3LjM4NDksNDM1LjEyOGwtMjk5Ljk5OTktLjI0OTdjLTE2LjI3MzUsMS4xOTM3LTI4LjQ5ODEsMTUuMzUzOC0yNy4zMDQ0LDMxLjYyNzMsMS4wNzE5LDE0LjYxMjgsMTIuNjkxNiwyNi4yMzI1LDI3LjMwNDQsMjcuMzA0NGwyOTkuOTk5OSwuMjQ5N2MxNi4yNzM1LTEuMTkzNywyOC40OTgxLTE1LjM1MzgsMjcuMzA0NC0zMS42MjczLTEuMDcxOC0xNC42MTI4LTEyLjY5MTYtMjYuMjMyNS0yNy4zMDQ0LTI3LjMwNDRaIiBzdHlsZT0iZmlsbDojYTdhYWFkIi8+PHBhdGggaWQ9InV1aWQtZTMwYmE0YzYtNDc2OS00NjZiLWEwM2EtZTY0NGM1MTk4ZTU2IiBkPSJNMjcuMzg0OSw1OC45MzE3bDI5OS45OTk5LC4yNDk3YzE2LjI3MzUtMS4xOTM3LDI4LjQ5ODEtMTUuMzUzNywyNy4zMDQ0LTMxLjYyNzMtMS4wNzE4LTE0LjYxMjgtMTIuNjkxNi0yNi4yMzI1LTI3LjMwNDQtMjcuMzA0NEwyNy4zODQ5LDBDMTEuMTExNCwxLjE5MzctMS4xMTMyLDE1LjM1MzcsLjA4MDUsMzEuNjI3M2MxLjA3MTksMTQuNjEyOCwxMi42OTE2LDI2LjIzMjUsMjcuMzA0NCwyNy4zMDQ0WiIgc3R5bGU9ImZpbGw6I2E3YWFhZCIvPjxwYXRoIGlkPSJ1dWlkLTJiYmQ1MmQ2LWFlYzEtNDY4OS05ZDRjLTIzYzM1ZDRmMjJiOCIgZD0iTTY1Mi40ODUsLjI4NDljLTEyNC45Mzg4LC4wNjQtMjMwLjE1NTQsOTMuNDEzMi0yNDUuMTAwMSwyMTcuNDU1SDI3LjM4NDljLTE2LjI3MzUsMS4xOTM3LTI4LjQ5ODEsMTUuMzUzNy0yNy4zMDQ0LDMxLjYyNzIsMS4wNzE5LDE0LjYxMjgsMTIuNjkxNiwyNi4yMzI1LDI3LjMwNDQsMjcuMzA0NEg0MDcuMzg0OWMxNi4yMjk4LDEzNS40NDU0LDEzOS4xODcsMjMyLjA4ODgsMjc0LjYzMjMsMjE1Ljg1ODksMTM1LjQ0NTUtMTYuMjI5OCwyMzIuMDg4OC0xMzkuMTg2OSwyMTUuODU4OS0yNzQuNjMyNEM4ODIuOTkyMSw5My42ODM0LDc3Ny41ODg0LC4yMTEyLDY1Mi40ODUsLjI4NDlabTAsNDMzLjQyMTdjLTEwMi45NzU0LDAtMTg2LjQ1MzMtODMuNDc4LTE4Ni40NTMzLTE4Ni40NTMzLDAtMTAyLjk3NTMsODMuNDc4MS0xODYuNDUzMywxODYuNDUzMy0xODYuNDUzMywxMDIuOTc1NCwwLDE4Ni40NTMzLDgzLjQ3OCwxODYuNDUzMywxODYuNDUzMywuMDUyNCwxMDIuOTc1My04My4zODMsMTg2LjQ5NTktMTg2LjM1ODMsMTg2LjU0ODMtLjAzMTYsMC0uMDYzNCwwLS4wOTUxLDB2LS4wOTVaIiBzdHlsZT0iZmlsbDojYTdhYWFkIi8+PC9zdmc+) !important"></div> ' . __('SEO', 'wp-seopress');
-    $title = apply_filters('seopress_adminbar_icon', $title);
+    $notifications = seopress_get_service('Notifications')->getSeverityNotification('all');
+    $total = 0;
+    
+    if (!empty($notifications['total'])) {
+        $total = $notifications['total'];
+    }
 
+    $title = '<div id="seopress-ab-icon" class="ab-item svg seopress-logo" style="background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIGlkPSJ1dWlkLTRmNmE4YTQxLTE4ZTMtNGY3Ny1iNWE5LTRiMWIzOGFhMmRjOSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgODk5LjY1NSA0OTQuMzA5NCI+PHBhdGggaWQ9InV1aWQtYTE1NWMxY2EtZDg2OC00NjUzLTg0NzctOGRkODcyNDBhNzY1IiBkPSJNMzI3LjM4NDksNDM1LjEyOGwtMjk5Ljk5OTktLjI0OTdjLTE2LjI3MzUsMS4xOTM3LTI4LjQ5ODEsMTUuMzUzOC0yNy4zMDQ0LDMxLjYyNzMsMS4wNzE5LDE0LjYxMjgsMTIuNjkxNiwyNi4yMzI1LDI3LjMwNDQsMjcuMzA0NGwyOTkuOTk5OSwuMjQ5N2MxNi4yNzM1LTEuMTkzNywyOC40OTgxLTE1LjM1MzgsMjcuMzA0NC0zMS42MjczLTEuMDcxOC0xNC42MTI4LTEyLjY5MTYtMjYuMjMyNS0yNy4zMDQ0LTI3LjMwNDRaIiBzdHlsZT0iZmlsbDojYTdhYWFkIi8+PHBhdGggaWQ9InV1aWQtZTMwYmE0YzYtNDc2OS00NjZiLWEwM2EtZTY0NGM1MTk4ZTU2IiBkPSJNMjcuMzg0OSw1OC45MzE3bDI5OS45OTk5LC4yNDk3YzE2LjI3MzUtMS4xOTM3LDI4LjQ5ODEtMTUuMzUzNywyNy4zMDQ0LTMxLjYyNzMtMS4wNzE4LTE0LjYxMjgtMTIuNjkxNi0yNi4yMzI1LTI3LjMwNDQtMjcuMzA0NEwyNy4zODQ5LDBDMTEuMTExNCwxLjE5MzctMS4xMTMyLDE1LjM1MzcsLjA4MDUsMzEuNjI3M2MxLjA3MTksMTQuNjEyOCwxMi42OTE2LDI2LjIzMjUsMjcuMzA0NCwyNy4zMDQ0WiIgc3R5bGU9ImZpbGw6I2E3YWFhZCIvPjxwYXRoIGlkPSJ1dWlkLTJiYmQ1MmQ2LWFlYzEtNDY4OS05ZDRjLTIzYzM1ZDRmMjJiOCIgZD0iTTY1Mi40ODUsLjI4NDljLTEyNC45Mzg4LC4wNjQtMjMwLjE1NTQsOTMuNDEzMi0yNDUuMTAwMSwyMTcuNDU1SDI3LjM4NDljLTE2LjI3MzUsMS4xOTM3LTI4LjQ5ODEsMTUuMzUzNy0yNy4zMDQ0LDMxLjYyNzIsMS4wNzE5LDE0LjYxMjgsMTIuNjkxNiwyNi4yMzI1LDI3LjMwNDQsMjcuMzA0NEg0MDcuMzg0OWMxNi4yMjk4LDEzNS40NDU0LDEzOS4xODcsMjMyLjA4ODgsMjc0LjYzMjMsMjE1Ljg1ODksMTM1LjQ0NTUtMTYuMjI5OCwyMzIuMDg4OC0xMzkuMTg2OSwyMTUuODU4OS0yNzQuNjMyNEM4ODIuOTkyMSw5My42ODM0LDc3Ny41ODg0LC4yMTEyLDY1Mi40ODUsLjI4NDlabTAsNDMzLjQyMTdjLTEwMi45NzU0LDAtMTg2LjQ1MzMtODMuNDc4LTE4Ni40NTMzLTE4Ni40NTMzLDAtMTAyLjk3NTMsODMuNDc4MS0xODYuNDUzMywxODYuNDUzMy0xODYuNDUzMywxMDIuOTc1NCwwLDE4Ni40NTMzLDgzLjQ3OCwxODYuNDUzMywxODYuNDUzMywuMDUyNCwxMDIuOTc1My04My4zODMsMTg2LjQ5NTktMTg2LjM1ODMsMTg2LjU0ODMtLjAzMTYsMC0uMDYzNCwwLS4wOTUxLDB2LS4wOTVaIiBzdHlsZT0iZmlsbDojYTdhYWFkIi8+PC9zdmc+) !important"></div> ' . __('SEO', 'wp-seopress');
+    
+    $title = apply_filters('seopress_adminbar_icon', $title);
+    
+    $counter = '';
+    if ('1' !== seopress_get_service('AdvancedOption')->getAppearanceAdminBarCounter() && $total > 0) {
+        $counter = '<div class="wp-core-ui wp-ui-notification seopress-menu-notification-counter">' . $total . '</div>';
+
+        $counter = apply_filters('seopress_adminbar_counter', $counter, $total);
+    }
     $noindex = '';
+
+    
     if ('1' !== seopress_get_service('AdvancedOption')->getAppearanceAdminBarNoIndex()) {
-        if ('1' === seopress_get_service('TitleOption')->getTitleNoIndex() || '1' != get_option('blog_public')) {
-            $noindex .= '<a class="wrap-seopress-noindex" href="' . admin_url('admin.php?page=seopress-titles#tab=tab_seopress_titles_advanced') . '">';
+        $metarobots = false;
+
+        // Get the object ID
+        $currentId = get_queried_object_id() ? get_queried_object_id() : null;
+
+        if (get_post_meta($currentId, '_seopress_robots_index', true) && is_singular()) {
+            $metarobots = true;
+        } elseif (isset($currentId) && (
+            seopress_get_service('TitleOption')->getSingleCptNoIndex($currentId) ||
+            seopress_get_service('TitleOption')->getTitleNoIndex() ||
+            true === post_password_required($currentId)
+        )) {
+            $metarobots = true;
+        } elseif (
+            '1' === seopress_get_service('TitleOption')->getTitleNoIndex() ||
+            '1' !== get_option('blog_public')
+        ) {
+            $metarobots = true;
+        }
+    
+        if ($metarobots === true) {
+            $noindex = '<a class="wrap-seopress-noindex" href="' . admin_url('admin.php?page=seopress-titles#tab=tab_seopress_titles_advanced') . '">';
             $noindex .= '<span class="ab-icon dashicons dashicons-hidden"></span>';
             $noindex .= __('noindex is on!', 'wp-seopress');
             $noindex .= '</a>';
         }
-        $noindex = apply_filters('seopress_adminbar_noindex', $noindex);
+    
+        $noindex = apply_filters('seopress_adminbar_noindex', $noindex ?? '');
     }
 
     // Adds a new top level admin bar link and a submenu to it
     $wp_admin_bar->add_menu([
         'parent'	=> false,
-        'id'		   => 'seopress',
-        'title'		=> $title . $noindex,
-        'href'		 => admin_url('admin.php?page=seopress-option'),
+        'id'		=> 'seopress',
+        'title'		=> $title . $counter . $noindex,
+        'href'		=> admin_url('admin.php?page=seopress-option'),
     ]);
 
     //noindex/nofollow per CPT

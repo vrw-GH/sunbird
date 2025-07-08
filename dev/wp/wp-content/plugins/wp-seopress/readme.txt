@@ -4,18 +4,18 @@ Contributors: seopress, rainbowgeek, gmulti, juliobox, maigret, mgris, vincentdu
 Donate link: https://www.seopress.org/
 Tags: SEO, google search console, xml sitemap, schema, ai
 Requires at least: 5.0+
-Tested up to: 6.6
+Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 8.3.1
-License: GPLv2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Stable tag: 8.9.0.2
+License: GPLv3 or later
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 SEOPress, a simple, fast and powerful all in one SEO plugin for WordPress. Rank higher in search engines, fully white label. Now with AI.
 
 == Description ==
 
 <h3>Best SEO plugin for WordPress fully integrated with all page builders and themes!</h3>
-<h3>Now with AI (GPT 4) to automagically generate meta title, description and alternative texts for images!</h3>
+<h3>Now with AI ( GPT-4o Mini, GPT-4o, GPT-4, GPT-3.5-Turbo) to automagically generate meta title, description and alternative texts for images!</h3>
 
 SEOPress is a powerful WordPress SEO plugin to optimize your SEO, boost your traffic, improve social sharing, build custom HTML and XML Sitemaps, create optimized breadcrumbs, add schemas / Google Structured data types, manage 301 redirections and so much more.<br>
 
@@ -23,8 +23,8 @@ SEOPress is a powerful WordPress SEO plugin to optimize your SEO, boost your tra
 ✔ <strong>No advertising, no footprints, white label, in backend AND frontend</strong>
 ✔ <strong>Content analysis to help you write content optimized for search engines with unlimited target keywords</strong>
 ✔ <strong><a href="https://www.seopress.org/solutions/migrate-from/" target="_blank">Import your post and term metadatas</a> from other SEO plugins or CSV file in 1 click</strong>
-✔ <strong><a href="https://translate.wordpress.org/projects/wp-plugins/wp-seopress" target="_blank">Translated into 25 languages (and counting)</strong>
-✔ <strong>Trusted by over 300,000 WordPress websites since 2017</strong>
+✔ <strong><a href="https://translate.wordpress.org/projects/wp-plugins/wp-seopress" target="_blank">Translated into 26 languages (and counting)</strong>
+✔ <strong>Trusted by over 350,000 WordPress websites since 2017</strong>
 
 <a href="https://www.seopress.org/pricing/" target="_blank"><strong>Buy SEOPress PRO: only $49 / year / 5 sites</strong></a>
 
@@ -44,7 +44,6 @@ SEOPress is a powerful WordPress SEO plugin to optimize your SEO, boost your tra
 <h3>SEOPress Free Features</h3>
 
 <ul>
-    <li><a href="https://www.seopress.org/support/guides/google-indexing-api-with-seopress/"><strong>Google Indexing API and IndexNow API (Bing / Yandex)</strong></a> to quickly index its content in these search engines</li>
 	<li><strong>Installation wizard</strong> to quickly setup your site</li>
 	<li><strong>Content analysis</strong> with unlimited keywords to help you write optimized content for search engines</li>
 	<li><strong>Mobile / Desktop Google Preview</strong> to see how your post will looks like in Google search results</li>
@@ -56,7 +55,7 @@ SEOPress is a powerful WordPress SEO plugin to optimize your SEO, boost your tra
 	<li><a href="https://www.seopress.org/features/google-analytics/"><strong>Google Analytics</strong> and <strong>Matomo</strong></a> with downloads tracking, custom dimensions, ip anonymization, remarketing, demographics and interest reporting, cross-domain tracking...(<a href="https://www.seopress.org/features/seopress-white-label/" target="_blank">GDPR compatibility</a>)</li>
 	<li><strong>Microsoft Clarity integration</strong>: to capture session recordings, get instant heatmaps and powerful Insights for Free. Know how people interact with your site to improve user experience and conversions</li>
     <li><strong>Custom Canonical URL</strong></li>
-	<li><a href="https://www.seopress.org/support/guides/manage-meta-robots/"><strong>Meta robots</strong></a> (noindex, nofollow, noimageindex, noarchive, nosnippet)</li>
+	<li><a href="https://www.seopress.org/support/guides/manage-meta-robots/"><strong>Meta robots</strong></a> (noindex, nofollow, noimageindex, nosnippet)</li>
 	<li>Build your <a href="https://www.seopress.org/features/sitemaps/"><strong>custom XML Sitemap</strong></a> to improve search indexing</li>
 	<li><strong>Image XML Sitemaps</strong> to improve search indexing for Google Images</li>
 	<li>Build your custom <strong>HTML Sitemap</strong> to enhanced navigation for visitors and improve search indexing</li>
@@ -69,6 +68,7 @@ SEOPress is a powerful WordPress SEO plugin to optimize your SEO, boost your tra
 	<li>Redirect attachment pages to their file URL</li>
 	<li><a href="https://www.seopress.org/features/image-seo/" target="_blank"><strong>Image SEO</strong></a>: Automatically set the image title / alt / caption / description</li>
 	<li>Import / Export settings from site to site.</li>
+    <li><a href="https://www.seopress.org/support/guides/google-indexing-api-with-seopress/"><strong>Google Indexing API and IndexNow API (Bing / Yandex)</strong></a> to quickly index its content in these search engines</li>
 	<li><a href="https://www.seopress.org/solutions/migrate-from/" target="_blank">Import posts and terms metadata</a> from Yoast SEO, All In One SEO, SEO Framework, Rank Math, SEO Ultimate, WP Meta SEO, Premium SEO Pack, Squirrly and many other SEO plugins</li>
 	<li>...</li>
 </ul>
@@ -80,7 +80,7 @@ SEOPress is a powerful WordPress SEO plugin to optimize your SEO, boost your tra
 [youtube https://youtu.be/zxGCY-bJYwE]
 
 <ul>
-	<li><a href="https://www.seopress.org/features/openai/" target="_blank"><strong>Use Artificial Intelligence (GPT 4 / Vision and GPT 3.5 Turbo) to generate SEO metadata and alternative texts for image files. Bulk actions supported.</strong></li>
+	<li><a href="https://www.seopress.org/features/openai/" target="_blank"><strong>Use Artificial Intelligence (GPT-4o, GPT-4 Turbo / Vision and GPT 3.5 Turbo) to generate SEO metadata and alternative texts for image files. Bulk actions supported.</strong></li>
 	<li><a href="https://www.seopress.org/features/site-audit/" target="_blank"><strong>Site Audit: Detect technical issues that could harm your site's SEO directly from your WordPress administration.</strong></li>
     <li><a href="https://www.seopress.org/features/seo-alerts/" target="_blank">Receive SEO alerts to prevent breaking your SEO before it's too late</a></li>
 	<li><a href="https://www.seopress.org/support/guides/import-metadata-from-a-csv-file-with-seopress-pro/" target="_blank"><strong>Import / export metadata</strong></a> (titles, open graph, robots...) from / to CSV file</li>
@@ -104,7 +104,6 @@ SEOPress is a powerful WordPress SEO plugin to optimize your SEO, boost your tra
 			<li>product</li>
 			<li>job</li>
 			<li>simple review</li>
-			<li>site navigation element</li>
 			<li>custom schema</li>
 		</ol>
 	<li><strong>Automatic Schemas</strong> with advanced conditions (AND, OR, Post types, taxonomies)</li>
@@ -196,7 +195,17 @@ We provide deep integration with Elementor page builder UI, see below:
 
 = Can I import my post and term metadata from other plugins? =
 
-You can import your metadata from <a href="https://www.seopress.org/support/guides/import-post-terms-metadatas-yoast-seo-seopress/_faq">Yoast SEO</a>, <a href="https://www.seopress.org/support/guides/import-post-and-terms-metadatas-from-all-in-one-seo-to-seopress/_faq">All In One SEO (AIO SEO)</a>, <a href="https://www.seopress.org/support/guides/import-post-and-terms-metadatas-from-the-seo-framework-to-seopress/_faq">The SEO Framework (TSF)</a>, <a href="https://www.seopress.org/support/guides/import-post-metadatas-from-squirrly-to-seopress/_faq">Squirrly</a> (post metas only, not terms), <a href="https://www.seopress.org/support/guides/import-post-terms-metadatas-rank-math-seo-seopress/_faq">Rank Math</a>, <a href="https://www.seopress.org/support/guides/import-post-metadata-from-seo-ultimate-to-seopress/_faq">SEO Ultimate (post metas only, not terms)</a>, <a href="https://www.seopress.org/support/guides/import-post-and-terms-metadata-from-wp-meta-seo-to-seopress/_faq">WP Meta SEO</a>, <a href="https://www.seopress.org/support/guides/import-post-and-terms-metadata-from-wpseo-to-seopress/_faq">wpSEO</a>, <a href="https://www.seopress.org/support/guides/import-post-and-terms-metadata-from-platinum-seo-pack-to-seopress/_faq">Platinum SEO Pack</a>, <a href="https://www.seopress.org/support/guides/import-post-and-terms-metadata-from-smartcrawl-to-seopress/_faq">SmartCrawl</a>, <a href="https://www.seopress.org/support/guides/import-post-metadata-from-seopressor-to-seopress/_faq">SEOPressor</a>, <a href="https://www.seopress.org/support/guides/import-post-and-terms-metadata-from-slim-seo-to-seopress/_faq">Slim SEO</a> and <a href="https://www.seopress.org/support/guides/import-post-and-terms-metadata-from-premium-seo-pack-to-seopress/_faq">Premium SEO Pack</a> in one click to SEOPress without losing traffic.
+You can import your metadata from:
+* <a href="https://www.seopress.org/support/guides/import-post-terms-metadatas-yoast-seo-seopress/_faq">Yoast SEO</a>, 
+* <a href="https://www.seopress.org/support/guides/import-post-and-terms-metadatas-from-all-in-one-seo-to-seopress/_faq">All In One SEO (AIO SEO)</a>, 
+* <a href="https://www.seopress.org/support/guides/import-post-and-terms-metadatas-from-the-seo-framework-to-seopress/_faq">The SEO Framework (TSF)</a>, 
+* <a href="https://www.seopress.org/support/guides/import-post-metadatas-from-squirrly-to-seopress/_faq">Squirrly</a> (post metas only, not terms), 
+* <a href="https://www.seopress.org/support/guides/import-post-terms-metadatas-rank-math-seo-seopress/_faq">Rank Math</a>, 
+* <a href="https://www.seopress.org/support/guides/import-post-metadata-from-seo-ultimate-to-seopress/_faq">SEO Ultimate (post metas only, not terms)</a>, 
+* <a href="https://www.seopress.org/support/guides/import-post-and-terms-metadata-from-wp-meta-seo-to-seopress/_faq">WP Meta SEO</a>, 
+* <a href="https://www.seopress.org/support/guides/import-post-and-terms-metadata-from-smartcrawl-to-seopress/_faq">SmartCrawl</a>, 
+* <a href="https://www.seopress.org/support/guides/import-post-and-terms-metadata-from-slim-seo-to-seopress/_faq">Slim SEO</a> 
+* <a href="https://www.seopress.org/support/guides/import-post-and-terms-metadata-from-premium-seo-pack-to-seopress/_faq">Premium SEO Pack</a> in one click to SEOPress without losing traffic.
 
 = How to use Google Tag Manager / other scripts with SEOPress? =
 
@@ -243,6 +252,10 @@ Read this <a href="https://www.seopress.org/support/guides/xml-sitemap-blank-pag
 
 You're theme is probably using a deprecated function to handle the title. <a href="https://www.seopress.org/support/guides/fixing-missing-add_theme_support-in-your-theme/">Learn more here</a>
 
+= How can I report security bugs? =
+
+By using our contact form (select Misc as subject), or directly from <a href="https://patchstack.com/database/vdp/c8c461bf-80aa-4c9d-8792-2ee26edd1570">Patchstack</a>
+
 = My question is not listed here! =
 
 <a href="https://www.seopress.org/support/faq/" target="_blank">Read our complete FAQ on our site</a>
@@ -262,31 +275,28 @@ You're theme is probably using a deprecated function to handle the title. <a hre
 12. Schema metabox
 
 == Changelog ==
-= 8.3.1 =
-* FIX Prevent fatal error to set default values
+= 8.9.0.2 =
+* FIX An issue with the universal SEO metabox
 
-= 8.3 <a href="https://www.seopress.org/newsroom/product-news/seopress-8-3/">Read the blog post update</a> =
-* NEW Site Audit #2 iteration 🎉 (PRO)
-- Improved CSV export functionality
-- Option to select which post types to scan from the settings
-- Added an "Ignore" button for each issue
-- Receive an email alert when the site audit task is completed
-- Added site audit scan duration
-- Enhanced user interface
-- Improved column ordering and sorting
-- Enhanced the seopress_site_audit_query hook
-- Fix false positives
-* NEW Automatically set alt text on already inserted image (SEO, Advanced, Image SEO tab) 🎉
-* NEW "seopress_dashboard_site_overview_tabs" to filter the tabs of the Dashboard Site Overview block (https://www.seopress.org/support/hooks/filter-tabs-in-the-dashboard-site-overview-block/)
-* NEW Add new default WooCommerce rules button to robots.txt tab (PRO)
-* NEW 'seopress_instant_indexing_permalink' hook to filter URL sent automatically to IndexNow API (https://www.seopress.org/support/hooks/filter-post-object-sent-automatically-to-indexnow-api/)
-* NEW 'seopress_site_audit_after_processs' hook to run action after site audit is completed (https://www.seopress.org/support/hooks/run-action-after-site-audit-is-completed/)
-* INFO The notification “You don’t have an XML sitemap!” can now be ignored
-* INFO Improve compatibility with Malcare plugin
-* INFO Add a notice for The7 theme to invite users to disable SEO settings to avoid any compatibility issue
-* INFO Improve redirects import tool from a CSV file by cleaning original URL if first character is a slash
-* FIX Slug change notice with the Block Editor
-* FIX PHP Warning "new_url"
+= 8.9.0.1 =
+* FIX Undefined variables in XML sitemaps
+* FIX Incorrect last mod date with specific timezone for XML Index Sitemap
+* FIX CSS Z-index for chatbot
+
+= 8.9 <a href="https://www.seopress.org/newsroom/product-news/seopress-8-9/">Read the blog post update</a> =
+* NEW Add our AI chatbot to our settings page to get help faster (PRO)
+* NEW Microsoft Clarity User Consent mode
+* NEW Replace the Referer column by Full Origin in our Redirect Manager: more useful, especially with multidomain/multilingual websites
+* NEW UI for automatic schemas
+* INFO Update Admin Columns PRO integration (minimum version 6.0 is now required). From version 7, the integration will be directly provided by ACP.
+* INFO Add caching to last modified date for XML Index sitemap
+* INFO UI - Add schema keys to automatic schemas (SEO, PRO, Schemas)
+* INFO NEW notice when using Google Indexing API
+* INFO WPML integration improved for automatic translations
+* INFO Image for the hiringOrganization sub-schema in the Job automatic schema is no longer required
+* FIX XML Index sitemap last modified date
+* FIX An issue with Admin Columns PRO
+* FIX A compatibility issue with WP 6.8 and our blocks causing performance issue when scrolling the post content from the Block Editor
 
 <a href="https://www.seopress.org/changelog/" target="_blank">View our complete changelog</a>
 <a href="https://www.seopress.org/support/guides/how-to-downgrade-seopress-pro-to-a-previous-version/" target="_blank">Need to downgrade/rollback?</a>

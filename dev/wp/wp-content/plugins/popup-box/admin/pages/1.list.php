@@ -34,6 +34,11 @@ $wp_plugins = [
 		'title'   => 'Floating Button',
 		'content' => 'WordPress plugin designed to generate and manage sticky Floating Buttons, capable of performing any defined actions on your website. '
 	],
+	[
+		'free'    => 'https://wordpress.org/plugins/flexi-menu/',
+		'title'   => 'Flexi Menu',
+		'content' => 'A powerful WordPress plugin for creating floating, dropdown, static, or context menus with ease.'
+	],
 ];
 ?>
 

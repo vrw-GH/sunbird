@@ -21,7 +21,6 @@ if ( ! function_exists( __NAMESPACE__ . '\meta_field_block_get_block_markup' ) )
 	 * @param  WP_Block   $block       Block instance.
 	 * @param  int|string $post_id     Post Id.
 	 * @param  string     $object_type Object type.
-	 * @param  string     $classes     Additional block classes.
 	 * @param  boolean    $is_dynamic  Is a static block.
 	 * @param  array      $args {
 	 *   Optional: The additional parameters.
@@ -30,7 +29,7 @@ if ( ! function_exists( __NAMESPACE__ . '\meta_field_block_get_block_markup' ) )
 	 *
 	 * @return string Returns the markup for the block.
 	 */
-	function meta_field_block_get_block_markup( $content, $attributes, $block, $post_id, $object_type = '', $classes = '', $is_dynamic = true, $args = [] ) {
+	function meta_field_block_get_block_markup( $content, $attributes, $block, $post_id, $object_type = '', $is_dynamic = true, $args = [] ) {
 		// Allow third-party plugins to alter the content.
 		$content = apply_filters( 'meta_field_block_get_block_content', $content, $attributes, $block, $post_id, $object_type );
 		$content = is_array( $content ) || is_object( $content ) ? '<code><em>' . __( 'This data type is not supported!', 'display-a-meta-field-as-block' ) . '</em></code>' : $content;
@@ -48,9 +47,6 @@ if ( ! function_exists( __NAMESPACE__ . '\meta_field_block_get_block_markup' ) )
 			$content = $attributes['emptyMessage'] ?? '';
 		}
 
-		$tag_name  = $attributes['tagName'] ?? 'div';
-		$inner_tag = 'div' === $tag_name ? 'div' : 'span';
-
 		// Build allowed html tags.
 		$allowed_html_tags = meta_field_block_get_allowed_html_tags();
 
@@ -67,34 +63,40 @@ if ( ! function_exists( __NAMESPACE__ . '\meta_field_block_get_block_markup' ) )
 			$content = wp_kses( $content, $allowed_html_tags );
 		}
 
-		// Return early if we only need raw value.
-		if ( 'dynamic' === $field_type && ( $attributes['fetchRawValue'] ?? false ) ) {
+		// Return early if we don't need the block wrapper.
+		if ( apply_filters( 'meta_field_block_ignore_wrapper_block', 'dynamic' === $field_type && ( $attributes['fetchRawValue'] ?? false ), $attributes, $block, $post_id, $object_type, $content ) ) {
 			return $content;
 		}
 
-		// Wrap around a div.
-		$content = sprintf( '<%2$s class="value">%1$s</%2$s>', $content, $inner_tag );
+		// Additional classes.
+		$classes = '';
 
-		$prefix = $attributes['prefix'] ?? '';
+		// Ignore prefix, suffix.
+		if ( ! apply_filters( 'meta_field_block_ignore_prefix_suffix', false, $attributes, $block, $post_id, $object_type, $content ) ) {
+			$inner_tag = 'div' === ( $attributes['tagName'] ?? 'div' ) ? 'div' : 'span';
 
-		if ( ! $prefix && ( $attributes['labelAsPrefix'] ?? false ) ) {
-			$field_label = $args['label'] ?? '';
-			$prefix      = $field_label ? $field_label : meta_field_block_get_field_label( $attributes, $post_id );
+			// Wrap around a tag.
+			$content = sprintf( '<%2$s class="value">%1$s</%2$s>', $content, $inner_tag );
+
+			$prefix = $attributes['prefix'] ?? '';
+			if ( ! $prefix && ( $attributes['labelAsPrefix'] ?? false ) ) {
+				$field_label = $args['label'] ?? '';
+				$prefix      = $field_label ? $field_label : meta_field_block_get_field_label( $attributes, $post_id, $object_type );
+			}
+			$prefix = $prefix ? sprintf( '<%2$s class="prefix"%3$s>%1$s</%2$s>', wp_kses( $prefix, $allowed_html_tags ), $inner_tag, meta_field_block_build_prefix_suffix_style( $attributes['prefixSettings'] ?? '' ) ) : '';
+
+			$suffix = $attributes['suffix'] ?? '';
+			$suffix = $suffix ? sprintf( '<%2$s class="suffix"%3$s>%1$s</%2$s>', wp_kses( $suffix, $allowed_html_tags ), $inner_tag, meta_field_block_build_prefix_suffix_style( $attributes['suffixSettings'] ?? '' ) ) : '';
+
+			// Addd prefix, suffix.
+			$content = $prefix . $content . $suffix;
+
+			if ( ! empty( $attributes['displayLayout'] ) ) {
+				$classes .= " is-display-{$attributes['displayLayout']}";
+			}
 		}
-		$prefix = $prefix ? sprintf( '<%2$s class="prefix"%3$s>%1$s</%2$s>', wp_kses( $prefix, $allowed_html_tags ), $inner_tag, meta_field_block_build_prefix_suffix_style( $attributes['prefixSettings'] ?? '' ) ) : '';
 
-		$suffix = $attributes['suffix'] ?? '';
-		$suffix = $suffix ? sprintf( '<%2$s class="suffix"%3$s>%1$s</%2$s>', wp_kses( $suffix, $allowed_html_tags ), $inner_tag, meta_field_block_build_prefix_suffix_style( $attributes['suffixSettings'] ?? '' ) ) : '';
-
-		if ( ! empty( $attributes['displayLayout'] ) ) {
-			$classes .= " is-display-{$attributes['displayLayout']}";
-		}
-		if ( isset( $attributes['textAlign'] ) ) {
-			$classes .= " has-text-align-{$attributes['textAlign']}";
-		}
-		$wrapper_attributes = get_block_wrapper_attributes( array( 'class' => trim( $classes ) ) );
-
-		return sprintf( '<%3$s %1$s>%2$s</%3$s>', $wrapper_attributes, $prefix . $content . $suffix, $tag_name );
+		return meta_field_block_get_block_wrapper( $content, $attributes, $block, $post_id, $object_type, [ 'class' => $classes ] );
 	}
 endif;
 
@@ -104,24 +106,95 @@ if ( ! function_exists( __NAMESPACE__ . '\meta_field_block_get_field_label' ) ) 
 	 *
 	 * @param  array      $attributes Block attributes.
 	 * @param  int|string $post_id    Post Id.
+	 * @param  string     $object_type Object type.
 	 *
 	 * @return string Returns the field label.
 	 */
-	function meta_field_block_get_field_label( $attributes, $post_id ) {
+	function meta_field_block_get_field_label( $attributes, $post_id, $object_type ) {
 		$field_label = '';
 
 		$field_type = $attributes['fieldType'] ?? 'meta';
 		$field_name = $attributes['fieldName'] ?? '';
 
-		if ( 'acf' === $field_type && \function_exists( 'get_field_object' ) ) {
+		if ( 'acf' === $field_type ) {
+			if ( ! \function_exists( 'get_field_object' ) ) {
+				return $field_label;
+			}
+
 			$field = get_field_object( $field_name, $post_id );
 
 			if ( $field ) {
 				$field_label = $field['label'] ?? '';
 			}
+		} elseif ( 'mb' === $field_type ) {
+			if ( ! \function_exists( 'rwmb_get_field_settings' ) ) {
+				return $field_label;
+			}
+
+			$field = rwmb_get_field_settings( $field_name, $object_type ? [ 'object_type' => $object_type ] : '', $post_id );
+
+			if ( $field ) {
+				$field_label = $field['name'] ?? '';
+			}
 		}
 
 		return $field_label;
+	}
+endif;
+
+if ( ! function_exists( __NAMESPACE__ . '\meta_field_block_get_block_wrapper' ) ) :
+	/**
+	 * Get the block wrapper.
+	 *
+	 * @param  array      $content Block content.
+	 * @param  array      $attributes Block attributes.
+	 * @param  WP_Block   $block Block instance.
+	 * @param  int|string $post_id Post Id.
+	 * @param  string     $object_type Object type.
+	 * @param  array      $extra_attributes Additional attributes.
+	 *
+	 * @return string Returns block wrapper attributes.
+	 */
+	function meta_field_block_get_block_wrapper( $content, $attributes, $block, $post_id, $object_type, $extra_attributes = [] ) {
+		// Allow adding extra attributes to the block attributes.
+		$extra_attributes = apply_filters( 'meta_field_block_get_block_wrapper_extra_attributes', $extra_attributes, $attributes, $block, $post_id, $object_type );
+
+		// Get classes.
+		$classes = $extra_attributes['class'] ?? '';
+
+		// Field type class.
+		$field_type = $attributes['fieldType'] ?? 'meta';
+		$classes   .= " is-{$field_type}-field";
+
+		// Data type class.
+		if ( $attributes['fieldSettings']['type'] ?? false ) {
+			$classes .= " is-{$attributes['fieldSettings']['type']}-field";
+		}
+
+		// Text align.
+		if ( isset( $attributes['textAlign'] ) ) {
+			$classes .= " has-text-align-{$attributes['textAlign']}";
+		}
+
+		// Core attributes.
+		$wrapper_attributes = get_block_wrapper_attributes(
+			array(
+				'class' => trim( $classes ),
+				'style' => $extra_attributes['style'] ?? '',
+				'id'    => $extra_attributes['id'] ?? '',
+			)
+		);
+
+		// Custom attributes.
+		$core_attributes = [ 'id', 'class', 'style' ];
+		foreach ( $extra_attributes as $key => $value ) {
+			if ( ! in_array( $key, $core_attributes, true ) ) {
+				$value               = esc_attr( $value );
+				$wrapper_attributes .= " {$key}=\"{$value}\"";
+			}
+		}
+
+		return sprintf( '<%3$s %1$s>%2$s</%3$s>', $wrapper_attributes, $content, esc_attr( $attributes['tagName'] ?? 'div' ) );
 	}
 endif;
 

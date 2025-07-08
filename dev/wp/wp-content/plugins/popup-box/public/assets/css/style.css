@@ -183,9 +183,14 @@ body.no-scroll {
 	Close buttons
 ======================== */
 .ds-popup-close {
+	all: unset;
 	cursor: pointer;
 	position: absolute;
 	font-weight: 700;
+}
+.ds-popup-close:focus {
+	outline: 1px solid #004C9A;
+	outline-offset: -1px;
 }
 
 .ds-popup-close,

@@ -5,27 +5,6 @@ use SEOPress\Helpers\PagesAdmin;
 defined('ABSPATH') or exit('Please don&rsquo;t call the plugin directly. Thanks :)');
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-//Generate dynamically the Instant Indexing API key
-///////////////////////////////////////////////////////////////////////////////////////////////////
-function seopress_instant_indexing_generate_api_key_fn($init = false) {
-    $options            = get_option('seopress_instant_indexing_option_name') ? get_option('seopress_instant_indexing_option_name') : [];
-
-    $api_key = wp_generate_uuid4();
-    $api_key = preg_replace('[-]', '', $api_key);
-    $options['seopress_instant_indexing_bing_api_key'] = base64_encode($api_key);
-
-    if ($init === true) {
-        $options['seopress_instant_indexing_automate_submission'] = '1';
-    }
-
-    update_option('seopress_instant_indexing_option_name', $options);
-
-    if ($init === false) {
-        wp_send_json_success();
-    }
-}
-
-///////////////////////////////////////////////////////////////////////////////////////////////////
 //Create the virtual Instant Indexing API key txt file
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 function seopress_instant_indexing_api_key_txt() {
@@ -160,13 +139,13 @@ function seopress_instant_indexing_fn($is_manual_submission = true, $permalink =
     //Prepare the URLS
     if ($is_manual_submission === true) {
         $urls 	= preg_split('/\r\n|\r|\n/', $urls);
-        $x_source_info = 'https://www.seopress.org/8.3.1/true';
+        $x_source_info = 'https://www.seopress.org/8.9.0.2/true';
 
         $urls = array_slice($urls, 0, 100);
     } elseif ($is_manual_submission === false && !empty($permalink)) {
         $urls = null;
         $urls[] = $permalink;
-        $x_source_info = 'https://www.seopress.org/8.3.1/false';
+        $x_source_info = 'https://www.seopress.org/8.9.0.2/false';
     }
 
     //Bing API
@@ -353,6 +332,35 @@ function seopress_instant_indexing_on_post_publish( $new_status, $old_status, $p
             }
 
             if(!$is_public_post){
+                return;
+            }
+
+            // Check if the post type is supported by Instant Indexing
+            $post_types = seopress_get_service('WordPressData')->getPostTypes();
+
+            unset(
+                $post_types['seopress_rankings'],
+                $post_types['seopress_backlinks'],
+                $post_types['seopress_404'],
+                $post_types['elementor_library'],
+                $post_types['fl-builder-template'],
+                $post_types['editor-template'],
+                $post_types['editor-form-entry'],
+                $post_types['breakdance_form_res'],
+                $post_types['customer_discount'],
+                $post_types['cuar_private_file'],
+                $post_types['cuar_private_page'],
+                $post_types['vc_grid_item'],
+                $post_types['zion_template'],
+                $post_types['tbuilder_layout'],
+                $post_types['tbuilder_layout_part'],
+                $post_types['tb_cf'],
+                $post_types['ct_template'],
+                $post_types['oxy_user_library'],
+                $post_types['bricks_template']
+            );
+
+            if (! in_array( $post->post_type, array_keys($post_types) ) ) {
                 return;
             }
 

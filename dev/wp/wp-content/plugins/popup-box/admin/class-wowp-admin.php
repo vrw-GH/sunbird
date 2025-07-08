@@ -52,24 +52,25 @@ class WOWP_Admin {
 	public function plugin_links(): void {
 		?>
         <div class="wpie-links">
-            <a href="<?php
-			echo esc_url( WOWP_Plugin::info( 'pro' ) ); ?>" target="_blank">PRO Plugin</a>
-            <a href="<?php
-			echo esc_url( WOWP_Plugin::info( 'docs' ) ); ?>" target="_blank">Documentation</a>
-            <a href="<?php
-			echo esc_url( WOWP_Plugin::info( 'rating' ) ); ?>" target="_blank" class="wpie-color-orange">Rating</a>
-            <a href="https://www.wordfence.com/r/a0fe3fadb6e08d58/products/wordfence-free/" class="wpie-color-success" target="_blank">Secure your site</a>
+            <a href="<?php echo esc_url( WOWP_Plugin::info( 'change' ) ); ?>" target="_blank">Check for Updates</a>
+            <a href="<?php echo esc_url( WOWP_Plugin::info( 'rating' ) ); ?>" target="_blank" class="wpie-color-orange">Rate Us</a>
+            <span class="wpie-links-divider">|</span>
+            <a href="<?php echo esc_url( WOWP_Plugin::info( 'pro' ) ); ?>" target="_blank" class="wpie-color-danger">Upgrade to Pro</a>
+            <a href="<?php echo esc_url( WOWP_Plugin::info( 'demo' ) ); ?>" target="_blank">Live Pro Demo</a>
         </div>
 		<?php
+
 	}
 
 	public function save_settings() {
+		// phpcs:disable WordPress.Security.NonceVerification.Missing -- Nonce verification is handled elsewhere.
 		$param = ! empty( $_POST['param'] ) ? map_deep( wp_unslash( $_POST['param'] ), 'sanitize_text_field' ) : [];
 
 		if ( isset( $_POST['param']['content'] ) ) {
 			$content_param    = wp_kses_post( wp_unslash( $_POST['param']['content'] ) );
 			$param['content'] = wp_encode_emoji( $content_param );
 		}
+		// phpcs:enable
 
 		return $param;
 	}
@@ -87,6 +88,9 @@ class WOWP_Admin {
 		wp_enqueue_media();
 		wp_enqueue_script( 'thickbox' );
 		wp_enqueue_style( 'thickbox' );
+
+		$url_fontawesome = WOWP_Plugin::url() . '/vendors/fontawesome/css/all.css';
+		wp_enqueue_style( 'wowp-fontawesome', $url_fontawesome, null, '6.5.1' );
 	}
 
 }

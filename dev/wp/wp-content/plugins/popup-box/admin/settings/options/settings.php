@@ -49,6 +49,7 @@ return [
 		'val' => '1',
 		'atts' => [
 			'min'   => '0',
+			'step' => '0.01',
 		],
 		'addon' => 'days',
 

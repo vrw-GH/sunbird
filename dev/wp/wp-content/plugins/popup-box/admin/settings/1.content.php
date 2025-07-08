@@ -10,7 +10,6 @@ defined( 'ABSPATH' ) || exit;
 $page_opt = include( 'options/content.php' );
 $field    = new CreateFields( $options, $page_opt );
 ?>
-
     <div class="wpie-fieldset">
         <div class="wpie-fields is-column">
 			<?php $field->create( 'content' ); ?>

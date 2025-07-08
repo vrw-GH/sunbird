@@ -1,96 +1,170 @@
-=== Popup Box: Create Popups Easily ===
+=== Popup Box - Create Popups Easily ===
 Contributors: Wpcalc, lobov
 Donate link: https://wow-estore.com/item/popup-box-pro/
-Tags: popup, popups, pop-up, WordPress popup, popup builder
+Tags: popup, popups, WordPress popup, popup builder, email popup
 Requires at least: 5.5
-Tested up to: 6.7
+Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 3.2.1
+Stable tag: 3.2.10
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Create and customize stunning WordPress popups with a live preview and advanced styling options to increase engagement and conversions.
+Create beautiful, customizable popups with live preview and powerful targeting options to boost engagement and conversions.
 
 == Description ==
 
-### **Effortless Popup Creation with Popup Box for WordPress**
+[📚 Documentation](https://wow-estore.com/documentations/popup-box-documentation/) | [🚀 Try Pro Demo](https://demo.wow-estore.com/popup-box-pro/)
 
-Popup Box is a powerful, user-friendly WordPress plugin that helps you create engaging, eye-catching popups. Easily customize your popups in real-time using the live preview feature, and style them to match your branding. Whether you're promoting special offers, capturing email subscriptions, or increasing user engagement, Popup Box gives you the flexibility to achieve your goals.
+**Popup Box** is a powerful yet lightweight WordPress plugin that lets you easily create, customize, and manage popups with a real-time live preview. Perfect for special offers, email signups, promotions, or boosting user interaction.
 
-**Embed rich content** with shortcode support, allowing you to insert forms (like **Contact Form 7**), videos, and other plugin content for interactive popups.
+### 🌟 Key Benefits
+- Effortlessly create stunning popups with live preview.
+- Improve engagement and grow conversions.
+- Lightweight and optimized for speed.
+- Simple setup – works with any theme.
 
-### = Key Features of Popup Box =
+✅ **Design eye-catching popups and captivate your visitors with Popup Box!**
 
-*   **Live Preview**: See your popup in action as you design it with real-time live preview.
-*   **Unlimited Popups**: Create unlimited popups for various promotions, events, and site needs.
-*   **Extensive Customization**: Tailor your popups with fonts, colors, backgrounds, borders, and more to match your website’s style.
-*   **Flexible Triggers**: Set popups to appear based on user actions like clicks, scrolls, or on page load with customizable delay options.
-*   **Shortcode Support**: Easily add forms, videos, and images using shortcodes from popular plugins like Contact Form 7, etc.
-*   **Targeted Display**: Choose where your popups appear, including specific pages, posts, or across the entire site.
+= Main Features =
 
-### **Advanced Popup Features**:
+### 🎨 **Customization & Design**
+- **Live Preview Editor**: Instantly see changes as you build.
+- **Unlimited Popups**: No limits—create as many popups as you need.
+- **Customizable Styles**: Fonts, colors, backgrounds, borders, shadows, and more.
+- **9 Placement Options**: Position your popups exactly where you want.
+- **Advanced Close Button**: Customize look and behavior.
 
-*   Rich content editor for full control over your popup’s appearance and behavior.
-*   Limit popup display to once per user for non-intrusive engagement.
-*   Add a delay timer for better timing control.
-*   9 placement options for precise positioning of your popups.
-*   Customize the look and behavior of the close button.
-*   Set image or color backgrounds for enhanced visual appeal.
-*   Optional page overlay to draw attention to your popup.
-*   Add shadow effects for a more professional look.
-*   Control popup closing behavior (click outside, ESC key, etc.).
-*   **Lightweight & Fast**: No jQuery dependencies; designed for performance.
-*   **GDPR Compliant**: Fully compliant with data privacy regulations using a cookie-free approach.
+### 🔥 **Triggers & Behavior**
+- **Flexible Triggers**: Show popups on page load, scroll, click, or delay.
+- **Display Targeting**: Show popups on specific posts, pages, or across your site.
+- **Popup Frequency Control**: Limit popups to appear once per session.
+- **Overlay & Shadow Effects**: Make your popups more attractive.
+- **Custom Backgrounds**: Use images or solid colors.
 
-**Boost engagement further with these free companion plugins:**
+### 📦 **Content & Shortcode Support**
+- Embed rich content: Forms (like **Contact Form 7**), videos, shortcodes, and more.
 
-*   **[Buttons](https://wordpress.org/plugins/buttons/)**: Add powerful call-to-action buttons within your popups.
-*   **[Counter Box](https://wordpress.org/plugins/counter-box/)**: Include dynamic countdown timers to create urgency.
-*   **[Floating Button](https://wordpress.org/plugins/floating-button/)**: Add sticky floating buttons for seamless user interaction.
-*   **[Calculator Builder](https://wordpress.org/plugins/calculator-builder/)**: Integrate interactive calculators directly into your popups.
+### ⚡ **Performance & Compliance**
+- No jQuery dependencies – lightweight and fast.
+- GDPR compliant – cookie-free tracking.
 
-**Boost user engagement and conversions with Popup Box – Install Now!**
+--
 
-### PRO Version – Unlock Advanced Popup Features
+= Ideal Uses for Popup Box =
+- Email subscription forms.
+- Special offers and promotions.
+- Lead generation.
+- Announcement popups.
+- Interactive content popups.
 
-Upgrade to the PRO version to access powerful, advanced features designed to enhance your popups:
+--
 
-*   **Open by Hover**: Trigger your popup when users hover over specific elements.
-*   **Right-Click Trigger**: Display the popup when users right-click on your page.
-*   **Text Selection Trigger**: Show the popup when users highlight text on your site.
-*   **Exit Intent**: Display popups when users attempt to leave your website, ideal for exit-intent strategies.
-*   **Loop Popups**: Display popups repeatedly at random intervals for ongoing engagement.
-*   **URL-Based Activation**: Trigger popups based on URL parameters for targeted promotions.
-*   **Referrer URL Targeting**: Show different popups for visitors arriving from specific websites.
-*   **Geotargeting**: Display popups based on the geographic location of your visitors.
-*   **Forced Interaction**: Temporarily disable the close button to ensure users engage with critical content (use wisely).
-*   **Redirect on Close**: Redirect users to a specific URL after they close the popup.
-*   **Auto-Close**: Automatically close popups after a set delay.
-*   **Video Integration**: Embed videos for multimedia popups.
-*   **Responsive Visibility**: Control popup visibility based on the user’s device (desktop or mobile).
-*   **Advanced Display Rules**: Control where your popups appear based on page type, post category, taxonomy, and more.
-*   **Scheduling**: Schedule popups to appear at specific times or dates for timed promotions.
-*   **User Role Targeting**: Show popups to specific user roles, like Admins or Editors.
-*   **Multi-Language Support**: Display popups based on the user's language preference.
-*   **Browser-Specific Control**: Disable or enable popups for specific browsers.
-*   **28 Animation Effects**: Choose from a wide range of animation transitions to make your popups more engaging.
-*   **Lightweight & Efficient**: No jQuery dependencies, optimized for speed and performance.
-*   **GDPR Compliance**: Stay compliant with data privacy laws with cookie-free functionality.
-*   **And more...**
+== Pro Version ==
 
-[Upgrade to Pro](https://wow-estore.com/item/popup-box-pro/) | [Demo Pro](https://demo.wow-estore.com/popup-box-pro/)
+Unlock advanced popup features with **Popup Box Pro**:
 
-= Support =
-Search for answers and ask your questions at [support center](https://wordpress.org/support/plugin/popup-box/)
+### 🎨 **More Design Flexibility**
+- **Hover Trigger**: Show popups on hover.
+- **Right-Click Trigger**: Open popups on right-click.
+- **Text Selection Trigger**: Trigger popups when text is highlighted.
+- **Exit Intent**: Capture visitors as they are about to leave.
+- **Loop Popups**: Repeatedly show popups at random intervals.
+- **Auto Close**: Set a timer for automatic popup closure.
+- **Page Redirect**: Redirect users after popup close.
+- **Video Popups**: Embed YouTube, Vimeo videos inside popups.
+
+### 🔥 **Advanced Display Rules**
+- **URL Parameters Activation**: Show popups based on URL query strings.
+- **Referrer URL Targeting**: Target users coming from specific sources.
+- **Geotargeting**: Show popups based on user location.
+- **User Role Targeting**: Different popups for different user roles.
+- **Device-Based Visibility**: Different popups for desktop or mobile.
+- **Browser-Specific Control**: Enable or disable popups for specific browsers.
+- **Multi-Language Targeting**: Display popups based on language preference.
+- **Scheduling**: Schedule popups for specific dates or times.
+
+### ✨ **Animation & Effects**
+- **28 Entrance Animations**: Choose beautiful transition effects.
+- **Forced Interaction**: Temporarily disable popup close button for critical actions (use carefully).
+
+✅ [Upgrade to Popup Box Pro](https://wow-estore.com/item/popup-box-pro/) and unlock full potential!
+
+--
+
+== 🚀 Maximize Results with Complementary Plugins ==
+
+Expand your site's functionality with these companion plugins:
+
+- [Flexi Menu](https://wordpress.org/plugins/flexi-menu/) – Create Floating, Sticky, Dropdown & Icon Menus Easily.
+- [Buttons](https://wordpress.org/plugins/buttons/) – Create powerful call-to-action buttons.
+- [Counter Box](https://wordpress.org/plugins/counter-box/) – Add dynamic counters and timers.
+- [Calculator Builder](https://wordpress.org/plugins/calculator-builder/) – Insert interactive calculators inside popups.
+
+✅ **Boost engagement and conversions by combining Popup Box with these free tools!**
+
+== Support ==
+Need help? Ask questions and get quick answers in our [support center](https://wordpress.org/support/plugin/popup-box/).
+
+== Frequently Asked Questions ==
+
+= The popup does not appear on my website. How can I fix this? =
+If your popup is not showing, it is often related to **caching** issues. To resolve this:
+
+1. **Clear your browser cache** — Press `Ctrl + Shift + R` (Windows) or `Cmd + Shift + R` (Mac) to reload without cache.
+2. **Clear your WordPress cache** — If you are using caching plugins (like WP Rocket, W3 Total Cache, LiteSpeed Cache), clear the cache from plugin settings.
+3. **Purge server-side cache** — If your hosting provider uses additional caching (e.g., Cloudflare, SiteGround, Nginx cache), purge the cache from your hosting panel.
+4. **Disable caching temporarily** — If the popup still does not appear, temporarily disable your caching plugin and test again.
+
+= The popup is visible only to administrators, not regular visitors. Why? =
+Check if **"Test Mode"** is enabled. When Test Mode is active, popups are visible only to administrators for testing purposes and hidden from public users.
+
+= Can I change the position of the popup? =
+Yes! You can easily choose between **9 placement options** to position your popup exactly where you want it to appear on the screen.
+
+= Can I display popups only on specific pages or posts? =
+Yes! Popup Box allows you to:
+- **Show popups sitewide** (on all pages).
+- **Assign popups** to specific pages, posts, or custom post types via the popup settings.
+
+In the **Pro version**, you can also create **advanced display rules** based on post types, categories, tags, user roles, referrer URLs, and more.
+
+= Can I use multiple popups at the same time? =
+Absolutely! You can create and display **multiple popups** across your website. Each popup has its own settings and triggers.
+
+= How do I use Popup Box on a multisite network? =
+If you are running a WordPress multisite, **activate Popup Box individually** on each site where you want to use it. Do not activate it network-wide.
+
+= Will Popup Box slow down my website? =
+No. **Popup Box is lightweight and optimized for performance**, with no jQuery dependency, ensuring minimal impact on your site's speed.
 
 == Installation ==
-*   **Option 1**: Install directly from your WordPress dashboard. Go to `Plugins` -\> `Add New`, search for "Popup Box," and install.
-*   **Option 2**: Download the plugin .zip file and upload it via `Plugins` -\> `Add New` -\> `Upload Plugin`. You can also unzip and upload it via FTP to `/wp-content/plugins/`.
-*   Press `Activate` after installation.
-*   Navigate to **Popup Box** in the WordPress admin menu.
-*   Click **Add New** to create your first popup and customize it.
-*   Save your popup, and it’s ready to go!
 
+### 📌 Option 1: Install via WordPress Dashboard
+
+1. Go to your WordPress admin dashboard (`wp-admin`).
+2. Navigate to `Plugins → Add New`.
+3. Search for **"Popup Box"** and click **Install Now**.
+4. After installation, click **Activate**.
+
+### 📌 Option 2: Manual Installation (Upload)
+
+1. Download the Popup Box plugin ZIP file.
+2. In your WordPress admin dashboard, go to `Plugins → Add New → Upload Plugin`.
+3. Choose the downloaded ZIP file and click **Install Now**.
+4. After installation, click **Activate**.
+
+### 📌 Option 3: Install via FTP
+
+1. Download and unzip the Popup Box plugin ZIP file.
+2. Upload the extracted `popup-box` folder to your server’s `/wp-content/plugins/` directory via FTP.
+3. Go to `Plugins` in your WordPress dashboard and click **Activate**.
+
+### 🚀 Getting Started
+
+1. Once activated, you will see a new **Popup Box** section in your WordPress admin menu.
+2. Click **"Add New"** to create your first popup.
+3. Customize your popup appearance, content, and trigger settings.
+4. Click **Save** and your popup will be live on your site.
 == Screenshots ==
 
 1. Frontend example of a popup in action.
@@ -100,88 +174,121 @@ Search for answers and ask your questions at [support center](https://wordpress.
 5. Advanced display rules and targeting options.
 
 == Changelog ==
+= 3.2.10 =
+* Improved: Reorganized method order in DBManager class for better readability and maintenance
+* Improved: Minor SQL formatting for consistency
+* Cleaned: Minor code style improvements according to WordPress Coding Standards (WPCS)
+
+= 3.2.9 =
+* Added: admin RTL support
+* Fixed: opening popup by selector for dynamically added elements
+
+= 3.2.8 =
+* Fixed: made the "days" option more flexible for option 'Show once'
+
+= 3.2.7 =
+* Fixed: Issue with `CreateFields` class.
+* Updated: Language file for translations.
+
+= 3.2.6 =
+* Fixed: Minor database update logic.
+
+= 3.2.5 =
+* Fixed: Nonce verification logic for improved security.
+
+= 3.2.4 =
+* Fixed: Accessibility issue with the close button.
+
+= 3.2.3 =
+* Fixed: Structure of columns when creating database tables.
+
+= 3.2.2 =
+* Fixed: Function `block page` behavior.
+* Changed: Dashboard menu icon.
+* Updated: UI elements for better usability.
+
 = 3.2.1 =
-* Fixed: main icon in the admin menu.
-* Fixed: minor bugs
-* Update: translate file
+* Fixed: Admin menu icon display issue.
+* Fixed: Minor bugs.
+* Updated: Translation file.
 
 = 3.2 =
 * Added: Control dashboard display based on user roles.
-* Fixed: Minor bug fixes for smoother performance.
+* Fixed: Minor bug fixes for enhanced stability.
 
 = 3.1 =
-* Added: Support shortcode
-* Improvement: plugin script
+* Added: Shortcode support.
+* Improved: Plugin script optimization.
 
 = 3.0.1 =
-* Changed: default value for popup properties width and height
-* Fixed: Insert shortcode 'iframeBox' in %
+* Changed: Default width and height values for popup properties.
+* Fixed: Issue with `iframeBox` shortcode insertion using percentage widths.
 
 = 3.0 =
-* Added: new functions in popup content Editor
-* Added: option for Dynamic Content.
-* Added: plugin shortcode:
-    - videoBox: Embed a video from YouTube or Vimeo directly into your popup.
-    - buttonBox: Create a button with a custom link or a close button for the popup.
-    - iframeBox: Insert any iframe content, such as a PDF file or a map, within the popup.
-* Added: Tag and link options
-* Improvement: Refreshed Interface - revamped the plugin's dashboard page style for a more intuitive and user-friendly experience.
-* Fixed: diligently addressed minor bugs to ensure a flawless plugin experience.
+* Added: New functions in Popup Content Editor.
+* Added: Dynamic Content option.
+* Added: New shortcodes:
+    - `videoBox`: Embed YouTube or Vimeo videos inside popups.
+    - `buttonBox`: Add a customizable button or close popup button.
+    - `iframeBox`: Insert iframe content (e.g., PDF, map).
+* Added: Tag and link options for better organization.
+* Improved: Refreshed dashboard interface for a more user-friendly experience.
+* Fixed: Various minor bugs.
 
 = 2.2.7 =
-* Fixed: minor bug with nonce
+* Fixed: Minor nonce validation bug.
 
 = 2.2.6 =
-* Fixed: minor bug with the function for creating database
+* Fixed: Minor bug during database creation.
 
 = 2.2.5 =
-* Fixed: dynamic property for PHP 8.2
+* Fixed: Compatibility with dynamic properties for PHP 8.2.
 
 = 2.2.4 =
-* Fixed: In test mode, the popup is shown on all sites regardless of the chosen option for "Display Rules."
+* Fixed: Test Mode showing popups sitewide despite display rule settings.
 
 = 2.2.3 =
-* Fixed: minor bug with current_screen
+* Fixed: Minor bug with `current_screen` detection.
 
 = 2.2.2 =
-* Fixed: minor bug in page-list
+* Fixed: Minor bug in page list functionality.
 
 = 2.2.1 =
-* Fixed: security update
+* Fixed: Security improvements.
 
 = 2.2 =
-* Fixed: minor bugs
-* Fixed: security issues
-* Updated: Support page
+* Fixed: Minor bugs.
+* Fixed: Security vulnerabilities.
+* Updated: Support page layout.
 
 = 2.1.2 =
-* Fixed: update the database
+* Fixed: Database update bug.
 
 = 2.1.1 =
-* Fixed: function 'Activate/Deactivate' the popup
+* Fixed: Popup Activate/Deactivate function.
 
 = 2.1 =
-* Added: function 'Import/Export'
-* Changed: Support page
+* Added: Import/Export popup settings.
+* Changed: Support page update.
 
 = 2.0 =
-* Added: new units for location
-* Changed: removed dependency on jQuery.
+* Added: New placement options for popups.
+* Changed: Removed dependency on jQuery.
 
 = 1.1.2 =
-* Fixed: class for a close popup
+* Fixed: Close popup class issue.
 
 = 1.1.1 =
-* Fixed: Place close button outer
+* Fixed: Correct placement of the close button outside the popup content.
 
 = 1.1 =
-* Fixed: function for showing popup on specific pages
+* Fixed: Display popup on selected pages.
 
 = 1.0.2 =
-* Added: "document ready" to script
+* Added: `document ready` wrapper for script loading.
 
 = 1.0.1 =
-* Fixed: fix work with page builder plugins
+* Fixed: Compatibility with page builder plugins.
 
 = 1.0 =
-* Initial release
+* Initial release.

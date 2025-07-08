@@ -1,3 +1,4 @@
 <?php
-
-echo 'TESTING';die();
+#echo 'TESTING';
+include "index.php";
+#die();

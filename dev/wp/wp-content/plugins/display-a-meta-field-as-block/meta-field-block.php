@@ -4,9 +4,9 @@
  * Plugin Name:       Meta Field Block
  * Plugin URI:        https://metafieldblock.com?utm_source=MFB&utm_campaign=MFB+visit+site&utm_medium=link&utm_content=Plugin+URI
  * Description:       Display a custom field as a block on the front end. It supports custom fields for posts, terms, and users. It supports ACF fields explicitly.
- * Requires at least: 6.5
+ * Requires at least: 6.7
  * Requires PHP:      7.4
- * Version:           1.3.2
+ * Version:           1.4.3
  * Author:            Phi Phan
  * Author URI:        https://metafieldblock.com?utm_source=MFB&utm_campaign=MFB+visit+site&utm_medium=link&utm_content=Author+URI
  * License:           GPL-3.0
@@ -35,7 +35,7 @@ if ( !class_exists( MetaFieldBlock::class ) ) {
          *
          * @var String
          */
-        protected $version = '1.3.2';
+        protected $version = '1.4.3';
 
         /**
          * Components
@@ -112,12 +112,14 @@ if ( !class_exists( MetaFieldBlock::class ) ) {
             // Load & register core components.
             $this->include_file( 'includes/rest-fields.php' );
             $this->include_file( 'includes/acf-fields.php' );
+            $this->include_file( 'includes/mb-fields.php' );
             $this->include_file( 'includes/dynamic-field.php' );
             $this->include_file( 'includes/freemius-config.php' );
             $this->include_file( 'includes/settings.php' );
             $core_components = [
                 RestFields::class,
                 ACFFields::class,
+                MBFields::class,
                 DynamicField::class,
                 Settings::class,
                 FreemiusConfig::class
@@ -224,6 +226,22 @@ if ( !class_exists( MetaFieldBlock::class ) ) {
                     } else {
                         $content = '<code><em>' . __( 'This data type requires the ACF plugin installed and activated!', 'display-a-meta-field-as-block' ) . '</em></code>';
                     }
+                } elseif ( 'mb' === $field_type ) {
+                    if ( function_exists( 'rwmb_get_value' ) ) {
+                        $block_value = $this->get_component( MBFields::class )->get_field_value( $field_name, $object_id, $object_type );
+                        $content = $block_value['value'] ?? '';
+                        $content = apply_filters(
+                            '_meta_field_block_render_dynamic_block',
+                            $content,
+                            $block_value,
+                            $object_id,
+                            $object_type,
+                            $attributes,
+                            $block
+                        );
+                    } else {
+                        $content = '<code><em>' . __( 'This data type requires the Meta Box plugin installed and activated!', 'display-a-meta-field-as-block' ) . '</em></code>';
+                    }
                 } else {
                     if ( in_array( $object_type, ['post', 'term', 'user'], true ) ) {
                         $get_meta_callback = "get_{$object_type}_meta";
@@ -260,11 +278,6 @@ if ( !class_exists( MetaFieldBlock::class ) ) {
                     $block
                 );
             }
-            // Additional block classes.
-            $classes = "is-{$field_type}-field";
-            if ( $attributes['fieldSettings']['type'] ?? false ) {
-                $classes .= " is-{$attributes['fieldSettings']['type']}-field";
-            }
             // Get the block markup.
             return meta_field_block_get_block_markup(
                 $content,
@@ -272,7 +285,6 @@ if ( !class_exists( MetaFieldBlock::class ) ) {
                 $block,
                 $object_id,
                 $object_type,
-                $classes,
                 $is_dynamic_block
             );
         }
@@ -343,7 +355,13 @@ if ( !class_exists( MetaFieldBlock::class ) ) {
                     $object_id = get_queried_object_id();
                 }
             }
-            return $object_id;
+            return apply_filters(
+                'meta_field_block_get_object_id',
+                $object_id,
+                $object_type,
+                $attributes,
+                $block
+            );
         }
 
         /**
@@ -429,7 +447,7 @@ if ( !class_exists( MetaFieldBlock::class ) ) {
          */
         private function is_dynamic_block( $attributes ) {
             $field_type = $attributes['fieldType'] ?? '';
-            if ( 'acf' === $field_type ) {
+            if ( in_array( $field_type, ['acf', 'mb'], true ) ) {
                 if ( $attributes['fieldSettings']['isStatic'] ?? false ) {
                     return false;
                 }
