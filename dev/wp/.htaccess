@@ -1,4 +1,4 @@
-# SUNBIRD # ----------------------------------------------------
+# SUNBIRD # (vw) ## ----------------------------------------------------
 
 # BEGIN WordPress
 # The directives (lines) between "BEGIN WordPress" and "END WordPress" are
@@ -17,13 +17,178 @@ RewriteRule . /index.php [L]
 # END WordPress
 
 
-# BEGIN CORS
+## WP Defender - Prevent information disclosure ##
+<FilesMatch "\.(md|exe|sh|bak|inc|pot|po|mo|log|sql)$">
+#Order allow,deny
+#Deny from all
+Require all denied
+</FilesMatch>
+
+<Files robots.txt>
+#Allow from all
+Require all granted
+</Files>
+
+<Files ads.txt>
+#Allow from all
+Require all granted
+</Files>
+## WP Defender - End ##
+
+# BEGIN GzipWpFastestCache
+<IfModule mod_deflate.c>
+AddType x-font/woff .woff
+AddType x-font/ttf .ttf
+AddOutputFilterByType DEFLATE image/svg+xml
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE text/javascript
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript
+AddOutputFilterByType DEFLATE application/x-font-ttf
+AddOutputFilterByType DEFLATE x-font/ttf
+AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+AddOutputFilterByType DEFLATE font/opentype font/ttf font/eot font/otf
+</IfModule>
+# END GzipWpFastestCache
+
+# BEGIN LBCWpFastestCache
+<FilesMatch "\.(webm|ogg|mp4|ico|pdf|flv|avif|jpg|jpeg|png|gif|webp|js|css|swf|x-html|xml|woff|woff2|otf|ttf|svg|eot)(\.gz)?$">
+<IfModule mod_expires.c>
+AddType application/font-woff2 .woff2
+AddType application/x-font-opentype .otf
+ExpiresActive On
+ExpiresDefault A0
+ExpiresByType video/webm A10368000
+ExpiresByType video/ogg A10368000
+ExpiresByType video/mp4 A10368000
+ExpiresByType image/avif A10368000
+ExpiresByType image/webp A10368000
+ExpiresByType image/gif A10368000
+ExpiresByType image/png A10368000
+ExpiresByType image/jpg A10368000
+ExpiresByType image/jpeg A10368000
+ExpiresByType image/ico A10368000
+ExpiresByType image/svg+xml A10368000
+ExpiresByType text/css A10368000
+ExpiresByType text/javascript A10368000
+ExpiresByType application/javascript A10368000
+ExpiresByType application/x-javascript A10368000
+ExpiresByType application/font-woff2 A10368000
+ExpiresByType application/x-font-opentype A10368000
+ExpiresByType application/x-font-truetype A10368000
+</IfModule>
+<IfModule mod_headers.c>
+Header set Expires "max-age=A10368000, public"
+Header unset ETag
+Header set Connection keep-alive
+FileETag None
+</IfModule>
+</FilesMatch>
+# END LBCWpFastestCache
+
+# BEGIN wp-sicherheit (vw) ## ------------------------------------------ 
+# Full Path Disclosure (FPD) verhindern
+# mod_php7.c zu mod_php5.c für PHP < 7
+<IfModule mod_php7.c>
+php_flag display_errors Off
+</IfModule>
+# Verzeichnislisting verhindern
+<If "%{SERVER_NAME} != 'localhost'">
+    Options All -Indexes
+</If>
+# PHP im Uploads-Verzeiochnis verhindern
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^(wp-content/uploads/.+.php)$ $1 [H=text/plain]
+</IfModule>
+# Allgemein Zugriff auf temporäre Dateien o.ä. und sonstige generell nicht sinnvolle Dateien verhinden
+<FilesMatch "(\.(env|bak|config|sql|fla|psd|ini|log|sh|inc|swp|dist|txt)|~)$">
+#Order allow,deny
+#Deny from all
+#Satisfy All
+Require all denied
+</FilesMatch>
+# Zugriff auf die robots.txt wieder erlauben
+# (ist über die obige Regel automatisch mit ausgeschlossen worden)
+<Files robots.txt>
+#Order allow,deny
+#Allow from all
+Require all granted
+</Files>
+# Zugriff auf htaccess und htpasswd verhindern
+<Files ~ "^[\._]ht">
+#Order Allow,Deny
+#Deny from all
+#Satisfy All
+Require all denied
+</Files>
+# Zugriff auf diverse WordPress-Dateien verhindern
+<FilesMatch "(wp-config.php|wp-config-sample.php|liesmich.html|readme.html)">
+#Order allow,deny
+#Deny from all
+#Satisfy All
+Require all denied
+</FilesMatch>
+# Zugriff auf die install.php verhindern
+# auskommentieren, um die Installation von Wordpress auszuführen
+<Files install.php>
+#Order allow,deny
+#Deny from all
+#Satisfy All
+Require all denied
+</Files>
+# Zugriff auf die XML-RPC-Schnittstelle verhindern
+# Diesen Teil nur aktivieren/nutzen, wenn die XML-RPC-Schnittstelle nicht benötigt wird.
+<Files xmlrpc.php>
+#Order Allow,Deny
+#Deny from all
+Require all denied
+</Files>
+# Includes-Dateien ausschließen
+# Auchtung bei Benutzung in Multisite-Umgebungen!
+# See: http://codex.wordpress.org/Hardening_WordPress#Securing_wp-admin
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# RewriteBase muss ggf. angepasst werden, je nach Serverkonfiguration
+RewriteBase /
+RewriteRule ^wp-admin/includes/ - [F,L]
+RewriteRule !^wp-includes/ - [S=3]
+RewriteCond %{SCRIPT_FILENAME} !^(.*)wp-includes/ms-files.php
+RewriteRule ^wp-includes/[^/]+\.php$ - [F,L]
+RewriteRule ^wp-includes/js/tinymce/langs/.+\.php - [F,L]
+RewriteRule ^wp-includes/theme-compat/ - [F,L]
+</IfModule>
+# Security-Header setzen
+# See: http://de.slideshare.net/walterebert/die-htaccessrichtignutzenwchh2014
+# Im WP-Umfeld mit Vorsicht zu genießen - deswegen per default auskommentiert
+#<IfModule mod_headers.c>
+#  Header set X-Frame-Options SAMEORIGIN
+#  Header set X-Content-Type-Options nosniff
+#  Header set X-XSS-Protection "1; mode=block"
+#  Header set Content-Security-Policy "default-src 'self'; img-src 'self' http: https: *.gravatar.com;"
+#</IfModule>
+# Header mit Versionsinfos deaktivieren
+<IfModule mod_headers.c>
+Header unset X-Powered-By
+Header unset X-Pingback
+Header unset SERVER
+</IfModule>
+# END wp-sicherheit (vw)
+
+# BEGIN CORS (vw) ## -------------------------------------
 <IfModule mod_headers.c>
 <FilesMatch "\.(ttf|woff|woff2)$">
 Header set Access-Control-Allow-Origin "*"
 </FilesMatch>
 </IfModule>
-# END CORS
+# END CORS (vw)
 
 ## HTTPS settings (vw) ## -------------------------------------
 #RewriteEngine On

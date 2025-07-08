@@ -23,6 +23,7 @@ class Dashboard {
 
 	public static function init(): void {
 		add_filter( 'plugin_action_links', [ __CLASS__, 'settings_link' ], 10, 2 );
+		add_filter( 'plugin_row_meta', [ __CLASS__, 'plugin_link' ], 10, 2 );
 		add_filter( 'admin_footer_text', [ __CLASS__, 'footer_text' ] );
 		add_action( 'admin_enqueue_scripts', [ __CLASS__, 'admin_assets' ] );
 		add_action( 'admin_menu', [ __CLASS__, 'admin_page' ] );
@@ -41,6 +42,15 @@ class Dashboard {
 		return $links;
 	}
 
+	public static function plugin_link( $plugin_meta, $plugin_file ) {
+		if ( false === strpos( $plugin_file, WOWP_Plugin::basename() ) ) {
+			return $plugin_meta;
+		}
+		$plugin_meta[] = '<a href="' . esc_url( WOWP_Plugin::info( 'change' ) ) . '" target="_blank">' . esc_attr__( 'Check Version', 'popup-box' ) . '</a>';
+
+		return $plugin_meta;
+	}
+
 	public static function footer_text( $footer_text ) {
 		global $pagenow;
 
@@ -51,7 +61,7 @@ class Dashboard {
 			/* translators: 1: Rating link (URL), 2: Plugin name */
 				__( 'Thank you for using <b>%2$s</b>! Please <a href="%1$s" target="_blank">rate us</a>',
 					'popup-box' ),
-				esc_url( WOWP_Plugin::info( 'url' ) ),
+				esc_url( WOWP_Plugin::info( 'rating' ) ),
 				esc_attr( WOWP_Plugin::info( 'name' ) )
 			);
 
@@ -79,6 +89,7 @@ class Dashboard {
 				$name = $style['file'];
 				$file = $key . '.' . $name;
 				wp_enqueue_style( $slug . '-admin-' . $name, $assets_url . 'css/' . $file . '.css', [], $version );
+				wp_style_add_data($slug . '-admin-' . $name, 'rtl', 'replace');
 			}
 		}
 
@@ -111,7 +122,8 @@ class Dashboard {
 		echo '</div>';
 	}
 
-	public static function header() {
+	// phpcs:disable PluginCheck.CodeAnalysis.ImageFunctions.NonEnqueuedImage
+	public static function header(): void {
 		$logo_url = self::logo_url();
 		?>
         <div class="wpie-header-wrapper">
@@ -142,6 +154,7 @@ class Dashboard {
 		<?php
 	}
 
+// phpcs:enable
 
 	public static function logo_url(): string {
 		$logo_url = WOWP_Plugin::url() . 'admin/assets/img/plugin-logo.png';

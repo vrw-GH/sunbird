@@ -1,6 +1,7 @@
 <wpml-config>
   <admin-texts>
 	<key name="seopress_titles_option_name">
+	  <key name="seopress_titles_sep"/>
 	  <key name="seopress_titles_home_site_title"/>
 	  <key name="seopress_titles_home_site_title_alt"/>
 	  <key name="seopress_titles_home_site_desc"/>
@@ -96,7 +97,6 @@
 	<custom-field action="translate">_seopress_robots_index</custom-field>
 	<custom-field action="translate">_seopress_robots_follow</custom-field>
 	<custom-field action="translate">_seopress_robots_imageindex</custom-field>
-	<custom-field action="translate">_seopress_robots_archive</custom-field>
 	<custom-field action="translate">_seopress_robots_snippet</custom-field>
 	<custom-field action="translate">_seopress_robots_canonical</custom-field>
 	<custom-field action="translate">_seopress_robots_primary_cat</custom-field>

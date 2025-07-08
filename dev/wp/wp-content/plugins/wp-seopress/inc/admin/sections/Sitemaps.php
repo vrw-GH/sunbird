@@ -77,7 +77,7 @@ function seopress_print_section_info_xml_sitemap_general()
     </div>
 
     <?php if (isset($_SERVER['SERVER_SOFTWARE'])) {
-        $server_software = explode('/', $_SERVER['SERVER_SOFTWARE']);
+        $server_software = explode('/', sanitize_text_field(wp_unslash($_SERVER['SERVER_SOFTWARE'])));
         reset($server_software);
 
         if ('nginx' == current($server_software)) { //IF NGINX
@@ -147,6 +147,16 @@ function seopress_print_section_info_html_sitemap()
 
         <p><?php esc_attr_e('To include specific custom post types, use the CPT attribute:', 'wp-seopress'); ?></p>
         <pre>[seopress_html_sitemap cpt="post,product"]</pre>
+
+        <p><?php esc_attr_e('To display only categories and/or product categories, use the terms_only attribute:', 'wp-seopress'); ?></p>
+        <pre>[seopress_html_sitemap terms_only="true"]</pre>
+
+        <p class="seopress-help">
+            <span class="dashicons dashicons-external"></span>
+            <a href="<?php echo esc_url($docs['sitemaps']['hooks']); ?>" target="_blank">
+                <?php esc_attr_e('For advanced usage, you can also use the filters listed in the documentation.', 'wp-seopress'); ?>
+            </a>
+        </p>
 
         <h4><?php esc_attr_e('Other', 'wp-seopress'); ?></h4>
         <p><?php esc_attr_e('Dynamically display the sitemap by entering an ID to the first field below.', 'wp-seopress'); ?></p>

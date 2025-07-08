@@ -4,7 +4,7 @@
   "name": "mfb/meta-field-block",
   "title": "Meta Field Block",
   "category": "theme",
-  "description": "Display a custom field as a block on the front end. It supports custom fields for posts, terms, and users. It supports ACF fields explicitly.",
+  "description": "Display a custom field as a block on the frontend. Supports custom fields for posts, terms, and users. Officially supports ACF, Meta Box, and all text-based meta fields.",
   "keywords": [
     "meta",
     "custom",
@@ -93,6 +93,7 @@
       "width": true,
       "__experimentalDefaultControls": false
     },
+    "shadow": true,
     "typography": {
       "fontSize": true,
       "lineHeight": true,

@@ -78,8 +78,7 @@
 
 ## Versions
 
-* Beta Ver: <a href="https://{{ siteId }}.{{ siteDev }}">{{ siteId }}.{{ siteDev }}</a>
-* Dev Build:    <a href="https://wrightsdesk.com/{{ siteId }}">wrightsdesk.com/{{ siteId }}</a>
+* Beta Build:    <a href="https://wrightsdesk.com/{{ siteId }}.beta">wrightsdesk.com/{{ siteId }}.beta</a>
 * Live Site:    <a href="http://www.{{ siteId }}.lk">{{ siteId }}.lk</a>
 
 ---
@@ -88,5 +87,5 @@
 Developer:   Victor Wright
 Client:      {{ siteId }}
 Date:        Sep 2022
-GH Page:     <a href="https://vrw-gh.github.io/{{ siteId }}/">vrw-gh.github.io/{{ siteId }}</a>
+GH Page:     <a href="https://wrightElement.github.io/{{ siteId }}/">wrightElement.github.io/{{ siteId }}</a>
 </pre>

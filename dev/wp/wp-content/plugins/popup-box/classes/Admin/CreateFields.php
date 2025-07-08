@@ -137,6 +137,7 @@ class CreateFields {
 				'label' => [],
 			],
 
+
 		);
 
 		echo wp_kses( $content, $allowed_html );
@@ -276,12 +277,14 @@ class CreateFields {
 
 
 	private function get_attributes( $args, $value ) {
-		if ( empty( $args['atts'] ) || ! is_array( $args['atts'] ) ) {
+		$arr = $args['atts'] ?? $args['options'] ?? '';
+
+		if (empty($arr) || !is_array($arr)) {
 			return false;
 		}
 		$atts = '';
 
-		foreach ( $args['atts'] as $key => $val ) {
+		foreach ( $arr as $key => $val ) {
 			if ( $args['type'] === 'select' ) {
 				if ( strrpos( $key, '_start' ) ) {
 					$atts .= '<optgroup label="' . esc_attr( $val ) . '">';
