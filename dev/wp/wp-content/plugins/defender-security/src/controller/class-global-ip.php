@@ -11,6 +11,7 @@ use WP_Defender\Controller;
 use Calotes\Component\Request;
 use Calotes\Component\Response;
 use WP_Defender\Traits\Setting;
+use WP_Defender\Traits\Formats;
 use WP_Defender\Behavior\WPMUDEV;
 use WP_Defender\Model\Setting\Global_Ip_Lockout;
 use WP_Defender\Component\Config\Config_Hub_Helper;
@@ -22,6 +23,7 @@ use WP_Defender\Component\IP\Global_IP as Global_IP_Component;
 class Global_Ip extends Controller {
 
 	use Setting;
+	use Formats;
 
 	/**
 	 * The slug identifier for this controller.
@@ -56,7 +58,7 @@ class Global_Ip extends Controller {
 	 */
 	public function __construct() {
 		$this->register_routes();
-		add_action( 'defender_enqueue_assets', array( &$this, 'enqueue_assets' ) );
+		add_action( 'defender_enqueue_assets', array( $this, 'enqueue_assets' ) );
 		$this->model   = wd_di()->get( Global_Ip_Lockout::class );
 		$this->service = wd_di()->get( Global_IP_Component::class );
 		$this->wpmudev = wd_di()->get( WPMUDEV::class );
@@ -80,23 +82,50 @@ class Global_Ip extends Controller {
 	 * @defender_route
 	 */
 	public function save_settings( Request $request ) {
-		$data        = $request->get_data_by_model( $this->model );
-		$old_enabled = (bool) $this->model->enabled;
+		$data = $request->get_data(
+			array(
+				'enabled'            => array( 'type' => 'bool' ),
+				'allow_self_unlock'  => array( 'type' => 'bool' ),
+				'blocklist_autosync' => array( 'type' => 'bool' ),
+				// Temporary property.
+				'module_title'       => array(
+					'type'     => 'string',
+					'sanitize' => 'sanitize_text_field',
+				),
+				// End.
+			)
+		);
+
+		$message_type = 'central_ip';
+		// Split messages.
+		if ( isset( $data['module_title'] ) && 'antibot' === $data['module_title'] ) {
+			$message_type = 'antibot';
+			unset( $data['module_title'] );
+		}
+
+		$old_enabled     = (bool) $this->model->enabled;
+		$old_self_unlock = $this->model->allow_self_unlock;
 
 		$this->model->import( $data );
 		if ( $this->model->validate() ) {
 			$this->model->save();
 			Config_Hub_Helper::set_clear_active_flag();
+			if ( 'central_ip' === $message_type ) {
+				$message = $this->get_update_message( $data, $old_enabled, Global_Ip_Lockout::get_module_name() );
+			} else {
+				$message = '';
+				if ( ! empty( $data['allow_self_unlock'] ) ) {
+					$message = esc_html__( 'Temporary self unlock CAPTCHA challenge is enabled successfully.', 'defender-security' );
+				} elseif ( ! empty( $old_self_unlock ) && empty( $data['allow_self_unlock'] ) ) {
+					$message = esc_html__( 'Temporary self unlock CAPTCHA challenge is disabled successfully.', 'defender-security' );
+				}
+			}
 
 			return new Response(
 				true,
 				array_merge(
 					array(
-						'message'    => $this->get_update_message(
-							$data,
-							$old_enabled,
-							Global_Ip_Lockout::get_module_name()
-						),
+						'message'    => $message,
 						'auto_close' => true,
 					),
 					$this->data_frontend()
@@ -133,9 +162,10 @@ class Global_Ip extends Controller {
 					'show_global_ips_disable'  => $this->wpmudev->is_disabled_hub_option(),
 					'is_wpmu_dev_admin'        => $this->wpmudev->is_wpmu_dev_admin(),
 					'module_name'              => Global_Ip_Lockout::get_module_name(),
-					'text_to_connect'          => esc_html__(
-						'Connect to a WPMU DEV account to activate Global IP Blocker.',
-						'defender-security'
+					'text_to_connect'          => sprintf(
+						/* translators: %s: Module name. */
+						esc_html__( 'Connect to a WPMU DEV account to activate %s.', 'defender-security' ),
+						Global_Ip_Lockout::get_module_name()
 					),
 					'is_show_dashboard_notice' => $this->service->is_show_dashboard_notice(),
 				),
@@ -169,7 +199,7 @@ class Global_Ip extends Controller {
 	 * @defender_route
 	 * @since 3.4.0
 	 */
-	public function refresh_global_ip_list( Request $request ) {
+	public function refresh_global_ip_list( Request $request ): Response {
 		$data = $this->service->fetch_global_ip_list();
 
 		if ( ! is_wp_error( $data ) ) {
@@ -177,7 +207,7 @@ class Global_Ip extends Controller {
 				true,
 				array(
 					'message'        => esc_html__(
-						'The global IP addresses have been updated.',
+						'The Custom IP List has been updated successfully.',
 						'defender-security'
 					),
 					'global_ip_list' => $this->service->get_formated_global_ip_list(),
@@ -188,7 +218,7 @@ class Global_Ip extends Controller {
 				false,
 				array(
 					'message' => esc_html__(
-						'An error occurred while synchronizing the global IPs.',
+						'An error occurred while synchronizing the Custom IP List.',
 						'defender-security'
 					),
 				)
@@ -244,12 +274,12 @@ class Global_Ip extends Controller {
 	public function remove_settings() {
 	}
 
-
 	/**
 	 * Delete all the data & the cache.
 	 */
 	public function remove_data() {
 		delete_site_transient( Global_IP_Component::LIST_KEY );
+		delete_site_option( Global_IP_Component::LIST_LAST_SYNCED_KEY );
 		$this->service->delete_dashboard_notice_reminder();
 	}
 

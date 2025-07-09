@@ -8,7 +8,7 @@
 namespace WP_Defender\Component;
 
 use WP_Defender\Component;
-use WP_Defender\Behavior\WPMUDEV;
+use WP_Defender\Traits\Defender_Dashboard_Client;
 
 /**
  * Use different actions for "What's new" modals.
@@ -16,12 +16,13 @@ use WP_Defender\Behavior\WPMUDEV;
  * @since 2.5.5
  */
 class Feature_Modal extends Component {
+	use Defender_Dashboard_Client;
 
 	/**
 	 * Feature data for the last active "What's new" modal.
 	 */
-	public const FEATURE_SLUG    = 'wd_show_feature_automatic_ip_detection';
-	public const FEATURE_VERSION = '4.9.0';
+	public const FEATURE_SLUG    = 'wd_show_feature_antibot_protection_mode';
+	public const FEATURE_VERSION = '5.3.0';
 
 	/**
 	 * Get modals that are displayed on the Dashboard page.
@@ -33,34 +34,15 @@ class Feature_Modal extends Component {
 	 * @since 2.7.0 Use one template for Welcome modal and dynamic data.
 	 */
 	public function get_dashboard_modals( $force_hide = false ): array {
-		$wpmudev      = wd_di()->get( WPMUDEV::class );
 		$is_displayed = $force_hide ? false : $this->display_last_modal( self::FEATURE_SLUG );
-		$title        = esc_html__( 'Enhanced Security with Automatic IP Detection', 'defender-security' );
-		$desc         = sprintf(
-		/* translators: 1. Open tag. 2. Close tag. */
-			esc_html__(
-				'Defender now identifies IP headers with improved accuracy and can effectively avoid false blocks. This ensures enhanced site security and compatibility across different hosting environments. For more details about the %1$sAutomatic IP Detection%2$s feature, please visit the Firewall Settings page.',
-				'defender-security'
-			),
-			'<strong style="font-weight: 700;">',
-			'</strong>'
-		);
-		$button_title      = esc_html__( 'Go to Settings', 'defender-security' );
-		$button_title_free = $button_title;
+		$current_user = wp_get_current_user();
 
 		return array(
 			'show_welcome_modal' => $is_displayed,
 			'welcome_modal'      => array(
-				'title'              => $title,
-				'desc'               => $desc,
-				'banner_1x'          => defender_asset_url( '/assets/img/modal/welcome-modal.png' ),
-				'banner_2x'          => defender_asset_url( '/assets/img/modal/welcome-modal@2x.png' ),
-				'banner_alt'         => esc_html__( 'Modal for Automatic IP Detection', 'defender-security' ),
-				'button_title'       => $button_title,
-				'button_title_free'  => $button_title_free,
-				// Additional information.
-				'additional_text'    => $this->additional_text(),
-				'is_disabled_option' => $wpmudev->is_disabled_hub_option(),
+				'user_name' => esc_html( $current_user->display_name ),
+				'banner_1x' => defender_asset_url( '/assets/img/modal/welcome-modal.png' ),
+				'banner_2x' => defender_asset_url( '/assets/img/modal/welcome-modal@2x.png' ),
 			),
 		);
 	}
@@ -78,13 +60,7 @@ class Feature_Modal extends Component {
 	protected function display_last_modal( $key ): bool {
 		$info = defender_white_label_status();
 
-		if ( defined( 'WP_DEFENDER_PRO' ) && WP_DEFENDER_PRO ) {
-			$allowed_fresh_install = true;
-		} else {
-			$allowed_fresh_install = (bool) get_site_option( 'wd_nofresh_install' );
-		}
-
-		return $allowed_fresh_install && (bool) get_site_option( $key ) && ! $info['hide_doc_link'];
+		return (bool) get_site_option( $key ) && ! $info['hide_doc_link'];
 	}
 
 	/**
@@ -104,8 +80,8 @@ class Feature_Modal extends Component {
 			),
 			// The latest feature.
 			array(
-				'slug' => 'wd_show_feature_global_ip',
-				'vers' => '3.6.0',
+				'slug' => 'wd_show_feature_session_protection',
+				'vers' => '5.2.0',
 			),
 			// The current feature.
 			array(

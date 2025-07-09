@@ -28,13 +28,12 @@ trait Formats {
 		if ( false === $timestamp ) {
 			return 'n/a';
 		}
-		$format = get_option( 'date_format' ) . ' ' . get_option( 'time_format' );
-		if ( false === $i18n ) {
-			return gmdate( $format, $timestamp );
-		}
-		$time = get_date_from_gmt( gmdate( 'Y-m-d H:i:s', $timestamp ) );
 
-		return date_i18n( $format, strtotime( $time ) );
+		// Convert the given timestamp to a local time Unix timestamp.
+		$time   = strtotime( get_date_from_gmt( gmdate( 'Y-m-d H:i:s', $timestamp ) ) );
+		$format = get_option( 'date_format' ) . ' ' . get_option( 'time_format' );
+
+		return $i18n ? wp_date( $format, $timestamp ) : gmdate( $format, $time );
 	}
 
 	/**
@@ -118,7 +117,7 @@ trait Formats {
 	 */
 	public function get_date( $date ) {
 		if ( strtotime( '-24 hours' ) > $date ) {
-			return $this->format_date_time( wp_date( 'Y-m-d H:i:s', $date ) );
+			return $this->format_date_time( $date );
 		} else {
 			return human_time_diff( $date, time() ) . ' ' . esc_html__( 'ago', 'defender-security' );
 		}
@@ -305,5 +304,33 @@ trait Formats {
 	 */
 	public function get_local_human_date( int $timestamp ): string {
 		return wp_date( 'l, jS \of F, Y \a\t h:i:s A', $timestamp + ( 3600 * get_option( 'gmt_offset' ) ) );
+	}
+
+	/**
+	 * Format the time difference between now and the given time.
+	 *
+	 * This takes a given time in the past and calculates the time difference
+	 * between now and then. The result is a human-readable string, such as
+	 * "3 days ago" or "2 months ago".
+	 *
+	 * @param string $last_time The time in the past. This should be a string in
+	 *                           a format that can be parsed by strtotime().
+	 *
+	 * @return string Formatted time difference.
+	 */
+	public function get_time_diff( string $last_time ): string {
+		// If the given time is empty, return a string indicating that the
+		// feature has never been used.
+		if ( empty( $last_time ) ) {
+			return esc_html__( 'Never', 'defender-security' );
+		}
+
+		// Get the time difference between now and the given time. This is
+		// returned as a human-readable string, such as "3 days" or "2 months".
+		$diff = human_time_diff( strtotime( $last_time ) );
+
+		// Append the word "ago" to the time difference, so that the final
+		// result is a string like "3 days ago" or "2 months ago".
+		return $diff . ' ' . esc_html__( 'ago', 'defender-security' );
 	}
 }

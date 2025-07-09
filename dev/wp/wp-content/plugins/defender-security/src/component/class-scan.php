@@ -24,6 +24,7 @@ use WP_Defender\Behavior\Scan\Malware_Quick_Scan;
 use WP_Defender\Behavior\Scan\Known_Vulnerability;
 use WP_Defender\Model\Setting\Scan as Scan_Settings;
 use WP_Defender\Helper\Analytics\Scan as Scan_Analytics;
+use WP_Defender\Controller\Scan as Scan_Controller;
 
 /**
  * The Scan class handles the scanning process, managing tasks, and coordinating different types of scans.
@@ -73,6 +74,13 @@ class Scan extends Component {
 	private ?Gather_Fact $gather_fact;
 
 	/**
+	 * Lock file name for scanning.
+	 *
+	 * @var string
+	 */
+	protected string $lock_filename = 'scan.lock';
+
+	/**
 	 * Constructs the Scan object and initializes behaviors.
 	 */
 	public function __construct() {
@@ -84,13 +92,13 @@ class Scan extends Component {
 	/**
 	 * Performs additional actions after an advanced scan.
 	 *
-	 * @param  object $model  The scan model.
+	 * @param object $model  The scan model.
 	 */
 	public function advanced_scan_actions( $model ) {
 		$this->reindex_ignored_issues( $model );
 		$this->clean_up();
 
-		if ( wd_di()->get( Admin::class )->is_wp_org_version() ) {
+		if ( defender_is_wp_org_version() ) {
 			Rate::run_counter_of_completed_scans();
 		}
 	}
@@ -112,7 +120,7 @@ class Scan extends Component {
 		$task       = $this->scan->status;
 		if ( Scan_Model::STATUS_INIT === $scan->status ) {
 			// Get the first.
-			$this->log( 'Prepare facts for a scan', 'scan.log' );
+			$this->log( 'Prepare facts for a scan', Scan_Controller::SCAN_LOG );
 			$task                    = Scan_Model::STEP_GATHER_INFO;
 			$this->scan->percent     = 0;
 			$this->scan->total_tasks = $runner->count();
@@ -134,22 +142,22 @@ class Scan extends Component {
 		// Find the current task.
 		$offset = array_search( $task, array_values( $tasks ), true );
 		if ( false === $offset ) {
-			$this->log( sprintf( 'offset is not found, search %s', $task ), 'scan.log' );
+			$this->log( sprintf( 'offset is not found, search %s', $task ), Scan_Controller::SCAN_LOG );
 
 			return false;
 		}
 		// Reset the tasks to current.
 		$runner->seek( $offset );
-		$this->log( sprintf( 'Current task %s', $runner->current() ), 'scan.log' );
+		$this->log( sprintf( 'Current task %s', $runner->current() ), Scan_Controller::SCAN_LOG );
 		if ( $this->has_method( $task ) ) {
-			$this->log( sprintf( 'processing %s', $runner->key() ), 'scan.log' );
+			$this->log( sprintf( 'processing %s', $runner->key() ), Scan_Controller::SCAN_LOG );
 			$result = $this->task_handler( $task );
 			if ( true === $result ) {
-				$this->log( sprintf( 'task %s processed', $runner->key() ), 'scan.log' );
+				$this->log( sprintf( 'task %s processed', $runner->key() ), Scan_Controller::SCAN_LOG );
 				// Task is done, move to next.
 				$runner->next();
 				if ( $runner->valid() ) {
-					$this->log( sprintf( 'queue %s for next', $runner->key() ), 'scan.log' );
+					$this->log( sprintf( 'queue %s for next', $runner->key() ), Scan_Controller::SCAN_LOG );
 					$this->scan->status          = $runner->key();
 					$this->scan->task_checkpoint = '';
 					$this->scan->date_end        = gmdate( 'Y-m-d H:i:s' );
@@ -157,7 +165,7 @@ class Scan extends Component {
 					// Queue for next run.
 					return false;
 				}
-				$this->log( 'All done!', 'scan.log' );
+				$this->log( 'All done!', Scan_Controller::SCAN_LOG );
 				// No more task in the queue, we are done.
 				$this->scan->status = Scan_Model::STATUS_FINISH;
 				$this->scan->save();
@@ -359,7 +367,7 @@ class Scan extends Component {
 				)
 			);
 
-			$this->log( $reason, 'scan.log' );
+			$this->log( $reason, Scan_Controller::SCAN_LOG );
 		}
 	}
 
@@ -377,44 +385,6 @@ class Scan extends Component {
 				$model->delete();
 			}
 		}
-	}
-
-	/**
-	 * Create a file lock, so we can check if a process already running.
-	 */
-	public function create_lock() {
-		file_put_contents( $this->get_lock_path(), time(), LOCK_EX ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_file_put_contents
-	}
-
-	/**
-	 * Delete file lock.
-	 */
-	public function remove_lock() {
-		wp_delete_file( $this->get_lock_path() );
-	}
-
-	/**
-	 * Check if a lock is valid.
-	 *
-	 * @return bool
-	 */
-	public function has_lock(): bool {
-		global $wp_filesystem;
-		// Initialize the WP filesystem, no more using 'file-put-contents' function.
-		if ( empty( $wp_filesystem ) ) {
-			require_once ABSPATH . '/wp-admin/includes/file.php';
-			WP_Filesystem();
-		}
-		if ( ! file_exists( $this->get_lock_path() ) ) {
-			return false;
-		}
-		$time = $wp_filesystem->get_contents( $this->get_lock_path() );
-		if ( strtotime( '+90 seconds', $time ) < time() ) {
-			// Usually a timeout window is 30 seconds, so we should allow lock at 1.30min for safe.
-			return false;
-		}
-
-		return true;
 	}
 
 	/**

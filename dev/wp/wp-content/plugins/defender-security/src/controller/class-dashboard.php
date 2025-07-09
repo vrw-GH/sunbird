@@ -16,9 +16,12 @@ use Calotes\Component\Response;
 use WP_Defender\Traits\Formats;
 use WP_Defender\Behavior\WPMUDEV;
 use WP_Defender\Component\Feature_Modal;
+use WP_Defender\Controller\Hub_Connector;
 use WP_Defender\Model\Setting\Global_Ip_Lockout;
 use WP_Defender\Component\Config\Config_Hub_Helper;
 use WP_Defender\Component\IP\Global_IP as Global_IP_Component;
+use WP_Defender\Controller\Antibot_Global_Firewall;
+use WP_Defender\Model\Setting\Session_Protection;
 
 /**
  * Handles the main admin page.
@@ -42,10 +45,10 @@ class Dashboard extends Event {
 		$this->attach_behavior( WPMUDEV::class, WPMUDEV::class );
 		$this->add_main_page();
 		$this->register_routes();
-		add_action( 'defender_enqueue_assets', array( &$this, 'enqueue_assets' ) );
+		add_action( 'defender_enqueue_assets', array( $this, 'enqueue_assets' ) );
 		add_filter( 'custom_menu_order', '__return_true' );
-		add_filter( 'menu_order', array( &$this, 'menu_order' ) );
-		add_action( 'admin_init', array( &$this, 'maybe_redirect_notification_request' ), 99 );
+		add_filter( 'menu_order', array( $this, 'menu_order' ) );
+		add_action( 'admin_init', array( $this, 'maybe_redirect_notification_request' ), 99 );
 	}
 
 	/**
@@ -169,8 +172,6 @@ class Dashboard extends Event {
 	 * @defender_route
 	 */
 	public function activate_global_ip(): Response {
-		// Hide the modal.
-		Feature_Modal::delete_modal_key();
 		// Changes for Global IP.
 		$model                     = wd_di()->get( Global_Ip_Lockout::class );
 		$model->enabled            = true;
@@ -185,6 +186,28 @@ class Dashboard extends Event {
 			true,
 			array(
 				'redirect' => network_admin_url( 'admin.php?page=wdf-ip-lockout&view=global-ip' ),
+				'interval' => 1,
+			)
+		);
+	}
+
+	/**
+	 * Activate Session Protection submodule.
+	 *
+	 * @return Response
+	 * @defender_route
+	 */
+	public function activate_session_protection(): Response {
+		$model          = wd_di()->get( Session_Protection::class );
+		$model->enabled = true;
+		$model->save();
+		// Changes for Hub.
+		Config_Hub_Helper::set_clear_active_flag();
+
+		return new Response(
+			true,
+			array(
+				'redirect' => network_admin_url( 'admin.php?page=wdf-advanced-tools&view=session-protection' ),
 				'interval' => 1,
 			)
 		);
@@ -208,7 +231,6 @@ class Dashboard extends Event {
 	public function remove_settings() {
 		wd_di()->get( Feature_Modal::class )->upgrade_site_options();
 	}
-
 
 	/**
 	 * Delete all the data & the cache.
@@ -239,10 +261,12 @@ class Dashboard extends Event {
 				'blocklist_monitor' => wd_di()->get( Blocklist_Monitor::class )->data_frontend(),
 				'two_fa'            => wd_di()->get( Two_Factor::class )->data_frontend(),
 				'advanced_tools'    => array(
-					'mask_login'       => wd_di()->get( Mask_Login::class )->dashboard_widget(),
-					'security_headers' => wd_di()->get( Security_Headers::class )->dashboard_widget(),
-					'pwned_passwords'  => wd_di()->get( Password_Protection::class )->dashboard_widget(),
-					'recaptcha'        => wd_di()->get( Recaptcha::class )->dashboard_widget(),
+					'mask_login'         => wd_di()->get( Mask_Login::class )->dashboard_widget(),
+					'security_headers'   => wd_di()->get( Security_Headers::class )->dashboard_widget(),
+					'pwned_passwords'    => wd_di()->get( Password_Protection::class )->dashboard_widget(),
+					'recaptcha'          => wd_di()->get( Recaptcha::class )->dashboard_widget(),
+					'strong_passwords'   => wd_di()->get( Strong_Password::class )->dashboard_widget(),
+					'session_protection' => wd_di()->get( Session_Protection::class )->export(),
 				),
 				'security_tweaks'   => wd_di()->get( Security_Tweaks::class )->dashboard_widget(),
 				'tutorials'         => wd_di()->get( Tutorial::class )->data_frontend(),
@@ -250,6 +274,8 @@ class Dashboard extends Event {
 				'settings'          => wd_di()->get( Main_Setting::class )->data_frontend(),
 				'countries'         => $firewall->dashboard_widget(),
 				'global_ip'         => wd_di()->get( Global_Ip::class )->data_frontend(),
+				'hub_connector'     => wd_di()->get( Hub_Connector::class )->data_frontend(),
+				'antibot'           => wd_di()->get( Antibot_Global_Firewall::class )->data_frontend(),
 			)
 		);
 	}

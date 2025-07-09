@@ -121,8 +121,8 @@ class Totp extends Two_Factor_Provider {
 	 * Constructor to add actions for initializing and managing user options for TOTP.
 	 */
 	public function __construct() {
-		add_action( 'wd_2fa_init_provider_' . self::$slug, array( &$this, 'init_provider' ) );
-		add_action( 'wd_2fa_user_options_' . self::$slug, array( &$this, 'user_options' ) );
+		add_action( 'wd_2fa_init_provider_' . self::$slug, array( $this, 'init_provider' ) );
+		add_action( 'wd_2fa_user_options_' . self::$slug, array( $this, 'user_options' ) );
 	}
 
 	/**
@@ -303,7 +303,6 @@ class Totp extends Two_Factor_Provider {
 	public function is_available_for_user( WP_User $user ) {
 		return (bool) get_user_meta( $user->ID, self::TOTP_AUTH_KEY, true );
 	}
-
 
 	/**
 	 * Validates the TOTP authentication for a user.

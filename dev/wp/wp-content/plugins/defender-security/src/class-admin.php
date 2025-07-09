@@ -25,35 +25,29 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Admin {
 
 	/**
-	 * Flag indicating if the user is a Pro member.
+	 * Is the Free version?
 	 *
 	 * @var bool
 	 */
-	public $is_pro;
+	public $is_wp_org_version;
 
 	/**
 	 * Constructor for the Admin class.
 	 */
 	public function __construct() {
-		add_action( 'admin_init', array( $this, 'check_pro' ) );
+		$this->is_wp_org_version = defender_is_wp_org_version();
 		add_action( 'wp_ajax_defender_ip_detection_notice_dismiss', array( $this, 'dismiss_notice' ) );
 		add_action( 'wp_ajax_defender_ip_detection_switch_to_xff', array( $this, 'switch_to_xff' ) );
+		add_action( 'admin_head', array( $this, 'add_global_styles' ) );
 	}
 
 	/**
-	 * Check if the user is a Pro member.
+	 * Add global styles.
 	 */
-	public function check_pro() {
-		$this->is_pro = wd_di()->get( WPMUDEV::class )->is_pro();
-	}
-
-	/**
-	 * WP_DEFENDER_PRO sometimes doesn't match $this->is_pro, e.g. WPMU DEV Dashboard plugin is deactivated.
-	 *
-	 * @return bool.
-	 */
-	public function is_wp_org_version(): bool {
-		return ! $this->is_pro && ( defined( 'WP_DEFENDER_PRO' ) && ! WP_DEFENDER_PRO );
+	public function add_global_styles() {
+		echo '<style>
+			#toplevel_page_wp-defender ul.wp-submenu li a[href="admin.php?page=wdf-ip-lockout"] { display: flex; justify-content: space-between; align-items: center; }
+		</style>';
 	}
 
 	/**
@@ -65,7 +59,7 @@ class Admin {
 		add_filter( 'plugin_action_links_' . DEFENDER_PLUGIN_BASENAME, array( $this, 'settings_link' ) );
 		add_filter( 'plugin_row_meta', array( $this, 'plugin_row_meta' ), 10, 3 );
 		// Only for plugin pages and actions are only for wp.org members.
-		if ( $this->is_wp_org_version() ) {
+		if ( $this->is_wp_org_version ) {
 			wd_di()->get( Rate::class )->init();
 			add_action( 'admin_init', array( $this, 'register_free_modules' ), 20 );
 			/**
@@ -90,11 +84,12 @@ class Admin {
 				);
 			}
 		}
+
 		// Display IP detection notice.
 		if ( is_multisite() ) {
-			add_action( 'network_admin_notices', array( &$this, 'admin_notices' ) );
+			add_action( 'network_admin_notices', array( $this, 'admin_notices' ) );
 		} else {
-			add_action( 'admin_notices', array( &$this, 'admin_notices' ) );
+			add_action( 'admin_notices', array( $this, 'admin_notices' ) );
 		}
 	}
 
@@ -105,7 +100,7 @@ class Admin {
 	 */
 	public function get_plugin_display_name(): string {
 		// Check if the plugin is the WordPress.org version (i.e., the free version) and set the label accordingly.
-		$plugin_label = $this->is_wp_org_version()
+		$plugin_label = $this->is_wp_org_version
 										? esc_html__( 'Defender', 'defender-security' )
 										: esc_html__( 'Defender Pro', 'defender-security' );
 
@@ -142,9 +137,11 @@ class Admin {
 			#toplevel_page_wp-defender > ul > li:last-child > a[href^="https://wpmudev.com/"]:hover,
 			#toplevel_page_wp-defender > ul > li:last-child > a[href^="https://wpmudev.com/"]:active,
 			#toplevel_page_wp-defender > ul > li:last-child > a[href^="https://wpmudev.com/"]:focus {
+				font-family: Roboto, sans-serif;
+				font-size: 12px;
 				background: #8D00B1;
 				color: #ffffff;
-				font-weight: 700;
+				font-weight: 500;
 			}
 
 			#toplevel_page_wp-defender.wp-not-current-submenu > ul > li:last-child > a[href^="https://wpmudev.com/"],
@@ -189,22 +186,22 @@ class Admin {
 				$link = "{$domain}/docs/wpmu-dev-plugins/defender/{$utm_tags}";
 				break;
 			case 'plugin':
+			case 'upsell':
 				$link = "{$domain}/project/wp-defender/{$utm_tags}";
 				break;
 			case 'rate':
 				$link = "{$wp_org}/support/plugin/defender-security/reviews/#new-post";
 				break;
 			case 'support':
-				$link = $this->is_wp_org_version() ? "{$wp_org}/support/plugin/defender-security/" : "{$domain}/get-support/";
+				$link = $this->is_wp_org_version
+					? "{$wp_org}/support/plugin/defender-security/"
+					: "{$domain}/get-support/";
 				break;
 			case 'roadmap':
 				$link = "{$domain}/roadmap/";
 				break;
 			case 'pro_link':
 				$link = "{$domain}/$adv_path";
-				break;
-			case 'upsell':
-				$link = "{$domain}/project/wp-defender/{$utm_tags}";
 				break;
 			default:
 				$link = '';
@@ -221,7 +218,7 @@ class Admin {
 	 *
 	 * @return array
 	 */
-	public function settings_link( $links ): array {
+	public function settings_link( $links ) {
 		$action_links = array();
 		$wpmu_dev     = new WPMUDEV();
 		// Dashboard-link.
@@ -279,7 +276,7 @@ class Admin {
 	 *
 	 * @return array
 	 */
-	public function plugin_row_meta( $links, $file, $plugin_data ): array {
+	public function plugin_row_meta( $links, $file, $plugin_data ) {
 		$row_meta = array();
 		if ( ! defined( 'DEFENDER_PLUGIN_BASENAME' ) || DEFENDER_PLUGIN_BASENAME !== $file ) {
 			return $links;
@@ -287,7 +284,7 @@ class Admin {
 
 		// Change AuthorURI link.
 		if ( isset( $links[1] ) ) {
-			$author_uri = $this->is_wp_org_version() ? 'https://profiles.wordpress.org/wpmudev/' : 'https://wpmudev.com/';
+			$author_uri = $this->is_wp_org_version ? 'https://profiles.wordpress.org/wpmudev/' : 'https://wpmudev.com/';
 			$author_uri = sprintf(
 				'<a href="%s" target="_blank">%s</a>',
 				$author_uri,
@@ -300,7 +297,7 @@ class Admin {
 			);
 		}
 
-		if ( $this->is_wp_org_version() ) {
+		if ( $this->is_wp_org_version ) {
 			// Change AuthorURI link.
 			if ( isset( $links[2] ) && false === strpos( $links[2], 'target="_blank"' ) ) {
 				if ( ! isset( $plugin_data['slug'] ) && $plugin_data['Name'] ) {
@@ -354,17 +351,12 @@ class Admin {
 	 * Register sub-modules.
 	 */
 	public function register_free_modules() {
-		if (
-			! file_exists( defender_path( 'extra/free-dashboard/module.php' ) )
-			|| ! file_exists( defender_path( 'extra/recommended-plugins-notice/notice.php' ) )
-		) {
+		$module_path = defender_path( 'extra/free-dashboard/module.php' );
+		if ( ! file_exists( $module_path ) ) {
 			return;
 		}
 		/* @noinspection PhpIncludeInspection */
-		require_once defender_path( 'extra/free-dashboard/module.php' );
-		/* @noinspection PhpIncludeInspection */
-		require_once defender_path( 'extra/recommended-plugins-notice/notice.php' );
-
+		require_once $module_path;
 		// Register the current plugin.
 		do_action(
 			'wdev_register_plugin',
@@ -373,8 +365,22 @@ class Admin {
 			/* 3 https://wordpress.org */ '/plugins/defender-security/',
 			/* 4      Email Button CTA */ esc_html__( 'Get Fast!', 'defender-security' )
 		);
-
 		// Recommended plugin notice.
+		$this->register_recommended_plugin_notice();
+	}
+
+	/**
+	 * Register the recommended plugin notice.
+	 *
+	 * @return void
+	 */
+	protected function register_recommended_plugin_notice() {
+		if ( ! file_exists( defender_path( 'extra/recommended-plugins-notice/notice.php' ) ) ) {
+			return;
+		}
+		/* @noinspection PhpIncludeInspection */
+		require_once defender_path( 'extra/recommended-plugins-notice/notice.php' );
+
 		do_action(
 			// It's from the extra WPMUDEV_Recommended_Plugins_Notice_Registered_Plugin package.
 			'wpmudev-recommended-plugins-register-notice', // phpcs:ignore WordPress.NamingConventions.ValidHookName.UseUnderscores
@@ -397,8 +403,7 @@ class Admin {
 		if ( ! current_user_can( 'manage_options' ) ) {
 			return;
 		}
-		$header  = $this->get_plugin_display_name();
-		$is_show = '';
+		$header = $this->get_plugin_display_name();
 		if ( Firewall::is_cf_notice_ready() ) {
 			$is_show      = 'cf';
 			$class_notice = 'notice-info';

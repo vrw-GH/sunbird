@@ -85,6 +85,8 @@ if ( ! class_exists( 'Strong_View_Display' ) ) :
 					$this->atts['count']    = -1;
 					$args['posts_per_page'] = $this->atts['pagination_settings']['per_page'];
 					$args['paged']          = wpmtst_get_paged();
+				}elseif ( 'slideshow' === $this->atts['mode'] ) {
+					$args['posts_per_page'] = $this->atts['count'];
 				}
 			}
 
@@ -550,7 +552,7 @@ if ( ! class_exists( 'Strong_View_Display' ) ) :
 	 * @since 2.40.4
 	 */
 		public function has_lazyload() {
-			if ( ! function_exists( 'wp_lazy_loading_enabled' ) || apply_filters( 'wp_lazy_loading_enabled', true, 'img', 'strong_testimonials_has_lazyload' ) ) {
+			if ( ! function_exists( 'wp_lazy_loading_enabled' ) || ! apply_filters( 'wp_lazy_loading_enabled', true, 'img', 'strong_testimonials_has_lazyload' ) ) {
 				$options = get_option( 'wpmtst_options' );
 				if ( isset( $options['lazyload'] ) && $options['lazyload'] ) {
 					WPMST()->render->add_style( 'wpmtst-lazyload-css' );

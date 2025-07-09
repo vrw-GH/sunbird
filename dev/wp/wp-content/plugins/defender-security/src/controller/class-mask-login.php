@@ -58,7 +58,7 @@ class Mask_Login extends Event {
 	 * Initializes the model and service, registers routes, and sets up scheduled events if the model is active.
 	 */
 	public function __construct() {
-		add_filter( 'wp_defender_advanced_tools_data', array( &$this, 'script_data' ) );
+		add_filter( 'wp_defender_advanced_tools_data', array( $this, 'script_data' ) );
 		// Internal cache, so we don't need to query many times.
 		$this->model   = wd_di()->get( Model_Mask_Login::class );
 		$this->service = wd_di()->get( Component_Mask_Login::class );
@@ -86,19 +86,19 @@ class Mask_Login extends Event {
 				return;
 			}
 			// Monitor wp-admin, wp-login.php.
-			add_filter( 'wp_redirect', array( &$this, 'filter_wp_redirect' ), 10 );
+			add_filter( 'wp_redirect', array( $this, 'filter_wp_redirect' ), 10 );
 			// Filter site_url & network_site_url so people won't get block screen.
-			add_filter( 'site_url', array( &$this, 'filter_site_url' ), 100 );
-			add_filter( 'network_site_url', array( &$this, 'filter_site_url' ), 100 );
+			add_filter( 'site_url', array( $this, 'filter_site_url' ), 100 );
+			add_filter( 'network_site_url', array( $this, 'filter_site_url' ), 100 );
 			// For prevent admin redirect.
 			remove_action( 'template_redirect', 'wp_redirect_admin_locations' );
 			// If Pro site is activated and user email is not defined, we need to update the email to match the new login URL.
-			add_filter( 'update_welcome_email', array( &$this, 'update_welcome_email_prosite_case' ), 10, 6 );
-			add_filter( 'lostpassword_redirect', array( &$this, 'change_lostpassword_redirect' ), 10 );
+			add_filter( 'update_welcome_email', array( $this, 'update_welcome_email_prosite_case' ), 10, 6 );
+			add_filter( 'lostpassword_redirect', array( $this, 'change_lostpassword_redirect' ), 10 );
 			// Log links in email.
-			add_filter( 'report_email_logs_link', array( &$this, 'update_report_logs_link' ), 10, 2 );
+			add_filter( 'report_email_logs_link', array( $this, 'update_report_logs_link' ), 10, 2 );
 			if ( class_exists( 'bbPress' ) ) {
-				add_filter( 'bbp_redirect_login', array( &$this, 'make_sure_wpadmin_after_login' ), 10, 3 );
+				add_filter( 'bbp_redirect_login', array( $this, 'make_sure_wpadmin_after_login' ), 10, 3 );
 			}
 
 			if ( 'flywheel' === Server::get_current_server() ) {
@@ -106,7 +106,7 @@ class Mask_Login extends Event {
 					add_action( 'login_form_rp', array( $this, 'handle_password_reset' ) );
 					add_action( 'login_form_resetpass', array( $this, 'handle_password_reset' ) );
 				}
-				add_filter( 'retrieve_password_message', array( &$this, 'flywheel_change_password_message' ), 10, 4 );
+				add_filter( 'retrieve_password_message', array( $this, 'flywheel_change_password_message' ), 10, 4 );
 			}
 
 			global $pagenow;
@@ -371,7 +371,7 @@ class Mask_Login extends Event {
 	 *
 	 * @return string
 	 */
-	public function filter_site_url( string $site_url ): string {
+	public function filter_site_url( string $site_url ) {
 		return $this->alter_url( $site_url, 'site_url' );
 	}
 
@@ -382,7 +382,7 @@ class Mask_Login extends Event {
 	 *
 	 * @return string The masked URL.
 	 */
-	public function filter_wp_redirect( string $location ): string {
+	public function filter_wp_redirect( string $location ) {
 		return $this->alter_url( $location, 'wp_safe_redirect' );
 	}
 
@@ -738,7 +738,7 @@ class Mask_Login extends Event {
 		string $password,
 		string $title,
 		array $meta
-	): string {
+	) {
 		$url           = get_blogaddress_by_id( $blog_id );
 		$welcome_email = str_replace(
 			$url . 'wp-login.php',
@@ -777,7 +777,7 @@ class Mask_Login extends Event {
 		string $key,
 		string $user_login,
 		WP_User $user_data
-	): string {
+	) {
 		$message = str_replace(
 			network_site_url( "wp-login.php?action=rp&key=$key&login=" . rawurlencode( $user_login ), 'login' ),
 			$this->get_model()->get_new_login_url( $this->get_site_url() )
@@ -788,15 +788,12 @@ class Mask_Login extends Event {
 		return $message;
 	}
 
-
 	/**
 	 * Change redirect param of the link 'Lost your password?'.
 	 *
-	 * @param  string $lostpassword_redirect  The original redirect URL.
-	 *
 	 * @return string
 	 */
-	public function change_lostpassword_redirect( string $lostpassword_redirect ): string {
+	public function change_lostpassword_redirect() {
 		return $this->get_model()->get_new_login_url( $this->get_site_url() ) . $this->get_permalink_separator() . 'checkemail=confirm';
 	}
 
@@ -851,7 +848,6 @@ class Mask_Login extends Event {
 	 * @return array An array of strings.
 	 */
 	public function export_strings(): array {
-
 		return array(
 			$this->get_model()->is_active() ? esc_html__( 'Active', 'defender-security' ) : esc_html__( 'Inactive', 'defender-security' ),
 		);
@@ -867,7 +863,6 @@ class Mask_Login extends Event {
 	 * @return array Returns an array of configuration strings.
 	 */
 	public function config_strings( array $config, bool $is_pro ): array {
-
 		return array(
 			$config['enabled'] ? esc_html__( 'Active', 'defender-security' ) : esc_html__( 'Inactive', 'defender-security' ),
 		);
@@ -1006,7 +1001,7 @@ class Mask_Login extends Event {
 	 * @return string $where
 	 * @since 2.7.1
 	 */
-	public function posts_where_title( string $where, WP_Query $wp_query ): string {
+	public function posts_where_title( string $where, WP_Query $wp_query ) {
 		global $wpdb;
 
 		$search_term = $wp_query->get( 'search_by_post_title' );
@@ -1026,7 +1021,7 @@ class Mask_Login extends Event {
 	 *
 	 * @return string The modified URL.
 	 */
-	public function change_subsites_admin_url( string $url, string $path, $blog_id ): string {
+	public function change_subsites_admin_url( string $url, string $path, $blog_id ) {
 		if ( empty( $path ) && ! empty( $blog_id ) ) {
 			$mask_url = trim( $this->model->mask_url );
 
@@ -1126,7 +1121,7 @@ class Mask_Login extends Event {
 	 * @return string
 	 * @since 3.4.0
 	 */
-	public function update_myblogs_blog_actions( string $actions, object $user_blog ): string {
+	public function update_myblogs_blog_actions( string $actions, object $user_blog ) {
 		$mask_url = trim( $this->model->mask_url );
 
 		if ( empty( $mask_url ) ) {

@@ -2,9 +2,9 @@
 Contributors: crocoblock, mjhead, hugreed
 Tags: blocks, forms, form builder, contact form, gutenberg, gutenberg forms, multi step form.
 Requires at least: 6.1
-Tested up to: 6.6.1
+Tested up to: 6.7.1
 Requires PHP: 7.0
-Stable tag: 3.4.4
+Stable tag: 3.5.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -274,6 +274,98 @@ Once you set the <a href="https://jetformbuilder.com/features/how-to-use-store-f
 You can report security bugs through the Patchstack Vulnerability Disclosure Program. The Patchstack team help validate, triage and handle any security vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/jetformbuilder)
 
 == Changelog ==
+
+**3.5.2**
+- FIX: Media field better compatibility with ACF [Crocoblock/jetformbuilder#487](https://github.com/Crocoblock/jetformbuilder/issues/487)
+- ADD: Create terms if missing when a post is inserted/updated via 'Insert/Update Post' action [Crocoblock/suggestions#3654](https://github.com/Crocoblock/suggestions/issues/3654)
+- ADD: 'Insert/Update Term' action
+- FIX: Fixed the issue with triggering the Send Email action after verification by the admin [Crocoblock/suggestions#7946](https://github.com/Crocoblock/suggestions/issues/7946)
+- FIX: Repeater items triplicate inside Elementor Tabs
+- FIX: Editor styles compatibility with BuddyBoss theme
+- FIX: Login & registration texts and UX enhancements
+- FIX: Resetting input values in the Repeater field when deleting a row
+- FIX: Moved 'Enable custom option' from block settings menu to toolbar
+- FIX: Deprecations and minor issues
+- FIX: PHP Object Injection vulnerability
+
+**3.5.1.2**
+- FIX: Meta fields update in `Insert/Update Post` action
+
+**3.5.1.1**
+- FIX: Fatal error if the user role is empty after plugin update/user role is not chosen after update
+
+**3.5.1**
+- FIX: Ensure post-meta insertion and updates work with the `Insert/Update Post` action when using meta repeaters saved as separate fields [Crocoblock/suggestions#7876](https://github.com/Crocoblock/suggestions/issues/7876)
+- ADD: Multiple Assignable Roles with Register/Update User actions [Crocoblock/suggestions#7942](https://github.com/Crocoblock/suggestions/issues/7942)
+- FIX: Save repeater data after removing items [Crocoblock/jetformbuilder#528](https://github.com/Crocoblock/jetformbuilder/issues/528)
+- ADD: `jet-form-builder/ajax/processing-error` JS trigger
+- FIX: Copilhost.fr breaks POST request in form
+- FIX: Honeypot protection not preventing submission if honeypot field not empty
+- FIX: Accessibility Improvements
+
+**3.5.0**
+- ADD: Calculated Field usage info with references and examples.
+- ADD: User Journey functionality.
+- ADD: Implemented visibility controls for Form Records, restricting access for unprivileged users.
+- ADD: Added date/time calculation support to Calculated Field, including new date/time filters.
+- ADD: input validation against the current user’s password.
+- ADD: new admin UI
+- UPD: synchronize manual and bulk editors
+- ADD: `Server side validation method` option
+- ADD: `Import from HTML` feature
+- FIX: Accessibility Improvements
+
+**3.4.7.1**
+- FIX: Compatibility with WordPress 6.8 (resolves visual issue with block validation type)
+
+**3.4.7**
+- FIX: Editor styles compatibility with BuddyBoss theme
+- FIX: Reset input values in the Repeater field when adding a new row
+- FIX: Init of the Check Mark block
+- FIX: Check mark widget icon for checkbox
+- FIX: Issue with Conditional Block duplication
+- ADD: style controls notices
+- ADD: `jet-form-builder/ajax/on-fail` JS trigger
+- FIX: Input mask DateTime documentation link
+- FIX: [Crocoblock/jetformbuilder#521](https://github.com/Crocoblock/jetformbuilder/issues/521)
+- FIX: [Crocoblock/suggestions#7878](https://github.com/Crocoblock/suggestions/issues/7878)
+- FIX: `Generate with AI` limit error on local sites
+- FIX: Errors on the `Payments` admin page when the `Enable Gateways` option is disabled
+- FIX: Disabled "Next page" button when select field is empty
+
+**3.4.6**
+- FIX: Resolved an issue with search autocomplete in the Map field
+- FIX: Fixed case sensitivity for the `use autocomplete` option in `Select Field` when loading via AJAX
+- FIX: [Crocoblock/jetformbuilder#497](https://github.com/Crocoblock/jetformbuilder/issues/497)
+- FIX: Improved compatibility with the `JetFormBuilder Hubspot Action` addon
+- FIX: Improved compatibility with the `JetFormBuilder Woocommerce Cart & Checkout Action` addon
+- FIX: Fixed incorrect calculation in the `Calculated Field` when using Dynamic Value
+- FIX: Resolved a critical error in hCaptcha when no keys are inserted
+- FIX: Fixed an issue where the input mask prevented the form from being submitted
+- FIX: Fixed an issue with `Enable form pages progress` and `Clear data on success submit` options on Elementor pages
+- ADD: Added the `Is field value unique` callback for the `Advanced Validation` option with the `Server-Side Callback` type
+- ADD: Added the `Open in New Tab` option to the `Redirect to Page` action
+- FIX: Minor fixes in the editor
+
+**3.4.5.2**
+- FIX: Calculated field issues after 3.4.5 update
+- FIX: Issue with the Date field when the default value is set as macros
+
+**3.4.5.1**
+- FIX: Calculated field issues after 3.4.5 update
+
+**3.4.5**
+- FIX: Bricks builder checkbox & radio fields style in the JetForm widget
+- FIX: Resolved an issue with Calculated Field recalculation when using a Conditional Block
+- FIX: Getresponce action error with default fields
+- FIX: JetForm widget disables the Enable Form Progress toggle
+- FIX: Resolved an issue with saving map meta fields when using the search autocomplete option in Map Field
+- FIX: Google reCAPTCHA Score Threshold option description styles
+- FIX: Wysiwyg not clickable in conditional block if Remove hidden elements from page HTML is turned on
+- FIX: CC/BCC address from options default emails in the 'Send Email' form action
+- FIX: Custom options for checkbox
+- FIX: Issue with input mask
+- FIX: Js issues
 
 **3.4.4**
 - FIX: Fixed the empty "Interests" field when creating a user in Mailchimp

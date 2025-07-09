@@ -134,7 +134,6 @@ class Recaptcha extends Event {
 		}
 	}
 
-
 	/**
 	 * Declares the necessary variables for the reCAPTCHA functionality.
 	 *
@@ -332,7 +331,6 @@ class Recaptcha extends Event {
 		return $error;
 	}
 
-
 	/**
 	 * Modifies the script loader tag for the 'wpdef_recaptcha_api' handle.
 	 *
@@ -341,14 +339,13 @@ class Recaptcha extends Event {
 	 *
 	 * @return string The modified script loader tag.
 	 */
-	public function script_loader_tag( string $tag, string $handle ): string {
+	public function script_loader_tag( string $tag, string $handle ) {
 		if ( 'wpdef_recaptcha_api' === $handle ) {
 			$tag = str_replace( ' src', ' data-cfasync="false" async="async" defer="defer" src', $tag );
 		}
 
 		return $tag;
 	}
-
 
 	/**
 	 * Returns the API URL for reCAPTCHA based on the recaptcha_type property.
@@ -635,7 +632,7 @@ class Recaptcha extends Event {
 	 *
 	 * @return WP_Error
 	 */
-	public function validate_captcha_field_on_registration( WP_Error $errors ): WP_Error {
+	public function validate_captcha_field_on_registration( WP_Error $errors ) {
 		// Skip check if connecting to XMLRPC.
 		if ( defined( 'XMLRPC_REQUEST' ) ) {
 			return $errors;
@@ -699,7 +696,7 @@ class Recaptcha extends Event {
 	 *
 	 * @return WP_Error
 	 */
-	public function validate_captcha_field_on_woo_login( WP_Error $errors ): WP_Error {
+	public function validate_captcha_field_on_woo_login( WP_Error $errors ) {
 		// Skip check if connecting to XMLRPC.
 		if ( defined( 'XMLRPC_REQUEST' ) ) {
 			return $errors;
@@ -725,7 +722,7 @@ class Recaptcha extends Event {
 	 *
 	 * @return WP_Error
 	 */
-	public function validate_captcha_field_on_woo_registration( WP_Error $errors ): WP_Error {
+	public function validate_captcha_field_on_woo_registration( WP_Error $errors ) {
 		if ( defined( 'WOOCOMMERCE_CHECKOUT' ) || ( defined( 'REST_REQUEST' ) && REST_REQUEST ) ) {
 			return $errors;
 		}
@@ -785,7 +782,7 @@ class Recaptcha extends Event {
 	 *
 	 * @return array
 	 */
-	public function comment_form_defaults( array $defaults ): array {
+	public function comment_form_defaults( array $defaults ) {
 		$defaults['comment_notes_after'] .= '<p>' . $this->display_recaptcha() . '</p>';
 
 		return $defaults;
@@ -960,7 +957,6 @@ class Recaptcha extends Event {
 			)
 		);
 	}
-
 
 	/**
 	 * Load the reCAPTCHA preview based on the provided request data.

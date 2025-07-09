@@ -23,12 +23,15 @@ class Lockout_Log extends DB {
 
 	public const AUTH_FAIL = 'auth_fail';
 	public const AUTH_LOCK = 'auth_lock';
+	public const IP_UNLOCK = 'ip_unlock';
 
 	public const ERROR_404        = '404_error';
 	public const LOCKOUT_404      = '404_lockout';
 	public const ERROR_404_IGNORE = '404_error_ignore';
 
 	public const LOCKOUT_UA = 'ua_lockout';
+	// Different IP Lockout types.
+	public const LOCKOUT_IP_CUSTOM = 'custom_lockout';
 
 	public const INFINITE_SCROLL_SIZE = 50;
 
@@ -102,7 +105,6 @@ class Lockout_Log extends DB {
 	 * @defender_property
 	 */
 	public $country_iso_code;
-
 
 	/**
 	 * Query the logs based on the provided filters and pagination settings.
@@ -276,7 +278,7 @@ class Lockout_Log extends DB {
 	}
 
 	/**
-	 * A shortcut for quickly count lockout in last 24 hours.
+	 * A shortcut for quickly count lockout in last 7 days.
 	 *
 	 * @return string|null
 	 */
@@ -311,6 +313,7 @@ class Lockout_Log extends DB {
 				self::AUTH_LOCK,
 				self::LOCKOUT_404,
 				self::LOCKOUT_UA,
+				// LOCKOUT_IP_CUSTOM is not taken into account.
 			)
 		);
 	}
@@ -379,9 +382,10 @@ class Lockout_Log extends DB {
 	 */
 	public static function get_summary(): array {
 		// Time.
-		$current_time    = time();
-		$today_midnight  = strtotime( '-24 hours', $current_time );
-		$first_this_week = strtotime( '-7 days', $current_time );
+		$current_time     = time();
+		$today_midnight   = strtotime( '-24 hours', $current_time );
+		$first_this_week  = strtotime( '-7 days', $current_time );
+		$first_this_month = strtotime( '-30 days', $current_time );
 
 		// Prepare columns.
 		$select = array(
@@ -396,19 +400,23 @@ class Lockout_Log extends DB {
 			"COUNT(IF(date > {$first_this_week} AND type = '" . self::LOCKOUT_404 . "', 1, NULL)) as lockout_404_this_week",
 			"COUNT(IF(date > {$first_this_week} AND type = '" . self::AUTH_LOCK . "', 1, NULL)) as lockout_login_this_week",
 			"COUNT(IF(date > {$first_this_week} AND type = '" . self::LOCKOUT_UA . "', 1, NULL)) as lockout_ua_this_week",
+			// 30 days
+			"COUNT(IF(date > {$first_this_month} AND type = '" . self::LOCKOUT_404 . "', 1, NULL)) as lockout_404_this_month",
+			"COUNT(IF(date > {$first_this_month} AND type = '" . self::AUTH_LOCK . "', 1, NULL)) as lockout_login_this_month",
+			"COUNT(IF(date > {$first_this_month} AND type = '" . self::LOCKOUT_UA . "', 1, NULL)) as lockout_ua_this_month",
 		);
 		$select = implode( ',', $select );
 
 		$orm    = self::get_orm();
 		$result = $orm->get_repository( self::class )
 						->select( $select )
+						// LOCKOUT_IP_CUSTOM is not taken into account.
 						->where( 'type', 'in', array( self::LOCKOUT_404, self::AUTH_LOCK, self::LOCKOUT_UA ) )
 						->where( 'date', '>=', strtotime( '-30 days', $current_time ) )
 						->get_results();
 
 		return $result[0] ?? array();
 	}
-
 
 	/**
 	 * Returns the log tag based on the given type.
@@ -428,6 +436,12 @@ class Lockout_Log extends DB {
 			case self::AUTH_LOCK:
 				$tag = 'login';
 				break;
+			case self::LOCKOUT_IP_CUSTOM:
+				$tag = 'Custom';
+				break;
+			case self::IP_UNLOCK:
+				$tag = 'Unlock';
+				break;
 			case self::LOCKOUT_UA:
 			default:
 				$tag = 'bots';
@@ -435,32 +449,6 @@ class Lockout_Log extends DB {
 		}
 
 		return $tag;
-	}
-
-
-	/**
-	 * Returns the CSS class for the log tag based on the given type.
-	 *
-	 * @param  string $type  The type of the log.
-	 *
-	 * @return string The CSS class for the log tag.
-	 */
-	protected static function get_log_tag_class( $type ): string {
-		switch ( $type ) {
-			case self::AUTH_LOCK:
-			case self::LOCKOUT_404:
-			case self::LOCKOUT_UA:
-				$badge_bg = 'bg-badge-red';
-				break;
-			case self::AUTH_FAIL:
-			case self::ERROR_404:
-			case self::ERROR_404_IGNORE:
-			default:
-				$badge_bg = 'bg-badge-green';
-				break;
-		}
-
-		return $badge_bg;
 	}
 
 
@@ -488,7 +476,6 @@ class Lockout_Log extends DB {
 
 		return $class;
 	}
-
 
 	/**
 	 * Retrieves logs from the database and formats them for display on the frontend.
@@ -612,7 +599,6 @@ class Lockout_Log extends DB {
 			$log['date']            = $item->format_date_time( $item->date );
 			$log['format_date']     = $item->get_date( $item->date );
 			$log['tag']             = self::get_log_tag( $item->type );
-			$log['tag_class']       = self::get_log_tag_class( $item->type );
 			$log['container_class'] = self::get_log_container_class( $item->type );
 			if ( self::LOCKOUT_UA === $item->type ) {
 				if ( User_Agent::REASON_BAD_POST === $item->tried ) {
@@ -651,5 +637,32 @@ class Lockout_Log extends DB {
 		}
 
 		return $data;
+	}
+
+	/**
+	 * Determine if the IP should be added to the database based on the timeframe.
+	 *
+	 * @return bool True if the IP should be added to the database, false otherwise.
+	 */
+	public function has_recent_ip_log(): bool {
+		// Ensure IP is set before proceeding.
+		if ( empty( $this->ip ) ) {
+			return false;
+		}
+
+		$orm = self::get_orm();
+		// Query the latest log for the current IP.
+		$latest_log = $orm->get_repository( self::class )
+                      ->select( 'date' )
+                      ->where( 'ip', $this->ip )
+                      ->order_by( 'date', 'desc' )
+                      ->first();
+
+		if ( $latest_log ) {
+			// Return true if the log is within the 5-minute timeframe.
+			return ( time() - $latest_log->date ) <= 300;
+		}
+
+		return false;
 	}
 }

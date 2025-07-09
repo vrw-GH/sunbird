@@ -18,6 +18,7 @@ use WP_Defender\Traits\Country;
 use WP_Defender\Behavior\WPMUDEV;
 use WP_Defender\Model\Lockout_Ip;
 use WP_Defender\Traits\Continent;
+use WP_Defender\Controller\Firewall;
 use WP_Defender\Component\Blacklist_Lockout;
 use MaxMind\Db\Reader\InvalidDatabaseException;
 use WP_Defender\Integrations\MaxMind_Geolocation;
@@ -59,10 +60,10 @@ class Blacklist extends Controller {
 	 */
 	public function __construct() {
 		$this->register_routes();
-		add_action( 'defender_enqueue_assets', array( &$this, 'enqueue_assets' ) );
+		add_action( 'defender_enqueue_assets', array( $this, 'enqueue_assets' ) );
 		$this->model   = wd_di()->get( Model_Blacklist_Lockout::class );
 		$this->service = wd_di()->get( Blacklist_Lockout::class );
-		add_action( 'wd_blacklist_this_ip', array( &$this, 'blacklist_an_ip' ) );
+		add_action( 'wd_blacklist_this_ip', array( $this, 'blacklist_an_ip' ) );
 		// Update MaxMind's DB.
 		if ( ! empty( $this->model->maxmind_license_key ) ) {
 			if ( ! wp_next_scheduled( 'wpdef_update_geoip' ) ) {
@@ -72,7 +73,7 @@ class Blacklist extends Controller {
 			$bind_updater = (bool) apply_filters( 'wd_update_maxmind_database', true );
 			// Bind to the scheduled updater action.
 			if ( $bind_updater ) {
-				add_action( 'wpdef_update_geoip', array( &$this, 'update_database' ) );
+				add_action( 'wpdef_update_geoip', array( $this, 'update_database' ) );
 			}
 		}
 	}
@@ -146,6 +147,7 @@ class Blacklist extends Controller {
 					'no_ips'                         => '' === $arr_model['ip_blacklist'] && '' === $arr_model['ip_whitelist'],
 					'countries_with_continents_list' => $countries_with_continents_list,
 					'geodb_license_key'              => $this->mask_license_key( $this->model->maxmind_license_key ),
+					'module_name'                    => Model_Blacklist_Lockout::get_module_name(),
 				),
 			),
 			$this->dump_routes_and_nonces()
@@ -309,7 +311,7 @@ class Blacklist extends Controller {
 				)
 			);
 		} else {
-			$this->log( 'Error from MaxMind: ' . $tmp->get_error_message() );
+			$this->log( 'Error from MaxMind: ' . $tmp->get_error_message(), Firewall::FIREWALL_LOG );
 			$string = sprintf(
 			/* translators: 1. License key with link. */
 				esc_html__(
@@ -376,7 +378,7 @@ class Blacklist extends Controller {
 		// WP_Filesystem class doesn’t directly provide a function for opening a stream to php://memory with the 'w' mode.
 		$fp = fopen( 'php://memory', 'w' ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fopen
 		foreach ( $data as $fields ) {
-			fputcsv( $fp, $fields );
+			fputcsv( $fp, $fields, ',', '"', '\\' );
 		}
 		$filename = 'wdf-ips-export-' . wp_date( 'ymdHis' ) . '.csv';
 		fseek( $fp, 0 );
@@ -501,12 +503,10 @@ class Blacklist extends Controller {
 	/**
 	 * Query locked IPs and return the results as a Response object.
 	 *
-	 * @param  Request $request  The request object.
-	 *
 	 * @return Response
 	 * @defender_route
 	 */
-	public function query_locked_ips( Request $request ) {
+	public function query_locked_ips() {
 		$results    = Lockout_Ip::query_locked_ip();
 		$locked_ips = array();
 		if ( ! empty( $results ) ) {
@@ -530,13 +530,11 @@ class Blacklist extends Controller {
 	/**
 	 * Get Listed IPs.
 	 *
-	 * @param  Request $request  Request object.
-	 *
 	 * @return Response
 	 * @defender_route
 	 * @throws Exception If table is not defined.
 	 */
-	public function get_listed_ips( Request $request ): Response {
+	public function get_listed_ips(): Response {
 		return new Response( true, $this->model->export() );
 	}
 
@@ -692,14 +690,14 @@ class Blacklist extends Controller {
 
 		$tmp = $service_geo->get_downloaded_url( $this->model->maxmind_license_key );
 		if ( is_wp_error( $tmp ) ) {
-			$this->log( 'CRON error downloading from MaxMind: ' . $tmp->get_error_message() );
+			$this->log( 'CRON error downloading from MaxMind: ' . $tmp->get_error_message(), Firewall::FIREWALL_LOG );
 
 			return;
 		}
 
 		$geodb_path = $service_geo->extract_db_archive( $tmp );
 		if ( is_wp_error( $geodb_path ) ) {
-			$this->log( 'CRON error extracting MaxMind archive: ' . $geodb_path->get_error_message() );
+			$this->log( 'CRON error extracting MaxMind archive: ' . $geodb_path->get_error_message(), Firewall::FIREWALL_LOG );
 
 			return;
 		}

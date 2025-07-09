@@ -20,6 +20,8 @@ use WP_Defender\Model\Setting\Password_Protection as Password_Protection_Setting
  */
 class Password_Protection extends Component {
 
+	public const PASSWORD_LOG = 'password.log';
+
 	/**
 	 * The Pwned API URL.
 	 * API source website: http://haveibeenpwned.com/. API version: v3.
@@ -132,7 +134,7 @@ class Password_Protection extends Component {
 				$user_meta = get_userdata( $user_id );
 				if ( empty( $user_meta->roles ) ) {
 					// User should have roles.
-					$this->log( sprintf( "User ID: %d doesn't have roles.", $user_id ), 'password.log' );
+					$this->log( sprintf( "User ID: %d doesn't have roles.", $user_id ), self::PASSWORD_LOG );
 
 					return false;
 				}
@@ -141,14 +143,14 @@ class Password_Protection extends Component {
 				$arr_user_blogs = get_blogs_of_user( $user_id );
 				if ( empty( $arr_user_blogs ) ) {
 					// User should be associated with some site.
-					$this->log( sprintf( 'User ID: %d is not associated with any site.', $user_id ), 'password.log' );
+					$this->log( sprintf( 'User ID: %d is not associated with any site.', $user_id ), self::PASSWORD_LOG );
 
 					return false;
 				}
 				$user_blog_id = array_key_first( $arr_user_blogs );
 				$user         = new WP_User( $user_id, '', $user_blog_id );
 				if ( empty( $user->roles ) ) {
-					$this->log( sprintf( "User ID: %d doesn't have roles on MU.", $user->ID ), 'password.log' );
+					$this->log( sprintf( "User ID: %d doesn't have roles on MU.", $user->ID ), self::PASSWORD_LOG );
 
 					return false;
 				}
@@ -325,11 +327,11 @@ class Password_Protection extends Component {
 	 * @return WP_User|WP_Error         Return user object or error object.
 	 */
 	public function do_force_reset( $user, $password ) {
-		if ( ! is_wp_error( $user ) && wp_check_password(
-			$password,
-			$user->user_pass,
-			$user->ID
-		) && $this->is_force_reset( $user ) ) {
+		// The check for $user and $password was performed before the method was called.
+		if (
+			wp_check_password( $password, $user->user_pass, $user->ID )
+			&& $this->is_force_reset( $user )
+		) {
 			$action      = 'password_reset';
 			$cookie_name = 'display_reset_password_warning';
 
@@ -348,11 +350,11 @@ class Password_Protection extends Component {
 	 * @return WP_User|WP_Error         Return user object or error object.
 	 */
 	public function do_weak_reset( $user, $password ) {
-		if ( ! is_wp_error( $user ) && wp_check_password(
-			$password,
-			$user->user_pass,
-			$user->ID
-		) && $this->is_weak_password( $user, $password ) ) {
+		// The check for $user and $password was performed before the method was called.
+		if (
+			wp_check_password( $password, $user->user_pass, $user->ID )
+			&& $this->is_weak_password( $user, $password )
+		) {
 			$action      = 'password_protection';
 			$cookie_name = 'display_pwned_password_warning';
 
@@ -369,7 +371,7 @@ class Password_Protection extends Component {
 	 * @param  string           $action  Action query string name.
 	 * @param  string           $cookie_name  Cookie name.
 	 */
-	private function trigger_redirect( $user, $action, $cookie_name ) {
+	public function trigger_redirect( $user, $action, $cookie_name ) {
 		// Set cookie to check and display the warning notice on reset password page.
 		$this->set_cookie_notice( $cookie_name, true, time() + MINUTE_IN_SECONDS * 2 );
 		// Get the reset password URL.

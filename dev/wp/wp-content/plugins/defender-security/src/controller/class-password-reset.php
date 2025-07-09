@@ -60,7 +60,7 @@ class Password_Reset extends Event {
 				is_multisite() && ! is_main_site()
 				&& ! wd_di()->get( \WP_Defender\Model\Setting\Mask_Login::class )->is_active()
 			) {
-				add_filter( 'network_site_url', array( &$this, 'filter_site_url' ), 100, 2 );
+				add_filter( 'network_site_url', array( $this, 'filter_site_url' ), 100, 2 );
 			}
 			add_action( 'validate_password_reset', array( $this, 'handle_reset_check_password' ), 10, 2 );
 			add_action( 'profile_update', array( $this, 'handle_update_user' ), 10, 2 );
@@ -111,7 +111,16 @@ class Password_Reset extends Event {
 	 *
 	 * @return WP_User|WP_Error Return user object or error object.
 	 */
-	public function handle_login_password( $user, string $password ) {
+	public function handle_login_password( $user, $password ) {
+		if ( is_wp_error( $user ) || ! $user instanceof WP_User ) {
+			return $user;
+		}
+		if ( empty( $password ) ) {
+			return new WP_Error(
+				'defender_invalid_password',
+				esc_html__( 'Invalid user data.', 'defender-security' )
+			);
+		}
 		$this->service->do_force_reset( $user, $password );
 
 		return $user;
@@ -255,7 +264,7 @@ class Password_Reset extends Event {
 				),
 			);
 		} else {
-			$response['message'] = esc_html__( 'Passwords reset is no longer required.', 'defender-security' );
+			$response['message'] = esc_html__( 'Force Reset Password has been disabled.', 'defender-security' );
 		}
 		$this->model->import( $data );
 		if ( $this->model->validate() ) {
