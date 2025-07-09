@@ -103,31 +103,31 @@ class Two_Factor extends Event {
 		$this->register_page(
 			esc_html__( '2FA', 'defender-security' ),
 			$this->slug,
-			array( &$this, 'main_view' ),
+			array( $this, 'main_view' ),
 			$this->parent_slug
 		);
-		add_action( 'defender_enqueue_assets', array( &$this, 'enqueue_assets' ) );
+		add_action( 'defender_enqueue_assets', array( $this, 'enqueue_assets' ) );
 		$this->register_routes();
 		$this->service                     = wd_di()->get( Two_Fa_Component::class );
 		$this->model                       = wd_di()->get( Two_Fa::class );
 		$this->password_protection_service = wd_di()->get( Password_Protection_Service::class );
 		$this->is_woo_activated            = wd_di()->get( Woocommerce::class )->is_activated();
 
-		add_action( 'update_option_jetpack_active_modules', array( &$this, 'listen_for_jetpack_option' ), 10, 2 );
+		add_action( 'update_option_jetpack_active_modules', array( $this, 'listen_for_jetpack_option' ), 10, 2 );
 
 		if ( $this->model->is_active() ) {
 			require_once ABSPATH . 'wp-admin/includes/plugin.php';
 			$is_jetpack_sso = $this->service->is_jetpack_sso();
 			$is_tml         = $this->service->is_tml();
 			add_action( 'admin_init', array( $this->service, 'get_providers' ) );
-			add_action( 'pre_get_users', array( &$this, 'filter_users_by_2fa' ) );
-			add_action( 'show_user_profile', array( &$this, 'show_user_profile' ) );
-			add_action( 'profile_update', array( &$this, 'profile_update' ) );
+			add_action( 'pre_get_users', array( $this, 'filter_users_by_2fa' ) );
+			add_action( 'show_user_profile', array( $this, 'show_user_profile' ) );
+			add_action( 'profile_update', array( $this, 'profile_update' ) );
 
 			if ( ! defined( 'DOING_AJAX' ) && ! $is_jetpack_sso && ! $is_tml ) {
-				add_filter( 'authenticate', array( &$this, 'maybe_show_otp_form' ), 30, 3 );
-				add_action( 'set_logged_in_cookie', array( &$this, 'store_session_key' ) );
-				add_action( 'login_form_defender-verify-otp', array( &$this, 'verify_otp_login_time' ) );
+				add_filter( 'authenticate', array( $this, 'maybe_show_otp_form' ), 30, 3 );
+				add_action( 'set_logged_in_cookie', array( $this, 'store_session_key' ) );
+				add_action( 'login_form_defender-verify-otp', array( $this, 'verify_otp_login_time' ) );
 			} else {
 				if ( $is_jetpack_sso ) {
 					$this->compatibility_notices[] = esc_html__(
@@ -143,7 +143,7 @@ class Two_Factor extends Event {
 				}
 			}
 			// Force auth redirect for admin area.
-			add_action( 'current_screen', array( &$this, 'maybe_redirect_to_show_2fa_enabler' ), 1 );
+			add_action( 'current_screen', array( $this, 'maybe_redirect_to_show_2fa_enabler' ), 1 );
 
 			$this->service->add_hooks();
 
@@ -158,9 +158,9 @@ class Two_Factor extends Event {
 					&& $this->service->is_auth_enable_for( $this->current_user, $this->model->user_roles )
 				) {
 					// Show a new Woo submenu.
-					add_action( 'init', array( &$this, 'wp_defender_2fa_endpoint' ) );
-					add_filter( 'query_vars', array( &$this, 'wp_defender_2fa_query_vars' ), 0 );
-					add_filter( 'woocommerce_account_menu_items', array( &$this, 'wp_defender_2fa_link_my_account' ) );
+					add_action( 'init', array( $this, 'wp_defender_2fa_endpoint' ) );
+					add_filter( 'query_vars', array( $this, 'wp_defender_2fa_query_vars' ), 0 );
+					add_filter( 'woocommerce_account_menu_items', array( $this, 'wp_defender_2fa_link_my_account' ) );
 					add_action(
 						"woocommerce_account_{$this->slug}_endpoint",
 						array(
@@ -710,7 +710,6 @@ class Two_Factor extends Event {
 		update_user_meta( $user_id, Two_Fa_Component::ENABLED_PROVIDERS_USER_KEY, '' );
 	}
 
-
 	/**
 	 * Updates the user's 2FA profile with the selected providers and default provider.
 	 *
@@ -978,14 +977,15 @@ class Two_Factor extends Event {
 			}
 		}
 		$headers = array( 'Content-Type: text/html; charset=UTF-8' );
-		if ( $sender ) {
-			$from_email = get_bloginfo( 'admin_email' );
+		if ( ! empty( $sender ) ) {
+			// Since v5.2.0.
+			$from_email = defender_noreply_email( 'wd_two_fa_totp_noreply_email' );
 			$headers[]  = sprintf( 'From: %s <%s>', $sender, $from_email );
-			/**Todo: check
-			 * $headers[] = wd_di()->get( \WP_Defender\Component\Mail::class )->get_headers(
-			 * defender_noreply_email( 'wd_two_fa_totp_noreply_email' ),
-			 * 'totp'
-			 * );*/
+		} else {
+			return new Response(
+				false,
+				array( 'message' => esc_html__( 'Sender value cannot be empty.', 'defender-security' ) )
+			);
 		}
 		// Main email template.
 		$body = $this->render_partial(
@@ -1043,7 +1043,6 @@ class Two_Factor extends Event {
 	public function remove_settings(): void {
 		( new Two_Fa() )->delete();
 	}
-
 
 	/**
 	 * Delete all the data & the cache.
@@ -1253,7 +1252,7 @@ class Two_Factor extends Event {
 	 *
 	 * @return string
 	 */
-	public function handle_woocommerce_login_redirect( string $redirect, WP_User $user ): string {
+	public function handle_woocommerce_login_redirect( string $redirect, WP_User $user ) {
 		// Is User role from common list checked?
 		if ( false === $this->service->is_auth_enable_for( $user, $this->model->user_roles ) ) {
 			return $redirect;
@@ -1363,12 +1362,11 @@ class Two_Factor extends Event {
 	 *
 	 * @return array The updated array of query variables.
 	 */
-	public function wp_defender_2fa_query_vars( $vars ): array {
+	public function wp_defender_2fa_query_vars( $vars ) {
 		$vars[] = $this->slug;
 
 		return $vars;
 	}
-
 
 	/**
 	 * 3. Inserts the new endpoint into the My Account menu.
@@ -1377,7 +1375,7 @@ class Two_Factor extends Event {
 	 *
 	 * @return array The updated array of items with the new endpoint inserted.
 	 */
-	public function wp_defender_2fa_link_my_account( $items ): array {
+	public function wp_defender_2fa_link_my_account( $items ) {
 		$needed_place = is_array( $items ) && ! empty( $items ) ? ( count( $items ) - 1 ) : 0;
 
 		return array_slice( $items, 0, $needed_place, true )

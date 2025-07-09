@@ -9,6 +9,7 @@ namespace WP_Defender\Component;
 
 use Calotes\Helper\HTTP;
 use WP_Defender\Component;
+use WP_Defender\Traits\Country;
 use WP_Defender\Model\Unlockout;
 use WP_Defender\Model\Lockout_Ip;
 use WP_Defender\Controller\Firewall;
@@ -19,6 +20,7 @@ use WP_Defender\Controller\Firewall;
  * @since 4.6.0
  */
 class Unlock_Me extends Component {
+	use Country;
 
 	/**
 	 * Time after which the unlock attempt is considered expired.
@@ -79,26 +81,16 @@ class Unlock_Me extends Component {
 		$ips = array();
 		// Get the line of ID or several IDs for multiple lockouts, and change status(-es) in Unlockout table.
 		$limit_time = strtotime( self::get_expired_time() );
-		if ( false !== strpos( $string_uid, '-' ) ) {
-			// There are some ID's.
-			$arr_uids = explode( '-', $string_uid );
-			if ( ! is_array( $arr_uids ) ) {
-				$this->log( 'Unlock Me. Incorrect result. Wrong UID(-s).', Firewall::FIREWALL_LOG );
 
-				return false;
-			}
-			foreach ( $arr_uids as $arr_uid ) {
-				$resolved_ip = Unlockout::get_resolved_ip_by( (int) $arr_uid, $user_email, $limit_time );
-				if ( 'expired' === $resolved_ip ) {
-					return false;
-				} elseif ( '' !== $resolved_ip ) {
-					// This is not expired result and no empty one.
-					$ips[] = $resolved_ip;
-				}
-			}
-		} else {
-			// Only one ID.
-			$resolved_ip = Unlockout::get_resolved_ip_by( (int) $string_uid, $user_email, $limit_time );
+		// There are some ID's.
+		$arr_uids = explode( '-', $string_uid );
+		if ( ! is_array( $arr_uids ) ) {
+			$this->log( 'Unlock Me. Incorrect result. Wrong UID(-s).', Firewall::FIREWALL_LOG );
+
+			return false;
+		}
+		foreach ( $arr_uids as $arr_uid ) {
+			$resolved_ip = Unlockout::get_resolved_ip_by( (int) $arr_uid, $user_email, $limit_time );
 			if ( 'expired' === $resolved_ip ) {
 				return false;
 			} elseif ( '' !== $resolved_ip ) {
@@ -106,6 +98,7 @@ class Unlock_Me extends Component {
 				$ips[] = $resolved_ip;
 			}
 		}
+
 		// All is good. IP's were unblocked.
 		if ( empty( $ips ) ) {
 			return true;
@@ -113,7 +106,8 @@ class Unlock_Me extends Component {
 		// Work with IP's.
 		$ips      = array_unique( $ips );
 		$first_ip = $ips[0];
-		// Remove the user IP's from Blocklist.
+
+		// Remove the user IP's from Local Blocklist.
 		$bl = wd_di()->get( \WP_Defender\Model\Setting\Blacklist_Lockout::class );
 		foreach ( $ips as $ip ) {
 			$bl->remove_from_list( $ip, 'blocklist' );
@@ -122,7 +116,8 @@ class Unlock_Me extends Component {
 				Firewall::FIREWALL_LOG
 			);
 		}
-		// Maybe IP(-s) in Active lockouts? Then unlock it or them.
+
+		// Remove IP(s) from Active lockouts.
 		if ( count( $ips ) > 1 ) {
 			$models = Lockout_Ip::get_bulk( Lockout_Ip::STATUS_BLOCKED, $ips );
 			foreach ( $models as $model ) {
@@ -142,8 +137,39 @@ class Unlock_Me extends Component {
 				);
 			}
 		}
+
+		// Remove IP(s) from Custom IP Blocklist.
+		$ret = wd_di()->get( IP\Global_IP::class )->remove_from_blocklist( $ips );
+		if ( is_wp_error( $ret ) ) {
+			$this->log(
+				'Unlock Me. Error. IP(s) ' . implode( ',', $ips ) . ' have not been unblocked from Custom IP Blocklist.',
+				Firewall::FIREWALL_LOG
+			);
+		} else {
+			$this->log(
+				'Unlock Me. Success. IP(s) ' . implode( ',', $ips ) . ' have been unblocked from Custom IP Blocklist.',
+				Firewall::FIREWALL_LOG
+			);
+		}
+
 		// Remove the old counter.
 		delete_transient( $this->check_ip_by_remote_addr( $first_ip ) );
+		// Log the successful unlock.
+		$user_agent        = defender_get_data_from_request( 'HTTP_USER_AGENT', 's' );
+		$model             = wd_di()->get( \WP_Defender\Model\Lockout_Log::class );
+		$model->ip         = $first_ip;
+		$model->user_agent = isset( $user_agent ) ? \WP_Defender\Component\User_Agent::fast_cleaning( $user_agent ) : null;
+		$model->date       = time();
+		$model->tried      = $user ? $user->user_login : '';
+		$model->blog_id    = get_current_blog_id();
+		$ip_to_country     = $this->ip_to_country( $first_ip );
+		if ( isset( $ip_to_country['iso'] ) ) {
+			$model->country_iso_code = $ip_to_country['iso'];
+		}
+		$model->type = \WP_Defender\Model\Lockout_Log::IP_UNLOCK;
+		/* translators: %s: IP address */
+		$model->log = sprintf( esc_html__( '%s was unlocked via "Unlock Me (Email)"', 'defender-security' ), $first_ip );
+		$model->save();
 		// Redirect.
 		wp_safe_redirect( Mask_Login::maybe_masked_login_url() );
 		exit;

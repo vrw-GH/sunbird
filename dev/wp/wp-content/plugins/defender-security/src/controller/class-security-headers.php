@@ -76,19 +76,19 @@ class Security_Headers extends Event {
 		if ( $this->model->validate() ) {
 			$this->model->save();
 			Config_Hub_Helper::set_clear_active_flag();
-			// Maybe track.
-			if ( ! defender_is_wp_cli() && $this->is_tracking_active() ) {
+
+			if ( $this->maybe_track() ) {
 				// The current model data.
 				$is_active_curr_data = $this->get_model()->is_any_activated();
 				// The previous model data.
-				$prev_data = $this->get_model()->old_settings;
+				$prev_data = $this->get_model()->get_old_settings();
 
 				$is_active_prev_data = false;
 
 				if ( ! empty( $prev_data ) ) {
 					$is_active_prev_data = true === $prev_data['sh_xframe'] || true === $prev_data['sh_xss_protection']
-											|| true === $prev_data['sh_content_type_options'] || true === $prev_data['sh_feature_policy']
-											|| true === $prev_data['sh_strict_transport'] || true === $prev_data['sh_referrer_policy'];
+						|| true === $prev_data['sh_content_type_options'] || true === $prev_data['sh_feature_policy']
+						|| true === $prev_data['sh_strict_transport'] || true === $prev_data['sh_referrer_policy'];
 				}
 
 				$need_track = false;

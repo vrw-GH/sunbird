@@ -18,6 +18,7 @@ use WP_Defender\Model\Scan_Item;
 use WP_Defender\Integrations\Smush;
 use WP_Defender\Model\Setting\Scan as Scan_Settings;
 use WP_Defender\Helper\Analytics\Scan as Scan_Analytics;
+use WP_Defender\Controller\Scan as Scan_Controller;
 
 /**
  * It is responsible for performing integrity checks on plugins.
@@ -216,7 +217,7 @@ class Plugin_Integrity extends Behavior {
 					)
 				);
 
-				$this->log( $reason, 'scan.log' );
+				$this->log( $reason, Scan_Controller::SCAN_LOG );
 				break;
 			}
 
@@ -232,15 +233,14 @@ class Plugin_Integrity extends Behavior {
 				continue;
 			}
 
-			require_once ABSPATH . 'wp-admin/includes/image.php';
 			if (
 				$exist_smush_images
-				&& file_is_valid_image( $plugin_files->current() )
+				&& $this->file_is_valid_image( $plugin_files->current() )
 				&& $integration_smush->exist_image_path( $plugin_files->current() )
 			) {
 				$this->log(
 					sprintf( 'skip %s because of Smush optimized file', $plugin_files->current() ),
-					'scan.log'
+					Scan_Controller::SCAN_LOG
 				);
 				$plugin_files->next();
 				continue;
@@ -257,7 +257,7 @@ class Plugin_Integrity extends Behavior {
 			if ( isset( $checksums[ $rev_file ] ) ) {
 				if ( ! $this->compare_hashes( $file, $checksums[ $rev_file ] ) ) {
 					$slugs_of_edited_plugins[] = $base_slug;
-					$this->log( sprintf( 'modified %s', $file ), 'scan.log' );
+					$this->log( sprintf( 'modified %s', $file ), Scan_Controller::SCAN_LOG );
 					$model->add_item(
 						Scan_Item::TYPE_PLUGIN_CHECK,
 						array(
@@ -309,5 +309,21 @@ class Plugin_Integrity extends Behavior {
 		}
 
 		return ! $plugin_files->valid();
+	}
+
+	/**
+	 * Checks if given file is a valid image.
+	 *
+	 * @param string $file_path Full path to the file.
+	 *
+	 * @return bool True if file is a valid image, false otherwise.
+	 */
+	private function file_is_valid_image( $file_path ): bool {
+		$mime = wp_check_filetype( $file_path );
+		if ( false === $mime['type'] ) {
+			return false;
+		}
+
+		return false !== strpos( $mime['type'], 'image' );
 	}
 }

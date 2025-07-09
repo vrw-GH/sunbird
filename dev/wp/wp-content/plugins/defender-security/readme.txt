@@ -1,13 +1,13 @@
 === Defender Security - Malware Scanner, Login Security & Firewall ===
 Plugin Name: Defender Security - Malware Scanner, Login Security & Firewall
-Version: 4.11.0
+Version: 5.3.1
 Author: WPMU DEV
 Author URI: https://wpmudev.com/
 Contributors: WPMUDEV
 Tags: security, malware, firewall, malware scanner, login security
-Requires at least: 5.2
-Tested up to: 6.7
-Stable tag: 4.11.0
+Requires at least: 6.4
+Tested up to: 6.8.1
+Stable tag: 5.3.1
 Requires PHP: 7.4
 License: GPL v2 - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
@@ -15,15 +15,17 @@ WordPress security plugin with malware scanner, IP blocking, audit logs, antivir
 
 == Description ==
 
-**Defender adds the best in WordPress plugin security to your website with just a few clicks, including malware scanner, firewall, and login security features. Stop brute force login attacks, SQL injections, cross-site scripting XSS, and other WordPress security vulnerabilities and hacks with Defender's malware scanner, providing antivirus scans, IP blocking, firewall, activity log, security log, and two-factor authentication (2FA) login security.**
+**Defender adds the best in WordPress plugin security to your website with just a few clicks, including malware scanner, firewall, password protection, and login security features. Stop brute force login attacks, weak password usage, SQL injections, cross-site scripting (XSS), and other WordPress security vulnerabilities and hacks with Defender’s malware scanner, providing antivirus scans, IP blocking, firewall, activity log, security log, and two-factor authentication (2FA) login security.**
 
 No more complex security settings, Defender's malware scanner, firewall, and login security features add all the hardening and security you need.
 
-**Enjoy complete site protection from malware, vulnerabilities, and bot attacks from the start with [Defender Pro](https://wpmudev.com/project/wp-defender/?utm_source=wordpress.org&utm_medium=readme&utm_campaign=defender-readme-above-the-fold&utm_content=wp_defender_pro).**
+Defender is brought to you by the WordPress speed specialists that created Smush image optimization, now active on more than +1 million websites.
+
+Plus, connect for free to WPMU DEV’s AntiBot Global Firewall to block harmful IPs with data from over 500,000 sites.
+
+**Enjoy complete site protection from malware, vulnerabilities, bot attacks, and session hijacking from the start with [Defender Pro](https://wpmudev.com/project/wp-defender/?utm_source=wordpress.org&utm_medium=readme&utm_campaign=defender-readme-above-the-fold&utm_content=wp_defender_pro).**
 
 Level up security immediately with exclusive Pro features like scheduled malware scanning, Safe Repair for suspicious files, and known WordPress vulnerability detection. [Learn more about Pro](https://wpmudev.com/project/wp-defender/?utm_source=wordpress.org&utm_medium=readme&utm_campaign=defender-readme-above-the-fold&utm_content=wp_defender_pro).
-
-[youtube https://www.youtube.com/watch?v=3rBd7ea91V8]
 
 ### Security Recommendations
 
@@ -32,6 +34,7 @@ Defender's one-click security hardening recommendations instantly adds layers of
 ### Enhance Security and Block Hackers At Every Level:
 
 * Malware scanner - scan WordPress core files for modifications and unexpected changes which may be caused by malware. Scan for malware and tighten up the security of your files
+* AntiBot Global Firewall - Connect for free to WPMU DEV to block harmful IPs with data from over 500,000 sites
 * WordPress Security Firewall - block or allowlist IPs, implement IP blocking, and Geo IP blocking, user agent banning and protect against brute force attacks
 * Two-factor authentication (2FA) - Easily set up better security with 2FA to prevent most login attacks such as brute force, App verification, backup codes, lost device email, WooCommerce 2FA, and Web Authentication
 * Login masking - change the location of WordPress's default login area to improve login security
@@ -52,7 +55,8 @@ Defender's one-click security hardening recommendations instantly adds layers of
 * Resolve security recommendations and issues in bulk
 * Google reCAPTCHA security - easy to add, stop fraud and abuse - including BuddyPress and WooCommerce
 * Pwned Password Check - Increase security by protecting against compromised passwords
-* Force Password Reset - Force users with selected roles to reset passwords.
+* Force Password Reset - Force users with selected roles to reset passwords
+* Force Strong Passwords – Ensure users create secure credentials by enforcing robust password requirements.
 
 ### Learn The Ropes With These Hands-On Defender Security Plugin Tutorials
 
@@ -67,8 +71,6 @@ Defender's malware scanner security checks for suspicious code and malware. It a
 ### Two-Factor Authentication (2FA) Security
 
 Easily add an extra layer of protection and security to your WordPress sites with Defender's two-factor authentication (2FA) features. Including: mobile app verification (Google Authenticator, Microsoft Authenticator, Authy), backup code generation, lost device emails, WooCommerce 2FA, Biometric Authentication (fingerprint/facial recognition), and Hardware Key Authentication (USB security keys). Easily prevent brute force attacks and login security vulnerabilities.
-
-[youtube https://www.youtube.com/watch?v=w9pfRCuT36Q]
 
 ### Login Protection
 
@@ -91,7 +93,7 @@ Add reCAPTCHA security to your login / registration pages, lost password forms, 
 
 ### Login Screen Masking
 
-Defender makes it easy to move your login screen to a custom URL. Not only does login screen masking improve security, but it also lets you white label your login user experience and improves branding. 
+Defender makes it easy to move your login screen to a custom URL. Not only does login screen masking improve security, but it also lets you white label your login user experience and improves branding.
 
 ### Force Password Reset
 
@@ -122,7 +124,7 @@ Save your Defender security plugin configurations and reapply them to your other
 
 Entered passwords are checked against public database breach records to further boost security. If a password is identified as compromised, the user will be asked to change it.
 
-### Global IP Block/Allowlists
+### Custom IP Block/Allowlist
 
 Create your IP block/allow list once, then apply and automatically sync it to all your other sites with just a single click. Save hours by not having to manually add IPs to each individual site. *Note: a [free WPMU DEV account] (https://wpmudev.com/register) is required to access this feature.
 
@@ -195,7 +197,7 @@ Yes! All of Defender's security features are fully compatible with a multisite i
 
 =  Does Defender offer spam protection and security? =
 
-A high percentage of Trackbacks and Pingbacks are spam. Defender allows you to easily disable both, giving you added security and protection.
+Yes, Defender provides multiple layers of spam protection and security. A large percentage of Trackbacks and Pingbacks are spam, and Defender allows you to easily disable both to reduce spam and improve site security. Additionally, Defender includes the AntiBot Global Firewall, which blocks known malicious IPs and bots before they even reach your site, offering proactive protection against common attacks and spam bots.
 
 = Will my site be protected from DDoS attacks and similar security threats? =
 
@@ -203,8 +205,15 @@ Yes. Defender's IP banning, IP lockout, and 404 detection security features can 
 
 = I've locked myself out of my admin panel, what can I do? =
 
-Add the code below to your theme's function.php file, which you'll find in the main directory of an active theme. Replace "YOUR IP HERE" with your IP address. Use a site like [whatsmyip](https://www.whatsmyip.org/) to get your IP.
+If you’re the administrator and you’ve been locked out due to multiple failed login attempts, Defender offers two options:
 
+Option #1: Use the “Unlock Me” feature:
+
+Click the Unlock Me button on the login page and enter your username or the email address linked to your site. You’ll receive an email with a secure link to unlock your account and regain access — no technical steps needed.
+
+Option #2: Use the manual method (if email doesn’t work):
+
+Add the following code to your theme’s functions.php file, located in the main directory of your active theme.
 `
 add_filter( 'ip_lockout_default_whitelist_ip', function ( $ips ) {
   $ip    = 'YOUR IP HERE';
@@ -212,6 +221,7 @@ add_filter( 'ip_lockout_default_whitelist_ip', function ( $ips ) {
   return $ips;
 } );
 `
+Replace "YOUR IP HERE" with your actual IP address (you can use a tool like whatsmyip to find it.)
 
 = Help! I was already hacked. What should I do? =
 
@@ -229,9 +239,10 @@ Please open a new thread in Defender's [support forum](https://wordpress.org/sup
 
 1. Malware scans and one-click website security hardening recommendations.
 2. Layered security recommendations let you harden your site with a few clicks.
-3. Compare your WordPress install with the directory and restore original files with a click.
-4. Use 2-Step Verification (2FA) to protect your accounts with your phone.
-5. IP blocklisting, 404 limiter, Geo IP Blocking, and Timed Lockout attack shield.
+3. Enable AntiBot & Local Firewall for smart, layered defense against bots and brute-force attacks.
+4. Keep your account safe with 2FA options including TOTP apps, backup codes, and secure fallback methods.
+5. Use built-in password rules to ensure only secure, uncompromised passwords are used.
+6. Never miss a threat—Defender emails you security updates on your schedule.
 
 == Installation ==
 
@@ -242,70 +253,85 @@ Please open a new thread in Defender's [support forum](https://wordpress.org/sup
 
 == Changelog ==
 
-= 4.11.0 ( 2024-11-04 ) =
+= 5.3.1 ( 2025-06-12 ) =
 
-- Enhance: Compatibility with WordPress 6.7
-- Enhance: Malware signatures update
-- Enhance: Update SUI to the latest version
-- Fix: Optimize security recommendations flow
-- Fix: Malware Scanning can't detect the suspicious code
-- Fix: Max included file size in Malware Scanning isn't working
-- Fix: Detecting changes in files whose names match default folders
-- Fix: SEOPress plugin files are being falsely flagged as suspicious
+- Fix: Sync malicious IP count displayed in Defender and the Hub
 
-= 4.10.1 ( 2024-10-03 ) =
+= 5.3.0 ( 2025-06-11 ) =
 
-- Fix: Optimize XML-RPC traffic management
+- New: AntiBot Mode
+- Enhance: Improve Session Protection when loading an image
+- Enhance: Add session widget on the Dashboard page
+- Enhance: Rename slug for Expert Services
+- Enhance: Update wp.org screenshots
+- Enhance: Update Session Protection Tracking event
+- Enhance: Change "Central IP List" label to "Custom IP List"
+- Enhance: Change OTP page styling to match the default WordPress login
+- Enhance: Generate strong passwords that meet all verification requirements
+- Enhance: Update malware signatures to detect additional infected files
+- Enhance: Log custom IP Block events
+- Enhance: Log Unblocking event from Unlock Me option
+- Fix: MaxMind key field appears empty on the Local Blocklist page if the MaxMind key is removed from the database
+- Fix: No session logs appear when the Interim login screen is shown
+- Fix: Scan can't detect modifications in the Debug Log Manager plugin
+- Fix: Warning in PHP 8.4
+- Fix: File existence and readability checks in Malware_Result and Plugin_Integrity classes
 
-= 4.10.0 ( 2024-10-01 ) =
+= 5.2.2 ( 2025-04-23 ) =
 
-- Enhance: Update malware signatures to detect different infected files
-- Enhance: Display notice on the Malware Scanning page if a file is missing or unreadable
-- Enhance: Defender > Recommendations > Disable XML-RPC syncs with Hosting XML-RPC Protection
-- Enhance: Improvements in deleting and exporting IPs
+- Fix: Plugin_Cross_Sell class error
+
+= 5.2.1 ( 2025-04-23 ) =
+
+- Enhance: Add a new menu item to help you discover other free plugins by WPMU DEV and more
+
+= 5.2.0 ( 2025-04-07 ) =
+
+- New: Session Protection
+- Enhance: Compatibility with WordPress 6.8
+- Enhance: Add a toggle to block popular spam/malicious User Agents
+- Enhance: Remove Semrush and Ahrefs from the default User Agent blocklist
+- Enhance: Improve the wpdef_sec_key_gen cron process on multisite
+- Enhance: Update Malware Signatures to detect suspicious code
+- Enhance: Improve the Quarantine flow during upgrade from free to pro plugin version
+- Enhance: Improve the class representing the vulnerability result
+- Enhance: Improve Trusted IP popup flow
+- Fix: Masked Login URL bypassed by using encoded characters
+- Fix: Audit Logging showing wrong time
+
+= 5.1.1 ( 2025-03-03 ) =
+
+- Enhance: Improve cron events for AntiBot Global Firewall on multisite
+- Enhance: Remove manual "All headers" option and migrate to Automatic IP detection for improved compatibility and security
+- Enhance: Update User Agent logic with AntiBot service to better detect potential threats
+
+= 5.1.0 ( 2025-02-26 ) =
+
+- New: Enforce strong password
+- Enhance: Manage all password-related settings in one place
+- Enhance: Improve lockout mechanism
+- Enhance: Upgrade plugin packages
+- Enhance: Support Unit server
 - Enhance: Translation improvements
-- Fix: False positive in Malware Scanning for Toolset plugin
-- Fix: Defender does not recognize phishing code
-- Fix: Malware Scanning gets stuck on fresh multisite
-- Fix: Text content not displayed in the Services upsell on the Malware Scanning page
-- Fix: Security keys not getting updated
-- Fix: Malware Scanning detects the old plugin file as modified
-- Fix: 404 Detection > Duration Unit disappears when changing the Firewall logs count to 100
+- Enhance: Improve IP Lockout redirect when user adds IP to Allowlist
+- Enhance: Create a new cookie to avoid Lockout caching in Hummingbird plugin
+- Enhance: Update minimum supported WordPress version
+- Enhance: Enable Plugin & Suspicious code scan by default on fresh installations
+- Enhance: Improve Malware_Result class
+- Enhance: Minor code improvements
+- Fix: Defender does not detect themes with vulnerabilities
+- Fix: Error while pfsockopen function is disabled
+- Fix: NaN is showing on AntiBot page when language is changed to German in the Dashboard plugin
+- Fix: Form does not submit if Google reCAPTCHA is enabled in both Defender and Forminator plugins
+- Fix: Malware Scanner highlights WordPress core files on IIS server
+- Fix: Database error related to AntiBot feature
+- Fix: Salt keys appear before open php tag
+- Fix: Google reCAPTCHA compact style is not working
 
-= 4.9.0 ( 2024-09-02 ) =
+= 5.0.2 ( 2025-02-14 ) =
 
-- New: Smart IP Detection method
-- Enhance: Improved error handling of Malware Scan during checksum
-- Enhance: Improved scan logic to detect plugins from wp.org
-- Enhance: Mention Defender in Cloudflare and X-Forwarded-For IP detection notices
-- Enhance: Usage Tracking improvements
-- Fix: Google reCAPTCHA verification failure on WooCommerce my-account and checkout pages
-- Fix: Google reCAPTCHA V3 error in the console log
-- Fix: 2FA settings issue in WooCommerce
-- Fix: Issues when uploading Config
-- Fix: Getting 'ERROR: Something went wrong' when registering a new authenticator
-- Fix: Copy error in translations
-- Fix: Undefined array key in Audit logs
-- Fix: Foreign key getting duplicated
-- Fix: Broken error notice design in 2FA methods
-
-= 4.8.2 ( 2024-07-31 ) =
-
-- Fix: Incorrect IP header detection on WPMU DEV hosting
-- Fix: Malware Scanning is not working for specific timezones
-- Fix: Can not set notification schedule after changing the site language
-- Fix: Quarantine feature improvements
-
-= 4.8.1 ( 2024-07-23 ) =
-
-- Enhance: Improvements for Known vulnerabilities
-- Fix: Multiple redirects when Mask Login Redirect Traffic is set to custom/external URL
-
-= 4.8.0 ( 2024-07-15 ) =
-
-- Enhance: Compatibility with WordPress 6.6
-- Enhance: WPCS compliance
-- Fix: Editors can't close Cloudflare Usage notification
+- Improvement: Update 404 logic with AntiBot service to better detect and mitigate potential threats
+- Improvement: Enhancing IP Detection in Defender to prevent blocking of server IPs
 
 [Changelog for previous versions](https://wpmudev.com/project/wp-defender/#view-changelog).
 

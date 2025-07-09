@@ -173,11 +173,15 @@ function wpmtst_get_custom_form_count() {
 
 function wpmtst_get_form_fields( $form_id = 1 ) {
 	$forms = get_option( 'wpmtst_custom_forms' );
+
 	if ( isset( $forms[ $form_id ] ) ) {
 		$form = $forms[ $form_id ];
-	} else {
+	} elseif ( isset( $forms[1] ) ) {
 		$form = $forms[1];
+	} else {
+		$form = reset( $forms );
 	}
+
 	$fields = $form['fields'];
 
 	return $fields;
@@ -231,7 +235,8 @@ function wpmtst_get_all_fields() {
 	 * and a field has 'admin_table' enabled in 'default'
 	 * but not in any custom form, the column will still be shown.
 	 */
-	$fields = $forms[1]['fields'];
+	$key    = array_key_exists( 1, $forms ) ? 1 : array_key_first( $forms );
+	$fields = $forms[ $key ]['fields'];
 
 	// replace key with field name
 	foreach ( $fields as $field ) {

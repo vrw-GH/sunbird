@@ -63,9 +63,11 @@ function defender_init_routes() {
 			'empty_lockouts'       => 'empty_lockouts',
 			'verify_blocked_user'  => array( 'verify_blocked_user', true ),
 			'send_again'           => array( 'send_again', true ),
+			'agf_unlock_user'      => array( 'agf_unlock_user', true ),
 		),
 		'global_ip_lockout' => array(
-			'refresh_global_ip_list' => 'refresh_global_ip_list',
+			'refresh_global_ip_list'  => 'refresh_global_ip_list',
+			'redirect_hub_connection' => 'redirect_hub_connection',
 		),
 		'scan'              => array(
 			'start'           => 'start',
@@ -101,6 +103,7 @@ function defender_init_routes() {
 			'hide_new_features'                => 'hide_new_features',
 			'activate_global_ip'               => 'activate_global_ip',
 			'remove_global_ip_notice_reminder' => 'remove_global_ip_notice_reminder',
+			'activate_session_protection'      => 'activate_session_protection',
 		),
 		'settings'          => array(
 			'update_settings' => 'save_settings',
@@ -110,8 +113,9 @@ function defender_init_routes() {
 			'recheck' => 'recheck',
 		),
 		'onboard'           => array(
-			'activating' => 'activating',
-			'skip'       => 'skip',
+			'activating'       => 'activating',
+			'skip'             => 'skip',
+			'antibot_reminder' => 'antibot_reminder',
 		),
 		'tutorial'          => array(
 			'hide' => 'hide',
@@ -123,6 +127,9 @@ function defender_init_routes() {
 		'tracking'          => array(
 			'close_track_modal' => 'close_track_modal',
 			'save_track_modal'  => 'save_track_modal',
+		),
+		'hub_connector'     => array(
+			'activate_dashboard_plugin' => 'activate_dashboard_plugin',
 		),
 	);
 

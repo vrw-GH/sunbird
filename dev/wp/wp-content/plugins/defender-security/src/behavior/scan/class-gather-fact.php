@@ -14,6 +14,7 @@ use Calotes\Base\Component;
 use WP_Defender\Component\Timer;
 use WP_Defender\Behavior\WPMUDEV;
 use WP_Defender\Model\Setting\Scan as Scan_Settings;
+use WP_Defender\Controller\Scan as Scan_Controller;
 
 /**
  * We will gather core files & content files, for using in core integrity.
@@ -76,7 +77,7 @@ class Gather_Fact extends Component {
 			$this->get_content_files();
 			$model->calculate_percent( 100, 1 );
 		}
-		$this->log( sprintf( '%s in %d', $need_to_run, $timer->get_difference() ), 'scan.log' );
+		$this->log( sprintf( '%s in %d', $need_to_run, $timer->get_difference() ), Scan_Controller::SCAN_LOG );
 		$model->task_checkpoint = $need_to_run;
 		$model->save();
 
@@ -84,7 +85,7 @@ class Gather_Fact extends Component {
 	}
 
 	/**
-	 * Gets core files and updates the cache.
+	 * Get core files and update the cache.
 	 *
 	 * @return array The array of core files.
 	 */
@@ -100,8 +101,8 @@ class Gather_Fact extends Component {
 			false,
 			array(
 				'dir' => array(
-					$abs_path . 'wp-admin/',
-					$abs_path . WPINC . '/',
+					$abs_path . 'wp-admin',
+					$abs_path . WPINC,
 				),
 			),
 			array(),
@@ -117,9 +118,9 @@ class Gather_Fact extends Component {
 			array(),
 			array(
 				'dir'      => array(
-					$abs_path . 'wp-content/',
-					$abs_path . 'wp-admin/',
-					$abs_path . WPINC . '/',
+					$abs_path . 'wp-content' . DIRECTORY_SEPARATOR,
+					$abs_path . 'wp-admin',
+					$abs_path . WPINC,
 				),
 				'filename' => array(
 					'wp-config.php',
@@ -132,16 +133,16 @@ class Gather_Fact extends Component {
 
 		$files = array_merge( $core->get_dir_tree(), $outside->get_dir_tree() );
 		$files = array_filter( $files );
-		$this->log( sprintf( 'Core: %s', count( $files ) ), 'scan.log' );
+		$this->log( sprintf( 'Core: %s', count( $files ) ), Scan_Controller::SCAN_LOG );
 		update_site_option( self::CACHE_CORE, $files );
 
 		return $files;
 	}
 
 	/**
-	 * Gets content files and updates the cache.
+	 * Get various content files starting from the root and update the cache.
 	 *
-	 * @return array|void The array of content files, or void if cache exists.
+	 * @return array|void The array of content files if cache exists, or void if no files in cache.
 	 */
 	private function get_content_files() {
 		$cache = get_site_option( self::CACHE_CONTENT, false );
@@ -149,7 +150,7 @@ class Gather_Fact extends Component {
 			return $cache;
 		}
 		$content = new File(
-			WP_CONTENT_DIR,
+			defender_replace_line( ABSPATH ),
 			true,
 			false,
 			array(
@@ -164,7 +165,7 @@ class Gather_Fact extends Component {
 		$files   = $content->get_dir_tree();
 		$files   = array_filter( $files );
 		$files[] = defender_wp_config_path();
-		$this->log( sprintf( 'Content: %s', count( $files ) ), 'scan.log' );
+		$this->log( sprintf( 'Content: %s', count( $files ) ), Scan_Controller::SCAN_LOG );
 		update_site_option( self::CACHE_CONTENT, $files );
 	}
 }

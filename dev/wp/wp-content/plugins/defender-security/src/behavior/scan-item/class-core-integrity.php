@@ -15,6 +15,7 @@ use Calotes\Component\Behavior;
 use WP_Defender\Traits\Formats;
 use WP_Defender\Model\Scan_Item;
 use WP_Defender\Traits\File_Operations;
+use WP_Defender\Controller\Scan as Scan_Controller;
 
 /**
  * This class represents a behavior related to core integrity in the WP_Defender plugin.
@@ -34,32 +35,7 @@ class Core_Integrity extends Behavior {
 		$data = $this->owner->raw_data;
 		$file = $data['file'];
 
-		if ( ! file_exists( $file ) || ! is_readable( $file ) ) {
-			return array(
-				'id'         => $this->owner->id,
-				'type'       => Scan_Item::TYPE_INTEGRITY,
-				'file_name'  => pathinfo( $file, PATHINFO_BASENAME ),
-				'full_path'  => $file,
-				'date_added' => 'n/a',
-				'size'       => 'n/a',
-				'scenario'   => $data['type'],
-				'deleted'    => true,
-				'short_desc' => $this->get_short_description(),
-			);
-		}
-
-		$file_created_at = filemtime( $file );
-		if ( $file_created_at ) {
-			$file_created_at = $this->format_date_time( $file_created_at );
-		} else {
-			$file_created_at = 'n/a';
-		}
-		$file_size = filesize( $file );
-		if ( ! $file_size ) {
-			$file_size = 'n/a';
-		} else {
-			$file_size = $this->format_bytes_into_readable( $file_size );
-		}
+		list( $file_created_at, $file_size, $deleted ) = $this->get_file_meta( $file );
 
 		return array(
 			'id'         => $this->owner->id,
@@ -69,7 +45,7 @@ class Core_Integrity extends Behavior {
 			'date_added' => $file_created_at,
 			'size'       => $file_size,
 			'scenario'   => $data['type'],
-			'deleted'    => false,
+			'deleted'    => $deleted,
 			'short_desc' => $this->get_short_description(),
 		);
 	}
@@ -114,7 +90,7 @@ class Core_Integrity extends Behavior {
 		global $wp_filesystem;
 		// Initialize the WP filesystem, no more using 'file-put-contents' function.
 		if ( empty( $wp_filesystem ) ) {
-			require_once ABSPATH . '/wp-admin/includes/file.php';
+			include_once ABSPATH . '/wp-admin/includes/file.php';
 			WP_Filesystem();
 		}
 		$data = $this->owner->raw_data;
@@ -133,7 +109,7 @@ class Core_Integrity extends Behavior {
 		if ( $ret ) {
 			$scan = Scan::get_last();
 			$scan->remove_issue( $this->owner->id );
-			$this->log( sprintf( '%s is deleted', $path ), 'scan.log' );
+			$this->log( sprintf( '%s is deleted', $path ), Scan_Controller::SCAN_LOG );
 
 			do_action( 'wpdef_fixed_scan_issue', 'core_integrity', 'resolve' );
 
@@ -186,11 +162,13 @@ class Core_Integrity extends Behavior {
 		$file = $data['file'];
 		if ( ! file_exists( $file ) || ! is_readable( $file ) ) {
 			$scan->remove_issue( $this->owner->id );
-			$this->log( sprintf( '%s is not readable and will be removed from the scan result', $file ), 'scan.log' );
+			$this->log(
+				sprintf( '%s is not readable and will be removed from the scan result', $file ),
+				Scan_Controller::SCAN_LOG
+			);
 
 			return array( 'message' => esc_html__( 'This item has been deleted.', 'defender-security' ) );
-		}
-		if ( 'unversion' === $data['type'] && $this->delete_infected_file( $file ) ) {
+		} elseif ( 'unversion' === $data['type'] && $this->delete_infected_file( $file ) ) {
 			return $this->after_delete( $file, $scan, 'core_integrity' );
 		} elseif ( 'dir' === $data['type'] && $this->delete_dir( $file ) ) {
 			return $this->after_delete( $file, $scan, 'core_integrity' );
@@ -211,7 +189,7 @@ class Core_Integrity extends Behavior {
 		global $wp_filesystem;
 		// Initialize the WP filesystem, no more using 'file-put-contents' function.
 		if ( empty( $wp_filesystem ) ) {
-			require_once ABSPATH . '/wp-admin/includes/file.php';
+			include_once ABSPATH . '/wp-admin/includes/file.php';
 			WP_Filesystem();
 		}
 		$data = $this->owner->raw_data;

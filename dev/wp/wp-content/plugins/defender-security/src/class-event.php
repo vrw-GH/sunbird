@@ -42,6 +42,15 @@ abstract class Event extends Controller {
 	}
 
 	/**
+	 * Check if the current moment is right for tracking.
+	 *
+	 * @return bool
+	 */
+	protected function maybe_track(): bool {
+		return ! defender_is_wp_cli() && $this->is_tracking_active();
+	}
+
+	/**
 	 *  Has the data changed?
 	 *
 	 * @param  array $old_data  Old data to compare.
@@ -93,8 +102,15 @@ abstract class Event extends Controller {
 	 * @defender_route
 	 */
 	public function track_feature_handler( Request $request ): Response {
+		// Forced tracking.
+		$data = $request->get_data();
+		if ( isset( $data['force'] ) ) {
+			$this->tracker()->track( $data['event'], $data['data'] );
+
+			return new Response( true, array() );
+		}
+		// Otherwise it's a normal process.
 		if ( $this->is_tracking_active() ) {
-			$data = $request->get_data();
 			$this->track_feature( $data['event'], $data['data'] );
 		}
 

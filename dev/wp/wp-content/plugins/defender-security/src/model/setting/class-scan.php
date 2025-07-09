@@ -46,7 +46,7 @@ class Scan extends Setting {
 	 * @defender_property
 	 * @var bool
 	 */
-	public $check_plugins = false;
+	public $check_plugins = true;
 
 	/**
 	 * Check the files inside wp-content by our malware signatures.
@@ -54,7 +54,7 @@ class Scan extends Setting {
 	 * @defender_property
 	 * @var bool
 	 */
-	public $scan_malware = false;
+	public $scan_malware = true;
 
 	/**
 	 * Check if any plugins or themes have a known vulnerability.
@@ -186,7 +186,6 @@ class Scan extends Setting {
 			);
 		}
 	}
-
 
 	/**
 	 * Initializes the object by setting default values for the frequency, day, day_n, and time properties based on the

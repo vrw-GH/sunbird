@@ -36,11 +36,20 @@ function wpmtst_update_custom_fields() {
 	$forms         = get_option( 'wpmtst_custom_forms' );
 	$field_options = apply_filters( 'wpmtst_fields', get_option( 'wpmtst_fields' ) );
 
+	$notice = array(
+		'status' => 'success',
+		'source' => array(
+			'slug' => 'strong-testimonials',
+			'name' => 'Strong Testimonials',
+		),
+		'timed'  => 5000,
+	);
+
 	if ( isset( $_POST['reset'] ) ) {
 
 		// Undo changes
-		wpmtst_add_admin_notice( 'changes-cancelled' );
-
+		$notice['title']   = esc_html__( 'Changes cancelled', 'strong-testimonials' );
+		$notice['message'] = esc_html__( 'The form changes have not been saved.', 'strong-testimonials' );
 	} elseif ( isset( $_POST['restore-defaults'] ) ) {
 
 		// Restore defaults
@@ -50,8 +59,8 @@ function wpmtst_update_custom_fields() {
 		update_option( 'wpmtst_custom_forms', $forms );
 		do_action( 'wpmtst_fields_updated', $fields );
 
-		wpmtst_add_admin_notice( 'defaults-restored' );
-
+		$notice['title']   = esc_html__( 'Defaults restored', 'strong-testimonials' );
+		$notice['message'] = esc_html__( 'The form fields have been restored to the default state.', 'strong-testimonials' );
 	} else {
 
 		// Save changes
@@ -113,7 +122,6 @@ function wpmtst_update_custom_fields() {
 
 			// add to fields array in display order
 			$fields[ $new_key++ ] = $field;
-
 		}
 
 		$forms[ $form_id ]['fields'] = $fields;
@@ -127,11 +135,13 @@ function wpmtst_update_custom_fields() {
 		update_option( 'wpmtst_custom_forms', $forms );
 		do_action( 'wpmtst_fields_updated', $fields );
 
-		wpmtst_add_admin_notice( 'fields-saved' );
-
+		$notice['title']   = esc_html__( 'Fields saved', 'strong-testimonials' );
+		$notice['message'] = esc_html__( 'The changes to the form fields have been successfully saved.', 'strong-testimonials' );
 	}
 
-	wp_redirect( $goback );
+	WPChill_Notifications::add_notification( 'wpmtst-update-custom-fields-notice', $notice );
+
+	wp_safe_redirect( $goback );
 	exit;
 }
 
@@ -363,23 +373,18 @@ function wpmtst_show_field_secondary( $key, $field ) {
 
 			// TODO Replace this special handling
 			if ( 'rating' === $field['input_type'] ) {
-
 				$html .= '<input type="text" name="fields[' . esc_attr( $key ) . '][default_form_value]" value="' . esc_attr( $field['default_form_value'] ) . '" class="as-number">';
 				$html .= '<span class="help inline">' . esc_html__( 'stars', 'strong-testimonials' ) . '</span>';
 				$html .= '<span class="help">' . esc_html__( 'Populate the field with this value.', 'strong-testimonials' ) . '</span>';
 
 			} elseif ( 'checkbox' === $field['input_type'] ) {
-
 				$html .= '<label>';
 				$html .= '<input type="checkbox" name="fields[' . esc_attr( $key ) . '][default_form_value]" ' . checked( $field['default_form_value'], true, false ) . '>';
 				$html .= '<span class="help inline">' . esc_html__( 'Checked by default.', 'strong-testimonials' ) . '</span>';
 				$html .= '</label>';
-
 			} else {
-
 				$html .= '<input type="text" name="fields[' . esc_attr( $key ) . '][default_form_value]" value="' . esc_attr( $field['default_form_value'] ) . '">';
-				$html .= '<span class="help">' . esc_html__( 'Populate the field with this value.', 'strong-testimonials' ) . '</span>';
-
+				$html .= '<span class="help">' . wp_kses_post( __( 'Populate the field with this custom value or use <code>{user_name}</code>, <code>{user_first_name}</code>, <code>{user_last_name}</code>, <code>{user_email}</code> placeholders.', 'strong-testimonials' ) ) . '</span>';
 			}
 
 			$html .= '</td>' . "\n";
